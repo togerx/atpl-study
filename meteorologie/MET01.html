@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MET01 — Atmosphère ISA · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">MET01 · Atmosphère ISA</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="MET01" data-matiere="meteorologie">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Météorologie</a>
+        <span class="sep">›</span>
+        <span>MET01</span>
+      </div>
+      <div class="cours-code-badge">MET01</div>
+      <h1 class="cours-title">Atmosphère Standard — ISA</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~15 min</span>
+        <span class="cours-meta-item">❓ 12 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ── TAB COURS ── -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <h1 id="composition">1. Composition de l'atmosphère</h1>
+        <p>L'atmosphère terrestre est l'enveloppe gazeuse entourant la Terre, maintenue par la gravitation. Elle est composée d'un mélange de gaz appelé <strong>air sec</strong>, auquel s'ajoute de la vapeur d'eau en quantité variable.</p>
+
+        <table>
+          <thead><tr><th>Gaz</th><th>Symbole</th><th>Proportion volumique</th></tr></thead>
+          <tbody>
+            <tr><td>Azote</td><td>N₂</td><td>78,09 %</td></tr>
+            <tr><td>Oxygène</td><td>O₂</td><td>20,95 %</td></tr>
+            <tr><td>Argon</td><td>Ar</td><td>0,93 %</td></tr>
+            <tr><td>Dioxyde de carbone</td><td>CO₂</td><td>0,03 %</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La composition de l'air reste <strong>constante jusqu'à ~80 km</strong> d'altitude. Seule la quantité de vapeur d'eau varie (0 à ~4 % en volume).
+        </div>
+
+        <h1 id="couches">2. Structure verticale — Les couches atmosphériques</h1>
+        <p>L'atmosphère est divisée en couches définies par le comportement du gradient thermique vertical (GTV). La limite entre deux couches est appelée <strong>pause</strong> (tropopause, stratopause…).</p>
+
+        <h2 id="troposphere">Troposphère</h2>
+        <p>C'est la couche la plus basse, siège de la quasi-totalité des phénomènes météorologiques et de l'aviation civile.</p>
+        <ul>
+          <li>Du sol jusqu'à la <strong>tropopause</strong></li>
+          <li>Altitude de la tropopause : ~<strong>11 km (36 090 ft)</strong> aux latitudes moyennes, ~8 km aux pôles, ~16 km à l'équateur</li>
+          <li>GTV moyen : <strong>−6,5 °C / 1 000 m</strong> (gradient standard ISA)</li>
+          <li>La température <strong>diminue</strong> avec l'altitude</li>
+          <li>Contient ~<strong>75 %</strong> de la masse totale de l'atmosphère et la quasi-totalité de la vapeur d'eau</li>
+        </ul>
+
+        <h2 id="tropopause">Tropopause</h2>
+        <p>Limite isotherme entre troposphère et stratosphère. La température y est constante (≈ −56,5 °C en ISA). C'est à ce niveau que se situent les <strong>Jet Streams</strong>.</p>
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          La tropopause est plus haute en été qu'en hiver, et plus haute à l'équateur qu'aux pôles. Cette variabilité influence les FL de croisière des avions de ligne.
+        </div>
+
+        <h2 id="stratosphere">Stratosphère</h2>
+        <ul>
+          <li>De la tropopause (~11 km) jusqu'à la <strong>stratopause</strong> (~50 km)</li>
+          <li>La température <strong>augmente</strong> avec l'altitude grâce à l'absorption des UV par l'ozone</li>
+          <li>Couche d'ozone (ozonosphère) : ~20–35 km</li>
+        </ul>
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La température dans la <strong>stratosphère augmente</strong> avec l'altitude — c'est l'inverse de la troposphère. Ne pas confondre avec un prolongement du gradient de −6,5 °C/1 000 m.
+        </div>
+
+        <h1 id="isa">3. Atmosphère Standard Internationale (ISA)</h1>
+        <p>L'ISA (<em>International Standard Atmosphere</em>) est un modèle de référence défini par l'OACI (Doc 7488). Elle représente des conditions <strong>moyennes aux latitudes moyennes</strong> (≈ 45°N) au niveau de la mer.</p>
+
+        <h2 id="isa-conditions">Conditions ISA au niveau de la mer (MSL)</h2>
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">15 °C</span><span class="val-label">Température MSL (288,15 K)</span></div>
+          <div class="value-chip"><span class="val">1013,25 hPa</span><span class="val-label">Pression MSL (1 atm)</span></div>
+          <div class="value-chip"><span class="val">1,225 kg/m³</span><span class="val-label">Densité de l'air</span></div>
+          <div class="value-chip"><span class="val">340,3 m/s</span><span class="val-label">Vitesse du son (LSS)</span></div>
+          <div class="value-chip"><span class="val">−6,5 °C/1 000 m</span><span class="val-label">Gradient thermique troposphère</span></div>
+          <div class="value-chip"><span class="val">−2 °C/1 000 ft</span><span class="val-label">Gradient approx. en ft</span></div>
+        </div>
+
+        <h2 id="isa-formules">Formules ISA clés</h2>
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Température ISA à une altitude H (en mètres) :</strong>
+          <div class="formula-display">T(H) = 15 − 0,0065 × H &nbsp;[°C]</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Ou en pieds : <code>T(H) = 15 − 0,002 × H</code> (approximation)</p>
+        </div>
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Déviation ISA (ISA deviation) :</strong>
+          <div class="formula-display">ΔT ISA = T réelle − T ISA à l'altitude concernée</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Exemple : si T = −40 °C à FL310 (T ISA = −46,5 °C), alors ISA +6,5</p>
+        </div>
+        <div class="box box-formule">
+          <div class="box-label">📋 Référence</div>
+          <strong>Température ISA à la tropopause (11 000 m / 36 090 ft) :</strong>
+          <div class="formula-display">T = 15 − (6,5 × 11) = <strong>−56,5 °C</strong></div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Dans la stratosphère (11–20 km) : T = <strong>constante à −56,5 °C</strong></p>
+        </div>
+
+        <h2 id="isa-tableau">Tableau de référence ISA</h2>
+        <table>
+          <thead><tr><th>Altitude (ft)</th><th>Altitude (m)</th><th>Pression ISA (hPa)</th><th>Température ISA (°C)</th></tr></thead>
+          <tbody>
+            <tr><td>0 (MSL)</td><td>0</td><td>1013,25</td><td>+15,0</td></tr>
+            <tr><td>5 000</td><td>1 524</td><td>843,1</td><td>+5,1</td></tr>
+            <tr><td>10 000</td><td>3 048</td><td>696,8</td><td>−4,8</td></tr>
+            <tr><td>20 000</td><td>6 096</td><td>465,6</td><td>−24,6</td></tr>
+            <tr><td>36 090 (tropo)</td><td>11 000</td><td>226,3</td><td>−56,5</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="densite">4. Densité de l'air et altitude-densité</h1>
+        <p>La densité de l'air est fondamentale pour les performances de l'aéronef. Elle dépend de la <strong>pression, de la température et de l'humidité</strong>.</p>
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Loi des gaz parfaits :</strong>
+          <div class="formula-display">ρ = P / (R × T)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec R = 287 J/(kg·K) pour l'air sec, P en Pa, T en Kelvin</p>
+        </div>
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'humidité (vapeur d'eau) <strong>diminue</strong> la densité de l'air. L'air humide est moins dense que l'air sec à même température et pression, car la masse molaire de H₂O (18 g/mol) est inférieure à celle de l'air sec (29 g/mol).
+        </div>
+
+        <h1 id="viscosite">5. Vitesse locale du son (LSS)</h1>
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <div class="formula-display">LSS = 38,94 × √T &nbsp;[kt] &nbsp;(T en Kelvin)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Au MSL ISA : LSS = 38,94 × √288,15 ≈ <strong>661,5 kt</strong></p>
+          <p style="margin:.25rem 0 0;font-size:.85rem">À la tropopause (216,65 K) : LSS ≈ <strong>573,6 kt</strong></p>
+        </div>
+        <p>La LSS ne dépend que de la <strong>température</strong> (pas de la pression ni de la densité).</p>
+
+      </div>
+    </div>
+
+    <!-- ── TAB SYNTHÈSE ── -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">15 °C</span><span class="val-label">Temp ISA au MSL</span></div>
+          <div class="value-chip"><span class="val">1013,25 hPa</span><span class="val-label">Pression ISA au MSL</span></div>
+          <div class="value-chip"><span class="val">−6,5 °C/1 000 m</span><span class="val-label">Gradient ISA troposphère</span></div>
+          <div class="value-chip"><span class="val">−56,5 °C</span><span class="val-label">Temp à la tropopause</span></div>
+          <div class="value-chip"><span class="val">11 000 m / 36 090 ft</span><span class="val-label">Altitude tropopause ISA</span></div>
+          <div class="value-chip"><span class="val">226,3 hPa</span><span class="val-label">Pression tropopause</span></div>
+          <div class="value-chip"><span class="val">661,5 kt</span><span class="val-label">LSS au MSL ISA</span></div>
+          <div class="value-chip"><span class="val">1 hPa ≈ 30 ft</span><span class="val-label">Gradient pression &lt; FL100</span></div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL — MET01</h1>
+        <div class="piege-list">
+          <div class="piege-item"><span class="piege-num">#1</span><div><div class="piege-sujet">Gradient thermique ISA en °C/ft</div><div class="piege-explication">Le gradient standard est <strong>−6,5 °C/1 000 m</strong>, soit ≈ −2 °C/1 000 ft. Certaines QCM donnent −1,98°C ou −2°C — les deux sont acceptés.</div></div></div>
+          <div class="piege-item"><span class="piege-num">#2</span><div><div class="piege-sujet">Stratosphère : gradient inversé</div><div class="piege-explication">Dans la stratosphère, la température <strong>augmente</strong> avec l'altitude (de −56,5 °C à ~0 °C à 50 km). C'est l'inverse de la troposphère.</div></div></div>
+          <div class="piege-item"><span class="piege-num">#3</span><div><div class="piege-sujet">Air humide = air moins dense</div><div class="piege-explication">Contre-intuitif : l'air humide est <strong>moins dense</strong> que l'air sec. H₂O (M=18) remplace N₂ (M=28) et O₂ (M=32) → masse molaire moyenne diminue.</div></div></div>
+          <div class="piege-item"><span class="piege-num">#4</span><div><div class="piege-sujet">LSS dépend uniquement de la température</div><div class="piege-explication">La vitesse locale du son ne dépend ni de la pression ni de la densité, <strong>seulement de la température</strong>. LSS = 38,94 × √T (K).</div></div></div>
+          <div class="piege-item"><span class="piege-num">#5</span><div><div class="piege-sujet">Altitude tropopause variable</div><div class="piege-explication">L'altitude ISA standard est <strong>11 km</strong> aux latitudes moyennes. Pôles : ~8 km. Équateur : ~16 km. Une QCM peut piéger avec une altitude hors contexte.</div></div></div>
+          <div class="piege-item"><span class="piege-num">#6</span><div><div class="piege-sujet">Température ISA dans la stratosphère</div><div class="piege-explication">Entre 11 km et ~20 km, la température est <strong>constante à −56,5 °C</strong>, elle n'est pas nulle ni positive. Elle ne recommence à monter qu'au-dessus de ~20 km.</div></div></div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check — 12 questions</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+          <div class="qc-item"><div class="qc-question">Température ISA au MSL ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>+15 °C</strong> (288,15 K)</div></div>
+          <div class="qc-item"><div class="qc-question">Pression ISA au MSL ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>1013,25 hPa</strong></div></div>
+          <div class="qc-item"><div class="qc-question">Gradient thermique ISA troposphère ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>−6,5 °C / 1 000 m</strong> (≈ −2 °C/1 000 ft)</div></div>
+          <div class="qc-item"><div class="qc-question">Altitude de la tropopause (ISA) ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>11 000 m = 36 090 ft</strong> aux latitudes moyennes</div></div>
+          <div class="qc-item"><div class="qc-question">Température à la tropopause ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>−56,5 °C</strong> (216,65 K)</div></div>
+          <div class="qc-item"><div class="qc-question">Pression à la tropopause ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>226,3 hPa</strong></div></div>
+          <div class="qc-item"><div class="qc-question">LSS au MSL ISA ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>661,5 kt</strong> (340,3 m/s)</div></div>
+          <div class="qc-item"><div class="qc-question">LSS dépend de quoi ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer">De la <strong>température uniquement</strong></div></div>
+          <div class="qc-item"><div class="qc-question">Air humide vs air sec : lequel est le plus dense ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>Air sec</strong> — H₂O moins lourd que N₂/O₂</div></div>
+          <div class="qc-item"><div class="qc-question">Gradient dans la stratosphère ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer">Température <strong>augmente</strong> avec l'altitude</div></div>
+          <div class="qc-item"><div class="qc-question">Température ISA à FL200 (6 096 m) ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer">15 − (6,5 × 6,096) ≈ <strong>−24,6 °C</strong></div></div>
+          <div class="qc-item"><div class="qc-question">Gradient pression basse altitude ? <span class="qc-toggle-icon">▼</span></div><div class="qc-answer"><strong>1 hPa ≈ 30 ft ≈ 8–9 m</strong></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation auto -->
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"><!-- Généré automatiquement par main.js --></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

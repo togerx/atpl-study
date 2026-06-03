@@ -1,0 +1,31 @@
+<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrmach" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1F3864"/>
+    </marker>
+  </defs>
+  <!-- Avion (point source) -->
+  <polygon points="120,110 100,100 100,120" fill="#1F3864"/>
+  <text x="75" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#1F3864">Source</text>
+  <!-- Vecteur vitesse -->
+  <line x1="120" y1="110" x2="620" y2="110" stroke="#1F3864" stroke-width="2" marker-end="url(#arrmach)"/>
+  <text x="620" y="105" font-family="Arial" font-size="11" fill="#1F3864">V (M &gt; 1)</text>
+  <!-- Fronts d'onde circulaires (empilés) -->
+  <circle cx="120" cy="110" r="30"  fill="none" stroke="#2E75B6" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <circle cx="200" cy="110" r="55"  fill="none" stroke="#2E75B6" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <circle cx="290" cy="110" r="80"  fill="none" stroke="#2E75B6" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <circle cx="390" cy="110" r="105" fill="none" stroke="#2E75B6" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Lignes du cône de Mach -->
+  <line x1="120" y1="110" x2="580" y2="15"  stroke="#C00000" stroke-width="2.5"/>
+  <line x1="120" y1="110" x2="580" y2="205" stroke="#C00000" stroke-width="2.5"/>
+  <!-- Angle mu -->
+  <path d="M 200,110 A 80,80 0 0,1 163,80" fill="none" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="215" y="90" font-family="Arial" font-size="12" fill="#BF8F00" font-style="italic">μ</text>
+  <!-- Formule -->
+  <rect x="430" y="135" width="180" height="40" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="520" y="152" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1F3864">sin μ = 1 / M</text>
+  <text x="520" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">μ ↓ quand M ↑</text>
+  <!-- Zone de silence -->
+  <text x="120" y="180" text-anchor="middle" font-family="Arial" font-size="10" fill="#C00000">Zone de silence</text>
+  <text x="120" y="192" text-anchor="middle" font-family="Arial" font-size="10" fill="#C00000">(en avant du cône)</text>
+</svg>

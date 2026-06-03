@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH07 — Audition & Équilibre · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH07 · Audition & Équilibre</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH07" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH07</span>
+      </div>
+      <div class="cours-code-badge">FH07</div>
+      <h1 class="cours-title">Audition &amp; Équilibre</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~25 min</span>
+        <span class="cours-meta-item">❓ 28 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ─── 1. INTRODUCTION ─────────────────────────────────────────── -->
+        <h1 id="introduction">1. Introduction</h1>
+        <p>
+          L'oreille est un organe sensoriel double : elle assure à la fois la <strong>perception auditive</strong> et la <strong>détection de l'équilibre</strong>. Dans le contexte aéronautique, ces deux fonctions sont critiques pour la sécurité des vols — la première pour les communications radio, la seconde pour la perception des mouvements et des accélérations de l'appareil.
+        </p>
+        <p>
+          Anatomiquement, l'oreille se divise en trois compartiments fonctionnels : l'oreille externe, l'oreille moyenne et l'oreille interne. Chaque compartiment joue un rôle précis dans la chaîne de traitement du signal sonore, depuis la capture des ondes acoustiques jusqu'à leur transformation en influx nerveux.
+        </p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          L'oreille contient <strong>2 détecteurs sensoriels</strong> : l'ouïe (cochléaire) et l'équilibre (vestibulaire). Elle est divisée en <strong>3 parties</strong> : externe, moyenne, interne.
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/FH07_anatomie_oreille.png" alt="Anatomie de l'oreille — 3 compartiments">
+          <div class="fig-caption">Fig. 1 — Les 3 compartiments de l'oreille et leurs structures clés</div>
+        </div>
+
+        <!-- ─── 2. ANATOMIE ──────────────────────────────────────────────── -->
+        <h1 id="anatomie">2. Anatomie de l'oreille</h1>
+
+        <h2 id="oreille-externe">2.1 Oreille externe</h2>
+        <p>
+          L'oreille externe comprend le <strong>pavillon</strong> (pinna) et le <strong>conduit auditif externe</strong>. Le pavillon joue un rôle de collecteur d'ondes sonores et permet une première localisation directionnelle du son. Le conduit auditif externe achemine les vibrations acoustiques jusqu'au tympan.
+        </p>
+        <p>
+          La frontière entre l'oreille externe et l'oreille moyenne est marquée par le <strong>tympan</strong> (membrane tympanique). C'est une membrane fine et très sensible qui fonctionne comme un <em>capteur de pression différentielle dynamique</em> : elle perçoit les variations de pression sonore et se met à vibrer en conséquence. Toute altération de cette membrane (perforation, cicatrices) réduit sa capacité vibratoire et entraîne une perte auditive.
+        </p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Le tympan est un capteur de <strong>pression différentielle</strong> : la pression doit être équilibrée de chaque côté. C'est la trompe d'Eustache (oreille moyenne) qui assure cet équilibre lors des changements d'altitude.
+        </div>
+
+        <h2 id="oreille-moyenne">2.2 Oreille moyenne</h2>
+        <p>
+          L'oreille moyenne est une cavité osseuse d'un volume de 1 à 2 cm³ creusée dans le rocher de l'os temporal. Elle contient la <strong>chaîne des osselets</strong>, qui transmet mécaniquement les vibrations du tympan vers l'oreille interne. Cette chaîne est composée de trois petits os articulés :
+        </p>
+        <ul>
+          <li>Le <strong>marteau</strong> (malleus) — en contact direct avec le tympan</li>
+          <li>L'<strong>enclume</strong> (incus) — os intermédiaire</li>
+          <li>L'<strong>étrier</strong> (stapes) — appuie sur la fenêtre ovale de l'oreille interne</li>
+        </ul>
+        <p>
+          La chaîne ossiculaire assure non seulement la transmission mécanique des vibrations mais joue aussi un rôle d'adaptation d'impédance entre l'air de l'oreille externe et les liquides de l'oreille interne. Elle amplifie les sons d'un facteur d'environ 22, compensant la perte d'énergie due à la différence de milieux.
+        </p>
+        <p>
+          L'oreille moyenne est mise en communication avec le rhinopharynx par la <strong>trompe d'Eustache</strong>, qui permet l'égalisation des pressions de part et d'autre du tympan. Cette trompe est normalement fermée et ne s'ouvre que lors des mouvements de déglutition, bâillement ou mastication. Son obstruction (par un rhume, par exemple) est à l'origine des barotraumatismes en aviation.
+        </p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La trompe d'Eustache relie l'oreille <strong>moyenne</strong> au rhinopharynx (pas l'oreille externe ni l'oreille interne). Son obstruction → barotraumatisme (aérotite) lors des changements d'altitude.
+        </div>
+
+        <h2 id="oreille-interne">2.3 Oreille interne</h2>
+        <p>
+          L'oreille interne est l'organe le plus complexe du système auditif. Elle est constituée d'un réseau de cavités et de canaux creusés dans l'os pétreux, appelé le <strong>labyrinthe</strong>. Ses structures sont immergées dans un liquide visqueux nommé <strong>endolymphe</strong> et sont entourées d'un liquide périlymphe.
+        </p>
+        <p>
+          Le labyrinthe comprend deux capteurs majeurs :
+        </p>
+        <ul>
+          <li>La <strong>cochlée</strong> (limaçon) — organe de l'audition</li>
+          <li>Le <strong>vestibule</strong> — organe de l'équilibre (canaux semi-circulaires + organes otolithiques)</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La <strong>cochlée</strong> = transforme les vibrations mécaniques en influx nerveux électriques. Ces signaux sont transmis au cerveau par le <strong>nerf auditif</strong>, qui fusionne avec le nerf vestibulaire pour former le <strong>nerf acoustique</strong> (VIII<sup>e</sup> paire crânienne).
+        </div>
+
+        <!-- ─── 3. PERCEPTION AUDITIVE ────────────────────────────────────── -->
+        <h1 id="perception-auditive">3. Perception auditive</h1>
+
+        <h2 id="physiologie-audition">3.1 Physiologie de l'audition</h2>
+        <p>
+          Le son est une vibration mécanique qui se propage dans un milieu élastique (air, liquide, solide). Dans le vide, aucun son ne peut se transmettre. La chaîne de transduction auditive suit la séquence suivante :
+        </p>
+        <p style="background:#EEF4FB;border-left:4px solid #2E75B6;padding:.6rem 1rem;border-radius:4px;font-size:.95rem;color:#1a1a1a">
+          Ondes sonores → Vibration du tympan → Chaîne des osselets → Fenêtre ovale → Mouvements de l'endolymphe dans la cochlée → Deflexion des cellules ciliées de l'organe de Corti → Influx électriques → Nerf auditif → Cerveau
+        </p>
+
+        <h2 id="frequences">3.2 Fréquences et plages d'audition</h2>
+        <p>
+          L'oreille humaine est sensible à une plage de fréquences allant de <strong>20 Hz à 20 000 Hz</strong> (20 kHz). Cette limite supérieure diminue naturellement avec l'âge — c'est la presbyacousie. Les fréquences les plus importantes pour la communication humaine, notamment la voix, se situent entre <strong>500 et 3 000 Hz</strong>.
+        </p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">20 Hz</span>
+            <span class="val-label">Fréquence min audible</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">20 kHz</span>
+            <span class="val-label">Fréquence max audible</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">500–3 000 Hz</span>
+            <span class="val-label">Voix humaine</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La limite supérieure de 20 kHz <strong>diminue avec l'âge</strong>. Un pilote âgé peut avoir une limite haute à 12–14 kHz seulement. Ce phénomène est aggravé par les expositions répétées au bruit (NIHL + presbyacousie).
+        </div>
+
+        <h2 id="intensite-sonore">3.3 Intensité sonore — l'échelle décibel</h2>
+        <p>
+          L'intensité sonore est mesurée en décibels (dB) selon une échelle <strong>logarithmique</strong>. Cette échelle est logarithmique car la perception humaine suit la loi de Weber-Fechner : nous percevons les différences relatives d'intensité, pas les différences absolues.
+        </p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule — Loi logarithmique des dB</div>
+          <strong>Doublement du stimulus physique :</strong>
+          <div class="formula-display">Stimulus × 2 → + 3 dB</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">
+            Exemple : 2 sources émettant chacune 80 dB émettent ensemble <strong>83 dB</strong> (pas 160 dB !)<br>
+            Exemple : 4 sources à 80 dB → 80 + 3 + 3 = <strong>86 dB</strong>
+          </p>
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/FH07_echelle_decibels.png" alt="Échelle des niveaux sonores en dB">
+          <div class="fig-caption">Fig. 2 — Échelle des niveaux sonores de référence avec les limites d'exposition recommandées</div>
+        </div>
+
+        <!-- ─── 4. BRUIT AÉRONAUTIQUE ────────────────────────────────────── -->
+        <h1 id="bruit-aeronautique">4. Bruit aéronautique</h1>
+
+        <h2 id="sources-bruit">4.1 Sources de bruit en aéronautique</h2>
+        <p>
+          En aéronautique, le pilote est exposé à plusieurs sources de bruit simultanées. On distingue principalement :
+        </p>
+        <ul>
+          <li>Le <strong>bruit aérodynamique</strong> — dû au frottement de l'air sur la cellule et les surfaces portantes</li>
+          <li>Le <strong>bruit mécanique</strong> — vibrations du moteur, des systèmes hydrauliques, du train d'atterrissage</li>
+          <li>Le <strong>bruit de climatisation</strong> — systèmes de conditionnement d'air sous pression</li>
+          <li>Le <strong>bruit radio</strong> — parasites et casque : +7 à +12 dB ajoutés au niveau ambiant</li>
+        </ul>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">90–100 dB</span>
+            <span class="val-label">Moteur à pistons / hélice (ex: Transall)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">120–160 dB</span>
+            <span class="val-label">Réacteur (jet engine)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+7 à +12 dB</span>
+            <span class="val-label">Bruit radio / casque</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">140 dB</span>
+            <span class="val-label">Seuil de douleur</span>
+          </div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info — Cartographie du bruit</div>
+          Les cartographies de bruit au sol (données IMASSA-ISL-IMNSSA) montrent que même au ralenti, un réacteur génère 89–114 dBA autour de l'appareil. À pleine puissance, les valeurs atteignent 116–141 dBA selon la position. Le bruit est maximum sur les côtés et en arrière de l'appareil.
+        </div>
+
+        <!-- ─── 5. PERTES AUDITIVES ──────────────────────────────────────── -->
+        <h1 id="pertes-auditives">5. Pertes auditives</h1>
+        <p>
+          Les pertes auditives se classifient en trois grandes catégories selon leur mécanisme :
+        </p>
+
+        <div class="fig-container">
+          <img src="../figures/FH07_pertes_auditives.png" alt="Classification des pertes auditives">
+          <div class="fig-caption">Fig. 3 — Classification des pertes auditives et pathologies associées</div>
+        </div>
+
+        <h2 id="surdite-conductive">5.1 Surdité de transmission (conductive)</h2>
+        <p>
+          La surdité de transmission résulte d'une altération du système mécanique de conduction du son, c'est-à-dire de l'oreille externe ou de l'oreille moyenne. Les causes possibles incluent :
+        </p>
+        <ul>
+          <li>Cicatrisation du tympan (réduction de l'amplitude de vibration)</li>
+          <li>Traumatisme de la chaîne ossiculaire (choc sur l'oreille)</li>
+          <li>Bouchon de cérumen ou tumeur du conduit auditif externe</li>
+          <li>Otite moyenne (infection, épanchement)</li>
+          <li>Otosclérose (raidissement de l'étrier)</li>
+        </ul>
+        <p>
+          Cette forme de surdité est souvent <strong>partiellement réversible</strong> par traitement médical ou chirurgical (microchirurgie ossiculaire).
+        </p>
+
+        <h2 id="nihl">5.2 Surdité due au bruit — NIHL</h2>
+        <p>
+          La <em>Noise Induced Hearing Loss</em> (NIHL) est causée par une exposition prolongée ou répétée à des niveaux sonores excessifs. Le mécanisme est la destruction mécanique des <strong>cellules ciliées de la cochlée</strong> (organe de Corti), qui sont des cellules <em>non régénérables</em> chez l'adulte. Cette destruction est donc <strong>irréversible</strong>.
+        </p>
+        <p>
+          La perte auditive induite par le bruit affecte en priorité les <strong>hautes fréquences</strong> (notamment 4 000 Hz), car les cellules ciliées correspondant aux sons aigus sont situées à la base de la cochlée, zone directement exposée aux vibrations les plus intenses.
+        </p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La NIHL commence à se manifester avec une exposition continue à plus de <strong>90 dB</strong>. Elle affecte d'abord les <strong>hautes fréquences</strong>. Les cellules ciliées de la cochlée sont <strong>irremplaçables</strong> une fois détruites.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Les sons les plus dangereux pour l'oreille sont les sons de <strong>haute fréquence</strong> (aigus), pas les graves. Un bruit grave très fort est moins cochléotoxique qu'un bruit aigu de même intensité.
+        </div>
+
+        <h2 id="presbyacousie">5.3 Presbyacousie</h2>
+        <p>
+          La presbyacousie est la perte auditive liée au <strong>vieillissement normal</strong> de l'oreille interne. Elle est progressive, bilatérale et symétrique. Elle touche en premier lieu les hautes fréquences, entraînant une difficulté à percevoir les consonnes aiguës de la parole (s, f, t, ch).
+        </p>
+        <p>
+          En aviation, la combinaison presbyacousie + NIHL peut atteindre un niveau d'atteinte suffisant pour entraîner la <strong>perte de la licence de pilote</strong>. L'audiogramme réalisé lors des visites médicales NAVIGANT vérifie précisément la conservation des seuils auditifs sur les fréquences importantes pour la communication.
+        </p>
+
+        <h2 id="autres-pathologies">5.4 Autres pathologies auditives</h2>
+
+        <p>
+          <strong>Barotraumatisme (aérotite) :</strong> Lésion du tympan ou de l'oreille moyenne due à un déséquilibre de pression entre l'oreille moyenne et le milieu ambiant, consécutif à l'obstruction de la trompe d'Eustache (rhume, congestion). Se produit lors des phases de descente rapide.
+        </p>
+        <p>
+          <strong>Acouphènes (tinnitus) :</strong> Perception de sons sans stimulation sonore extérieure (bourdonnements, sifflements). Peuvent être intermittents ou permanents. Souvent associés à une NIHL ou une presbyacousie. Leur présence peut être disqualifiante pour le maintien d'une licence.
+        </p>
+        <p>
+          <strong>Surdité soudaine :</strong> Perte brutale de l'audition consécutive à un traumatisme acoustique violent ou une variation de pression soudaine. Mécanisme : le fluide incompressible de l'oreille interne transmet l'onde de choc directement aux cellules ciliées sans amortissement.
+        </p>
+
+        <!-- ─── 6. PRÉVENTION ────────────────────────────────────────────── -->
+        <h1 id="prevention">6. Prévention des pertes auditives</h1>
+
+        <h2 id="effets-bruit">6.1 Effets du bruit sur la santé</h2>
+        <p>
+          L'exposition au bruit génère, au-delà des pertes auditives, un ensemble de troubles physiques et cognitifs impactant directement les performances du pilote :
+        </p>
+        <ul>
+          <li>Fatigue générale et nervosité accrue</li>
+          <li>Migraines et céphalées</li>
+          <li>Troubles de l'attention et de la concentration</li>
+          <li>Difficultés de mémorisation</li>
+          <li>Troubles du sommeil (récupération altérée)</li>
+          <li>Lésions auditives temporaires ou permanentes</li>
+        </ul>
+
+        <h2 id="limites-exposition">6.2 Valeurs limites d'exposition</h2>
+
+        <div class="box box-formule">
+          <div class="box-label">📋 Référence — Valeurs limites d'exposition au bruit</div>
+          <table>
+            <thead>
+              <tr><th>Niveau sonore</th><th>Durée maximale d'exposition</th><th>Statut</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>≤ 87 dB</td><td>8 heures</td><td style="color:#548235">✅ Acceptable journée complète</td></tr>
+              <tr><td>&gt; 90 dB</td><td>8 heures max</td><td style="color:#BF8F00">⚠️ Limite recommandée</td></tr>
+              <tr><td>&gt; 100 dB</td><td>2 heures max</td><td style="color:#C00000">❌ Exposition limitée</td></tr>
+              <tr><td>&gt; 110 dB</td><td>30 minutes max</td><td style="color:#C00000">❌ Exposition très limitée</td></tr>
+              <tr><td>&gt; 120 dB</td><td>Aucune exposition</td><td style="color:#C00000">⛔ Danger immédiat</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="moyens-protection">6.3 Moyens de protection</h2>
+        <p>
+          La protection contre le bruit peut être collective ou individuelle.
+        </p>
+        <p>
+          La <strong>protection collective</strong> intervient dès la conception des appareils (insonorisation de la cabine, isolation phonique des moteurs, traitement acoustique des postes de travail).
+        </p>
+        <p>
+          La <strong>protection individuelle</strong> comprend la sélection et la surveillance médicale, ainsi que le port d'équipements de protection individuelle (EPI) :
+        </p>
+
+        <div class="fig-container">
+          <img src="../figures/FH07_protections_auditives.png" alt="Comparatif des protections auditives">
+          <div class="fig-caption">Fig. 4 — Atténuation comparée des différents types de protection auditive</div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">−15 dB</span>
+            <span class="val-label">Bouchons musiciens</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−20 dB</span>
+            <span class="val-label">Bouchons silicone</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−27 dB</span>
+            <span class="val-label">Bouchons cire</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−35 dB</span>
+            <span class="val-label">Bouchons mousse</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−30 dB</span>
+            <span class="val-label">Casque anti-bruit passif</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">ANR</span>
+            <span class="val-label">Réduction active du bruit</span>
+          </div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ ANR — Active Noise Reduction</div>
+          Les casques ANR (Active Noise Reduction) utilisent un microphone qui capte le bruit ambiant et génèrent un signal en opposition de phase pour l'annuler. Très efficaces sur les basses fréquences (bruit de moteur), ils permettent une atténuation globale supérieure aux bouchons foam seuls, tout en maintenant une bonne intelligibilité des communications.
+        </div>
+
+        <h2 id="audition-hypoxie">6.4 Audition et hypoxie</h2>
+        <p>
+          Un point crucial en aviation d'altitude : l'ouïe est l'un des sens les plus <strong>résistants à l'hypoxie</strong>. Lors d'une dépressurisation ou d'un manque d'oxygène, la vision se dégrade et disparaît avant que l'audition ne soit affectée. L'ouïe constitue donc le <strong>dernier moyen de communication</strong> disponible avec un pilote en état d'hypoxie avancée.
+        </p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          En hypoxie : <strong>la vision est perdue avant l'audition</strong>. L'ouïe est le dernier capteur sensoriel opérationnel. Conséquence opérationnelle : les communications radio vocales restent possibles plus longtemps que la vue instrumentale.
+        </div>
+
+        <!-- ─── 7. ÉQUILIBRE ──────────────────────────────────────────────── -->
+        <h1 id="equilibre">7. Système vestibulaire et équilibre</h1>
+
+        <h2 id="canaux-semi-circulaires">7.1 Canaux semi-circulaires</h2>
+        <p>
+          L'oreille interne contient <strong>3 canaux semi-circulaires</strong> remplis d'endolymphe et orientés selon des plans orthogonaux (à 90° les uns des autres). Chaque canal correspond à un axe de rotation de la tête : antérieur (tangage), postérieur (roulis) et latéral (lacet).
+        </p>
+        <p>
+          Le mécanisme de détection est le suivant : lors d'une rotation angulaire de la tête, l'endolymphe — par son inertie — reste en place alors que les canaux bougent avec la tête. Ce mouvement relatif défléchit la <strong>cupule</strong> (membrane gélatineuse) située dans chaque ampoule (ampulla). Les cils des cellules sensorielles (ciliées) de la cupule se courbent, générant des influx électriques transmis au cerveau.
+        </p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Les canaux semi-circulaires détectent les <strong>accélérations angulaires</strong> (rotations). Ils ne peuvent pas détecter une rotation constante : après 20–30 secondes, l'endolymphe acquiert la vitesse du canal et la cupule revient à sa position neutre → illusion de retour à l'horizontale (illusion somatogyrale).
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Illusion somatogyrale</div>
+          Si un pilote entre en virage progressif (sous le seuil de perception angulaire), le vestibule ne détecte pas la rotation. À la sortie du virage, il perçoit une rotation dans le sens opposé et compense, créant un danger de CFIT. Solution : <strong>faire confiance aux instruments</strong>, pas aux sensations.
+        </div>
+
+        <h2 id="organes-otolithiques">7.2 Organes otolithiques — utricule et saccule</h2>
+        <p>
+          Les organes otolithiques sont des structures situées à la base des canaux semi-circulaires, dans le vestibule. Ils contiennent des <strong>otolithes</strong> : de petits cristaux de carbonate de calcium (CaCO₃) insérés dans une membrane gélatineuse (otolithique) tapissée de cellules ciliées. Leur densité est supérieure à celle de l'endolymphe, ce qui les rend sensibles à la gravité et aux accélérations linéaires.
+        </p>
+        <p>
+          On distingue deux organes otolithiques selon leur orientation et leur spécialité :
+        </p>
+        <ul>
+          <li>L'<strong>utricule</strong> — plan horizontal : détecte les accélérations linéaires horizontales (tangage/roulis) et la direction du vecteur gravité dans le plan horizontal</li>
+          <li>Le <strong>saccule</strong> — plan vertical : détecte les accélérations linéaires verticales (montée/descente)</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/FH07_systeme_vestibulaire.png" alt="Système vestibulaire : canaux et otolithes">
+          <div class="fig-caption">Fig. 5 — Système vestibulaire : canaux semi-circulaires (accélérations angulaires) et organes otolithiques (accélérations linéaires)</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Illusion somatogravique</div>
+          Les otolithes ne distinguent pas l'<strong>accélération linéaire</strong> d'un changement d'<strong>inclinaison</strong>. Une forte accélération au décollage est interprétée comme une cabré de l'avion, poussant le pilote à piquer pour « corriger ». Ce phénomène a causé des accidents. Solution : ignorer la sensation, se fier aux instruments de vol.
+        </div>
+
+        <!-- ─── 8. PROPRIOCEPTION ─────────────────────────────────────────── -->
+        <h1 id="proprioception">8. Perception multisensorielle de l'espace</h1>
+
+        <h2 id="seat-of-pants">8.1 Récepteurs proprioceptifs — le « siège-culotte »</h2>
+        <p>
+          La perception de l'équilibre et de la position dans l'espace ne repose pas uniquement sur le vestibule. Elle intègre également les informations des <strong>récepteurs proprioceptifs somatiques</strong> (appelés parfois <em>seat-of-the-pants sense</em>) répartis dans tout le corps :
+        </p>
+        <ul>
+          <li>Fuseaux neuromusculaires dans les <strong>muscles</strong></li>
+          <li>Organes de Golgi dans les <strong>tendons</strong></li>
+          <li>Récepteurs articulaires dans les <strong>articulations</strong></li>
+          <li>Mécanorécepteurs dans la <strong>peau</strong> (pression, déformation)</li>
+        </ul>
+        <p>
+          Ces récepteurs informent le cerveau sur la posture du corps, les forces qu'il subit et la relation des membres entre eux. En aviation, la pression ressentie sur le siège du pilote donne des informations sur les accélérations verticales (facteur de charge). Cependant, comme les otolithes, ces récepteurs peuvent être trompés par les forces inertielles et induire des illusions spatiales.
+        </p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Synthèse des capteurs d'équilibre</div>
+          Le cerveau intègre en permanence trois types d'informations sensorielles pour établir une représentation spatiale :
+          <ul style="margin-top:.5rem">
+            <li>🌀 <strong>Vestibulaire angulaire</strong> — canaux semi-circulaires (rotations)</li>
+            <li>↕️ <strong>Vestibulaire linéaire</strong> — otolithes (gravité + accélérations linéaires)</li>
+            <li>💪 <strong>Proprioceptif</strong> — muscles, tendons, peau (forces et posture)</li>
+            <li>👁️ <strong>Visuel</strong> — horizon naturel ou instruments</li>
+          </ul>
+          En cas de conflit entre ces sources, le cerveau tend à privilégier les informations <strong>visuelles</strong> → importance capitale des instruments de vol.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">20 Hz – 20 kHz</span>
+            <span class="val-label">Plage auditive humaine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">500–3 000 Hz</span>
+            <span class="val-label">Fréquences voix humaine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">×2 → +3 dB</span>
+            <span class="val-label">Règle logarithmique dB</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–2 cm³</span>
+            <span class="val-label">Volume oreille moyenne</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">87 dB / 8h</span>
+            <span class="val-label">Limite maximale expo continue</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">100 dB / 2h</span>
+            <span class="val-label">Expo max 2 heures</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">110 dB / 30 min</span>
+            <span class="val-label">Expo max 30 minutes</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 120 dB</span>
+            <span class="val-label">Aucune exposition recommandée</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">90–100 dB</span>
+            <span class="val-label">Moteur piston / hélice</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">120–160 dB</span>
+            <span class="val-label">Réacteur / jet engine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−35 dB</span>
+            <span class="val-label">Bouchons mousse (meilleure atténuation passive)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 canaux</span>
+            <span class="val-label">Semi-circulaires à 90° entre eux</span>
+          </div>
+        </div>
+
+        <h1 id="recap-retenir">Rappel — Points À Retenir</h1>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Anatomie</div>
+          3 parties : externe (pavillon + conduit + tympan) / moyenne (osselets : marteau, enclume, étrier + trompe Eustache) / interne (cochlée + vestibule, immergés dans endolymphe).
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Cochlée</div>
+          Transforme les vibrations mécaniques en influx nerveux. Cellules ciliées non régénérables. Nerf auditif → nerf acoustique (VIII<sup>e</sup>).
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ NIHL</div>
+          Irréversible. Hautes fréquences en premier. Seuil de risque : > 90 dB continu.
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Canaux semi-circulaires</div>
+          Détectent accélérations angulaires uniquement. Rotation constante → non détectée après 20–30 s (cupule revenue à neutre → illusion somatogyrale).
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Otolithes</div>
+          Utricule (horizontal, accélérations linéaires horizontales) + Saccule (vertical, accélérations linéaires verticales). Confondent accélération linéaire et inclinaison → illusion somatogravique.
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Audition et hypoxie</div>
+          L'audition est résistante à l'hypoxie. Vision perdue avant audition → last resort communication avec un pilote hypoxique.
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Calcul dB logarithmique</div>
+              <div class="piege-explication">2 sources de 80 dB = 83 dB (pas 160 dB). Doublement du stimulus physique = +3 dB seulement. Ne jamais additionner les dB directement.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Fréquences dangereuses pour la cochlée</div>
+              <div class="piege-explication">Les sons aigus (hautes fréquences) sont les plus cochléotoxiques, pas les sons graves. La NIHL touche d'abord 4 000 Hz.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Trompe d'Eustache — localisation</div>
+              <div class="piege-explication">Relie l'oreille MOYENNE (pas externe, pas interne) au rhinopharynx. Son obstruction → barotraumatisme à la descente.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Rotation constante non détectée</div>
+              <div class="piege-explication">Les canaux semi-circulaires ne détectent QUE les accélérations angulaires. Après ~20–30 s de virage constant, l'endolymphe suit le canal → signal nul → le pilote pense voler droit (illusion somatogyrale).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Illusion somatogravique au décollage</div>
+              <div class="piege-explication">L'accélération linéaire au décollage est interprétée comme un cabré de l'avion par les otolithes. Réflexe dangereux : piquer pour compenser → CFIT. Toujours vérifier les instruments.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">NIHL est irréversible</div>
+              <div class="piege-explication">Contrairement à la surdité de transmission (souvent chirurgicalement corrigeable), la destruction des cellules ciliées de la cochlée est définitive. Prévention = seule solution.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Presbyacousie + NIHL = perte de licence</div>
+              <div class="piege-explication">Chacune seule peut rester en dessous du seuil disqualifiant, mais leur combinaison peut atteindre les critères de perte de licence NAVIGANT.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Audition et hypoxie</div>
+              <div class="piege-explication">L'audition résiste à l'hypoxie mieux que la vision. Si un pilote est en hypoxie sévère et ne voit plus ses instruments, on peut encore lui parler à la radio.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Utricule vs Saccule</div>
+              <div class="piege-explication">Utricule = accélérations HORIZONtales. Saccule = accélérations VERTIcales. Mémo : U comme hUrizontal, S comme Supérieur/vertical.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Bouchons mousse vs casque passif</div>
+              <div class="piege-explication">Les bouchons mousse (−35 dB) atténuent davantage que les casques passifs (−30 dB). Mais les casques restent préférés en aviation pour leur compatibilité avec les communications radio.</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les 3 parties de l'oreille ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Externe</strong> (pavillon, conduit, tympan) — <strong>Moyenne</strong> (osselets : marteau, enclume, étrier + trompe Eustache) — <strong>Interne</strong> (cochlée + vestibule).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la plage de fréquences audibles de l'homme ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>20 Hz à 20 000 Hz</strong>. La voix humaine est entre 500 et 3 000 Hz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">2 sources émettent chacune 80 dB. Quel est le niveau combiné ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>83 dB</strong> — doublement du stimulus = +3 dB (règle logarithmique).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le rôle de la trompe d'Eustache ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Équilibrer la pression entre l'<strong>oreille moyenne</strong> et le rhinopharynx. Son obstruction cause les barotraumatismes (aérotite).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels osselets composent la chaîne de l'oreille moyenne ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>marteau</strong> (malleus), l'<strong>enclume</strong> (incus) et l'<strong>étrier</strong> (stapes).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la NIHL ? Pourquoi est-elle dangereuse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><em>Noise Induced Hearing Loss</em> — perte auditive due au bruit. Dangereuse car elle détruit les <strong>cellules ciliées de la cochlée</strong>, qui sont <strong>irremplaçables</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée maximale d'exposition recommandée à 100 dB ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 heures</strong> maximum. Au-delà de 120 dB : aucune exposition recommandée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles fréquences sont atteintes en premier par la NIHL et la presbyacousie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les <strong>hautes fréquences</strong> (sons aigus), notamment vers 4 000 Hz pour la NIHL.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le niveau sonore d'un moteur à réaction ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>120 à 160 dB</strong>. À pleine puissance, les zones immédiates latérales et arrière atteignent 130–141 dBA.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment fonctionne un canal semi-circulaire ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La rotation de la tête déplace le canal mais l'<strong>endolymphe reste en place par inertie</strong> → défléchit la cupule → stimule les cellules ciliées → signal nerveux d'accélération angulaire.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'illusion somatogyrale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Après un virage constant de >20–30 s, l'endolymphe suit le mouvement et la cupule revient à neutre. Le pilote perçoit faussement qu'il vole droit, puis ressent une rotation inverse à la sortie du virage.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'illusion somatogravique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les <strong>otolithes confondent accélération linéaire et inclinaison</strong>. Exemple classique : l'accélération au décollage est perçue comme un cabré → tendance à piquer → danger d'accident.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre utricule et saccule ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Utricule</strong> : plan horizontal, détecte les accélérations linéaires <em>horizontales</em>. <strong>Saccule</strong> : plan vertical, détecte les accélérations linéaires <em>verticales</em>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle protection auditive offre la meilleure atténuation passive ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les <strong>bouchons en mousse</strong> : −35 dB. Les bouchons en cire font −27 dB, silicone −20 dB, le casque passif −30 dB.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi l'audition est-elle importante en hypoxie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'audition résiste mieux à l'hypoxie que la vision. Elle constitue le <strong>dernier moyen de communication</strong> disponible avec un pilote hypoxique (la vision est déjà perdue).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les 3 catégories de perte auditive ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Conductive</strong> (oreille ext/moy, souvent réversible) — <strong>NIHL</strong> (cochléaire, irréversible) — <strong>Presbyacousie</strong> (vieillissement, progressive). NIHL + presbyacousie peuvent entraîner la perte de licence.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Combien de canaux semi-circulaires y a-t-il et comment sont-ils orientés ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>3 canaux</strong> orientés à <strong>90° les uns des autres</strong>, couvrant ainsi les 3 plans de rotation de la tête.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la presbyacousie ? Quand est-elle disqualifiante ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Perte auditive liée au <strong>vieillissement</strong>, progressive, touchant les hautes fréquences. Devient disqualifiante pour la licence quand elle se cumule avec la NIHL jusqu'à dépasser les seuils médicaux NAVIGANT.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un barotraumatisme de l'oreille ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Lésion de l'oreille moyenne due à l'obstruction de la <strong>trompe d'Eustache</strong> lors d'une variation rapide de pression (descente). Aussi appelé <em>aérotite</em>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel liquide remplit les structures de l'oreille interne ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'<strong>endolymphe</strong> (dans les canaux semi-circulaires et les organes sensoriels). L'oreille interne est également entourée de <em>périlymphe</em>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel nerf transporte les informations auditives au cerveau ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>nerf auditif</strong> (depuis la cochlée), qui fusionne avec le nerf vestibulaire pour former le <strong>nerf acoustique</strong> (VIII<sup>e</sup> paire crânienne).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la proprioception et quel est son rôle dans l'équilibre ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Ensemble des récepteurs dans les <strong>muscles, tendons, articulations et peau</strong> qui informent le cerveau sur la posture et les forces subies. Contribuent à la perception spatiale, mais peuvent être trompés comme les capteurs vestibulaires.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la composition des otolithes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Cristaux de <strong>carbonate de calcium (CaCO₃)</strong> insérés dans une membrane gélatineuse, reposant sur des cellules ciliées. Leur densité supérieure à l'endolymphe les rend sensibles à la gravité.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la surdité de perception ? Donnez un exemple. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Surdité due à une atteinte de l'<strong>oreille interne ou des nerfs</strong>. Exemples : NIHL (cellules ciliées), surdité soudaine (choc acoustique), dégénérescence du nerf auditif.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le bruit radio aggrave-t-il l'exposition sonore du pilote ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le casque radio ajoute <strong>+7 à +12 dB</strong> au niveau sonore déjà existant dans le cockpit, ce qui peut dépasser les seuils de sécurité même si le bruit ambiant seul était tolérable.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle fréquence l'audiogramme est-il réalisé pour les pilotes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Lors des <strong>visites médicales NAVIGANT</strong> au CEMPN (centre médical navigant), de façon systématique. L'audiogramme vérifie la perception en fréquence et en intensité.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le mécanisme de la surdité soudaine ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un son violent ou une variation brusque de pression génère une onde transmise <strong>directement sans atténuation</strong> à l'oreille interne via son fluide incompressible, détruisant les cellules ciliées de la cochlée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez les 4 types de récepteurs proprioceptifs impliqués dans l'équilibre. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Fuseaux neuromusculaires (<strong>muscles</strong>), organes de Golgi (<strong>tendons</strong>), récepteurs (<strong>articulaires</strong>), mécanorécepteurs de la <strong>peau</strong>.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

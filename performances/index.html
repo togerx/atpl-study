@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performances — ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-matiere-id="performances">
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle" id="topbar-subtitle">Performances</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+  <main class="main" data-matiere-id="performances">
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <span id="matiere-title">Performances</span>
+      </div>
+      <h1 class="cours-title" style="border:none;margin-top:.25rem" id="matiere-title">Performances</h1>
+      <p style="color:var(--text-muted);font-size:.9rem;margin-top:.5rem" id="matiere-desc"></p>
+    </div>
+    <div id="cours-list" class="cours-list-container"></div>
+  </main>
+</div>
+<script src="../main.js"></script>
+</body>
+</html>

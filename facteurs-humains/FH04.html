@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH04 — DCS &amp; Barotraumatismes · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH04 · DCS &amp; Barotraumatismes</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH04" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH04</span>
+      </div>
+      <div class="cours-code-badge">FH04</div>
+      <h1 class="cours-title">DCS &amp; Barotraumatismes</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~30 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ─── 1. INTRODUCTION ─────────────────────────────────────── -->
+        <h1 id="introduction">1. Introduction — Gaz dans l'organisme</h1>
+        <p>
+          L'organisme humain contient environ <strong>10 dm³ de gaz</strong> répartis sous trois formes physico-chimiques distinctes, chacune avec ses propres conséquences pathologiques en aviation :
+        </p>
+        <ul>
+          <li><strong>Forme libre</strong> — dans les poumons, le tube digestif, les sinus, l'oreille moyenne → risque de <em>barotraumatisme</em> (loi de Boyle-Mariotte)</li>
+          <li><strong>Forme dissoute</strong> — principalement l'azote (N₂) dans les tissus → risque de <em>maladie de décompression</em> (loi de Henry)</li>
+          <li><strong>Forme combinée</strong> — l'oxygène lié à l'hémoglobine → pas de risque barique direct</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Forme libre → Boyle-Mariotte → Barotraumatisme</strong> (expansion/contraction des gaz dans les cavités)<br>
+          <strong>Forme dissoute → Henry → DCS</strong> (bullage de l'azote dissous lors de la dépressurisation)
+        </div>
+
+        <!-- ─── 2. DCS ────────────────────────────────────────────────── -->
+        <h1 id="dcs">2. Maladie de décompression (DCS)</h1>
+
+        <h2 id="loi-henry">2.1 Loi de Henry</h2>
+        <p>
+          La loi de Henry énonce que <strong>la quantité de gaz dissoute dans un liquide est proportionnelle à la pression partielle de ce gaz</strong> dans la phase gazeuse en contact avec ce liquide. En pratique : plus la pression ambiante est élevée, plus l'azote se dissout dans les tissus. Inversement, si la pression chute brutalement, l'azote en excès sort de solution et forme des bulles.
+        </p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Henry</div>
+          <strong>Quantité dissoute ∝ Pression partielle du gaz</strong>
+          <div class="formula-display">C = k<sub>H</sub> × P</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec C = concentration dissoute, k<sub>H</sub> = constante de Henry, P = pression partielle du gaz</p>
+        </div>
+
+        <h2 id="mecanisme-dcs">2.2 Mécanisme de la DCS</h2>
+        <p>
+          L'organisme contient environ <strong>1 dm³ d'azote dissous</strong>. Ce gaz se stocke préférentiellement dans les graisses, où il est <strong>6 fois plus soluble que dans l'eau</strong>. De ce fait, <strong>70 % de l'azote corporel est stocké dans les tissus adipeux</strong>.
+        </p>
+        <p>
+          Lors d'une dépressurisation (montée en altitude non pressurisée ou perte de pressurisation), la pression partielle d'azote chute. L'azote dissous devient en sursaturation et tend à sortir de solution. S'il sort trop rapidement, il forme des <strong>bulles gazeuses dans le sang et les tissus</strong> : c'est la DCS.
+        </p>
+
+        <div class="fig-container">
+          <img src="../figures/FH04_mecanisme_dcs.png" alt="Mécanisme DCS — Loi de Henry">
+          <div class="fig-caption">Fig. 1 — Mécanisme de la DCS : saturation normale, sursaturation à l'altitude, formation de bulles de N₂</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Mécanisme DCS</div>
+          Chute de pression → azote dissous sursaturé → <strong>bulles de N₂</strong> dans le sang et les tissus → DCS.<br>
+          Analogie : bouteille de soda ouverte brutalement → les bulles de CO₂ sortent de solution.
+        </div>
+
+        <h2 id="symptomes-dcs">2.3 Symptômes de la DCS</h2>
+        <p>
+          Les symptômes de la DCS se classifient en trois catégories selon leur gravité et leur délai d'apparition :
+        </p>
+
+        <div class="fig-container">
+          <img src="../figures/FH04_symptomes_dcs.png" alt="Classification des symptômes DCS">
+          <div class="fig-caption">Fig. 2 — Classification des symptômes DCS (légers → sévères → secondaires)</div>
+        </div>
+
+        <p><strong>Symptômes légers :</strong></p>
+        <ul>
+          <li><strong>Bends</strong> — douleurs articulaires (genoux, hanches, épaules). Signe le plus fréquent en aviation</li>
+          <li><strong>Creeps</strong> — troubles cutanés (prurit, marbrures, sensation de fourmillements ou de puces : "fleas and sheep")</li>
+        </ul>
+        <p><strong>Symptômes sévères</strong> (rares en aviation civile) :</p>
+        <ul>
+          <li><strong>Chokes</strong> — douleur thoracique, toux sèche, dyspnée, voire insuffisance cardiaque (bulles dans la circulation pulmonaire)</li>
+          <li><strong>Staggers</strong> — atteinte neurologique : paralysie, troubles visuels, confusion, troubles vestibulaires</li>
+        </ul>
+        <p><strong>Symptômes secondaires :</strong></p>
+        <ul>
+          <li>Survenant des <strong>heures après</strong> les symptômes primaires, sous forme d'atteinte neurologique sévère comparable à un accident vasculaire cérébral (AVC). Peuvent apparaître jusqu'à <strong>24 heures après</strong> l'exposition.</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Délai des symptômes secondaires</div>
+          Les symptômes de DCS peuvent survenir jusqu'à <strong>24 heures après</strong> l'exposition. Un pilote qui "se sent bien" après une dépressurisation n'est pas hors de danger. Aucun vol pendant au moins <strong>24 heures</strong> après tout épisode.
+        </div>
+
+        <h2 id="facteurs-risque-dcs">2.4 Facteurs de risque DCS</h2>
+
+        <h3 id="facteurs-environnementaux">2.4.1 Facteurs environnementaux</h3>
+
+        <div class="fig-container">
+          <img src="../figures/FH04_risque_altitude_dcs.png" alt="Niveaux de risque DCS selon l'altitude">
+          <div class="fig-caption">Fig. 3 — Niveaux de risque DCS selon l'altitude et la pression de cabine</div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">&lt; 14 000 ft</span>
+            <span class="val-label">Aucun risque DCS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">14 000–25 000 ft</span>
+            <span class="val-label">Risque faible</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">25 000–30 000 ft</span>
+            <span class="val-label">Risque modéré</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 30 000 ft</span>
+            <span class="val-label">Risque élevé</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 1 m/s</span>
+            <span class="val-label">Vitesse de montée à risque (≥ 200 ft/min)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">P/2</span>
+            <span class="val-label">Chute de pression critique (ex: 8000ft → 25000ft)</span>
+          </div>
+        </div>
+
+        <p>
+          La règle du <strong>P/2</strong> est importante : le risque DCS apparaît significativement lorsque la pression ambiante chute de moitié. Une cabine maintenue à 8 000 ft (812 hPa) génère un risque si l'altitude réelle dépasse 25 000 ft (406 hPa = P/2).
+        </p>
+
+        <h3 id="facteurs-individuels">2.4.2 Facteurs de risque individuels</h3>
+        <ul>
+          <li><strong>Âge &gt; 40 ans</strong> — le risque augmente drastiquement</li>
+          <li><strong>Obésité +++</strong> — tissu adipeux abondant = plus d'azote stocké</li>
+          <li><strong>Plongée sous-marine +++</strong> — la plongée avec air comprimé augmente la charge en azote dissous</li>
+          <li>Effort musculaire intense (augmente la vascularisation et la libération de bulles)</li>
+          <li>Hypoxie concomitante</li>
+          <li>Écarts thermiques importants (froid)</li>
+          <li>Répétition des expositions à l'altitude</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Plongée et vol</div>
+          Après plongée avec <strong>air comprimé</strong> : ne pas voler avant <strong>12 heures</strong>.<br>
+          Après plongée à moins de <strong>10 mètres</strong> (même avec air comprimé) : ne pas voler avant <strong>24 heures</strong>.<br>
+          La plongée augmente la charge en azote dissous, aggravant le risque DCS en altitude.
+        </div>
+
+        <h2 id="action-depressurisation">2.5 Procédure en cas de perte de pressurisation</h2>
+        <p>La séquence à exécuter sans délai :</p>
+        <ol style="padding-left:1.5rem;line-height:2.2">
+          <li>Mettre le <strong>masque à oxygène</strong> immédiatement</li>
+          <li>Effectuer une <strong>descente d'urgence</strong>, atterrir dès que possible</li>
+          <li>Consulter le <strong>médecin navigant</strong></li>
+          <li><strong>Aucun vol</strong> pendant au minimum <strong>24 heures</strong></li>
+          <li>Surveiller l'apparition de symptômes DCS jusqu'à 24 heures après</li>
+        </ol>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Pressurisation de secours</div>
+          Objectif pressurisation : maintenir la cabine à moins de <strong>8 000 ft</strong> d'altitude.<br>
+          En cas de dépressurisation → <strong>descente d'urgence en 3 minutes</strong> sous 25 000 ft.
+        </div>
+
+        <h2 id="prevention-dcs">2.6 Prévention de la DCS</h2>
+        <ul>
+          <li>Pressurisation cabine (moyen principal)</li>
+          <li>Procédures de descente d'urgence si dépressurisation accidentelle</li>
+          <li><strong>Pré-oxygénation</strong> (pré-breathing) avant exposition à très haute altitude (vols non pressurisés, saut en parachute à haute altitude, EVA spatiales) : respirer de l'O₂ pur élimine progressivement l'azote dissous</li>
+          <li>Respecter les délais après plongée (12h / 24h)</li>
+        </ul>
+
+        <!-- ─── 3. BAROTRAUMATISMES ───────────────────────────────────── -->
+        <h1 id="barotraumatismes">3. Barotraumatismes</h1>
+
+        <h2 id="loi-boyle-mariotte">3.1 Loi de Boyle-Mariotte</h2>
+        <p>
+          La loi de Boyle-Mariotte stipule qu'à <strong>température constante</strong>, le volume d'un gaz est inversement proportionnel à sa pression. Plus la pression est grande, plus le volume est petit — et inversement.
+        </p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Boyle-Mariotte</div>
+          <strong>Isotherme :</strong>
+          <div class="formula-display">P × V = k &nbsp;&nbsp;(constante)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">
+            <strong>P₁ × V₁ = P₂ × V₂</strong><br>
+            Exemple : 4 × 5 = 8 × 2,5 → si P double, V est divisé par 2<br>
+            En altitude : P chute → V augmente → gaz emprisonnés dans les cavités se <strong>dilatent</strong>
+          </p>
+        </div>
+
+        <h2 id="mecanisme-barotraumatisme">3.2 Mécanisme général</h2>
+        <p>
+          Un barotraumatisme est une lésion causée par la dilatation ou la contraction de gaz emprisonné dans les <strong>cavités closes de l'organisme</strong> (oreille moyenne, sinus, dents, intestins, poumons) lors des changements de pression ambiante. Les conséquences vont d'un simple inconfort à des douleurs extrêmes.
+        </p>
+        <p>
+          En aviation, les barotraumatismes sont particulièrement fréquents lors des <strong>phases de montée et de descente</strong>, et préférentiellement aux <strong>basses altitudes</strong> où les variations de pression par unité d'altitude sont les plus importantes (gradient de pression maximal entre 0 et 5 000 ft).
+        </p>
+
+        <div class="fig-container">
+          <img src="../figures/FH04_boyle_mariotte_barotraumatismes.png" alt="Loi de Boyle-Mariotte et types de barotraumatismes">
+          <div class="fig-caption">Fig. 4 — Loi de Boyle-Mariotte et les 6 types de barotraumatismes en aviation</div>
+        </div>
+
+        <h2 id="barotraumatisme-oreille-moyenne">3.3 Barotraumatisme de l'oreille moyenne (Aérotite)</h2>
+
+        <h3 id="mecanisme-oreille">3.3.1 Mécanisme</h3>
+        <p>
+          En conditions normales, la pression de l'oreille externe (P<sub>OE</sub>) est égale à la pression de l'oreille moyenne (P<sub>OM</sub>), grâce à l'ouverture intermittente de la <strong>trompe d'Eustache</strong> lors des mouvements de déglutition.
+        </p>
+
+        <div class="fig-container">
+          <img src="../figures/FH04_mecanisme_oreille.png" alt="Mécanisme de l'oreille moyenne lors des phases de vol">
+          <div class="fig-caption">Fig. 5 — Mécanisme d'équilibration lors de la montée (facile) et de la descente (difficile)</div>
+        </div>
+
+        <p>
+          <strong>Lors de la montée :</strong> P<sub>OE</sub> &lt; P<sub>OM</sub> — la surpression interne pousse naturellement l'air vers l'extérieur via la trompe : équilibration facile et passive.
+        </p>
+        <p>
+          <strong>Lors de la descente :</strong> P<sub>OE</sub> &gt; P<sub>OM</sub> — la trompe d'Eustache fonctionne comme un <strong>clapet anti-retour</strong> et empêche le flux de rentrer passivement. Des manœuvres actives sont nécessaires.
+        </p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Manœuvres d'équilibration actives</div>
+          <ul style="margin:.3rem 0">
+            <li><strong>Valsalva</strong> — pincer le nez et souffler doucement (avec précaution : risque si trop brutal)</li>
+            <li><strong>Déglutition</strong> — avaler de la salive</li>
+            <li><strong>Bâillement</strong></li>
+            <li><strong>Mouvements de la mâchoire</strong> latéraux</li>
+          </ul>
+        </div>
+
+        <h3 id="facteurs-favorisants-oreille">3.3.2 Facteurs favorisants</h3>
+        <ul>
+          <li>Infection des voies aériennes supérieures (rhinite, sinusite, allergie) → trompe inflammée et obstruée</li>
+          <li>Malformation anatomique de la trompe d'Eustache</li>
+          <li>Vitesse de variation de pression (Vsp) trop élevée</li>
+        </ul>
+
+        <h3 id="symptomes-oreille">3.3.3 Symptômes</h3>
+        <p><strong>Signes d'alerte :</strong> sensation d'oreille pleine, réduction d'audition, acouphènes (tinnitus), vertiges.</p>
+        <p><strong>Symptômes francs :</strong> douleur graduelle ou soudaine, vertiges, dans les cas extrêmes rupture du tympan avec saignement → surdité possible.</p>
+        <p><strong>Conséquences médicales anatomiques :</strong> rétraction ou perforation tympanique, épanchement. Cliniques : otalgie, hypoacousie, otorragie, troubles de l'équilibre. Complications : infection secondaire, guérison vicieuse du tympan.</p>
+
+        <h3 id="conduite-oreille">3.3.4 Conduite à tenir</h3>
+        <p><strong>En vol :</strong> réduire ou stopper la descente, manœuvre de Valsalva.</p>
+        <p><strong>Au sol :</strong> consultation médecin navigant + ORL, traitement selon gravité. Éviction de vol : <strong>5 jours à 2 mois</strong>. Ne jamais reprendre avant guérison complète.</p>
+        <p><strong>Prévention :</strong> apprendre les manœuvres d'équilibration, éviter tout vol enrhumé, décongestionnants locaux 15 minutes avant la descente.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Descente plus dangereuse que la montée</div>
+          Le barotraumatisme de l'oreille survient <strong>principalement à la descente</strong> (pas à la montée). La trompe d'Eustache fonctionne comme un clapet : l'air sort facilement mais ne peut pas rentrer passivement. Le problème est maximal aux basses altitudes où le gradient de pression est le plus élevé.
+        </div>
+
+        <h2 id="barotraumatisme-oreille-interne">3.4 Barotraumatisme de l'oreille interne</h2>
+        <p>
+          Causes : manœuvre de Valsalva trop brutale ou décompression explosive. La surpression brusque transmise à l'oreille interne peut déchirer des membranes délicates.
+        </p>
+        <ul>
+          <li><strong>Conséquences immédiates :</strong> hypoacousie, acouphènes, vertiges</li>
+          <li><strong>Complications :</strong> surdité de perception (irréversible), vertiges sévères</li>
+          <li><strong>Traitement :</strong> difficile, selon gravité. <strong>La prévention est la meilleure solution.</strong></li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Valsalva trop brutal</div>
+          Une manœuvre de Valsalva trop violente peut provoquer un barotraumatisme de l'<strong>oreille interne</strong> (pas seulement de l'oreille moyenne). Toujours effectuer le Valsalva doucement et progressivement.
+        </div>
+
+        <h2 id="barotraumatisme-sinus">3.5 Barotraumatisme des sinus (Aérosinusite)</h2>
+        <p>
+          Les sinus sont des cavités osseuses communicantes avec le rhinopharynx. Contrairement à l'oreille moyenne, l'équilibration sinusienne est <strong>passive</strong> (pas de manœuvre active possible). Si l'ostium sinusien est obstrué (mucus, polype, infection), le gaz ne peut pas s'équilibrer.
+        </p>
+        <p><strong>Facteurs favorisants :</strong> sinusite, polypes, déviation septale nasale, œdème muqueux.</p>
+        <p><strong>Signes d'alerte :</strong> sensation de bulles dans le nez à la montée, sensation de plénitude frontale à la descente.</p>
+        <p><strong>Symptômes :</strong> douleur péri-orbitaire progressive ou soudaine irradiant dans les joues et les dents, vertiges, épistaxis, syncope dans les cas sévères.</p>
+
+        <h3 id="conduite-sinus">Conduite à tenir pour les sinus</h3>
+        <p><strong>En vol :</strong> STOPPER l'évolution, revenir à l'altitude saine précédente, sprays décongestionnants nasaux si disponibles, descente très lente.</p>
+        <p><strong>À noter :</strong> les manœuvres d'équilibration de type Valsalva sont <strong>inutiles</strong> pour les sinus (pas de mécanisme actif).</p>
+        <p><strong>Au sol :</strong> consultation ORL + scanner + dentiste, éviction <strong>minimum 3 semaines</strong>.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Sinus vs oreille moyenne</div>
+          Pour l'<strong>oreille moyenne</strong> → Valsalva efficace. Pour les <strong>sinus</strong> → Valsalva INUTILE (pas de mécanisme d'équilibration active). Il faut stopper l'évolution de l'altitude et utiliser des sprays nasaux.
+        </div>
+
+        <h2 id="aerodontalgie">3.6 Aérodontalgie</h2>
+        <p>
+          Expansion de bulles gazeuses dans la <strong>pulpe dentaire</strong> lors de la montée en altitude, en présence d'une dent cariée ou d'une obturation dentaire défectueuse. La symptomatologie est une douleur dentaire intense. Conduite : annuler la montée, entretien dentaire régulier (tous les 6 mois).
+        </p>
+
+        <h2 id="barotraumatisme-digestif">3.7 Barotraumatisme digestif</h2>
+        <p>
+          Le tube digestif contient des gaz (air dégluti, fermentation) qui se <strong>dilatent à la montée</strong> selon la loi de Boyle-Mariotte. Cela provoque une distension abdominale douloureuse. Prévention : éviter les aliments producteurs de gaz avant le vol (choux, légumineuses, boissons gazeuses), manger lentement, interdire les chewing-gums en vol.
+        </p>
+
+        <h2 id="burst-lung">3.8 Burst lung (Éclatement pulmonaire)</h2>
+        <p>
+          Lors d'une <strong>décompression rapide ou explosive</strong> de la cabine, la chute brutale de pression extérieure provoque une expansion violente des gaz dans les poumons. Si le pilote retient sa respiration (glotte fermée), la surpression relative peut atteindre la limite de résistance des alvéoles.
+        </p>
+        <p>
+          <strong>Facteurs déterminants :</strong> altitude atteinte, niveau de pressurisation, surface de la brèche.</p>
+        <p>
+          <strong>Conduite réflexe :</strong> garder la <strong>glotte ouverte</strong> (ne pas retenir sa respiration) pour permettre l'expulsion naturelle du surplus d'air. Laisser l'air sortir librement.
+        </p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Burst lung</div>
+          Lors d'une décompression explosive : <strong>garder la glotte OUVERTE</strong> (ne pas bloquer la respiration). Laisser l'air sortir librement pour éviter la surpression intra-pulmonaire.
+        </div>
+
+        <!-- ─── 4. PRESSURISATION ─────────────────────────────────────── -->
+        <h1 id="pressurisation">4. Pressurisation de la cabine</h1>
+
+        <h2 id="principe-pressurisation">4.1 Principe général</h2>
+        <p>
+          La pressurisation maintient la cabine à une pression supérieure à la pression extérieure, grâce à un système d'admission d'air (prélèvement sur compresseurs moteurs) et d'évacuation régulée par une vanne de surpression. L'altitude cabine est réglée par le bouton de commande d'altitude, qui contrôle l'ouverture de cette vanne.
+        </p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">8 000 ft max</span>
+            <span class="val-label">Altitude cabine maximale autorisée</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">500 ft/min</span>
+            <span class="val-label">Taux de montée cabine (ascent)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">300 ft/min</span>
+            <span class="val-label">Taux de descente cabine (descent)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 min</span>
+            <span class="val-label">Temps pour descendre sous 25 000 ft en urgence</span>
+          </div>
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/FH04_pressurisation_cabine.png" alt="Pressurisation cabine — avion civil vs avion de combat">
+          <div class="fig-caption">Fig. 6 — Profils de pressurisation : avion civil (8 200 ft max) vs avion de combat (formule (Zext−3000)/2 au-delà de 15 000 ft)</div>
+        </div>
+
+        <h2 id="pressurisation-combat">4.2 Avion de combat</h2>
+        <p>
+          Les avions de combat utilisent une loi de pressurisation différente, basée sur la formule <strong>Z<sub>cab</sub> = (Z<sub>ext</sub> − 3 000) / 2</strong> au-delà de 15 000 ft, avec un palier à 6 000 ft pour les altitudes extérieures inférieures à 15 000 ft. Cela signifie que l'altitude cabine augmente progressivement avec l'altitude réelle de l'avion, exposant davantage le pilote aux risques d'hypoxie et de DCS à très haute altitude.
+        </p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de pressurisation avion de combat</div>
+          <div class="formula-display">Z<sub>cab</sub> = (Z<sub>ext</sub> − 3 000) / 2</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">
+            Valable pour Z<sub>ext</sub> &gt; 15 000 ft.<br>
+            Pour Z<sub>ext</sub> &lt; 15 000 ft : Z<sub>cab</sub> = 6 000 ft (palier constant).
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">10 dm³</span>
+            <span class="val-label">Volume total de gaz dans l'organisme</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 dm³</span>
+            <span class="val-label">Azote dissous dans l'organisme</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">70 %</span>
+            <span class="val-label">N₂ stocké dans les graisses</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">×6</span>
+            <span class="val-label">Solubilité N₂ dans graisses vs eau</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&lt; 14 000 ft</span>
+            <span class="val-label">Aucun risque DCS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">14–25 000 ft</span>
+            <span class="val-label">Risque DCS faible</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">25–30 000 ft</span>
+            <span class="val-label">Risque DCS modéré</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 30 000 ft</span>
+            <span class="val-label">Risque DCS élevé</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">P/2</span>
+            <span class="val-label">Seuil critique DCS (cabine 8000ft → risque à 25000ft)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">24 h</span>
+            <span class="val-label">Délai max d'apparition des symptômes DCS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">12 h</span>
+            <span class="val-label">Délai vol après plongée air comprimé</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">24 h</span>
+            <span class="val-label">Délai vol après plongée &lt; 10 m</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">8 000 ft</span>
+            <span class="val-label">Altitude cabine max avion civil</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 min</span>
+            <span class="val-label">Descente d'urgence sous 25 000 ft</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">500 ft/min</span>
+            <span class="val-label">Taux de montée cabine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">300 ft/min</span>
+            <span class="val-label">Taux de descente cabine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5 j – 2 mois</span>
+            <span class="val-label">Éviction vol après aérotite</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 semaines</span>
+            <span class="val-label">Éviction vol minimum après aérosinusite</span>
+          </div>
+        </div>
+
+        <h1 id="recap-retenir">Rappels — Points À Retenir</h1>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Lois physiques fondamentales</div>
+          Gaz dissous (N₂) + décompression → <strong>Loi de Henry → DCS</strong>.<br>
+          Gaz libre (cavités) + décompression → <strong>Loi de Boyle-Mariotte → Barotraumatisme</strong>.
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Mécanisme DCS</div>
+          Dépressurisation → azote sursaturé → bulles de N₂ dans sang/tissus → bends, chokes, staggers. Symptômes possibles jusqu'à 24h après.
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Oreille moyenne — descente critique</div>
+          Montée : équilibration facile (air sort). Descente : trompe = clapet → manœuvres actives indispensables (Valsalva, déglutition, bâillement).
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Sinus : pas de Valsalva</div>
+          Barotraumatisme des sinus → Valsalva INUTILE. Stopper l'évolution, revenir en altitude, sprays décongestionnants.
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Burst lung</div>
+          Décompression explosive → garder la glotte OUVERTE. Ne jamais bloquer la respiration.
+        </div>
+        <div class="box box-retenir">
+          <div class="box-label">✅ Plongée et vol</div>
+          Air comprimé → attendre 12h. Plongée &lt; 10 m → attendre 24h. L'obésité +++ et l'âge &gt; 40 ans sont des facteurs individuels majeurs.
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">DCS → Loi de Henry / Barotraumatisme → Boyle-Mariotte</div>
+              <div class="piege-explication">Ne pas confondre les deux pathologies et leurs lois physiques. DCS = azote dissous (Henry). Barotraumatisme = gaz libre dans cavités (Boyle-Mariotte).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Symptômes DCS jusqu'à 24 heures après</div>
+              <div class="piege-explication">Les symptômes secondaires (neurologiques) peuvent survenir des heures après l'exposition. Pas de vol pendant 24h minimum après tout épisode de dépressurisation.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Plongée air comprimé : 12h, pas 24h</div>
+              <div class="piege-explication">Plongée avec air comprimé → 12h. Mais plongée profonde (&lt; 10 m) → 24h. Ne pas inverser les deux délais.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Aérotite : surtout à la descente</div>
+              <div class="piege-explication">Le barotraumatisme de l'oreille survient principalement à la DESCENTE (trompe = clapet). À la montée, l'air sort seul passivement → pas de problème sauf exception.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Valsalva inutile pour les sinus</div>
+              <div class="piege-explication">Valsalva = efficace pour l'oreille moyenne (trompe d'Eustache). Inutile et non réalisable pour les sinus (pas de conduit actif). Solution : stopper l'évolution altitude + sprays nasaux.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Valsalva brutal → barotraumatisme oreille interne</div>
+              <div class="piege-explication">Un Valsalva trop violent peut provoquer un barotraumatisme de l'OREILLE INTERNE (pas seulement de l'oreille moyenne), avec risque de surdité de perception irréversible.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Burst lung : glotte OUVERTE</div>
+              <div class="piege-explication">Lors d'une décompression explosive, le réflexe naturel est de retenir sa respiration → danger ! Il faut au contraire OUVRIR la glotte pour laisser l'air s'échapper librement.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Règle P/2 pour le seuil DCS</div>
+              <div class="piege-explication">Le risque DCS apparaît significativement quand la pression chute de moitié. Cabine à 8 000 ft (812 hPa) → risque si altitude réelle dépasse 25 000 ft (≈ 406 hPa = P/2).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Obésité et âge : facteurs DCS majeurs</div>
+              <div class="piege-explication">L'obésité +++ (plus de tissu adipeux = plus d'azote stocké) et l'âge > 40 ans (risque dramatiquement accru) sont les deux facteurs individuels les plus importants pour le risque DCS.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Taux de pressurisation : montée ≠ descente</div>
+              <div class="piege-explication">Montée cabine : 500 ft/min. Descente cabine : 300 ft/min (plus lent, pour ménager l'oreille). Ne pas confondre les deux valeurs.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Aérodontalgie : seulement à la montée</div>
+              <div class="piege-explication">Les douleurs dentaires (aérodontalgie) surviennent à la MONTÉE (dilatation des bulles dans la pulpe dentaire), contrairement aux douleurs d'oreille qui surviennent surtout à la descente.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Éviction vol : oreille (5j–2 mois) vs sinus (3 semaines min)</div>
+              <div class="piege-explication">L'éviction après aérosinusite (3 semaines min) est généralement plus longue que pour une aérotite simple (5 jours minimum, mais peut aller jusqu'à 2 mois selon gravité).</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les 3 formes de gaz dans l'organisme ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Libre</strong> (cavités : poumons, digestif, sinus, oreille) — <strong>Dissoute</strong> (N₂ dans les tissus) — <strong>Combinée</strong> (O₂ lié à l'hémoglobine).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle loi physique explique la DCS ? Et le barotraumatisme ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">DCS → <strong>Loi de Henry</strong> (gaz dissous). Barotraumatisme → <strong>Loi de Boyle-Mariotte</strong> (gaz libre dans les cavités).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la loi de Henry ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La quantité de gaz dissoute dans un liquide est <strong>proportionnelle à la pression partielle</strong> de ce gaz. → Dépressurisation = bullage du N₂ dissous.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le mécanisme de la DCS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dépressurisation → azote dissous sursaturé → <strong>bulles de N₂</strong> dans le sang et les tissus. 70 % stocké dans les graisses (×6 plus soluble que dans l'eau).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez les symptômes légers de la DCS. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Bends</strong> (douleurs articulaires) et <strong>Creeps</strong> (troubles cutanés : prurit, marbrures, fourmillements).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez les symptômes sévères de la DCS. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Chokes</strong> (douleur thoracique, détresse respiratoire) et <strong>Staggers</strong> (atteinte neurologique : paralysie, confusion).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Jusqu'à quand les symptômes DCS secondaires peuvent-ils survenir ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Jusqu'à <strong>24 heures</strong> après l'exposition. Les symptômes secondaires sont de type neurologique sévère (comparable à un AVC).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En dessous de quelle altitude il n'y a aucun risque DCS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">En dessous de <strong>14 000 ft</strong>. Risque faible entre 14 000 et 25 000 ft, modéré entre 25 000 et 30 000 ft, élevé au-delà de 30 000 ft.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le délai de vol recommandé après une plongée avec air comprimé ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>12 heures</strong> minimum. Après plongée à moins de 10 m : <strong>24 heures</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que faire en cas de perte de pressurisation cabine ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">1. Masque O₂ immédiatement. 2. Descente d'urgence, atterrir dès que possible. 3. Médecin navigant. 4. Aucun vol pendant minimum <strong>24 heures</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Énoncer la loi de Boyle-Mariotte. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">À température constante, le volume d'un gaz est <strong>inversement proportionnel à sa pression</strong>. P × V = k, donc P₁ × V₁ = P₂ × V₂.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le barotraumatisme de l'oreille est-il plus fréquent à la descente qu'à la montée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La trompe d'Eustache fonctionne comme un <strong>clapet</strong> : l'air sort facilement à la montée mais ne peut pas rentrer passivement à la descente → nécessité de manœuvres actives.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez 4 manœuvres d'équilibration de l'oreille. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Valsalva</strong> (avec précaution), <strong>déglutition</strong>, <strong>bâillement</strong>, <strong>mouvements de la mâchoire</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">La manœuvre de Valsalva est-elle utile pour un barotraumatisme des sinus ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Non, inutile.</strong> Les sinus n'ont pas de mécanisme d'équilibration active. Il faut stopper l'évolution en altitude et utiliser des sprays décongestionnants.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les risques d'un Valsalva trop brutal ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Barotraumatisme de l'<strong>oreille interne</strong>, avec risque de surdité de perception irréversible et de vertiges sévères.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la conduite à tenir lors d'une décompression explosive ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Garder la <strong>glotte OUVERTE</strong> (ne pas bloquer la respiration) pour permettre la décompression pulmonaire naturelle et éviter le burst lung.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'altitude cabine maximale autorisée en avion civil ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>8 000 ft</strong> (environ 812 hPa).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les taux de pressurisation cabine en montée et en descente ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Montée : <strong>500 ft/min</strong>. Descente : <strong>300 ft/min</strong> (plus lent pour préserver l'oreille).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les deux facteurs individuels de risque DCS les plus importants ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Obésité +++</strong> (plus de graisses = plus d'azote stocké) et <strong>âge &gt; 40 ans</strong> (risque augmente drastiquement).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi l'obésité est-elle un facteur de risque DCS majeur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'azote est <strong>6 fois plus soluble dans les graisses</strong> que dans l'eau. Un sujet obèse stocke davantage d'azote → plus de bulles lors de la dépressurisation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'aérodontalgie ? Quand survient-elle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Douleur dentaire due à l'expansion de gaz dans la pulpe dentaire. Survient à la <strong>montée</strong> (dilatation). Cause : carie ou obturation défectueuse. Prévention : contrôle dentaire tous les 6 mois.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le barotraumatisme digestif ? Comment le prévenir ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dilatation des gaz intestinaux à la montée → distension douloureuse. Prévention : éviter aliments producteurs de gaz, manger lentement, interdire les <strong>chewing-gums en vol</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée d'éviction de vol après une aérotite ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>5 jours à 2 mois</strong> selon la gravité. Attendre la guérison complète avant de reprendre le vol.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée d'éviction de vol après une aérosinusite ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>3 semaines minimum</strong>. Consultation ORL + scanner + dentiste (si irradiation dentaire).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la règle P/2 pour le risque DCS ? Donnez un exemple. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le risque DCS significatif survient quand la pression chute de moitié. Exemple : cabine à 8 000 ft (812 hPa) → risque si altitude réelle dépasse <strong>25 000 ft</strong> (≈ 406 hPa = P/2).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la pré-oxygénation (pré-breathing) ? Dans quels cas est-elle utilisée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Respiration d'O₂ pur avant une exposition à haute altitude pour éliminer l'azote dissous. Utilisée pour les vols non pressurisés, sauts en parachute à haute altitude, EVA spatiales, vol après plongée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la loi de pressurisation de l'avion de combat ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Z<sub>cab</sub> = (Z<sub>ext</sub> − 3 000) / 2</strong> pour Z<sub>ext</sub> &gt; 15 000 ft. Palier à 6 000 ft en dessous de 15 000 ft d'altitude extérieure.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez les 5 types de barotraumatismes rencontrés en aviation. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Aérotite (oreille moyenne), barotraumatisme oreille interne, aérosinusite (sinus), aérodontalgie (dents), barotraumatisme digestif, burst lung (poumons).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les barotraumatismes sont-ils plus fréquents aux basses altitudes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le gradient de pression par unité d'altitude est maximal à basse altitude (selon la loi atmosphérique exponentielle). Entre 0 et 5 000 ft, la variation de pression est beaucoup plus importante qu'entre 30 000 et 35 000 ft.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En combien de temps un avion doit-il pouvoir descendre sous 25 000 ft en cas d'urgence ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>3 minutes</strong> maximum pour descendre en dessous de 25 000 ft lors d'une dépressurisation d'urgence.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PFL14 — Aérodynamique Haute Vitesse · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">PFL14 · Haute Vitesse</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="PFL14" data-matiere="principle-flights">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Principes du Vol</a>
+        <span class="sep">›</span>
+        <span>PFL14</span>
+      </div>
+      <div class="cours-code-badge">PFL14</div>
+      <h1 class="cours-title">Aérodynamique Haute Vitesse</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA 081.02 / 081.03</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~30 min</span>
+        <span class="cours-meta-item">❓ 28 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════════════
+             SECTION 1 — NOMBRE DE MACH
+        ══════════════════════════════════════ -->
+        <h1 id="mach-number">1. Nombre de Mach</h1>
+
+        <h2 id="vitesse-son">1.1 Vitesse du son</h2>
+        <p>La vitesse du son dans un gaz est la vitesse à laquelle se propagent les petites perturbations de pression (ondes sonores). Elle dépend uniquement de la <strong>température statique</strong> de l'air :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Vitesse du son :</strong>
+          <div class="formula-display">a = √(γ · R · T)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">γ = 1,4 (rapport des capacités calorifiques de l'air) · R = 287 J/(kg·K) (constante des gaz parfaits) · T = température statique en Kelvin<br>
+          En ISA au niveau de la mer : a = 340 m/s = 661 kt</p>
+        </div>
+
+        <p>La vitesse du son <strong>diminue avec l'altitude</strong> (la température diminue dans la troposphère). Elle devient <strong>constante à partir de la tropopause</strong> (T constante ≈ −56,5 °C dans l'ISA standard).</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">661 kt</span>
+            <span class="val-label">Vitesse du son à MSL ISA</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">573 kt</span>
+            <span class="val-label">Vitesse du son à FL360 ISA</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">340 m/s</span>
+            <span class="val-label">Vitesse du son à MSL ISA</span>
+          </div>
+        </div>
+
+        <h2 id="mach-def">1.2 Définition du nombre de Mach</h2>
+        <p>Le nombre de Mach est le rapport entre la <strong>vitesse vraie (TAS)</strong> de l'avion et la <strong>vitesse locale du son</strong> :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Nombre de Mach :</strong>
+          <div class="formula-display">M = TAS / a</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">TAS = True Air Speed · a = vitesse locale du son (dépend de T)<br>
+          À FL constant et IAS constant : M est <strong>indépendant de la température</strong> (car TAS et a varient dans le même sens avec T)</p>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — M constant à FL et IAS constants</div>
+          Si la température augmente (OAT plus chaude que l'ISA) à FL constant et IAS constant : TAS augmente ET la vitesse du son augmente proportionnellement → le nombre de Mach reste <strong>inchangé</strong>. Ce résultat contre-intuitif est fréquent aux QCM.
+        </div>
+
+        <h2 id="profil-montee">1.3 Profil de montée / descente</h2>
+        <p>Les avions de transport volent selon deux phases distinctes concernant la limite de vitesse :</p>
+        <ul>
+          <li><strong>Montée</strong> : on limite d'abord l'IAS (VMO), puis à partir d'une certaine altitude (≈ FL280–320 selon l'avion), on bascule sur la limitation en Mach (MMO). La vitesse de transition correspond à l'altitude où le Mach atteint MMO alors que l'IAS est encore à VMO.</li>
+          <li><strong>Descente</strong> : on suit d'abord la limitation en Mach (MMO), puis on bascule sur la limitation en IAS (VMO) en descendant.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Moyen mnémotechnique : <strong>Climb = IAS then Mach · Descent = Mach then IAS</strong>.<br>
+          À l'altitude de transition (≈ 36 000 ft en ISA standard), IAS diminue à Mach constant car la TAS reste constante mais la densité baisse. MMO typique sur avion de transport : M 0,82–0,86.
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 2 — COMPRESSIBILITÉ
+        ══════════════════════════════════════ -->
+        <h1 id="compressibilite">2. Compressibilité et régimes de vol</h1>
+
+        <h2 id="regimes-mach">2.1 Subdivision des régimes aérodynamiques</h2>
+        <p>La compressibilité de l'air devient significative à partir d'environ M 0,3–0,4. On distingue quatre régimes :</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL14_regimes_mach.svg" alt="Régimes de vol en fonction du nombre de Mach">
+          <div class="fig-caption">Fig. 1 — Régimes de vol selon le nombre de Mach</div>
+        </div>
+
+        <ul>
+          <li><strong>Low subsonic (M &lt; 0,3)</strong> : écoulement incompressible, les équations classiques de Bernoulli s'appliquent sans correction</li>
+          <li><strong>High subsonic (M 0,3–Mcrit)</strong> : écoulement compressible, les effets de densité doivent être pris en compte (facteur de Prandtl-Glauert)</li>
+          <li><strong>Transsonique (Mcrit–M 1,2)</strong> : coexistence d'écoulements subsoniques et supersoniques sur le même profil. C'est le régime de croisière des avions de transport modernes.</li>
+          <li><strong>Supersonique (M &gt; 1,2)</strong> : tout l'écoulement est supersonique autour de l'avion</li>
+        </ul>
+
+        <h2 id="tubes-convergents">2.2 Comportement dans les tuyères (convergent / divergent)</h2>
+        <p>Le comportement des fluides dans les tuyères est <strong>inversé entre le régime subsonique et supersonique</strong> :</p>
+
+        <table>
+          <thead>
+            <tr><th>Tuyère</th><th>Subsonique</th><th>Supersonique</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Convergente</strong></td><td>V ↑, P ↓, T ↓ (Venturi classique)</td><td>V ↓, P ↑, T ↑</td></tr>
+            <tr><td><strong>Divergente</strong></td><td>V ↓, P ↑, T ↑</td><td>V ↑, P ↓, T ↓</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Tuyère divergente supersonique</div>
+          Pour accélérer un flux supersonique, il faut une tuyère <strong>divergente</strong> (et non convergente comme en subsonique). C'est le principe de la tuyère de Laval (convergent-divergent) des réacteurs supersoniques. Ce comportement opposé est souvent testé en QCM.
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 3 — ONDE DE CHOC
+        ══════════════════════════════════════ -->
+        <h1 id="onde-choc">3. Onde de choc</h1>
+
+        <h2 id="definition-choc">3.1 Définition et formation</h2>
+        <p>Une onde de choc se forme chaque fois que l'écoulement supersonique doit <strong>changer de direction ou de magnitude</strong>. C'est une zone de recompression extrêmement mince (quelques libres parcours moyens) et <strong>discontinue</strong> où les grandeurs thermodynamiques varient brutalement.</p>
+
+        <p>Propriétés fondamentales d'une onde de choc :</p>
+        <ul>
+          <li><strong>Recompression soudaine</strong> : P, ρ, T augmentent instantanément</li>
+          <li><strong>Processus irréversible</strong> : la pression totale Pt <strong>diminue</strong> (entropie augmente) → perte d'énergie</li>
+          <li><strong>Température totale Ti conservée</strong> (transformation adiabatique)</li>
+          <li>Si l'incidence augmente : l'onde de choc <strong>s'intensifie</strong> et se <strong>déplace vers l'avant</strong></li>
+        </ul>
+
+        <h2 id="choc-normal">3.2 Onde de choc normale</h2>
+        <p>L'onde de choc <strong>normale</strong> est perpendiculaire à la direction de l'écoulement. Elle convertit un flux supersonique en flux subsonique en un seul passage :</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL14_onde_choc_normale.svg" alt="Onde de choc normale — variations des grandeurs">
+          <div class="fig-caption">Fig. 2 — Onde de choc normale : variations des grandeurs thermodynamiques</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Onde de choc normale</div>
+          À la traversée d'une onde de choc normale :
+          <ul style="margin:.4rem 0 0">
+            <li>P statique ↑, ρ ↑, T statique ↑</li>
+            <li>Vitesse V ↓ (passage de M &gt; 1 à M &lt; 1)</li>
+            <li>Ti (température totale) = constante</li>
+            <li><strong>Pt (pression totale) ↓ → irréversible, perte d'énergie</strong></li>
+          </ul>
+        </div>
+
+        <p>Sur un profil en régime transsonique, l'onde de choc normale se forme sur l'extrados quand l'écoulement local devient supersonique. À son pied, l'onde de choc interagit avec la couche limite, pouvant provoquer un <strong>décollement de la couche limite</strong> → buffet.</p>
+
+        <!-- ══════════════════════════════════════
+             SECTION 4 — ÉCOULEMENT TRANSSONIQUE
+        ══════════════════════════════════════ -->
+        <h1 id="transsonique">4. Écoulement transsonique</h1>
+
+        <h2 id="mcrit-def">4.1 Mach critique (Mcrit)</h2>
+        <p>Le <strong>Mach critique (Mcrit)</strong> est le nombre de Mach de l'avion à partir duquel l'écoulement <strong>local</strong> sur le profil atteint Mach 1 pour la première fois. L'écoulement local est toujours plus rapide que l'écoulement libre (effet Venturi du profil), donc Mcrit &lt; 1.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Mcrit</strong> = premier point du profil où l'écoulement local atteint M = 1, alors que le Mach de l'avion est encore subsonique. Typiquement Mcrit ≈ 0,72–0,82 pour un avion de transport moderne.
+        </div>
+
+        <h2 id="evolution-transsonique">4.2 Évolution de l'écoulement de Mcrit à M = 1</h2>
+        <p>L'évolution de l'écoulement autour du profil à mesure que le Mach augmente au-delà de Mcrit suit une séquence caractéristique :</p>
+
+        <table>
+          <thead>
+            <tr><th>Mach avion</th><th>Situation sur le profil</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>M &lt; Mcrit</strong></td><td>Tout l'écoulement subsonique. Pas d'onde de choc.</td></tr>
+            <tr><td><strong>M = Mcrit</strong></td><td>Premier point à M = 1 localement (sommet extrados). Pas encore d'onde de choc.</td></tr>
+            <tr><td><strong>Mcrit &lt; M &lt; 1</strong></td><td>Zone supersonique croissante sur l'extrados, terminée par une onde de choc normale. L'onde de choc se déplace vers le bord de fuite à mesure que M augmente. Décollement possible au pied du choc → buffet.</td></tr>
+            <tr><td><strong>M ≈ 1</strong></td><td>Onde de choc sur extrados ET intrados. Forte traînée d'onde.</td></tr>
+            <tr><td><strong>M &gt; 1 (supersonique)</strong></td><td>Onde de choc détachée devant le nez (bow shock), puis attachée si profil adapté.</td></tr>
+          </tbody>
+        </table>
+
+        <!-- ══════════════════════════════════════
+             SECTION 5 — CÔNE DE MACH
+        ══════════════════════════════════════ -->
+        <h1 id="cone-mach">5. Cône de Mach</h1>
+
+        <p>En régime supersonique, une source sonore (ou l'avion lui-même) génère des ondes qui ne peuvent pas se propager vers l'avant car l'avion se déplace plus vite que le son. Ces ondes forment un <strong>cône de Mach</strong> dont le demi-angle au sommet μ vérifie :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Angle du cône de Mach :</strong>
+          <div class="formula-display">sin μ = 1 / M</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">μ est le demi-angle entre l'axe de vol et la tangente au cône. Plus M est grand, plus μ est petit → cône plus fermé (plus pointu).<br>
+          M = 1,5 → μ ≈ 41,8° · M = 2 → μ = 30° · M = 3 → μ ≈ 19,5°</p>
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/PFL14_cone_mach.svg" alt="Cône de Mach et angle mu">
+          <div class="fig-caption">Fig. 3 — Cône de Mach : zone de silence en avant du cône, bang sonique à son passage</div>
+        </div>
+
+        <p>La <strong>zone de silence</strong> (zone of silence) est la région en avant du cône où aucun son émis par l'avion ne peut être entendu. Un observateur au sol n'entend le bang supersonique qu'<strong>après</strong> le passage de l'avion, lorsque le cône le dépasse.</p>
+
+        <!-- ══════════════════════════════════════
+             SECTION 6 — DÉPASSER Mcrit
+        ══════════════════════════════════════ -->
+        <h1 id="exceeding-mcrit">6. Effets du dépassement de Mcrit</h1>
+
+        <h2 id="effet-portance">6.1 Effet sur la portance</h2>
+        <p>L'évolution du coefficient de portance Cz en fonction du Mach est non-monotone :</p>
+        <ul>
+          <li><strong>M 0,4 → Mcrit (~0,75)</strong> : Cz augmente légèrement (compressibilité → portance supplémentaire)</li>
+          <li><strong>Mcrit → M ~0,89</strong> : Cz augmente fortement (zone supersonique locale sur extrados → très basse pression → forte portance). Point maximum ≈ M 0,81</li>
+          <li><strong>M 0,89 → M 1,0</strong> : Cz chute brutalement (onde de choc + décollement + destruction de la dépression extrados)</li>
+          <li><strong>M &gt; 1,0</strong> : Cz se stabilise à une valeur basse (régime supersonique)</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Cz maximum transsonique</div>
+          Le Cz <strong>augmente</strong> entre Mcrit et M ≈ 0,81 avant de chuter. Cela signifie qu'un avion en régime transsonique peut momentanément avoir plus de portance avant la chute brutale. Ce comportement non-linéaire est à l'origine du mach tuck.
+        </div>
+
+        <h2 id="effet-trainee">6.2 Effet sur la traînée — Mach de divergence de traînée</h2>
+        <p>La traînée reste quasi-stable jusqu'au <strong>Mach de divergence de traînée (Mdiv)</strong>, défini comme le Mach auquel la traînée totale a augmenté de <strong>10%</strong> par rapport à sa valeur subsonique. Mdiv &gt; Mcrit.</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL14_trainee_mach.svg" alt="Évolution de la traînée avec le nombre de Mach">
+          <div class="fig-caption">Fig. 4 — Traînée en fonction du Mach : divergence de traînée et traînée d'onde</div>
+        </div>
+
+        <p>Au-delà de Mdiv, la <strong>traînée d'onde</strong> (wave drag) apparaît brutalement. Elle est liée à la dissipation d'énergie dans les ondes de choc et peut atteindre des valeurs considérables, rendant le vol transsonique très coûteux en carburant.</p>
+
+        <h2 id="effet-moment">6.3 Mach tuck (tuck under)</h2>
+        <p>Lorsque le Mach dépasse Mcrit, le <strong>centre de poussée (CP) se déplace vers l'arrière</strong> (de ¼ de corde vers ½ de corde en supersonique). Ce recul du CP crée un <strong>moment piqueur (nose-down)</strong> qui tend à faire piquer le nez de l'avion : c'est le <strong>Mach tuck</strong> ou <em>tuck under</em>.</p>
+
+        <p>Ce phénomène est aggravé par la réduction du downwash sur l'empennage horizontal (l'onde de choc perturbe le sillage de la voilure) → moment cabreur de l'empennage réduit.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Mach tuck</div>
+          Causes combinées du Mach tuck :
+          <ul style="margin:.4rem 0 0">
+            <li>CP recule (¼c → ½c) → moment piqueur</li>
+            <li>Downwash réduit → moins de portance cabratrice à l'empennage</li>
+            <li>Correction : <strong>Mach trim</strong> (transfert carburant vers l'arrière sur Concorde, ou trim automatique nose-up sur avions modernes)</li>
+          </ul>
+        </div>
+
+        <h2 id="effet-gouvernes">6.4 Effet sur l'efficacité des gouvernes</h2>
+        <p>Au-delà de Mcrit, les gouvernes opèrent dans un flux transsonique perturbé par les ondes de choc. Plusieurs effets s'en suivent :</p>
+        <ul>
+          <li>Chaque braquage de gouverne modifie l'AoA local → peut <strong>abaisser le Mcrit local</strong> de cette surface</li>
+          <li>Les gouvernes sont plus minces que les profils porteurs pour avoir un Mcrit plus élevé</li>
+          <li>En régime supersonique, les gouvernes classiques perdent en efficacité → on préfère les surfaces tout-mobiles</li>
+        </ul>
+
+        <!-- ══════════════════════════════════════
+             SECTION 7 — AUGMENTER Mcrit
+        ══════════════════════════════════════ -->
+        <h1 id="augmenter-mcrit">7. Moyens d'augmenter Mcrit</h1>
+
+        <h2 id="fleche">7.1 Aile en flèche (Swept back wing)</h2>
+        <p>L'aile en flèche est le principal moyen d'augmenter Mcrit sur les avions de transport. Son principe : seule la <strong>composante perpendiculaire au bord d'attaque</strong> (VN) est « vue » par le profil.</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL14_aile_fleche.svg" alt="Aile en flèche et composante normale de la vitesse">
+          <div class="fig-caption">Fig. 5 — Aile en flèche : V_N = V₀ × cos φ (φ = angle de flèche)</div>
+        </div>
+
+        <p>Plus l'angle de flèche φ est grand, plus VN est faible → les effets de compressibilité sur le profil se produisent à un Mach avion plus élevé → Mcrit augmente.</p>
+
+        <p>Inconvénients de l'aile en flèche à <strong>basse vitesse</strong> :</p>
+        <ul>
+          <li>Cz max réduit (moins de portance pour un même angle d'attaque) → nécessite des hypersustentateurs plus performants</li>
+          <li>Décrochage en bout d'aile en premier (<em>tip stall</em>) → moment cabreur (pitch-up) instable, car les ailerons (sur les bouts d'ailes) perdent leur efficacité avant le reste de l'aile</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Décrochage en bout d'aile flèche</div>
+          Sur une aile en flèche, le décrochage commence au <strong>bout d'aile</strong> (et non à l'emplanture comme sur une aile droite). Raison : le flux migre vers l'extérieur (spanwise flow), appauvrissant la couche limite en bout d'aile. Conséquence : perte d'efficacité des ailerons avant le décrochage complet, et moment <strong>cabreur</strong> (pitch-up) instable au décrochage.
+        </div>
+
+        <h2 id="profil-supercritique">7.2 Forme du profil</h2>
+        <p>Le <strong>profil supercritique</strong> est conçu spécifiquement pour retarder l'apparition de l'onde de choc et la rendre moins intense. Par rapport à un profil conventionnel :</p>
+        <ul>
+          <li>Extrados plus plat (accélération du flux plus progressive et plus homogène)</li>
+          <li>Bord de fuite plus cambrée (compense la perte de portance de l'extrados aplati)</li>
+          <li>Épaisseur relative plus grande (17% vs 12% pour un profil conventionnel)</li>
+        </ul>
+        <p>Résultat : le flux supersonique sur l'extrados se termine par une <strong>décélération progressive</strong> sans onde de choc nette, ou avec une onde de choc beaucoup plus faible → Mcrit et Mdiv plus élevés, traînée d'onde réduite.</p>
+
+        <h2 id="vortex-generators">7.3 Générateurs de vortex (Vortex Generators)</h2>
+        <p>Les générateurs de vortex (VG) sont de petites ailettes placées sur l'extrados de la voilure. Leur rôle est d'<strong>injecter de l'énergie cinétique</strong> dans la couche limite par création de tourbillons longitudinaux qui mélangent l'écoulement rapide de l'extérieur avec la couche limite plus lente.</p>
+        <ul>
+          <li><strong>À basse vitesse</strong> : retardent le décollement de la couche limite → décrochage retardé (Vstall réduite)</li>
+          <li><strong>À haute vitesse</strong> : au pied de l'onde de choc, renforcent la couche limite pour résister au gradient de pression adverse → onde de choc plus faible, buffet transsonique réduit</li>
+        </ul>
+
+        <h2 id="area-rule">7.4 Règle des aires (Area Rule)</h2>
+        <p>La règle des aires de Whitcomb stipule que la <strong>section transversale totale</strong> de l'avion (fuselage + ailes) doit évoluer de façon aussi progressive que possible le long de l'axe longitudinal. Une variation brutale de section crée une forte traînée d'interférence (onde de choc à la jonction aile/fuselage).</p>
+        <p>Solution pratique : le fuselage est <strong>étranglé</strong> (waist) au niveau du raccordement aile/fuselage pour compenser l'ajout de section des ailes → section totale progressive (forme de bouteille de Coca-Cola). Cela réduit significativement la traînée d'onde transsonique.</p>
+
+        <!-- ══════════════════════════════════════
+             SECTION 8 — BUFFET ONSET
+        ══════════════════════════════════════ -->
+        <h1 id="buffet-onset">8. Buffet onset</h1>
+
+        <h2 id="buffet-def">8.1 Définition et types de buffet</h2>
+        <p>Le <strong>buffet</strong> est une vibration structurale de l'avion causée par un écoulement décollé (turbulent, instationnaire) frappant des surfaces de la cellule. On distingue deux types :</p>
+        <ul>
+          <li><strong>Buffet basse vitesse (low speed buffet)</strong> : causé par le décrochage aérodynamique à haute incidence. L'écoulement décolle de l'extrados → sillage turbulent frappe l'empennage.</li>
+          <li><strong>Buffet haute vitesse (high speed buffet / Mach buffet)</strong> : causé par les ondes de choc transsoniques. L'onde de choc interagit avec la couche limite → décollement au pied de l'onde → sillage turbulent frappe l'empennage.</li>
+        </ul>
+
+        <h2 id="buffet-chart">8.2 Diagramme de buffet onset</h2>
+        <p>Le diagramme de buffet onset (buffet onset chart) représente les limites de buffet en fonction du Mach, du FL, du poids et du facteur de charge. Il définit une <strong>enveloppe de vol sûre</strong> entre les deux limites de buffet.</p>
+
+        <p>Paramètres clés du diagramme :</p>
+        <ul>
+          <li><strong>Axe vertical</strong> : FL (Flight Level) ou altitude</li>
+          <li><strong>Axe horizontal gauche</strong> : Mach number</li>
+          <li><strong>Axes droits</strong> : CG (%), facteur de charge (n), angle de gîte (bank angle)</li>
+          <li><strong>Lecture</strong> : pour un poids et un FL donnés, on peut lire les limites basse et haute de Mach sans buffet, ou le facteur de charge maximal sans buffet à un Mach donné</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Lecture du buffet onset chart</div>
+          La marge de buffet est réduite par : altitude élevée (FL ↑), masse élevée, facteur de charge élevé (virage serré), Mach élevé. La règle pratique est de conserver une <strong>marge minimale de 0,3g</strong> par rapport au buffet basse vitesse (1g buffet margin).
+        </div>
+
+        <h2 id="coffin-corner">8.3 Coffin Corner</h2>
+        <p>Le <strong>coffin corner</strong> (coin du cercueil) est l'altitude à laquelle l'enveloppe de vol se referme complètement : la vitesse de buffet basse (Vstall) rejoint la vitesse de buffet haute (MMO). À cette altitude, il n'existe plus aucune vitesse sûre sans risque de buffet ou de décrochage.</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL14_coffin_corner.svg" alt="Coffin corner — rétrécissement de l'enveloppe de vol en altitude">
+          <div class="fig-caption">Fig. 6 — Coffin corner : rétrécissement de l'enveloppe entre buffet bas et buffet haut</div>
+        </div>
+
+        <p>Facteurs qui abaissent le coffin corner (le rendent accessible à plus basse altitude, réduisant la marge) :</p>
+        <ul>
+          <li><strong>Masse élevée</strong> : Vstall augmente → la limite basse monte</li>
+          <li><strong>Facteur de charge élevé</strong> : Vstall augmente en virage</li>
+          <li><strong>Turbulences</strong> : peuvent provoquer des variations de facteur de charge involontaires</li>
+          <li><strong>Altitude élevée</strong> : les deux limites se rapprochent naturellement</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Coffin corner et masse</div>
+          À <strong>masse élevée</strong>, le coffin corner se produit à une <strong>altitude plus basse</strong> (la Vstall est plus haute). Inversement, un avion léger atteint son coffin corner à une altitude plus élevée. La masse et l'altitude ont des effets opposés et simultanés sur les deux limites.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">661 kt</span>
+            <span class="val-label">Vitesse du son à MSL ISA</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">340 m/s</span>
+            <span class="val-label">Vitesse du son à MSL ISA</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">M = TAS/a</span>
+            <span class="val-label">Définition du Mach</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">sin μ = 1/M</span>
+            <span class="val-label">Angle du cône de Mach</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Cx +10%</span>
+            <span class="val-label">Définition de Mdiv (Mach divergence traînée)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">VN = V₀ cos φ</span>
+            <span class="val-label">Aile en flèche : composante normale</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">¼c → ½c</span>
+            <span class="val-label">Déplacement du CP subsonique → supersonique</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">M 0.3–0.4</span>
+            <span class="val-label">Seuil de compressibilité significative</span>
+          </div>
+        </div>
+
+        <h1 id="tableau-regimes">Régimes aérodynamiques</h1>
+        <table>
+          <thead>
+            <tr><th>Régime</th><th>Plage Mach</th><th>Caractéristique</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Low subsonic</td><td>M &lt; 0,3</td><td>Incompressible — Bernoulli classique</td></tr>
+            <tr><td>High subsonic</td><td>M 0,3 → Mcrit</td><td>Compressible — correction Prandtl-Glauert</td></tr>
+            <tr><td>Transsonique</td><td>Mcrit → M 1,2</td><td>Flux mixte sub/supersonic — ondes de choc</td></tr>
+            <tr><td>Supersonique</td><td>M &gt; 1,2</td><td>Tout le flux supersonique — cône de Mach</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="tableau-choc">Onde de choc normale — récapitulatif</h1>
+        <table>
+          <thead>
+            <tr><th>Grandeur</th><th>Avant (supersonique)</th><th>Après (subsonique)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vitesse V</td><td>Rapide (M &gt; 1)</td><td>Lente (M &lt; 1) ↓</td></tr>
+            <tr><td>Pression statique P</td><td>Faible</td><td>↑ augmente</td></tr>
+            <tr><td>Densité ρ</td><td>Faible</td><td>↑ augmente</td></tr>
+            <tr><td>Température T statique</td><td>Faible</td><td>↑ augmente</td></tr>
+            <tr><td>Température totale Ti</td><td>Ti₁</td><td>Ti₂ = Ti₁ (conservée)</td></tr>
+            <tr><td>Pression totale Pt</td><td>Pt₁</td><td>Pt₂ &lt; Pt₁ ↓ (irréversible !)</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="tableau-mcrit">Moyens d'augmenter Mcrit</h1>
+        <table>
+          <thead>
+            <tr><th>Moyen</th><th>Principe</th><th>Inconvénient principal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Aile en flèche</strong></td><td>VN = V₀ cos φ → composante normale réduite</td><td>Tip stall (pitch-up), Cz max réduit</td></tr>
+            <tr><td><strong>Profil supercritique</strong></td><td>Extrados plat → décélération progressive</td><td>Moins performant en pur subsonique</td></tr>
+            <tr><td><strong>Vortex generators</strong></td><td>Énergie cinétique dans couche limite</td><td>Traînée parasite ajoutée</td></tr>
+            <tr><td><strong>Règle des aires</strong></td><td>Section transversale progressive</td><td>Fuselage étranglé (constraints de conception)</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">M constant à FL et IAS constants malgré un changement de température</div>
+              <div class="piege-explication">Si T augmente à FL et IAS constants : TAS ↑ ET a ↑ dans le même rapport → M inchangé. Ce résultat est contre-intuitif et souvent testé.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Tuyère divergente supersonique accélère le flux</div>
+              <div class="piege-explication">En supersonique, une tuyère <strong>divergente</strong> accélère le flux (contrairement au subsonique). Une tuyère convergente le ralentit. Exact inverse du régime subsonique.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Onde de choc = irréversible → Pt diminue</div>
+              <div class="piege-explication">La température totale Ti est conservée (adiabatique) mais la pression totale Pt <strong>diminue</strong> (irréversible). C'est une source de perte de performance moteur. Ti = const ≠ Pt = const.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Mcrit ≠ Mdiv ≠ MMO</div>
+              <div class="piege-explication"><strong>Mcrit</strong> = première zone locale M=1. <strong>Mdiv</strong> = Cx total +10% (Mdiv &gt; Mcrit). <strong>MMO</strong> = limite opérationnelle maximale (MMO &gt; Mdiv). Ces trois Mach sont distincts et croissants.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Mach tuck = moment piqueur (nose-down), pas cabreur</div>
+              <div class="piege-explication">Au-delà de Mcrit, le CP recule (vers ½c) → moment <strong>piqueur</strong>. Aggravé par la réduction du downwash sur l'empennage. Correction : mach trim nose-up automatique.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Aile en flèche : décrochage au bout d'aile (tip stall)</div>
+              <div class="piege-explication">Sur une aile en flèche, le flux migre vers l'extérieur (spanwise flow), appauvrissant la couche limite en bout d'aile. Décrochage au bout en premier → perte des ailerons avant le décrochage complet + moment cabreur instable (pitch-up).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Coffin corner : masse élevée → altitude de coffin corner plus basse</div>
+              <div class="piege-explication">À masse élevée, la Vstall est plus haute → la limite basse de buffet monte plus tôt → coffin corner à une altitude plus <strong>basse</strong>. Un avion plus lourd a donc une enveloppe de vol utilisable plus réduite en altitude.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Angle de cône de Mach : μ diminue quand M augmente</div>
+              <div class="piege-explication">sin μ = 1/M → plus M est grand, plus μ est petit → le cône est <strong>plus fermé</strong> (plus pointu). À M = 1, μ = 90° (front d'onde plan). À M = 2, μ = 30°.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Vortex generators : double rôle selon la vitesse</div>
+              <div class="piege-explication">À <strong>basse vitesse</strong> : retardent le décrochage (couche limite énergisée). À <strong>haute vitesse</strong> : affaiblissent l'onde de choc au pied (réduisent le buffet transsonique). Un seul dispositif, deux usages distincts.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Profil de montée : IAS puis Mach / Descente : Mach puis IAS</div>
+              <div class="piege-explication">En <strong>montée</strong> : on maintient une IAS constante (VMO), puis on bascule sur Mach constant (MMO). En <strong>descente</strong> : on part de Mach constant, puis on bascule sur IAS constante. L'ordre est inversé entre montée et descente.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Cz augmente entre Mcrit et M ~0,81 avant de chuter</div>
+              <div class="piege-explication">L'évolution de Cz dans le domaine transsonique n'est pas monotone. Il y a une augmentation temporaire liée à la zone supersonique basse pression sur l'extrados, suivie d'une chute brutale quand l'onde de choc provoque le décollement.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Vitesse du son : constante à la tropopause, pas en dessous</div>
+              <div class="piege-explication">Dans la troposphère, a diminue avec l'altitude (T baisse). À la tropopause et en-dessus (stratosphère basse), T est constante → a est constante ≈ 573 kt (ISA). La vitesse du son n'est constante qu'en isotherme.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la formule de la vitesse du son ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>a = √(γRT)</strong> avec γ = 1,4 (air), R = 287 J/(kg·K), T en Kelvin. À MSL ISA : a = 340 m/s = 661 kt.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que vaut M si TAS = 480 kt et a = 573 kt ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>M = 480/573 ≈ 0,84</strong>. Mach = TAS/a. Typiquement proche du MMO des avions de transport en croisière.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">M est-il affecté si T augmente à FL et IAS constants ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Non</strong>. TAS et a augmentent proportionnellement → M = TAS/a reste constant. Ce résultat contre-intuitif est un piège classique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Ordre de vitesse en montée sur avion de transport ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>IAS constante (VMO) puis Mach constant (MMO)</strong> à partir de l'altitude de transition (~FL280–320). En descente, c'est l'inverse.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que Mcrit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le Mach avion auquel l'écoulement <strong>local</strong> sur le profil atteint M = 1 pour la première fois. Mcrit &lt; 1 car l'écoulement s'accélère au-dessus du profil.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que Mdiv (Mach de divergence de traînée) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le Mach auquel la traînée totale a augmenté de <strong>10%</strong> par rapport à la valeur subsonique. Mdiv &gt; Mcrit. C'est l'apparition de la traînée d'onde.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Dans une onde de choc normale, Ti est-elle conservée ? Et Pt ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Ti = conservée</strong> (processus adiabatique). <strong>Pt diminue</strong> (processus irréversible, entropie augmente). Ces deux affirmations sont souvent confondues.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment évolue P, ρ, T à la traversée d'une onde de choc normale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">P ↑, ρ ↑, T statique ↑ — toutes augmentent. La vitesse V ↓ (passage de M &gt; 1 à M &lt; 1).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la formule de l'angle du cône de Mach ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>sin μ = 1/M</strong>. Plus M est grand, plus μ est petit (cône plus fermé). À M = 2 : μ = 30°.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le Mach tuck (tuck under) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Moment <strong>piqueur (nose-down)</strong> apparaissant au-delà de Mcrit. Causé par le recul du CP (¼c → ½c) et la réduction du downwash sur l'empennage. Corrigé par le mach trim.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi l'aile en flèche augmente-t-elle Mcrit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Seule la composante <strong>perpendiculaire au bord d'attaque</strong> (VN = V₀ cos φ) est vue par le profil. VN &lt; V₀ → les effets de compressibilité se produisent à un Mach avion plus élevé.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel type de décrochage est propre à l'aile en flèche ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Décrochage en <strong>bout d'aile (tip stall)</strong> en premier, dû à la migration du flux vers l'extérieur (spanwise flow). Conséquence : perte des ailerons avant le décrochage complet + moment cabreur instable.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le double rôle des vortex generators ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Basse vitesse : retardent le décrochage (énergisent la couche limite). Haute vitesse : affaiblissent l'onde de choc transsonique et réduisent le buffet.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le coffin corner ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'altitude à laquelle Vstall (buffet bas) = MMO (buffet haut) → plus aucune vitesse sûre. La marge de vitesse disponible devient nulle.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">La masse élevée fait monter ou descendre l'altitude du coffin corner ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La fait <strong>descendre</strong>. Masse ↑ → Vstall ↑ → limite basse de buffet monte → coffin corner atteint à une altitude plus basse.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En tuyère divergente supersonique, V augmente ou diminue ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>V augmente</strong>. En supersonique, le comportement est inversé par rapport au subsonique : divergent = accélération, convergent = décélération.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la règle des aires de Whitcomb ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La section transversale totale de l'avion doit varier de façon progressive pour minimiser la traînée d'interférence transsonique. Solution : étranglement (waist) du fuselage au niveau de l'aile.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le profil supercritique a un extrados plus bombé ou plus plat ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Plus <strong>plat</strong>. L'extrados aplati distribue l'accélération de façon plus homogène, évitant un pic de vitesse locale qui déclencherait prématurément une onde de choc. Le bord de fuite est plus cambré pour compenser.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Si AoA augmente sur un profil transsonique, que devient Mcrit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Mcrit <strong>diminue</strong>. Une incidence plus élevée accélère davantage le flux sur l'extrados → la zone supersonique locale apparaît à un Mach avion plus faible.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quand l'onde de choc s'intensifie-t-elle et se déplace-t-elle vers l'avant ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Quand l'<strong>incidence (AoA) augmente</strong>. L'onde de choc se renforce et remonte vers le bord d'attaque. Elle ne recule vers le BF que lorsque le Mach avion augmente à incidence constante.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle altitude la vitesse du son est-elle constante ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">À partir de la <strong>tropopause</strong> (≈ FL360 en ISA standard) où T est constante (−56,5 °C). En dessous, a diminue avec l'altitude car T baisse.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le Mach buffet haute vitesse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Buffet causé par les ondes de choc transsoniques : l'onde de choc interagit avec la couche limite → décollement au pied de l'onde → sillage turbulent frappe l'empennage. Se produit au-delà d'un Mach limite.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Définissez le Mach de détachement (Mdet) par rapport à Mcrit et Mdiv. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Mcrit &lt; Mdiv &lt; Mdet. <strong>Mcrit</strong> = premier point local M=1. <strong>Mdiv</strong> = divergence de traînée (+10%). <strong>Mdet</strong> = Mach auquel le choc se détache du bord d'attaque (onde bow shock). MMO &lt; Mdet pour un avion de transport.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle grandeur thermodynamique caractérise l'irréversibilité d'une onde de choc ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>pression totale Pt</strong> diminue (Pt₂ &lt; Pt₁). Cela correspond à une augmentation d'entropie. La pression totale perdue représente l'énergie dissipée dans l'onde de choc.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel facteur réduit Mcrit des gouvernes par rapport aux ailes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les gouvernes sont plus <strong>minces</strong> que les profils porteurs principaux pour avoir un Mcrit plus élevé. De plus, chaque braquage de gouverne modifie l'AoA local, ce qui abaisse le Mcrit local de cette surface.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le Cz augmente ou diminue juste après Mcrit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Augmente</strong> temporairement (jusqu'à M ≈ 0,81). La zone supersonique à basse pression sur l'extrados génère plus de portance avant que l'onde de choc ne provoque le décollement et la chute brutale de Cz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez les deux causes du Mach tuck. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>(1)</strong> Recul du CP de ¼c vers ½c → moment piqueur croissant. <strong>(2)</strong> Réduction du downwash sur l'empennage → portance cabratrice de l'empennage réduite. Les deux effets se cumulent pour aggraver le moment piqueur.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À M = 1, quel est l'angle du cône de Mach μ ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>μ = 90°</strong> (sin 90° = 1 = 1/M = 1/1). Le « cône » est en fait un plan perpendiculaire à la direction de vol. C'est la condition limite à M = 1.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

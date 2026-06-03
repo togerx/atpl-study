@@ -1,0 +1,38 @@
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr6" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1F3864"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="80" y1="20" x2="80" y2="230" stroke="#1F3864" stroke-width="2" marker-end="url(#arr6)"/>
+  <line x1="80" y1="230" x2="680" y2="230" stroke="#1F3864" stroke-width="2" marker-end="url(#arr6)"/>
+  <text x="40" y="130" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864" transform="rotate(-90,40,130)">Altitude (FL)</text>
+  <text x="680" y="248" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">Vitesse / Mach</text>
+  <!-- FL labels -->
+  <text x="72" y="228" text-anchor="end" font-family="Arial" font-size="9" fill="#555">FL 0</text>
+  <text x="72" y="145" text-anchor="end" font-family="Arial" font-size="9" fill="#555">FL 350</text>
+  <text x="72" y="60"  text-anchor="end" font-family="Arial" font-size="9" fill="#555">FL 500</text>
+  <!-- Courbe Vstall (gauche, monte avec altitude = IAS monte avec alt pour même TAS) -->
+  <polyline points="120,228 130,200 145,170 165,145 195,120 240,92 300,62 340,40"
+            fill="none" stroke="#2E75B6" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="105" y="235" text-anchor="middle" font-family="Arial" font-size="10" fill="#2E75B6">Vs</text>
+  <!-- Courbe VMO/MMO (droite, descend avec altitude car Mach constant = IAS descend) -->
+  <polyline points="620,228 610,200 590,170 565,145 540,120 510,92 480,62 460,40"
+            fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <text x="635" y="235" text-anchor="middle" font-family="Arial" font-size="10" fill="#C00000">VMO/MMO</text>
+  <!-- Zone verte (enveloppe sûre) remplie entre les deux courbes -->
+  <polygon points="120,228 130,200 145,170 165,145 195,120 240,92 300,62 340,40 460,40 480,62 510,92 540,120 565,145 590,170 610,200 620,228"
+           fill="#E2EFDA" opacity="0.5"/>
+  <!-- Coffin corner (sommet du triangle) -->
+  <circle cx="400" cy="40" r="12" fill="#C00000" opacity="0.7"/>
+  <text x="430" y="35" font-family="Arial" font-size="11" font-weight="bold" fill="#C00000">Coffin Corner</text>
+  <text x="430" y="50" font-family="Arial" font-size="9" fill="#C00000">Vs ≈ VMO/MMO</text>
+  <!-- Ligne FL350 -->
+  <line x1="80" y1="145" x2="670" y2="145" stroke="#BF8F00" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="660" y="142" text-anchor="end" font-family="Arial" font-size="9" fill="#BF8F00">FL 350 typique croisière</text>
+  <!-- Annotation bulle faible marge à FL350 -->
+  <rect x="270" y="100" width="160" height="28" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="350" y="115" text-anchor="middle" font-family="Arial" font-size="9" fill="#1F3864">Marge de vitesse réduite</text>
+  <text x="350" y="125" text-anchor="middle" font-family="Arial" font-size="9" fill="#BF8F00">buffet bas ↔ buffet haut</text>
+</svg>

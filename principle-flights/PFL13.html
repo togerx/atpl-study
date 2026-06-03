@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PFL13 — Commandes de Vol · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">PFL13 · Commandes de Vol</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- Sidebar injectée automatiquement par main.js — NE PAS TOUCHER -->
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="PFL13" data-matiere="principle-flights">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Principes du Vol</a>
+        <span class="sep">›</span>
+        <span>PFL13</span>
+      </div>
+      <div class="cours-code-badge">PFL13</div>
+      <h1 class="cours-title">Commandes de Vol (Controls)</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA 081.05</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~35 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════════════
+             SECTION 0 — GÉNÉRALITÉS
+        ══════════════════════════════════════ -->
+        <h1 id="generalites">0. Généralités sur les commandes de vol</h1>
+
+        <p>Les commandes de vol permettent au pilote de contrôler l'avion autour de ses trois axes. Chaque axe correspond à une surface de contrôle primaire et à un type de stabilité.</p>
+
+        <div class="fig-container">
+          <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto">
+            <defs>
+              <marker id="arr0" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#1F3864"/>
+              </marker>
+            </defs>
+            <!-- Boîte Tangage -->
+            <rect x="10" y="20" width="210" height="160" rx="10" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+            <text x="115" y="48" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1F3864">TANGAGE (Pitch)</text>
+            <text x="115" y="70" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">Axe latéral (transversal)</text>
+            <text x="115" y="92" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">Gouverne de profondeur</text>
+            <text x="115" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">(elevator / THS)</text>
+            <text x="115" y="134" text-anchor="middle" font-family="Arial" font-size="11" fill="#548235">Stabilité longitudinale</text>
+            <text x="115" y="158" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Angle : assiette (θ)</text>
+            <!-- Boîte Lacet -->
+            <rect x="255" y="20" width="210" height="160" rx="10" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+            <text x="360" y="48" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1F3864">LACET (Yaw)</text>
+            <text x="360" y="70" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">Axe normal (vertical)</text>
+            <text x="360" y="92" text-anchor="middle" font-family="Arial" font-size="11" fill="#C00000">Gouverne de direction</text>
+            <text x="360" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#C00000">(rudder)</text>
+            <text x="360" y="134" text-anchor="middle" font-family="Arial" font-size="11" fill="#548235">Stabilité de route</text>
+            <text x="360" y="158" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Angle : dérapage (β)</text>
+            <!-- Boîte Roulis -->
+            <rect x="500" y="20" width="210" height="160" rx="10" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+            <text x="605" y="48" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1F3864">ROULIS (Roll)</text>
+            <text x="605" y="70" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">Axe longitudinal</text>
+            <text x="605" y="92" text-anchor="middle" font-family="Arial" font-size="11" fill="#548235">Ailerons (+ spoilers)</text>
+            <text x="605" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#548235"> </text>
+            <text x="605" y="134" text-anchor="middle" font-family="Arial" font-size="11" fill="#548235">Stabilité latérale</text>
+            <text x="605" y="158" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Angle : gîte (Φ)</text>
+          </svg>
+          <div class="fig-caption">Fig. 1 — Les trois axes de l'avion et leurs commandes primaires</div>
+        </div>
+
+        <h2 id="forces-pression">0.1 Principe aérodynamique des gouvernes</h2>
+        <p>Le braquage d'une gouverne modifie localement la cambrure du profil ou son angle d'attaque effectif, ce qui génère une redistribution des pressions :</p>
+        <ul>
+          <li><strong>Du côté du braquage</strong> : surpression (frein à l'écoulement)</li>
+          <li><strong>Du côté opposé</strong> : dépression (accélération de l'écoulement)</li>
+          <li><strong>Résultat</strong> : une force résultante perpendiculaire à la surface, qui crée un moment autour de l'axe concerné</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Deux effets distincts du braquage d'une gouverne :
+          <ul style="margin:.4rem 0 0">
+            <li><strong>Changement de cambrure</strong> (flaps, gouvernes classiques) : modification du Cz sans modifier l'incidence</li>
+            <li><strong>Changement d'AoA</strong> (profil complet tournant) : l'incidence effective α<sub>eff</sub> &gt; α réel → piège au décrochage (stall recovery : mettre le nez bas pour réduire α)</li>
+          </ul>
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 1 — PITCH
+        ══════════════════════════════════════ -->
+        <h1 id="pitch">1. Contrôle en tangage (Pitch)</h1>
+
+        <h2 id="pitch-gouvernes">1.1 La gouverne de profondeur</h2>
+        <p>Le contrôle en tangage est assuré par la <strong>gouverne de profondeur</strong> (elevator) ou par un <strong>stabilisateur horizontal tout mobile</strong> (THS — Trimmable Horizontal Stabilizer, aussi appelé PHR en français). L'empennage horizontal génère une force de portance (positive ou négative) qui, multipliée par le bras de levier jusqu'au centre de gravité, crée le moment de tangage.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">THS</span>
+            <span class="val-label">Stabilisateur horizontal tout mobile (PHR)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">α_HT</span>
+            <span class="val-label">AoA empennage &lt; AoA voilure</span>
+          </div>
+        </div>
+
+        <h2 id="downwash">1.2 Effet du downwash sur l'empennage</h2>
+        <p>Le sillage tourbillonnaire de la voilure génère un <strong>downwash</strong> (flux dévié vers le bas) qui affecte l'empennage horizontal. Par conséquent :</p>
+        <ul>
+          <li>L'empennage voit un angle d'attaque <strong>réduit</strong> par rapport à la voilure : α_HT = α_Wing − ε + i_HT</li>
+          <li>ε (downwash angle) n'est pas constant : il <strong>augmente avec α_Wing</strong></li>
+          <li>Si on ignorait le downwash, on dimensionnerait un empennage trop petit → il doit être surdimensionné pour compenser</li>
+        </ul>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Angle d'attaque de l'empennage horizontal :</strong>
+          <div class="formula-display">α_HT = α_Wing − ε + i_HT</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec ε = angle de downwash (croît avec α_Wing) ; i_HT = incidence de calage de l'empennage (négatif sur avion classique)</p>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          ε (downwash) n'est <strong>pas constant</strong> : il augmente avec l'incidence de la voilure. Un empennage dimensionné sans tenir compte du downwash serait insuffisant pour assurer la stabilité longitudinale.
+        </div>
+
+        <h2 id="cg-pitch">1.3 Influence de la position du CG sur le contrôle en tangage</h2>
+        <p>La position du centre de gravité conditionne directement l'efficacité et les limites du contrôle en tangage :</p>
+        <ul>
+          <li><strong>CG avant (limite avant)</strong> : couple piqueur important → l'empennage doit générer une forte portance négative (cabrage) → risque de manque d'autorité en cabré (atterrissage, décollage). La limite avant est une limite de <em>contrôlabilité</em>.</li>
+          <li><strong>CG arrière (limite arrière)</strong> : couple cabreur croissant → instabilité longitudinale. La limite arrière est une limite de <em>stabilité</em>.</li>
+        </ul>
+
+        <div class="fig-container">
+          <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;height:auto">
+            <defs>
+              <marker id="arr1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#1F3864"/>
+              </marker>
+              <marker id="arr1r" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="10 0, 0 3.5, 10 7" fill="#C00000"/>
+              </marker>
+            </defs>
+            <!-- Barre CG -->
+            <rect x="30" y="70" width="640" height="20" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+            <!-- Limite avant -->
+            <line x1="100" y1="55" x2="100" y2="105" stroke="#C00000" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="100" y="48" text-anchor="middle" font-family="Arial" font-size="10" fill="#C00000">Limite avant</text>
+            <text x="100" y="120" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000">Contrôlabilité</text>
+            <!-- Limite arrière -->
+            <line x1="580" y1="55" x2="580" y2="105" stroke="#C00000" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="580" y="48" text-anchor="middle" font-family="Arial" font-size="10" fill="#C00000">Limite arrière</text>
+            <text x="580" y="120" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000">Stabilité</text>
+            <!-- Zone verte CG acceptable -->
+            <rect x="100" y="72" width="480" height="16" rx="3" fill="#548235" opacity="0.3"/>
+            <text x="340" y="83" text-anchor="middle" font-family="Arial" font-size="10" fill="#1F3864" font-weight="bold">Plage CG acceptable</text>
+            <!-- Flèche CG avant = + de couple piqueur -->
+            <text x="340" y="148" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">← CG avant : couple piqueur ↑, autorité cabrage ↓     CG arrière : instabilité ↑ →</text>
+          </svg>
+          <div class="fig-caption">Fig. 2 — Plage de centrage et limites de contrôle en tangage</div>
+        </div>
+
+        <h2 id="types-stabilisateurs">1.4 Types de stabilisateurs horizontaux</h2>
+        <p>On distingue quatre grandes configurations d'empennage horizontal :</p>
+
+        <table>
+          <thead>
+            <tr><th>Configuration</th><th>Description</th><th>Avantages</th><th>Inconvénients</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Standard (plan fixe + gouverne)</strong></td>
+              <td>Stabilisateur fixe + gouverne mobile (elevator). THS = version à stabilisateur pivotant.</td>
+              <td>Simplicité, robustesse</td>
+              <td>Dans le sillage de la voilure → efficacité réduite</td>
+            </tr>
+            <tr>
+              <td><strong>T-tail (empennage en T)</strong></td>
+              <td>Stabilisateur au sommet du plan vertical</td>
+              <td>Hors du sillage → plus efficace ; bon bras de levier par rapport au CG</td>
+              <td><strong>Deep stall</strong> : à haute incidence, la voilure masque complètement l'empennage → décrochage profond irréversible</td>
+            </tr>
+            <tr>
+              <td><strong>V-tail « Ruddervator »</strong></td>
+              <td>Deux surfaces en V remplacent empennage H et V. Surfaces appelées « ruddervators ».</td>
+              <td>Traînée et masse réduites ; bon comportement en vrille</td>
+              <td>Complexité de la commande ; faible efficacité en lacet ; avion très sensible au roulis hollandais</td>
+            </tr>
+            <tr>
+              <td><strong>Canard</strong></td>
+              <td>Surface de contrôle en avant de la voilure</td>
+              <td>Portance positive (pas de portance négative) ; décroche avant la voilure → protection naturelle</td>
+              <td>Perturbe l'écoulement sur la voilure ; subit les rafales avant la voilure (instabilité) ; limite l'AoA maximale</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — T-tail et deep stall</div>
+          Sur les avions à empennage en T, à très haute incidence (après décrochage), la voilure masque entièrement l'empennage (dans son sillage). La gouverne de profondeur devient <strong>totalement inefficace</strong> → deep stall (décrochage profond) potentiellement irréversible. Exemples : DC-9, BAC-111, certains Learjet.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — THS nose-up</div>
+          Quand on commande du <strong>nose-up</strong> (cabré), le THS pivote de telle sorte que son <strong>bord d'attaque descend</strong>. C'est l'inverse de ce qu'on pourrait intuitivement penser. La commande pilote agit sur le braquage du stabilisateur entier, pas seulement sur une gouverne.
+        </div>
+
+        <h2 id="moteurs-tangage">1.5 Moments de tangage dus à la poussée moteur</h2>
+        <p>La poussée moteur crée un moment de tangage si la ligne de poussée ne passe pas par le centre de gravité :</p>
+        <ul>
+          <li><strong>Moteur sous l'aile (sous le CG)</strong> : poussée crée un moment <em>cabreur</em> (nose-up) → à plein gaz, tendance à cabrer</li>
+          <li><strong>Moteur au-dessus (au-dessus du CG)</strong> : poussée crée un moment <em>piqueur</em> (nose-down) → exemple : A-10 Thunderbolt II avec réacteurs dorsaux</li>
+          <li><strong>Moteur au niveau du CG</strong> : pas de moment de tangage</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Sur les avions de transport modernes (réacteurs sous voilure, CG au-dessus de la ligne de poussée), l'augmentation de poussée à faible vitesse tend à faire <strong>cabrer l'avion</strong>. C'est un facteur à prendre en compte lors des remises de gaz (go-around). Sur certains avions à réacteurs en fuselage arrière (comme le B727), c'est l'inverse : l'ajout de puissance tend à <strong>faire piquer</strong> le nez.
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 2 — YAW
+        ══════════════════════════════════════ -->
+        <h1 id="yaw">2. Contrôle en lacet (Yaw)</h1>
+
+        <h2 id="gouverne-direction">2.1 La gouverne de direction</h2>
+        <p>Le contrôle en lacet est assuré par la <strong>gouverne de direction</strong> (rudder), articulée sur le plan vertical fixe. Son braquage modifie l'AoA du plan vertical, générant une force latérale qui crée un moment de lacet autour de l'axe normal.</p>
+
+        <p>Effets secondaires de la gouverne de direction :</p>
+        <ul>
+          <li><strong>Roulis induit</strong> : le lacet crée une différence de vitesse entre les deux ailes → roulis dans le sens du lacet</li>
+          <li><strong>Dérapage β</strong> : angle entre l'axe longitudinal de l'avion et la direction du vent relatif</li>
+        </ul>
+
+        <h2 id="sideslip">2.2 Le dérapage (sideslip β)</h2>
+        <p>Le dérapage est l'angle β entre l'axe longitudinal de l'avion et le vent relatif, mesuré dans le plan horizontal. Il peut être provoqué par :</p>
+        <ul>
+          <li>Une rafale de vent latéral (phase initiale)</li>
+          <li>Un virage non coordonné (lacet non contrebalancé)</li>
+          <li>Un angle de crabe intentionnel (atterrissage vent de travers)</li>
+          <li>Une panne moteur sur avion bimoteur (asymétrie de poussée)</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Sur les avions à ailes basses en dérapage : la partie intérieure de l'aile sous le vent (leeward wing) est <strong>masquée par le fuselage</strong> → moins de portance → tendance à rouler vers l'aile sous le vent. Le pilote doit compenser avec les ailerons en mettant de l'aile <strong>dans le vent</strong>.
+        </div>
+
+        <h2 id="rudder-limiting">2.3 Limitation de la gouverne de direction (Rudder Limiting)</h2>
+        <p>Sur les avions de transport (CAT aircraft), la déflexion maximale de la gouverne de direction est <strong>automatiquement réduite à haute vitesse</strong>. Le système de limitation de gouverne (rudder limiter / rudder ratio changer) empêche un braquage excessif qui pourrait :</p>
+        <ul>
+          <li>Dépasser les <strong>limites structurales</strong> de l'empennage vertical</li>
+          <li>Provoquer un <strong>roulis excessif</strong> à grande vitesse</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Rudder Limiting</div>
+          Le rudder limiting s'applique <strong>principalement aux avions de transport (CAT)</strong>. À <em>basse vitesse</em>, la déflexion maximale est autorisée (utile en cas de panne moteur). À <em>haute vitesse</em>, la déflexion est automatiquement réduite. Cela ne signifie pas que la gouverne est moins efficace — au contraire, à haute vitesse, même une petite déflexion génère des forces considérables.
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 3 — ROLL
+        ══════════════════════════════════════ -->
+        <h1 id="roll">3. Contrôle en roulis (Roll)</h1>
+
+        <h2 id="ailerons">3.1 Les ailerons</h2>
+        <p>Le contrôle en roulis est principalement assuré par les <strong>ailerons</strong>, surfaces mobiles situées sur le bord de fuite extérieur de chaque aile. Ils fonctionnent de manière différentielle : quand l'aileron gauche monte, l'aileron droit descend, et vice-versa. L'aile dont l'aileron descend voit son portance augmenter, l'autre diminuer → moment de roulis.</p>
+
+        <h2 id="ailerons-inboard-outboard">3.2 Ailerons intérieurs / extérieurs</h2>
+        <p>La plupart des avions de transport disposent de <strong>deux paires d'ailerons</strong> :</p>
+        <ul>
+          <li><strong>Ailerons extérieurs (outboard)</strong> : utilisés à basse vitesse uniquement. À haute vitesse, ils sont <strong>verrouillés</strong> pour éviter trois phénomènes :</li>
+          <li style="list-style:none;padding-left:1.5rem">— Surcommande (excessive roll rate)</li>
+          <li style="list-style:none;padding-left:1.5rem">— Dépassement des limites structurales</li>
+          <li style="list-style:none;padding-left:1.5rem">— Phénomènes aéroélastiques (aileron reversal)</li>
+          <li><strong>Ailerons intérieurs (inboard)</strong> : actifs à toutes vitesses</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Aileron reversal — phénomène aéroélastique</div>
+          À haute vitesse, l'aile est suffisamment flexible pour que le braquage d'un aileron <strong>torde l'aile dans la direction opposée</strong> (twisting autour de l'axe élastique). Au-delà de la <strong>vitesse de reversal</strong>, l'effet de l'aileron s'inverse : baisser l'aileron pour monter l'aile produit en fait une descente de cette aile. C'est pour prévenir ce phénomène que les ailerons extérieurs sont verrouillés à haute vitesse.
+        </div>
+
+        <h2 id="adverse-yaw">3.3 Lacet inverse (Adverse Yaw)</h2>
+        <p>Quand les ailerons sont braqués pour initier un roulis, l'aile qui monte (aileron levé) génère plus de traînée induite que l'aile qui descend (aileron abaissé). En effet, la portance augmentée de l'aile montante s'accompagne d'une traînée induite (Cxi) plus élevée. Résultat : l'avion « lace » dans le sens <strong>opposé</strong> au roulis souhaité. Ce phénomène s'appelle le <strong>lacet inverse</strong> (adverse yaw).</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Moyens de corriger le lacet inverse</div>
+          Quatre techniques existent :
+          <ul style="margin:.4rem 0 0">
+            <li><strong>Ailerons différentiels</strong> : l'aileron qui monte se déplace plus que celui qui descend → réduit la traînée du côté montant</li>
+            <li><strong>Aileron Frise</strong> : le bord d'attaque de l'aileron qui monte dépasse dans le flux → augmente volontairement la traînée de son côté pour équilibrer</li>
+            <li><strong>Couplage gouverne/aileron</strong> (rudder-aileron cross-coupling) : la gouverne de direction est automatiquement actionnée en coordination avec les ailerons</li>
+            <li><strong>Spoilers différentiels</strong> : le spoiler est braqué sur l'extrados de l'aile descendante pour compenser la traînée</li>
+          </ul>
+        </div>
+
+        <h2 id="roll-rate">3.4 Taux de roulis (Roll Rate)</h2>
+        <p>Le <strong>taux de roulis</strong> est la vitesse angulaire à laquelle l'avion se met en roulis (rad/s ou °/s). Facteurs influençant le roll rate :</p>
+        <ul>
+          <li><strong>Altitude</strong> : à haute altitude, la TAS est plus élevée pour un IAS donné → l'AoA est plus faible → la force d'amortissement du roulis (damping) est réduite → le <strong>roll rate augmente</strong> avec l'altitude</li>
+          <li>Envergure (plus grande envergure → roll rate plus faible)</li>
+          <li>Déflexion des ailerons</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Roll rate et altitude</div>
+          À haute altitude, pour le même mouvement de manche, le taux de roulis est <strong>plus élevé</strong>. Cela peut surprendre le pilote habitué aux altitudes plus basses. La raison : TAS élevée → AoA réduit → moins d'amortissement aérodynamique.
+        </div>
+
+        <h2 id="spoilers">3.5 Spoilers</h2>
+        <p>Les spoilers sont des surfaces mobiles sur l'extrados de l'aile. Leur double rôle est d'<strong>augmenter la traînée</strong> et de <strong>réduire la portance</strong>. Ils sont utilisés dans trois contextes différents :</p>
+
+        <table>
+          <thead>
+            <tr><th>Situation</th><th>Fonction</th><th>Commande</th><th>Déflexion typique</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Contrôle en roulis (en vol)</strong></td><td>Spoilers différentiels</td><td>Mouvement latéral manche/volant</td><td>±5° à ±10°</td></tr>
+            <tr><td><strong>Freinage aérodynamique (en vol)</strong></td><td>Aérofreins (Speed brakes)</td><td>Levier speedbrake (symétrique)</td><td>10° à 20°</td></tr>
+            <tr><td><strong>Roulage à l'atterrissage</strong></td><td>Destructeurs de portance (Ground spoilers)</td><td>Automatique (signal WOW)</td><td>45° à 60°</td></tr>
+          </tbody>
+        </table>
+
+        <p>Effet sur la polaire aérodynamique en cas de déploiement des spoilers :</p>
+        <ul>
+          <li>Cz diminue, Cx augmente</li>
+          <li>Rapport portance/traînée (L/D) diminue</li>
+          <li><strong>Vstall augmente</strong> (car Cz max est réduit)</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Spoilers vs Airbrakes : effet sur Vstall</div>
+          <ul style="margin:.3rem 0 0">
+            <li><strong>Spoilers</strong> : réduisent Cz max → <strong>Vstall augmente</strong></li>
+            <li><strong>Aérofreins (airbrakes)</strong> : augmentent la traînée parasite (ΔCx constant) sans modifier Cz max → <strong>Vstall constante</strong> (le CD0 augmente, mais Cz max ne change pas)</li>
+          </ul>
+          C'est une distinction fréquente aux examens ATPL !
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 4 — INTERACTION ROULIS/LACET
+        ══════════════════════════════════════ -->
+        <h1 id="roll-yaw-interaction">4. Interaction roulis / lacet</h1>
+
+        <h2 id="lacet-induit">4.1 Lacet induit par le roulis</h2>
+        <p>Lors d'une action en roulis, les deux ailes se déplacent à des vitesses différentes. L'aile haute parcourt une trajectoire plus longue que l'aile basse en un même temps → elle se déplace plus vite → elle génère une portance et une traînée induite <strong>plus élevées</strong>. Cette asymétrie de traînée crée un moment de lacet dans le sens du roulis (le nez tend à pointer vers l'aile basse). C'est le <strong>lacet induit</strong>.</p>
+
+        <h2 id="roulis-induit">4.2 Roulis induit par le lacet</h2>
+        <p>Réciproquement, une action en lacet crée une différence de vitesse entre les deux ailes. L'aile qui avance (côté vers lequel on lace) se déplace plus vite et génère donc <strong>plus de portance</strong> que l'aile qui recule. Cette asymétrie de portance crée un moment de roulis dans le sens du lacet. C'est le <strong>roulis induit</strong>.</p>
+
+        <div class="fig-container">
+          <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;height:auto">
+            <defs>
+              <marker id="arr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#1F3864"/>
+              </marker>
+            </defs>
+            <!-- Boîte gauche -->
+            <rect x="10" y="30" width="300" height="120" rx="8" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+            <text x="160" y="58" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">Lacet induit par le roulis</text>
+            <text x="160" y="80" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">Roulis → aile haute tourne plus vite</text>
+            <text x="160" y="100" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">→ traînée induite ↑ côté haut</text>
+            <text x="160" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">→ lacet vers l'aile basse</text>
+            <text x="160" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">(dans le sens du roulis)</text>
+            <!-- Séparateur -->
+            <line x1="360" y1="20" x2="360" y2="165" stroke="#BF8F00" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <!-- Boîte droite -->
+            <rect x="390" y="30" width="300" height="120" rx="8" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+            <text x="540" y="58" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">Roulis induit par le lacet</text>
+            <text x="540" y="80" text-anchor="middle" font-family="Arial" font-size="11" fill="#C00000">Lacet → aile avançante plus rapide</text>
+            <text x="540" y="100" text-anchor="middle" font-family="Arial" font-size="11" fill="#C00000">→ portance ↑ côté avançant</text>
+            <text x="540" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">→ roulis vers l'aile reculante</text>
+            <text x="540" y="140" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">(dans le sens du lacet)</text>
+          </svg>
+          <div class="fig-caption">Fig. 3 — Couplage roulis/lacet : les deux effets secondaires</div>
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 5 — AÉROFREINS
+        ══════════════════════════════════════ -->
+        <h1 id="airbrakes">5. Aérofreins (Airbrakes)</h1>
+
+        <p>Les aérofreins ont pour unique but d'<strong>augmenter la traînée</strong> sans modifier significativement la portance (contrairement aux spoilers). Ils peuvent être placés :</p>
+        <ul>
+          <li><strong>Sur le fuselage</strong> (extrados ou intrados) : fréquent sur les avions militaires (F-15, Eurofighter, Mirage)</li>
+          <li><strong>Sur les ailes</strong> : aérofreins d'extrados et d'intrados, actionnés par vérins hydrauliques via biellettes</li>
+          <li><strong>Cône de queue / clamshell</strong> : panneaux en queue de fuselage s'ouvrant en « coquille » — fréquent sur certains jets d'affaires</li>
+        </ul>
+
+        <p>Effet sur la polaire aérodynamique :</p>
+        <ul>
+          <li>Traînée parasite augmente (ΔCx constant quelle que soit l'incidence)</li>
+          <li>Cz max inchangé → <strong>Vstall constante</strong></li>
+          <li>Rapport portance/traînée (L/D) diminue</li>
+          <li>La polaire est décalée vers la droite (plus de Cx) sans changement de Cz max</li>
+        </ul>
+
+        <!-- ══════════════════════════════════════
+             SECTION 6 — RÉDUCTION EFFORTS
+        ══════════════════════════════════════ -->
+        <h1 id="reduction-efforts">6. Réduction des efforts aux commandes</h1>
+
+        <h2 id="moment-charniere">6.1 Moment charnière</h2>
+        <p>La force aérodynamique Fc agissant sur une gouverne crée un <strong>moment charnière</strong> (hinge moment) que le pilote doit compenser par un effort E sur les commandes. La relation fondamentale est :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Moment charnière :</strong>
+          <div class="formula-display">d × Fc = E × l</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec d = distance charnière–centre de pression, Fc = force aérodynamique sur la gouverne (∝ ½ρV² × S_gouverne), E = effort pilote, l = longueur du bras de levier de commande</p>
+        </div>
+
+        <p>Plus la vitesse est grande, plus Fc est élevée, plus l'effort pilote est grand → nécessité de mécanismes de réduction.</p>
+
+        <h2 id="equilibrage-aero">6.2 Équilibrage aérodynamique (Aerodynamic balance)</h2>
+        <p>L'objectif est de réduire le moment charnière sans supprimer totalement le ressenti (feel). Deux familles de solutions existent :</p>
+
+        <p><strong>A — Systèmes de balance sur la gouverne (Control balancing system)</strong></p>
+        <ul>
+          <li><strong>Inset hinge (charnière en retrait)</strong> : la charnière est reculée vers le bord de fuite, réduisant la distance d → moins de moment. Simple mais limité.</li>
+          <li><strong>Horn balance / Corne débordante (Control horn)</strong> : une partie de la gouverne dépasse devant la charnière. La force sur cette partie crée un moment inverse au moment charnière → réduction de l'effort.</li>
+          <li><strong>Balance panel (panneau d'équilibrage interne)</strong> : panneau souple dans une cavité interne, utilisant la différence de pression entre extrados et intrados pour aider le mouvement → très efficace (utilisé sur certains avions anciens type B727).</li>
+        </ul>
+
+        <p><strong>B — Tabs (petites surfaces en bord de fuite)</strong></p>
+        <p>Un tab est une petite surface articulée en bord de fuite de la gouverne, qui crée un moment s'opposant au moment charnière. Inconvénient principal : réduit légèrement l'efficacité de la gouverne principale.</p>
+
+        <table>
+          <thead>
+            <tr><th>Type de tab</th><th>Fonctionnement</th><th>Particularités</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Balance tab</strong></td>
+              <td>Se déplace en sens inverse de la gouverne (automatiquement, mécaniquement couplé)</td>
+              <td>Réduit l'effort, utilisé en trim</td>
+            </tr>
+            <tr>
+              <td><strong>Servo tab</strong></td>
+              <td>Le pilote n'agit que sur le tab ; c'est lui qui entraîne la gouverne par sa force aérodynamique</td>
+              <td>Moment global très faible ; <strong>inefficace à basse vitesse</strong> ; risque de sur-déflexion par le pilote</td>
+            </tr>
+            <tr>
+              <td><strong>Spring tab</strong></td>
+              <td>Couplé à un ressort : à basse vitesse, agit comme une commande directe ; à partir d'une certaine vitesse, devient un servo tab</td>
+              <td>Compromis : feel artificiel à basse vitesse, assistance à haute vitesse</td>
+            </tr>
+            <tr>
+              <td><strong>Anti-balance tab</strong></td>
+              <td>Se déplace dans le <em>même sens</em> que la gouverne → augmente le moment charnière</td>
+              <td>Utilisé quand l'effort aux commandes est trop faible (ex: empennage tout-mobile très efficace)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Balance panel vs Balance tab</div>
+          Le <strong>balance panel</strong> (panneau d'équilibrage interne) est un dispositif <em>structurel</em> intégré à la gouverne utilisant des différences de pression dans deux chambres. Le <strong>balance tab</strong> est une petite surface articulée visible extérieurement. Ces deux termes sont souvent confondus dans les QCM ATPL.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Servo tab inefficace à basse vitesse</div>
+          Un avion équipé de servo tabs peut avoir des commandes dangereusement légères à haute vitesse, permettant des déflexions excessives de la gouverne. C'est pourquoi ils sont souvent <strong>associés à des spring tabs</strong> pour durcir les commandes et créer un feel artificiel à basse vitesse.
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 7 — TRIM
+        ══════════════════════════════════════ -->
+        <h1 id="trim">7. Trim (compensateurs)</h1>
+
+        <h2 id="raisons-trim">7.1 Pourquoi trimer ?</h2>
+        <p>Trimer consiste à annuler les efforts résiduels aux commandes dans une configuration de vol donnée, afin que le pilote puisse relâcher les commandes sans que l'avion change d'assiette. Les raisons de devoir trimer sont notamment : changement de vitesse, de configuration (train, volets), de masse, de centrage, ou de poussée.</p>
+
+        <h2 id="trim-tab">7.2 Trim tab</h2>
+        <p>Le trim tab est une petite surface sur le bord de fuite de la gouverne, commandée indépendamment par le pilote (molette de trim en cabine). Il se positionne de façon à créer un moment charnière qui équilibre la force aérodynamique sur la gouverne, permettant de relâcher la gouverne en position neutre sans effort.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Distinction entre trim tab et balance tab :
+          <ul style="margin:.4rem 0 0">
+            <li><strong>Trim tab</strong> : commandé <em>indépendamment</em> par le pilote pour éliminer les efforts résiduels à une configuration donnée.</li>
+            <li><strong>Balance tab</strong> : couplé mécaniquement à la gouverne, se déplace automatiquement en sens inverse pour <em>réduire les efforts</em> pendant le braquage. Il n'est pas commandé directement par le pilote.</li>
+          </ul>
+        </div>
+
+        <h2 id="stabilisateur-trim">7.3 Trim par stabilisateur horizontal (THS)</h2>
+        <p>Sur les avions de transport modernes, le trim en tangage est réalisé en modifiant l'incidence du <strong>stabilisateur horizontal trimmable (THS/PHR)</strong> plutôt que par un simple tab. Avantages : plus efficace (toute la surface bouge), pas de perte d'efficacité de la gouverne. Les inconvénients liés à un THS bloqué ou emballé (runaway stabilizer) sont critiques :</p>
+        <ul>
+          <li>THS bloqué (jammed stabilizer) : le pilote ne peut plus trimer en tangage → plus difficile à gérer si le centrage évolue</li>
+          <li>THS emballé (runaway stabilizer) : le THS se déplace sans ordre → situation d'urgence, nécessite un arrêt immédiat de la commande moteur du THS</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — THS emballé (runaway stabilizer)</div>
+          Un THS emballé lors d'un go-around ou décollage peut rendre l'avion incontrôlable si non détecté immédiatement. Lors du décollage, un mauvais réglage du trim THS (trop cabreur) augmente les efforts au manche et peut provoquer une rotation trop précoce. Les QCM testent souvent les <em>conséquences</em> d'un trim erroné au décollage.
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 8 — SERVOCOMMANDES ET FBW
+        ══════════════════════════════════════ -->
+        <h1 id="artificial-means">8. Servocommandes et Fly-by-Wire (FBW)</h1>
+
+        <h2 id="servocommandes">8.1 Commandes assistées et servocommandes</h2>
+        <p>Sur les avions modernes, la force aérodynamique sur les gouvernes est trop élevée pour être actionnée directement par le pilote. Deux niveaux d'assistance existent :</p>
+        <ul>
+          <li><strong>Power-assisted controls (servocommandes réversibles)</strong> : un actionneur hydraulique assiste le pilote, mais les efforts aérodynamiques sont partiellement renvoyés au manche (feel naturel partiel).</li>
+          <li><strong>Fully powered controls (servocommandes irréversibles)</strong> : l'actionneur hydraulique/électrique déplace la gouverne entièrement ; les efforts aérodynamiques ne sont <strong>pas</strong> transmis au pilote → nécessité d'un <em>artificial feel system</em> pour simuler la sensation de vol.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Sur les avions à commandes entièrement motorisées (fully powered), il n'y a <strong>aucune sensation naturelle</strong> aux commandes. Un système d'artificial feel (Q-feel, springs, Force Feel Computer) est obligatoire pour fournir au pilote une résistance proportionnelle à la vitesse et à la déflexion.
+        </div>
+
+        <h2 id="fbw">8.2 Fly-by-Wire (FBW)</h2>
+        <p>Le système FBW remplace les liaisons mécaniques entre les commandes pilote et les gouvernes par des liaisons <strong>électriques</strong>. Les ordres du pilote sont transmis sous forme de signaux électriques à des ordinateurs de commande de vol (Flight Control Computers — FCC/PRIM/SEC) qui commandent les actionneurs hydrauliques des gouvernes.</p>
+
+        <p>Paramètres contrôlables en vol palier grâce aux lois de commandes FBW :</p>
+        <ul>
+          <li>Tangage, roulis, lacet</li>
+          <li>Vitesse, poussée moteur (certains systèmes)</li>
+        </ul>
+
+        <p>Avantages du FBW :</p>
+        <ul>
+          <li>Réduction de masse (absence de câbles/bielles)</li>
+          <li>Protections enveloppe de vol (pitch, roll, vitesse)</li>
+          <li>Facilité de pilotage (les ordinateurs coordonnent automatiquement les gouvernes)</li>
+          <li>Utilisation du centrage CG dans le système FBW pour optimiser les performances</li>
+        </ul>
+
+        <h2 id="lois-commandes">8.3 Lois de commandes (Control Laws)</h2>
+        <p>Les FCC implémentent des lois de commandes qui varient selon l'état du système. Sur l'A320/A330 par exemple :</p>
+
+        <table>
+          <thead>
+            <tr><th>Loi</th><th>Etat du système</th><th>Protections disponibles</th><th>Indication PFD</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Normal Law</strong></td>
+              <td>Tous les FCC opérationnels</td>
+              <td>Toutes (α-prot, α-max, bank limit, Vmax…)</td>
+              <td>Triangle vert (sidestick)</td>
+            </tr>
+            <tr>
+              <td><strong>Alternate Law</strong></td>
+              <td>Dégradation partielle</td>
+              <td>Réduites (pas d'α-prot)</td>
+              <td>Triangle ambre (double triangle)</td>
+            </tr>
+            <tr>
+              <td><strong>Direct Law</strong></td>
+              <td>Dégradation sévère</td>
+              <td>Aucune (déflexion directe proportionnelle à l'entrée)</td>
+              <td>Triangle ambre, "USE MAN PITCH TRIM"</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Protections FBW (Normal Law)</div>
+          En Normal Law sur Airbus :
+          <ul style="margin:.4rem 0 0">
+            <li><strong>α-protection</strong> : à partir de Vα-prot, le THS s'arrête et le sidestick devient une commande directe d'incidence</li>
+            <li><strong>α-max</strong> : incidence maximale physiquement irréalisable quelle que soit la commande pilote</li>
+            <li><strong>Bank angle limit</strong> : retour automatique à 33° si lâcher manche (67° maxi en manœuvre)</li>
+            <li><strong>Hard/Soft protections</strong> : soft = résistance progressive croissante ; hard = butée physique impossible à dépasser</li>
+          </ul>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — FBW et position CG</div>
+          Sur les avions FBW comme l'A320, le centrage est intentionnellement maintenu <strong>vers l'arrière</strong> (proche de la limite arrière) pour réduire les besoins de portance négative de l'empennage horizontal → réduction de traînée → économie de carburant. Les FCC compensent électroniquement l'instabilité statique qui en résulte.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">α_HT &lt; α_W</span>
+            <span class="val-label">Downwash réduit l'AoA de l'empennage</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">±5°–10°</span>
+            <span class="val-label">Spoilers différentiels (roulis en vol)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">10°–20°</span>
+            <span class="val-label">Speed brakes (freinage aéro en vol)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">45°–60°</span>
+            <span class="val-label">Ground spoilers (atterrissage)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">33° / 67°</span>
+            <span class="val-label">Bank limit FBW Normal Law (auto / maxi)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">d × Fc = E × l</span>
+            <span class="val-label">Équilibre moment charnière</span>
+          </div>
+        </div>
+
+        <h1 id="tableau-gouvernes">Tableau de synthèse des gouvernes</h1>
+        <table>
+          <thead>
+            <tr><th>Gouverne</th><th>Axe</th><th>Commande pilote</th><th>Effet secondaire</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Profondeur / THS</td><td>Tangage (axe latéral)</td><td>Manche AV/AR</td><td>Variation portance empennage</td></tr>
+            <tr><td>Direction (Rudder)</td><td>Lacet (axe normal)</td><td>Palonnier</td><td>Roulis induit</td></tr>
+            <tr><td>Ailerons</td><td>Roulis (axe longit.)</td><td>Manche gauche/droite</td><td>Lacet inverse (adverse yaw)</td></tr>
+            <tr><td>Spoilers (diff.)</td><td>Roulis (assiste ailerons)</td><td>Manche gauche/droite</td><td>Traînée + réduction portance</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="tableau-tabs">Types de tabs — Récapitulatif</h1>
+        <table>
+          <thead>
+            <tr><th>Tab</th><th>Sens de déflexion vs gouverne</th><th>Rôle principal</th><th>Piège</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Balance tab</strong></td><td>Sens inverse</td><td>Réduire les efforts (automatique)</td><td>Réduit légèrement l'efficacité</td></tr>
+            <tr><td><strong>Anti-balance tab</strong></td><td>Même sens</td><td>Augmenter les efforts (feel)</td><td>Sur empennages tout-mobiles très efficaces</td></tr>
+            <tr><td><strong>Trim tab</strong></td><td>Commandé par pilote</td><td>Annuler les efforts résiduels</td><td>Différent du balance tab !</td></tr>
+            <tr><td><strong>Servo tab</strong></td><td>Pilote agit uniquement sur tab</td><td>Commande indirecte de la gouverne</td><td>Inefficace à basse vitesse</td></tr>
+            <tr><td><strong>Spring tab</strong></td><td>Couplé par ressort</td><td>Feel à basse V, servo à haute V</td><td>Compromis basse/haute vitesse</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="tableau-stabilisateurs">Types de stabilisateurs horizontaux</h1>
+        <table>
+          <thead>
+            <tr><th>Type</th><th>Avantages</th><th>Inconvénient majeur</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Standard (dans sillage)</strong></td><td>Simple, robuste</td><td>Efficacité réduite (sillage voilure)</td></tr>
+            <tr><td><strong>T-tail</strong></td><td>Hors sillage, bras de levier ↑</td><td><strong>Deep stall</strong> irréversible</td></tr>
+            <tr><td><strong>V-tail (Ruddervator)</strong></td><td>Masse/traînée réduits</td><td>Lacet faible, Dutch roll, complexité</td></tr>
+            <tr><td><strong>Canard</strong></td><td>Portance positive, décroche en 1er</td><td>Instabilité (rafales), limitation AoA</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Spoilers vs Airbrakes — effet sur Vstall</div>
+              <div class="piege-explication">Les <strong>spoilers réduisent Cz max → Vstall augmente</strong>. Les <strong>airbrakes</strong> n'affectent pas Cz max → <strong>Vstall constante</strong>. Ce n'est que la traînée parasite qui augmente avec les airbrakes.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">T-tail et Deep Stall</div>
+              <div class="piege-explication">À haute incidence sur un avion T-tail, la voilure masque entièrement l'empennage → gouverne de profondeur totalement inefficace → deep stall irréversible. Exemples : DC-9, BAC-111.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">THS « Nose-up » → bord d'attaque vers le bas</div>
+              <div class="piege-explication">Quand on commande du cabré (nose-up), le <strong>bord d'attaque du THS descend</strong>. Contre-intuitif : c'est parce que le THS doit générer une portance négative pour cabrer l'avion (empennage classique).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Limite avant CG = contrôlabilité / Limite arrière = stabilité</div>
+              <div class="piege-explication">La limite <strong>avant</strong> est imposée par l'autorité maximale en cabré (atterrissage, décollage). La limite <strong>arrière</strong> est imposée par la stabilité longitudinale statique. Confondre les deux est un piège classique.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Servo tab inefficace à basse vitesse</div>
+              <div class="piege-explication">Le servo tab dépend de la force aérodynamique pour déplacer la gouverne. À basse vitesse, la force générée est insuffisante → la gouverne reste peu efficace. C'est pourquoi les servo tabs sont souvent combinés à des spring tabs.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Balance panel ≠ Balance tab</div>
+              <div class="piege-explication">Le <strong>balance panel</strong> (panneau interne) utilise des différences de pression dans 2 chambres isolées. Le <strong>balance tab</strong> est une petite surface visible extérieurement. Ce sont deux dispositifs différents de réduction d'effort.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Ailerons extérieurs verrouillés à haute vitesse</div>
+              <div class="piege-explication">Pour prévenir l'over-control, le dépassement des limites structurales, et l'aileron reversal (phénomène aéroélastique). À basse vitesse, les ailerons inboard ET outboard sont actifs.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Roll rate plus élevé en altitude</div>
+              <div class="piege-explication">À haute altitude, TAS élevée pour IAS donnée → AoA réduit → force d'amortissement du roulis réduite → roll rate plus élevé pour même déflexion d'ailerons. Le pilote peut être surpris par la réactivité accrue.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Rudder limiting → avions CAT uniquement</div>
+              <div class="piege-explication">La limitation automatique de gouverne de direction (rudder limiter) est propre aux <strong>avions de transport (CAT)</strong>. À basse vitesse, la déflexion maximale est autorisée. La gouverne n'est pas moins efficace à haute vitesse — au contraire, elle est plus puissante.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Moteur sous l'aile = couple cabreur à plein gaz</div>
+              <div class="piege-explication">La poussée d'un moteur situé sous le niveau du CG crée un moment de tangage cabreur (nose-up). À plein gaz (go-around), ce couple doit être contré par la gouverne de profondeur.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Canard — instabilité due aux rafales</div>
+              <div class="piege-explication">L'empennage canard reçoit les rafales avant la voilure → perturbation de portance avant que la voilure ne soit touchée → réponse destabilisatrice (à l'opposé de l'empennage arrière qui est stabilisant).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">FBW : centrage arrière voulu (économie de carburant)</div>
+              <div class="piege-explication">Sur les avions FBW (A320/330), le centrage proche de la limite arrière réduit la portance négative nécessaire à l'empennage → moins de traînée. L'instabilité statique est compensée électroniquement par les FCC.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'axe de tangage et quelle gouverne le contrôle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Axe latéral (transversal)</strong>, contrôlé par la <strong>gouverne de profondeur (elevator) ou le THS</strong>. Stabilité associée : longitudinale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi l'empennage horizontal voit-il un AoA plus faible que la voilure ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">À cause du <strong>downwash</strong> généré par la voilure, qui dévie le flux vers le bas. α_HT = α_Wing − ε + i_HT. ε augmente avec α_Wing.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">La limite avant du CG est une limite de quoi ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Limite de <strong>contrôlabilité</strong> (autorité insuffisante en cabré, notamment à l'atterrissage). La limite arrière est une limite de <strong>stabilité</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le deep stall et quel type d'empennage en est victime ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Décrochage profond irréversible. Se produit sur les avions à <strong>empennage en T</strong> : la voilure masque l'empennage dans le sillage à haute incidence → gouverne profondeur inefficace.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le lacet inverse (adverse yaw) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Lors d'un roulis, l'aile montante génère plus de traînée induite (portance ↑ → Cxi ↑) → moment de lacet dans le sens <strong>opposé</strong> au roulis souhaité.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez 4 moyens de réduire le lacet inverse. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>(1)</strong> Ailerons différentiels, <strong>(2)</strong> Aileron Frise, <strong>(3)</strong> Couplage gouverne/aileron, <strong>(4)</strong> Spoilers différentiels.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Les spoilers augmentent-ils la Vstall ? Et les airbrakes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Spoilers : OUI</strong> (Cz max diminue → Vstall augmente). <strong>Airbrakes : NON</strong> (Cz max inchangé, seule la traînée parasite augmente → Vstall constante).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les ailerons extérieurs sont-ils verrouillés à haute vitesse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Pour éviter : over-control (taux de roulis excessif), dépassement des limites structurales, et phénomène d'<strong>aileron reversal</strong> (aéroélasticité).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'aileron reversal ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Phénomène aéroélastique : la déflexion de l'aileron tord l'aile autour de son axe élastique dans le sens opposé → au-delà de la <strong>reversal speed</strong>, l'effet de l'aileron s'inverse.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Un moteur sous l'aile à plein gaz crée quel moment de tangage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Moment <strong>cabreur (nose-up)</strong> : la ligne de poussée est sous le CG → couple qui soulève le nez. À contrebalancer par la gouverne de profondeur.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la formule du moment charnière ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>d × Fc = E × l</strong> avec d = distance charnière/CP, Fc = force aéro sur gouverne, E = effort pilote, l = bras de levier commande.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre un trim tab et un balance tab ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Trim tab</strong> : commandé par le pilote pour annuler les efforts résiduels. <strong>Balance tab</strong> : couplé mécaniquement à la gouverne, se déplace automatiquement pour réduire les efforts pendant le braquage.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le servo tab est-il inefficace à basse vitesse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le servo tab dépend des forces aérodynamiques pour déplacer la gouverne. À basse vitesse, ces forces sont insuffisantes → la gouverne reste peu déflectée. Solution : associer un spring tab.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quand utilise-t-on un anti-balance tab ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Quand l'effort aux commandes est trop <strong>faible</strong> (empennage tout-mobile très efficace). L'anti-balance tab se déplace dans le même sens que la gouverne pour <strong>augmenter</strong> le moment charnière et donner du feel.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En FBW Normal Law Airbus, quel est l'angle de gîte de retour automatique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>33°</strong> : si le pilote lâche le manche, l'avion revient automatiquement à 33° de gîte. Le maximum manœuvrable est 67°.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">V-tail : avantages et inconvénients principaux ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Avantages</strong> : masse/traînée réduits, bon comportement en vrille. <strong>Inconvénients</strong> : complexité du système, lacet faible, très sensible au roulis hollandais (Dutch Roll).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le roll rate augmente ou diminue avec l'altitude ? Pourquoi ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Augmente</strong> : à haute altitude, TAS plus élevée pour même IAS → AoA réduit → force d'amortissement du roulis (damping) réduite → roll rate plus élevé pour même déflexion d'ailerons.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le balance panel (panneau d'équilibrage interne) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Panneau interne souple dans une cavité de la gouverne, utilisant la différence de pression entre deux chambres non communicantes pour créer une force aidant le mouvement de la gouverne. À ne pas confondre avec le balance tab.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Empennage canard : pourquoi est-il intrinsèquement moins stable ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Il reçoit les rafales <strong>avant la voilure</strong> → le nez est perturbé avant que la voilure ne réagisse → réponse déstabilisante. Un empennage arrière classique reçoit les rafales après la voilure → réponse stabilisante.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'effet du sideslip sur les ailes d'un avion à ailes basses ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La partie intérieure de l'aile sous le vent (leeward) est masquée par le fuselage → moins de portance → tendance à rouler vers l'aile sous le vent. Le pilote doit mettre de l'aile <strong>dans le vent</strong> pour contrebalancer.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle loi FBW est active quand on lit « USE MAN PITCH TRIM » sur le PFD Airbus ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Direct Law</strong> : dégradation sévère, aucune protection enveloppe, déflexion des gouvernes directement proportionnelle à l'entrée pilote. Trim manuel obligatoire.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Les ground spoilers se déploient à quel angle typique et comment sont-ils déclenchés ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>45° à 60°</strong>, déclenchés automatiquement par le signal <strong>WOW (Weight On Wheels)</strong> à l'atterrissage. Rôle : détruire la portance résiduelle et maximiser le freinage.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel phénomène caractérise le V-tail concernant le roulis hollandais ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le V-tail rend l'avion très sensible au <strong>Dutch Roll</strong> (oscillation couplée roulis/lacet) en raison de la faible efficacité en lacet pur du plan en V et du fort couplage entre les deux axes.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur quel principe fonctionne l'inset hinge pour réduire l'effort pilote ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>charnière est reculée</strong> vers le bord de fuite (d réduit dans d × Fc = E × l). En réduisant d, on réduit le moment charnière Fc × d que le pilote doit compenser.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les avions FBW comme l'A320 volent-ils avec un centrage arrière ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Pour réduire la portance négative de l'empennage → moins de traînée → économie carburant. L'instabilité statique résultante est compensée électroniquement par les FCC (impossible sur avion mécanique).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le lacet induit (induced yaw) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Effet secondaire du roulis : l'aile haute parcourt un trajet plus long → Vi plus élevée → traînée induite plus élevée de ce côté → moment de lacet vers l'aile basse (dans le sens du roulis).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le roulis induit (induced roll) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Effet secondaire du lacet : l'aile avançante se déplace plus vite → portance plus élevée → moment de roulis dans le sens du lacet (vers l'aile reculante).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les 3 types de phénomènes que les ailerons extérieurs verrouillés préviennent ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>(1) Over-control</strong> (taux de roulis excessif), <strong>(2) dépassement des limites structurales</strong>, <strong>(3) phénomènes aéroélastiques</strong> (aileron reversal).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'indication sur le PFD qui permet de savoir la loi FBW active sur Airbus ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La forme et la couleur du symbole de sidestick sur l'horizon artificiel : triangle vert plein = Normal Law ; triangle ambre double = Alternate Law ; triangle ambre + texte "USE MAN PITCH TRIM" = Direct Law.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment le braquage d'une gouverne génère-t-il une force de contrôle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le braquage modifie la cambrure ou l'AoA effectif du profil → surpression du côté du braquage, dépression de l'autre côté → force résultante créant un moment autour de l'axe de la gouverne.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation prev/next — remplie automatiquement par main.js -->
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <!-- TOC auto-générée par main.js à partir des h1/h2/h3[id] du contenu -->
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

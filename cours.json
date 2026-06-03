@@ -1,0 +1,150 @@
+{
+  "matieres": [
+    {
+      "id": "droit-aerien",
+      "nom": "Droit Aérien",
+      "emoji": "⚖️",
+      "description": "Convention de Chicago, OACI, EASA, règles de l'air — Module 010",
+      "couleur": "#E2EFDA",
+      "cours": [
+      ]
+    },
+    {
+      "id": "agk-airframe",
+      "nom": "Cellule & Systèmes",
+      "emoji": "✈️",
+      "description": "Structures, hydraulique, train, pressurisation, climatisation — Module 021",
+      "couleur": "#E8F0FE",
+      "cours": []
+    },
+    {
+      "id": "agk-electrics",
+      "nom": "Électricité & Électronique",
+      "emoji": "⚡",
+      "description": "Circuits DC/AC, batteries, générateurs, avionique — Module 022",
+      "couleur": "#FFF2CC",
+      "cours": []
+    },
+    {
+      "id": "agk-powerplant",
+      "nom": "Motorisation",
+      "emoji": "🔧",
+      "description": "Moteurs à pistons, turbopropulseurs, turboréacteurs, hélices — Module 021",
+      "couleur": "#FBE5E5",
+      "cours": []
+    },
+    {
+      "id": "instruments",
+      "nom": "Instrumentation",
+      "emoji": "🎛️",
+      "description": "Pitot-statique, gyroscopes, compas, FMS, EFIS — Module 022",
+      "couleur": "#DEEAF6",
+      "cours": [
+      ]
+    },
+    {
+      "id": "mass-balance",
+      "nom": "Masse & Centrage",
+      "emoji": "⚖️",
+      "description": "Masses limites, centrage, domaine de vol, chargement — Module 031",
+      "couleur": "#E2EFDA",
+      "cours": []
+    },
+    {
+      "id": "performances",
+      "nom": "Performances",
+      "emoji": "📈",
+      "description": "V1/VR/V2, piste, obstacles, classes de performances — Module 032",
+      "couleur": "#E8F0FE",
+      "cours": []
+    },
+    {
+      "id": "flight-planning",
+      "nom": "Planification de Vol",
+      "emoji": "🗺️",
+      "description": "Plan de vol ICAO, carburant, ETOPS, dégagements, ATC — Module 033",
+      "couleur": "#FFF2CC",
+      "cours": []
+    },
+    {
+      "id": "facteurs-humains",
+      "nom": "Facteurs Humains",
+      "emoji": "🧠",
+      "description": "Modèles SHELL/REASON, CRM, biais cognitifs, fatigue — Module 040",
+      "couleur": "#FBE5E5",
+      "cours": [
+            {
+              "code": "FH04",
+              "titre": "DCS & Barotraumatismes",
+              "description": "Maladie de décompression, barotraumatismes de l'oreille, des sinus et des poumons, pressurisation cabine.",
+              "tags": ["easa", "exam"],
+              "lecture_min": 30
+            },
+            {
+              "code": "FH07",
+              "titre": "Audition & Équilibre",
+              "description": "Anatomie de l'oreille, perception auditive, bruit aéronautique, pertes auditives, protection et système vestibulaire.",
+              "tags": ["easa", "exam"],
+              "lecture_min": 25
+            }
+      ]
+    },
+    {
+      "id": "meteorologie",
+      "nom": "Météorologie",
+      "emoji": "🌤️",
+      "description": "Atmosphère, nuages, phénomènes dangereux, codes METAR/TAF — Module 050",
+      "couleur": "#DEEAF6",
+      "cours": [
+      ]
+    },
+    {
+      "id": "navigation",
+      "nom": "Navigation Générale",
+      "emoji": "🧭",
+      "description": "Terre, cartographie, cap, distance, navigation DR — Module 061",
+      "couleur": "#E2EFDA",
+      "cours": [
+      ]
+    },
+    {
+      "id": "radio-nav",
+      "nom": "Radio-Navigation",
+      "emoji": "📡",
+      "description": "VOR, ILS, NDB, GPS, DME — portées, erreurs et identifications — Module 062",
+      "couleur": "#E8F0FE",
+      "cours": []
+    },
+    {
+      "id": "communications",
+      "nom": "Communications",
+      "emoji": "📻",
+      "description": "Phraséologie OACI, urgence, procédures radio HF/VHF — Module 070",
+      "couleur": "#FFF2CC",
+      "cours": []
+    },
+    {
+      "id": "principle-flights",
+      "nom": "Principle-Flights",
+      "emoji": "🛫",
+      "description": "Principe de Vol, Aérodynamique — Module 081",
+      "couleur": "#FFF2CC",
+      "cours": [
+        {
+          "code": "PFL13",
+          "titre": "Commandes de Vol (Controls)",
+          "description": "Axes et gouvernes, pitch/yaw/roll, adverse yaw, spoilers, réduction des efforts, FBW et lois de commandes.",
+          "tags": ["easa", "exam"],
+          "lecture_min": 35
+        },
+        {
+          "code": "PFL14",
+          "titre": "Aérodynamique Haute Vitesse",
+          "description": "Mach, compressibilité, ondes de choc, Mcrit, Mach tuck, aile en flèche, profil supercritique, coffin corner.",
+          "tags": ["easa", "exam"],
+          "lecture_min": 30
+        }
+      ]
+    }
+  ]
+}

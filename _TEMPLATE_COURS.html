@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[[CODE]] — [[TITRE]] · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">[[CODE]] · [[TITRE_COURT]]</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- Sidebar injectée automatiquement par main.js — NE PAS TOUCHER -->
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <!-- data-code et data-matiere : les deux seuls champs à renseigner pour la nav -->
+  <main class="main" data-code="[[CODE]]" data-matiere="[[MATIERE_ID]]">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">[[MATIERE_NOM]]</a>
+        <span class="sep">›</span>
+        <span>[[CODE]]</span>
+      </div>
+      <div class="cours-code-badge">[[CODE]]</div>
+      <h1 class="cours-title">[[TITRE]]</h1>
+      <div class="cours-meta">
+        <!-- Choisir parmi : tag-oaci  tag-easa  tag-fr  tag-exam -->
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~[[X]] min</span>
+        <span class="cours-meta-item">❓ [[N]] questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+         Chapitres H1/H2/H3, tous avec id=""
+         pour que la TOC et la barre de prog
+         fonctionnent automatiquement.
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <h1 id="section-1">1. Titre du chapitre</h1>
+        <p>Contenu du cours...</p>
+
+        <!-- Encadré vert : À retenir -->
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Texte clé à mémoriser.
+        </div>
+
+        <!-- Encadré rouge : Piège ATPL -->
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Description du piège et comment l'éviter.
+        </div>
+
+        <!-- Encadré bleu : Info complémentaire -->
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Information complémentaire ou contextuelle.
+        </div>
+
+        <!-- Encadré or : Formule / Référence -->
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Nom de la formule :</strong>
+          <div class="formula-display">X = Y × Z</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec X = ..., Y = ..., Z = ...</p>
+        </div>
+
+        <!-- Tableau -->
+        <table>
+          <thead><tr><th>Col 1</th><th>Col 2</th><th>Col 3</th></tr></thead>
+          <tbody>
+            <tr><td>Valeur</td><td>Valeur</td><td>Valeur</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Chips valeurs clés (inline dans le cours) -->
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">XXX</span>
+            <span class="val-label">Label</span>
+          </div>
+        </div>
+
+        <!-- Figure matplotlib (si générée) -->
+        <!--
+        <div class="fig-container">
+          <img src="../figures/NOM_FIGURE.png" alt="Description">
+          <div class="fig-caption">Fig. X — Description</div>
+        </div>
+        -->
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">XXX</span>
+            <span class="val-label">Label</span>
+          </div>
+          <!-- Dupliquer autant que nécessaire -->
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Sujet du piège</div>
+              <div class="piege-explication">Explication et comment l'éviter en examen.</div>
+            </div>
+          </div>
+          <!-- Dupliquer autant que nécessaire -->
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+          <div class="qc-item">
+            <div class="qc-question">Question ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Réponse</strong> avec détail si nécessaire.</div>
+          </div>
+          <!-- Par paires pour 2 colonnes — dupliquer autant que nécessaire -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation prev/next — remplie automatiquement par main.js -->
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <!-- TOC auto-générée par main.js à partir des h1/h2/h3[id] du contenu -->
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>
