@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH08 — Désorientation Spatiale et Illusions Sensorielles · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH08 · Illusions Sensorielles</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH08" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH08</span>
+      </div>
+      <div class="cours-code-badge">FH08</div>
+      <h1 class="cours-title">Désorientation Spatiale et Illusions Sensorielles</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~15 min</span>
+        <span class="cours-meta-item">❓ 20 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <h1 id="introduction-perceptions">1. Introduction et Mécanismes de la Perception</h1>
+        <p>La perception de l'espace en vol repose sur une chaîne complexe d'organes sensoriels interconnectés[cite: 476]. Pour construire une représentation mentale fidèle de la position de sa tête et de son aéronef, le système nerveux central du pilote traite simultanément des données issues de plusieurs récepteurs[cite: 477, 484]:</p>
+        <ul>
+          <li><strong>La vision</strong>, qui constitue le capteur le plus important et le plus précis pour l'orientation spatiale[cite: 477, 668].</li>
+          <li><strong>Les informations vestibulaires</strong> issues de l'oreille interne, qui mesurent les accélérations angulaires et linéaires[cite: 481].</li>
+          <li><strong>L'audition</strong>, qui apporte des indices environnementaux complémentaires[cite: 482].</li>
+          <li><strong>Les réflexes posturaux</strong> (proprioception ou "sensibilité profonde"), souvent vulgarisés sous le terme de "sens du siège"[cite: 483].</li>
+        </ul>
+
+        <p>Une illusion sensorielle se définit mathématiquement et physiologiquement comme la différence ou l'écart entre la perception erronée de l'organisme et la réalité physique objective[cite: 488]. Ces anomalies proviennent de trois défaillances principales : un manque pur d'informations, une mauvaise interprétation par les capteurs ou une décorrélation flagrante entre les stimuli réels et le ressenti du pilote[cite: 490, 491, 492]. Le danger majeur associé à ce phénomène réside dans l'apparition concomitante de la désorientation spatiale et du mal des transports (cinétose)[cite: 485, 486].</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir : Statistiques et gravité</div>
+          La désorientation spatiale représente une source majeure d'accidents aériens, étant impliquée dans <strong>1/4 à 1/3</strong> de la totalité des sinistres en aviation[cite: 494]. Sa dangerosité est critique : <strong>88 %</strong> des accidents résultant directement d'une désorientation sensorielle s'avèrent fatals[cite: 495].
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/FH08_classification_illusions.svg" alt="Classification des illusions sensorielles">
+          <div class="fig-caption">Fig. 1 — Typologie et classification des illusions sensorielles en vol</div>
+        </div>
+
+        <h1 id="illusions-visuelles">2. Illusions Sensorielles d'Origine Visuelle</h1>
+        <p>La désorientation spatiale d'origine visuelle est provoquée par une déformation du signal physique initial, une absence de repères extérieurs, une mauvaise perception géométrique par le capteur oculaire ou un traitement erroné de l'information par le système nerveux central[cite: 496, 497, 498, 499, 500].</p>
+
+        <h3>Le mouvement relatif (Vection)</h3>
+        <p>Ce phénomène se produit lorsqu'un mouvement dans le champ visuel périphérique est interprété à tort comme un déplacement propre de l'aéronef[cite: 505]. Par exemple, au parking, un avion voisin qui recule génère l'illusion immédiate que notre propre appareil avance. De plus, la hauteur importante du cockpit au-dessus du sol sur les gros porteurs altère fortement la perception cinétique : elle donne une fausse impression de vitesse excessive lors du roulage au sol[cite: 507, 508].</p>
+
+        <h3>L'autocinèse (Autokinesis)</h3>
+        <p>Lorsqu'un pilote fixe de manière prolongée un point lumineux isolé et stationnaire dans un environnement nocturne dépourvu d'autres repères visuels, de minuscules mouvements oculaires réflexes se produisent à l'insu du cerveau[cite: 548, 549, 551]. Le système nerveux central ignore ces micro-mouvements et les interprète faussement comme un déplacement erratique du point lumineux extérieur[cite: 552]. Le pilote croit alors que l'objet visé est en mouvement[cite: 550].</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Pour éviter l'autocinèse en vol de nuit, il ne faut jamais fixer fixement une seule lumière isolée[cite: 549]. La contre-mesure consiste à <strong>balayer continuellement du regard</strong> l'espace extérieur (shifter la ligne de mire) pour éliminer les effets de la fixation oculaire[cite: 553].
+        </div>
+
+        <h3>Le vertige par papillotement (Flicker Vertigo)</h3>
+        <p>L'activation des feux à éclats (stroboscopes) en pleine couche nuageuse, ou la réflexion cyclique de la lumière du soleil à travers le plan d'une hélice ou d'un rotor, engendre une perception répétitive de flashs lumineux[cite: 539, 541, 542, 544]. Cette stimulation stroboscopique peut provoquer un vertige aigu, une désorientation sévère et, dans les cas extrêmes chez les sujets prédisposés, des crises d'épilepsie[cite: 545, 546]. La procédure standard exige l'extinction immédiate des stroboscopes lors du vol aux instruments en conditions de visibilité réduite[cite: 547].</p>
+
+        <h3>Fausses références d'horizon et séparation verticale</h3>
+        <p>Après le décollage de nuit, un alignement rectiligne de lumières au sol (comme une route éclairée ou un littoral) peut être confondu par le pilote avec l'horizon réel, surtout si les étoiles sont masquées[cite: 557, 558]. Cette confusion mène à l'établissement d'une fausse référence d'assiette[cite: 558]. De la même manière, au-dessus de l'eau, les feux des bateaux de pêche sont fréquemment confondus avec des étoiles, incitant le pilote à modifier sa trajectoire vers un profil descendant dangereux[cite: 559]. En relief montagneux, l'émergence d'une couche de nuages bas peut masquer les repères bas et conduire le pilote à prendre les lumières des habitations en altitude pour des étoiles, abaissant dangereusement sa trajectoire de vol[cite: 560]. À grande distance, un avion ou un massif montagneux semble toujours situé plus haut qu'il ne l'est en réalité, avant de passer finalement sous le plan de l'observateur[cite: 554, 555, 556]. Un terrain en pente douce peut également fausser l'assiette visuelle en vol à basse altitude[cite: 561].</p>
+
+        <h1 id="illusions-approche-piste">3. Illusions Spécifiques en Approche et Atterrissage</h1>
+        <p>Les phases d'approche et d'atterrissage concentrent à elles seules <strong>50 %</strong> des accidents aériens mondiaux[cite: 563]. Parmi ces événements, <strong>73 %</strong> sont imputables directement à des erreurs humaines liées à la charge de travail visuelle intense requise par le jugement initial du plan, le maintien de la trajectoire de descente et l'évaluation de la proximité du sol[cite: 563, 564, 565, 567, 568].</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH08_illusions_piste.svg" alt="Illusions d'optique de piste et de pente">
+          <div class="fig-caption">Fig. 2 — Distorsions géométriques de la piste et du relief et leurs conséquences opérationnelles</div>
+        </div>
+
+        <h3>Dimensions de la piste : Largeur et Longueur</h3>
+        <p>Le système visuel du pilote s'habitue aux proportions de sa piste de référence habituelle[cite: 569]. Lors de l'arrivée sur une piste inconnue, les anomalies de dimensions provoquent des erreurs systématiques d'évaluation de la hauteur[cite: 583]:</p>
+        <ul>
+          <li><strong>Piste anormalement LARGE :</strong> L'avion semble beaucoup plus bas et plus proche qu'il ne l'est en réalité[cite: 584]. Le pilote a tendance à adopter un plan d'approche trop élevé, déclenche son arrondi trop haut et s'expose à un dépassement de piste (<em>overshoot</em>)[cite: 584].</li>
+          <li><strong>Piste anormalement ÉTROITE :</strong> L'avion donne l'illusion d'être trop haut et éloigné[cite: 585]. Le pilote réagit en écrasant son plan de descente, effectue un arrondi trop bas et risque un impact avant le seuil de piste (<em>undershoot</em>)[cite: 585].</li>
+        </ul>
+
+        <h3>Pente de la piste et du terrain de fond</h3>
+        <ul>
+          <li><strong>Piste en descente (Downsloping runway) :</strong> Elle donne l'illusion visuelle que l'avion est trop bas sur son plan[cite: 573]. Le pilote compense en haussant sa trajectoire, ce qui engendre une approche trop haute[cite: 576].</li>
+          <li><strong>Piste en montée (Upsloping runway) :</strong> Elle génère l'illusion exacte inverse, à savoir que l'appareil est situé au-dessus du plan nominal[cite: 578]. Le pilote baisse son plan et effectue une approche trop basse, augmentant drastiquement le risque d'impact sans perte de contrôle (CFIT)[cite: 582].</li>
+          <li><strong>Terrain en montée avant le seuil :</strong> Un relief ascendant situé en amont de la piste donne l'impression d'une hauteur excessive, provoquant une approche dangereusement basse[cite: 598, 600]. Inversement, un terrain en descente induit une approche trop haute[cite: 604, 605].</li>
+        </ul>
+
+        <h3>L'effet de trou noir (Black Hole Effect)</h3>
+        <p>Cette illusion survient de nuit lors d'une approche effectuée au-dessus d'une zone totalement dépourvue de repères lumineux (vols au-dessus de la mer, d'une forêt dense, d'un désert ou de la jungle), où seules les lumières de la piste lointaine sont visibles[cite: 586, 587]. En l'absence totale d'indices visuels périphériques pour matérialiser le relief, le pilote subit l'illusion d'être positionné trop haut sur le plan de descente[cite: 588, 589]. Il adopte en conséquence une trajectoire rectiligne exagérément basse, conduisant inévitablement à un impact prématuré avec le sol bien avant le seuil de piste (<em>touchdown short</em>)[cite: 590]. De plus, en cas de perte de vitesse involontaire couplée à une perte d'altitude graduelle, la piste peut paraître parfaitement stationnaire sur le pare-brise, simulant une approche stabilisée fictive jusqu'à l'impact[cite: 612, 613, 614].</p>
+
+        <h1 id="illusions-vestibulaires">4. Illusions d'Origine Vestibulaire (Oreille Interne)</h1>
+        <p>Le système vestibulaire est composé des canaux semi-circulaires (qui détectent les accélérations angulaires lors des rotations sur les trois axes) et des organes otolithiques (l'utricule et le saccule, qui captent les accélérations linéaires et la gravité)[cite: 619, 660]. En l'absence de références visuelles, ces capteurs mécaniques possèdent des limites physiologiques strictes qui induisent de graves erreurs de perception[cite: 619].</p>
+
+        <h3>Illusions somatogyrales : Les "Leans" et la Vrille de Cimetière</h3>
+        <p>L'illusion somatogyrale est la sensation erronée de tourner dans la direction opposée au mouvement réel de l'avion, provoquée par l'incapacité de l'oreille interne à enregistrer fidèlement une rotation prolongée[cite: 617, 619].</p>
+        
+        <p>Le processus physiologique se décompose en quatre étapes fondamentales[cite: 615]:</p>
+        <ul>
+          <li><strong>A. Vol rectiligne en palier :</strong> L'endolymphe (liquide des canaux) est immobile, les cils sensoriels de la cupule restent verticaux. Sensation de neutralité parfaite[cite: 623].</li>
+          <li><strong>B. Début de rotation :</strong> Lors de la mise en virage, l'inertie du liquide crée un mouvement relatif du fluide qui incline les cils. Le pilote perçoit correctement la rotation[cite: 624, 627, 628].</li>
+          <li><strong>C. Rotation prolongée à taux constant :</strong> Après environ 15 à 30 secondes de virage stabilisé, le liquide finit par rattraper la vitesse de rotation de la paroi du canal. Les cils sensoriels reviennent en position verticale érigée, transmettant un faux signal de neutralité (sensation de vol rectiligne alors que l'avion est toujours incliné)[cite: 630, 634].</li>
+          <li><strong>D. Arrêt de la rotation :</strong> Lors du retour aux ailes horizontales (décélération angulaire), le liquide continue temporairement sa rotation par inertie mécanique. Les cils sont fléchis dans le sens inverse, projetant au cerveau la sensation violente d'engager un virage de l'autre côté[cite: 618, 635, 638, 639].</li>
+        </ul>
+
+        <p>Cette fausse impression pousse le pilote à incliner à nouveau l'avion du côté initial pour compenser : c'est l'illusion des <strong>Leans</strong>. Si cette situation dégénère lors d'une vrille prolongée, elle mène à la <strong>vrille de cimetière (Graveyard spin)</strong> : le pilote initie la sortie de vrille, ressent une rotation inverse fictive intense, cède à son illusion et réengage l'avion dans sa vrille initiale destructrice[cite: 640, 641, 643, 644, 645].</p>
+
+        <h3>L'illusion somatogravique (Somatogravic illusion)</h3>
+        <p>Elle découle d'une mauvaise interprétation des déplacements des otolithes face à une forte accélération linéaire, particulièrement critique lors de la phase de décollage initial[cite: 659, 660, 661].</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Mécanisme vectoriel de la somatogravique</div>
+          <strong>Résultante gravito-inertielle :</strong>
+          <div class="formula-display">\vec{G}_{perçu} = \vec{g} - \vec{a}_{linéaire}</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">L'accélération linéaire vers l'avant ($\vec{a}$) combine son vecteur d'inertie avec l'attraction terrestre ($\vec{g}$). Les otolithes basculent vers l'arrière, reproduisant fidèlement le stimulus d'un fort cabré[cite: 660].</p>
+        </div>
+
+        <p>Croyant à tort que l'aéronef est en train de cabrer excessivement (risque de décrochage), le pilote a le réflexe instinctif de pousser vigoureusement sur le manche, ce qui précipite l'avion vers le sol (impact face au sol à haute vitesse)[cite: 662].</p>
+
+        <h3>L'effet Coriolis</h3>
+        <p>Si l'avion maintient un virage stabilisé prolongé et que le pilote effectue un mouvement brusque de la tête (vitesse de rotation de la tête supérieure à environ 3° par seconde) dans un plan différent de celui du virage, il déclenche une stimulation croisée de plusieurs canaux semi-circulaires simultanément[cite: 663, 664, 665, 666]. Cette interaction gyroscopique intracrânienne génère une illusion immédiate et violente de rotation, de basculement ou de tonneau, accompagnée d'un étourdissement sévère et de nausées[cite: 664, 666]. Cela crée un conflit aigu entre les différents sens[cite: 667].</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Facteurs aggravants du vertige médical</div>
+          Le vertige (sensation de rotation, de chute ou de bascule due à des signaux contradictoires envoyés au SNC) peut survenir en dehors des causes cinétiques pures[cite: 646, 647]. Les facteurs déclenchants incluent le blocage de la trompe d'Eustache, les variations brutales de pression auriculaire lors d'un mouchage violent, la fatigue, le stress, la prise de médicaments ou l'intoxication alcoolique[cite: 650, 651, 654, 656, 689].
+        </div>
+
+        <h1 id="illusions-mixtes">5. Illusions d'Origine Mixte</h1>
+        <p>Les illusions de nature mixte proviennent de l'interaction physique et visuelle directe entre les mouvements de l'œil et les accélérations subies par l'appareil[cite: 669].</p>
+
+        <ul>
+          <li><strong>L'illusion oculogyre (Oculogyral illusion) :</strong> Elle correspond à un déplacement apparent erroné des objets situés directement en face du pilote[cite: 671]. À la suite d'une rotation subie, l'observateur voit les instruments ou les repères extérieurs bouger dans la direction opposée[cite: 672]. Associée à une illusion somatogyrale, elle renforce la fausse perception du pilote en y apportant une fausse confirmation visuelle[cite: 673, 674].</li>
+          <li><strong>L'illusion oculogravique (Oculogravic illusion) :</strong> Elle se produit dans les mêmes configurations physiques que l'illusion somatogravique[cite: 676]. Sous l'effet direct d'une forte accélération linéaire vers l'avant, les objets immobiles placés en face du pilote (comme le tableau de bord) semblent visuellement se déplacer vers le haut par rapport à lui[cite: 676, 677].</li>
+        </ul>
+
+        <h1 id="prevention-reactions">6. Prévention et Réactions de l'Équipage</h1>
+        <p>Le fait de subir des illusions sensorielles en vol est un phénomène physiologique normal, prévisible et universel auquel aucun être humain ne peut échapper[cite: 679]. La sécurité des opérations repose exclusivement sur l'application stricte de barrières comportementales et procédurales[cite: 680, 683]:</p>
+        <ul>
+          <li><strong>Connaissance théorique :</strong> Les équipages doivent parfaitement maîtriser les conditions environnementales propices à l'apparition des illusions et leurs mécanismes physiologiques sous-jacents[cite: 680, 682].</li>
+          <li><strong>Préparation des vols :</strong> La réalisation de briefings complets avant le vol incluant l'étude détaillée des fiches d'approche et du profil altimétrique des terrains est impérative[cite: 684, 687].</li>
+          <li><strong>Discipline de cockpit :</strong> Une vigilance extrême s'impose lors des phases d'accélération et de vol aux instruments (IFR)[cite: 688]. La sensibilité du corps humain aux illusions s'accroissant de manière exponentielle avec le stress et l'état de fatigue du pilote, le maintien des marges de sécurité est capital[cite: 689].</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Règle d'or absolue en aviation</div>
+          La seule et unique méthode fiable pour contrer et dissiper les illusions sensorielles consiste à <strong>croire aveuglément et exclusivement les indications des instruments de bord</strong>[cite: 685]. Le pilote doit impérativement effectuer un cross-check permanent de ses informations de vol et rejeter catégoriquement ses propres perceptions sensorielles internes[cite: 685, 686].
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">25% à 33%</span>
+            <span class="val-label">Des accidents dus à la désorientation [cite: 494]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">88 %</span>
+            <span class="val-label">Taux de mortalité de ces accidents [cite: 495]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">50 %</span>
+            <span class="val-label">Des accidents localisés en approche/atterrissage [cite: 563]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">73 %</span>
+            <span class="val-label">Part de l'erreur humaine dans ces phases [cite: 563]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">> 3° / s</span>
+            <span class="val-label">Mouvement de tête critique (Effet Coriolis) [cite: 665]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15 - 30 s</span>
+            <span class="val-label">Temps de neutralisation des canaux semi-circulaires</span>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Piste large vs Piste étroite</div>
+              <div class="piege-explication">Une piste large induit une illusion d'approche trop basse (conduit à un survol trop haut / <em>overshoot</em>)[cite: 584]. Une piste étroite induit une illusion d'approche trop haute (conduit à un crash avant la piste / <em>undershoot</em>)[cite: 585].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Pente de la piste (Upslope / Downslope)</div>
+              <div class="piege-explication">Une pente ascendante (upslope) donne l'illusion d'être trop haut (génère un plan réel trop bas)[cite: 578, 582]. Une pente descendante (downslope) donne l'illusion d'être trop bas (génère un plan réel trop haut)[cite: 573, 576].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">L'illusion somatogravique au décollage</div>
+              <div class="piege-explication">Une forte accélération linéaire incline la résultante des otolithes vers l'arrière, simulant une assiette à cabrer intense[cite: 660, 661]. Le piège à l'examen est de croire que le pilote ressent un piqué : non, il ressent un <strong>cabré</strong> et commet l'erreur de <strong>pousser sur le manche</strong> vers le sol[cite: 660, 662].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">L'illusion de trou noir (Black Hole)</div>
+              <div class="piege-explication">En approche de nuit sur zone non éclairée, l'absence de repères périphériques crée l'illusion d'être positionné trop haut[cite: 586, 588, 589]. Le pilote écrase alors volontairement son plan et percute le sol en amont de la piste[cite: 590].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">L'autocinèse nocturne</div>
+              <div class="piege-explication">Un point lumineux fixe donne l'illusion de bouger au bout de quelques secondes de fixation continue[cite: 548, 550]. Ne jamais tenter de suivre ce point ; le correctif officiel EASA est d'effectuer un balayage visuel permanent[cite: 549, 553].</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+          
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'organe sensoriel prédominant pour l'orientation spatiale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>vision</strong>, qui surpasse tous les autres sens[cite: 668].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la proportion d'accidents liés à la désorientation en vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Entre <strong>1/4 et 1/3</strong> de la totalité des accidents[cite: 494].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le taux de létalité des accidents dus à la désorientation spatiale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un taux critique de <strong>88 %</strong>[cite: 495].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment s'exprime mathématiquement une illusion sensorielle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">C'est la <strong>différence quantitative entre la perception et la réalité</strong> physique[cite: 488].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le phénomène de vection ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une illusion de <strong>mouvement relatif</strong> où le déplacement d'un élément extérieur est perçu comme le mouvement de son propre avion[cite: 505].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le risque lié à une hauteur importante du cockpit au sol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une sensation de <strong>vitesse excessive (over speed)</strong> lors du roulage[cite: 507, 508].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle illusion est causée par de micro-mouvements oculaires involontaires la nuit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'<strong>autocinèse</strong> (un point lumineux fixe semble se déplacer)[cite: 548, 550, 551].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la parade technique immédiate face au Flicker Vertigo dans un nuage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Il faut <strong>éteindre les feux stroboscopiques</strong> (strobe lights off)[cite: 547].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le piège d'une approche sur une piste plus large que la normale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le pilote se croit trop bas, adopte un plan réel trop haut et fait un <strong>overshoot</strong>[cite: 584].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le piège d'une approche sur une piste plus étroite que la normale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le pilote se croit trop haut, écrase son plan et risque un impact avant la piste (<strong>undershoot</strong>)[cite: 585].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel profil d'approche génère une piste en montée (Upsloping runway) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une approche réelle <strong>trop basse</strong> (lower approach)[cite: 578, 582].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'effet de trou noir (Black Hole Effect) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une illusion nocturne où l'absence de repères au sol fait croire au pilote qu'il est trop haut, provoquant une approche trop basse[cite: 586, 588, 589, 590].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels récepteurs de l'oreille interne mesurent les accélérations linéaires ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les <strong>otolithes</strong> (utricule et saccule)[cite: 660].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle illusion vestibulaire est causée par une accélération linéaire au décollage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'illusion <strong>somatogravique</strong> (sensation de cabré)[cite: 659, 660, 661].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi un virage stabilisé prolongé devient-il imperceptible pour les canaux ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Parce que l'<strong>endolymphe atteint la même vitesse de rotation</strong>, permettant aux cils de se redresser[cite: 642].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'illusion des "Leans" ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une illusion somatogyrale où le retour au vol rectiligne donne la fausse sensation d'incliner du côté opposé[cite: 616, 617, 638].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment se déclenche l'effet Coriolis en vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Par un <strong>mouvement brusque de la tête</strong> lors d'un virage stabilisé prolongé[cite: 663, 665].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la définition de l'illusion oculogyre ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un mouvement visuel apparent d'objets fixes suite à une stimulation des canaux semi-circulaires[cite: 671, 672].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels facteurs physiologiques augmentent la sensibilité aux illusions ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>stress</strong> et la <strong>fatigue</strong>[cite: 689].</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la seule défense efficace contre la désorientation spatiale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Croire et suivre uniquement ses instruments de bord</strong>[cite: 685].</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

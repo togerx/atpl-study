@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <rect x="200" y="10" width="200" height="40" rx="5" fill="#1F3864" stroke="#1F3864" stroke-width="2"/>
+  <text x="300" y="35" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="bold" text-anchor="middle">ILLUSIONS SENSORIELLES</text>
+
+  <line x1="300" y1="50" x2="300" y2="70" stroke="#1F3864" stroke-width="2"/>
+  <line x1="110" y1="70" x2="490" y2="70" stroke="#1F3864" stroke-width="2"/>
+  
+  <line x1="110" y1="70" x2="110" y2="90" stroke="#1F3864" stroke-width="2"/>
+  <line x1="300" y1="70" x2="300" y2="90" stroke="#1F3864" stroke-width="2"/>
+  <line x1="490" y1="70" x2="490" y2="90" stroke="#1F3864" stroke-width="2"/>
+
+  <rect x="20" y="90" width="180" height="40" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <text x="110" y="115" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">Origine Visuelle</text>
+  
+  <rect x="210" y="90" width="180" height="40" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <text x="300" y="115" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">Origine Vestibulaire</text>
+
+  <rect x="400" y="90" width="180" height="40" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <text x="490" y="115" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">Origine Mixte (Vis + Vest)</text>
+
+  <g transform="translate(20, 150)">
+    <rect x="0" y="0" width="180" height="150" rx="5" fill="#F8F9FA" stroke="#2E75B6" stroke-dasharray="4" stroke-width="1"/>
+    <text x="10" y="25" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333333">• Mouvement relatif (Vection)</text>
+    <text x="10" y="50" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333333">• Autocinèse (Point fixe)</text>
+    <text x="10" y="75" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333333">• Trou noir (Black hole)</text>
+    <text x="10" y="100" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333333">• Profil de piste (Largeur/Pente)</text>
+    <text x="10" y="125" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333333">• Vertige par papillotement</text>
+  </g>
+
+  <g transform="translate(210, 150)">
+    <rect x="0" y="0" width="180" height="150" rx="5" fill="#F8F9FA" stroke="#BF8F00" stroke-dasharray="4" stroke-width="1"/>
+    <text x="10" y="25" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#C00000">• Somatogyraux :</text>
+    <text x="20" y="45" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">- Leans (Fausse inclinaison)</text>
+    <text x="20" y="65" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">- Vrille de cimetière</text>
+    <text x="10" y="90" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#C00000">• Somatograviques :</text>
+    <text x="20" y="110" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">- Accélération = Cabré fictif</text>
+    <text x="10" y="135" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333333">• Effet Coriolis (Tête en virage)</text>
+  </g>
+
+  <g transform="translate(400, 150)">
+    <rect x="0" y="0" width="180" height="150" rx="5" fill="#F8F9FA" stroke="#C00000" stroke-dasharray="4" stroke-width="1"/>
+    <text x="10" y="30" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#333333">• Oculogyre :</text>
+    <text x="15" y="50" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">Mouvement visuel apparent</text>
+    <text x="15" y="65" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">d'un objet suite à rotation</text>
+    
+    <text x="10" y="100" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#333333">• Oculogravique :</text>
+    <text x="15" y="120" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">Déplacement visuel apparent</text>
+    <text x="15" y="135" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#555555">suite à accélération linéaire</text>
+  </g>
+</svg>

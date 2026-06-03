@@ -86,7 +86,21 @@
               "description": "Anatomie de l'oreille, perception auditive, bruit aéronautique, pertes auditives, protection et système vestibulaire.",
               "tags": ["easa", "exam"],
               "lecture_min": 25
-            }
+            },
+            {
+            "code": "FH08",
+            "titre": "Désorientation Spatiale et Illusions Sensorielles",
+            "description": "Étude complète des illusions d'origines visuelle, vestibulaire et mixte rencontrées en vol ainsi que leurs contre-mesures opérationnelles.",
+            "tags": ["oaci", "easa", "exam"],
+            "lecture_min": 15
+          },
+          {
+            "code": "FH09",
+            "titre": "Cinétose et Mal des Transports",
+            "description": "Analyse neurophysiologique de la théorie du conflit sensoriel, tableau clinique complet, traitements et risques liés au mal du simulateur.",
+            "tags": ["oaci", "easa", "exam"],
+            "lecture_min": 10
+          }
       ]
     },
     {

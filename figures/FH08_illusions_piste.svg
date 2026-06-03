@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <rect width="600" height="500" fill="#F8F9FA"/>
+  
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="14" fill="#1F3864" font-weight="bold" text-anchor="middle">ILLUSIONS D'OPTIQUE LIÉES À LA PISTE</text>
+  
+  <line x1="300" y1="50" x2="300" y2="480" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="20" y1="260" x2="580" y2="260" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4"/>
+  
+  <g transform="translate(0, 50)">
+    <text x="150" y="25" font-family="Arial, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">A. Piste plus LARGE que la normale</text>
+    <polygon points="110,120 190,120 165,60 135,60" fill="#2E75B6" fill-opacity="0.2" stroke="#2E75B6" stroke-width="1.5"/>
+    <rect x="25" y="135" width="250" height="60" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+    <text x="150" y="152" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle" font-weight="bold">Perception : Avion trop BAS et proche</text>
+    <text x="150" y="170" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle">Action : Le pilote hausse son plan</text>
+    <text x="150" y="185" font-family="Arial, sans-serif" font-size="9.5" fill="#C00000" text-anchor="middle" font-weight="bold">Risque : Arrondi trop haut / OVERSHOOT</text>
+  </g>
+  
+  <g transform="translate(300, 50)">
+    <text x="150" y="25" font-family="Arial, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">B. Piste plus ÉTROITE que la normale</text>
+    <polygon points="135,120 165,120 155,60 145,60" fill="#2E75B6" fill-opacity="0.2" stroke="#2E75B6" stroke-width="1.5"/>
+    <rect x="25" y="135" width="250" height="60" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+    <text x="150" y="152" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle" font-weight="bold">Perception : Avion trop HAUT et loin</text>
+    <text x="150" y="170" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle">Action : Le pilote écrase son plan</text>
+    <text x="150" y="185" font-family="Arial, sans-serif" font-size="9.5" fill="#C00000" text-anchor="middle" font-weight="bold">Risque : Arrondi trop bas / UNDERSHOOT</text>
+  </g>
+  
+  <g transform="translate(0, 260)">
+    <text x="150" y="25" font-family="Arial, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">C. Piste en DESCENTE (Downslope)</text>
+    <line x1="60" y1="70" x2="240" y2="110" stroke="#1F3864" stroke-width="3"/>
+    <polygon points="240,110 230,105 235,115" fill="#1F3864"/>
+    <rect x="25" y="130" width="250" height="60" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+    <text x="150" y="147" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle" font-weight="bold">Perception : Profil de descente trop BAS</text>
+    <text x="150" y="165" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle">Action : Le pilote hausse sa trajectoire</text>
+    <text x="150" y="180" font-family="Arial, sans-serif" font-size="9.5" fill="#1F3864" text-anchor="middle" font-weight="bold">Résultat : Plan d'approche TROP HAUT</text>
+  </g>
+  
+  <g transform="translate(300, 260)">
+    <text x="150" y="25" font-family="Arial, sans-serif" font-size="11" fill="#1F3864" font-weight="bold" text-anchor="middle">D. Piste en MONTÉE (Upslope)</text>
+    <line x1="60" y1="110" x2="240" y2="70" stroke="#1F3864" stroke-width="3"/>
+    <polygon points="240,70 235,65 230,75" fill="#1F3864"/>
+    <rect x="25" y="130" width="250" height="60" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+    <text x="150" y="147" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle" font-weight="bold">Perception : Profil de descente trop HAUT</text>
+    <text x="150" y="165" font-family="Arial, sans-serif" font-size="9.5" fill="#333333" text-anchor="middle">Action : Le pilote baisse sa trajectoire</text>
+    <text x="150" y="180" font-family="Arial, sans-serif" font-size="9.5" fill="#C00000" text-anchor="middle" font-weight="bold">Résultat : Plan TROP BAS (Danger CFIT)</text>
+  </g>
+</svg>

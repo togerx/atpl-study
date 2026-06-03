@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH09 — Cinétose et Mal des Transports · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH09 · Cinétose & Mal des Transports</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH09" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH09</span>
+      </div>
+      <div class="cours-code-badge">FH09</div>
+      <h1 class="cours-title">Cinétose et Mal des Transports</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~10 min</span>
+        <span class="cours-meta-item">❓ 20 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <h1 id="introduction-epidemiologie">1. Introduction et Épidémiologie</h1>
+        <p>La cinétose, ou mal des transports [cite: 572, 611], regroupe un ensemble de symptômes physiologiques [cite: 587] déclenchés lorsqu'un individu est exposé à un mouvement réel ou apparent d'un type inhabituel[cite: 588]. Tous les modes de transport (terrestre, maritime, aérien ou spatial) sont susceptibles d'induire cette affection[cite: 587].</p>
+
+        <p>L'analyse statistique et épidémiologique met en évidence des variations majeures selon l'environnement et le niveau d'activité de l'individu :</p>
+        <ul>
+          <li><strong>Hiérarchie des milieux :</strong> L'incidence est maximale en mer, suivie du milieu aérien, et enfin du transport terrestre (Mer &gt; Air &gt; Terre)[cite: 591].</li>
+          <li><strong>Rôle à bord :</strong> Les passagers sont les plus touchés, suivis des pilotes superviseurs ou officiers systèmes d'armes (WSO), tandis que le pilote aux commandes (pilote en fonction) est le mieux préservé (Passager &gt; Pilote superviseur/WSO &gt; Pilote en fonction)[cite: 592, 639].</li>
+          <li><strong>Statistiques en aviation civile :</strong> La prévalence est de 1 % chez les passagers de l'aviation commerciale, mais elle grimpe à 8 % chez les pilotes privés[cite: 593].</li>
+          <li><strong>Statistiques en aviation militaire :</strong> Dans l'aviation de chasse, le phénomène est massif, impactant 40 % des élèves pilotes et 50 % des navigateurs/WSO[cite: 593].</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir : Impact sur la formation</div>
+          Le mal des transports a des répercussions directes sur la progression pédagogique dans <strong>15 %</strong> des cas[cite: 596]. Le taux d'élimination définitive des élèves pilotes pour cause de cinétose réfractaire s'élève à <strong>1 %</strong>[cite: 596].
+        </div>
+
+        <h1 id="etiologie-mecanisme">2. Étiologie et Mécanisme Physiologique</h1>
+        <p>Le fondement étiologique de la cinétose repose sur la <strong>théorie du conflit sensoriel</strong> (ou <em>mismatch</em>)[cite: 589, 598]. Il s'agit d'une discordance aiguë entre les informations physiques collectées en temps réel par les capteurs de l'organisme et les modèles d'attente mémorisés par le système nerveux central[cite: 599].</p>
+
+        <p>Quatre systèmes biologiques majeurs concourent à l'apparition du conflit[cite: 603]:</p>
+        <ul>
+          <li>Le <strong>système vestibulaire</strong> (canaux semi-circulaires et otolithes)[cite: 604].</li>
+          <li>Le <strong>système visuel</strong> (perceptions optiques focales et périphériques)[cite: 605].</li>
+          <li>Les <strong>sens proprioceptifs</strong> (récepteurs musculaires, tendineux et cutanés dits "sens de la position")[cite: 606, 607].</li>
+          <li>Le <strong>système gastro-intestinal</strong>, particulièrement sensible aux contraintes mécaniques[cite: 608].</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/FH09_mecanisme_conflit.svg" alt="Mécanisme du conflit sensoriel de la cinétose">
+          <div class="fig-caption">Fig. 1 — Schéma neurophysiologique de la divergence sensorielle menant à la cinétose</div>
+        </div>
+
+        <p>Lorsque le cerveau traite l'expérience présente [cite: 609, 610] et constate une divergence [cite: 612] avec l'expérience acquise [cite: 613], la cinétose s'installe[cite: 611]. Heureusement, l'intégration de cette nouvelle expérience mécanique [cite: 614, 615] permet une habituation et une adaptation plus ou moins rapide et complète selon les individus[cite: 600].</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Le rôle des basses fréquences</div>
+          Les vibrations mécaniques de basse fréquence, comprises spécifiquement entre <strong>0,5 et 2 Hz</strong>, jouent un rôle déterminant dans le déclenchement de la cinétose en provoquant d'importantes répercussions viscérales par résonance abdominale[cite: 601].
+        </div>
+
+        <h1 id="symptomatologie">3. Sémiologie et Symptômes</h1>
+        <p>Le tableau clinique de la cinétose est large et évolutif, impactant lourdement les capacités cognitives et motrices du membre d'équipage :</p>
+        <ul>
+          <li><strong>Symptômes neuro-végétatifs initiaux :</strong> Sensation de malaise général (<em>faintness</em>) [cite: 616, 617], somnolence (<em>drowsiness</em>) [cite: 617], accès de vertige [cite: 618], sueurs froides [cite: 618] et bâillements répétés[cite: 624].</li>
+          <li><strong>Modifications cliniques visibles :</strong> Pâleur cutanée prononcée [cite: 625], hypersalivation [cite: 621], céphalées (maux de tête) [cite: 626], polypnée (augmentation de la fréquence respiratoire) [cite: 622] et hyperventilation[cite: 623].</li>
+          <li><strong>Dégradation opérationnelle :</strong> Maladresse motrice (<em>clumsiness</em>) [cite: 619], réduction globale des performances de pilotage [cite: 620], suivies d'une phase de découragement profond et d'apathie[cite: 629].</li>
+          <li><strong>Phase critique :</strong> Nausées puissantes [cite: 627] culminant par des vomissements[cite: 628].</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Origine évolutive du vomissement</div>
+          À l'examen ATPL, on demande parfois la justification physiologique du vomissement en cinétose. Il s'agit d'un <strong>mécanisme de protection archaïque</strong> préservé depuis la préhistoire [cite: 631] : lorsque le cerveau subit un conflit sensoriel violent, il interprète le dysfonctionnement de ses repères [cite: 632, 633] comme l'ingestion d'une substance neurotoxique empoisonnée, déclenchant l'évacuation gastrique réflexe pour éliminer le prétendu toxique[cite: 634].
+        </div>
+
+        <h1 id="facteurs-favorisants">4. Facteurs Favorisants</h1>
+        <p>La tolérance aux accélérations et la résistance à la cinétose dépendent de variables individuelles et environnementales bien définies :</p>
+        <ul>
+          <li><strong>Facteurs individuels :</strong> Prédisposition génétique intrinsèque, résurgence de mauvais souvenirs ou d'expériences antérieures traumatisantes [cite: 636], anxiété, manque de motivation [cite: 640] ou un entraînement au vol insuffisant ou interrompu (perte d'habituation)[cite: 637].</li>
+          <li><strong>Contraintes aéronautiques :</strong> Sollicitations dynamiques intenses combinant le roulis, le tangage, les accélérations et les turbulences météorologiques[cite: 638]. La voltige aérienne (voltige +++) présente le potentiel de déclenchement le plus élevé[cite: 638].</li>
+          <li><strong>Environnement cabine :</strong> Température ambiante élevée (chaleur), confinement, odeurs de carburant ou de vomi, ainsi que l'état physiologique du pilote (fatigue, estomac trop vide ou au contraire en phase de surcharge digestive)[cite: 640].</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/FH09_incidence_age.svg" alt="Courbe de sensibilité à la cinétose selon l'âge">
+          <div class="fig-caption">Fig. 2 — Graphique de la susceptibilité relative à la cinétose en fonction de l'âge de l'individu</div>
+        </div>
+
+        <p>L'âge est un facteur clé[cite: 641]. La sensibilité est quasi nulle à la naissance, croît rapidement durant l'enfance pour atteindre son <strong>maximum absolu entre 10 et 15 ans</strong>, puis décroît de manière continue tout au long de la vie adulte[cite: 642].</p>
+
+        <h1 id="prevention">5. Stratégies de Prévention</h1>
+        <p>La prévention non pharmacologique repose sur des mesures d'hygiène de vie et des techniques comportementales simples visant à atténuer les conflits sensoriels :</p>
+        <ul>
+          <li><strong>Hygiène pré-vol :</strong> Assurer un sommeil suffisant (éviter la fatigue) [cite: 644] et consommer des repas légers avant d'embarquer (éviter l'estomac vide ou trop lourd)[cite: 645].</li>
+          <li><strong>Gestion du vol :</strong> Éviter autant que possible les zones de turbulences[cite: 646]. En cas d'apparition des premiers symptômes, il faut stopper immédiatement les sollicitations et les manœuvres brusques[cite: 647].</li>
+          <li><strong>Ergonomie cabine :</strong> Régler la climatisation et la ventilation pour assurer un flux d'air frais, éviter le confinement [cite: 648] et installer le sujet sensible <strong>à proximité immédiate du centre de gravité</strong> de l'aéronef, là où les accélérations linéaires et angulaires sont minimales[cite: 648].</li>
+          <li><strong>Techniques de maintien corporel :</strong> Maintenir la tête parfaitement immobile (éviter de remuer ou balancer la tête) [cite: 649], fixer un point fixe sur l'horizon visuel extérieur et rester activement concentré sur la conduite du vol[cite: 650]. En cabine passager, adopter si possible une position allongée [cite: 651] associée à des techniques de relaxation [cite: 652] ou suivre un entraînement d'habituation régulier[cite: 653].</li>
+        </ul>
+
+        <h1 id="traitements-medicaments">6. Thérapeutique et Médications</h1>
+        <p>L'arsenal pharmacologique contre le mal des transports comprend plusieurs molécules éprouvées : les patchs transdermiques de scopolamine (Scopoderm TTS) [cite: 655], les antihistaminiques classiques (Marzine, Transmer, Nautamine) [cite: 656, 660], les inhibiteurs calciques (Cinnarizine, Flunarizine) [cite: 657] ou l'homéopathie (Cocculine)[cite: 658, 664].</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Effets secondaires et interdiction absolue</div>
+          <strong>Tous les médicaments anti-cinétose possèdent des effets secondaires majeurs [cite: 659] incompatibles avec la sécurité des vols :</strong>
+          <ul>
+            <li>La <strong>Nautamine ®</strong> provoque une somnolence sévère et une baisse de la vigilance[cite: 660].</li>
+            <li>Le <strong>Scopoderm TTS ®</strong> engendre des troubles de l'accommodation visuelle (mydriase, vision floue de près)[cite: 661].</li>
+          </ul>
+          L'auto-médication est strictement interdite en milieu aéronautique[cite: 662]. Ces molécules sont exclusivement réservées aux élèves pilotes en début de formation (trainees) pour une courte période [cite: 663] et requièrent obligatoirement une prescription formelle d'un médecin navigant expert, spécialiste en médecine aéronautique[cite: 666].
+        </div>
+
+        <h1 id="mal-du-simulateur">7. Cas Particulier : Le Mal du Simulateur</h1>
+        <p>Le mal du simulateur (<em>simulator sickness</em>) constitue un cas d'étude unique de cinétose[cite: 667]. Il survient aussi bien dans les simulateurs de vol fixes que sur les cabines mobiles[cite: 668].</p>
+        
+        <p>Son mécanisme est inverse à la cinétose classique : l'œil perçoit un mouvement visuel dynamique à grande amplitude sur l'écran, tandis que le système vestibulaire de l'oreille interne (dans un simulateur fixe) ne ressent aucune accélération physique correspondante. Ce conflit flagrant force le cerveau à tenter de construire un nouveau modèle d'attente sensoriel et nécessite une phase de réinitialisation (<em>reset</em>) lors du retour aux conditions terrestres ou aéronautiques réelles[cite: 669].</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Risque opérationnel majeur</div>
+          L'adaptation au simulateur crée un décalage sensoriel temporaire. Il existe un <strong>risque critique d'accident en vol réel</strong> si le pilote reprend les commandes d'un véritable avion trop tôt après sa séance. Un délai de sécurité obligatoire doit être observé entre la fin d'une session de simulateur et le vol suivant pour permettre la réadaptation neurologique du pilote[cite: 670].
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">0,5 - 2 Hz</span>
+            <span class="val-label">Fréquence vibratoire critique (viscérale)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">10 - 15 ans</span>
+            <span class="val-label">Pic d'incidence absolu selon l'âge</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15 %</span>
+            <span class="val-label">Des élèves subissent un impact sur leur progression</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 %</span>
+            <span class="val-label">Taux d'élimination définitive des élèves pilotes</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">40 % / 50 %</span>
+            <span class="val-label">Élèves chasse / WSO touchés initialement</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 % / 8 %</span>
+            <span class="val-label">Passagers civils vs Pilotes privés touchés</span>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Hiérarchie de la sensibilité</div>
+              <div class="piege-explication">Retenir par cœur l'ordre exact. Milieux : Mer &gt; Air &gt; Terre. Rôles à bord : Passager &gt; Pilote non en fonction (superviseur/WSO) &gt; Pilote aux commandes (mieux immunisé par l'anticipation motrice).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Justification évolutionnaire du vomissement</div>
+              <div class="piege-explication">Le vomissement en vol n'est pas déclenché par un problème gastrique initial, mais par une interprétation erronée du système nerveux central qui assimile la divergence sensorielle à l'effet d'une neurotoxine (poison) préhistorique exigeant l'élimination.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Effets secondaires incompatibles avec le vol</div>
+              <div class="piege-explication">Savoir associer la molécule à sa panne : la Nautamine engendre de la <strong>somnolence</strong> ; le Scopoderm (scopolamine) engendre des <strong>troubles de l'accommodation visuelle</strong> de près. L'auto-médication est radieusement interdite.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Danger post-simulateur</div>
+              <div class="piege-explication">Le mal du simulateur résulte d'un conflit visuo-vestibulaire (mouvement visuel sans mouvement physique). Le vrai danger réside dans le vol réel qui suit immédiatement à cause du temps de latence requis pour réinitialiser les modèles du cerveau.</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+          
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la cause fondamentale de la cinétose ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un <strong>conflit sensoriel</strong> (mismatch) entre les signaux perçus et les modèles mémorisés.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel mode de transport est le plus inducteur de cinétose ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le transport <strong>maritime (mer)</strong>, devant l'aérien et le terrestre.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qui est le moins sensible au mal des transports entre le passager et le pilote en fonction ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>pilote en fonction</strong> (pilote flying) grâce à l'anticipation des trajectoires.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel pourcentage d'élèves pilotes de chasse subit le mal des transports au début ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Environ <strong>40 %</strong> des élèves pilotes (et 50 % des WSO).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le taux d'élimination définitive en école de pilotage pour cinétose ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Il est fixe à <strong>1 %</strong> des cas.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle plage de fréquences vibratoires aggrave le plus les symptômes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les basses fréquences situées entre <strong>0,5 et 2 Hz</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les quatre systèmes physiologiques impliqués ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le système <strong>vestibulaire</strong>, la <strong>vision</strong>, la <strong>proprioception</strong> et le système <strong>gastro-intestinal</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citer trois symptômes initiaux/précoces de la cinétose. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le malaise général, la <strong>somnolence</strong> et les <strong>bâillements</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le cerveau déclenche-t-il le vomissement réflexe ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Il assimile le conflit sensoriel à l'ingestion d'une <strong>substance neurotoxique</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quel âge la sensibilité à la cinétose culmine-t-elle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Durant l'adolescence, entre <strong>10 et 15 ans</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle activité aérienne est la plus grande pourvoyeuse de cinétose ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>voltige aérienne</strong> (aerobatics +++) en raison de ses fortes accélérations combinées.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Où doit s'asseoir un passager sensible dans un avion ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le plus près possible du <strong>centre de gravité</strong> de l'appareil.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle consigne donner concernant la tête en cas de fortes turbulences ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Garder la <strong>tête strictement immobile</strong> (éviter de la remuer).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que doit fixer le pilote des yeux pour atténuer le conflit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'<strong>horizon extérieur</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'effet secondaire majeur de la Nautamine ® ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une forte <strong>somnolence</strong> (drowsiness).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel trouble provoque l'application d'un patch de Scopoderm TTS ® ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Des <strong>troubles de l'accommodation visuelle</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Un pilote peut-il décider seul de prendre un anti-histaminique avant le vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Non, interdiction absolue</strong> d'auto-médication ; prescription médicale aéronautique obligatoire.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la cause du mal du simulateur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La perception visuelle d'un mouvement sans stimulus physique reçu par l'oreille interne.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le risque de revoler immédiatement après une longue session de simulateur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un risque accru d'<strong>accident en vol</strong> par retard de réadaptation neurologique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que doit impérativement emporter un pilote à chaque vol par sécurité ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un <strong>sac étanche</strong> (waste bag).</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>
