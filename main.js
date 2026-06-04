@@ -5,11 +5,10 @@
 ═══════════════════════════════════════════════════════════ */
 
 // ── Résoudre le chemin racine selon la profondeur de la page ──
-// Compatible : local file://, GitHub Pages (/repo/), Netlify (/)
-const _segs = location.pathname.replace(/\/$/, '').split('/').filter(Boolean);
-const _last = _segs[_segs.length - 1] || '';
-const _inMatiere = _last.endsWith('.html') && _segs.length >= 2;
-const ROOT = _inMatiere ? '../' : './';
+const _segs    = location.pathname.replace(/\/$/, '').split('/').filter(Boolean);
+const _hasHtml = _segs.length > 0 && _segs[_segs.length - 1].endsWith('.html');
+const depth    = _hasHtml ? _segs.length - 2 : _segs.length - 1;
+const ROOT     = depth <= 0 ? './' : '../'.repeat(depth);
 
 // ── Charger cours.json et tout initialiser ─────────────────
 fetch(ROOT + 'cours.json')
@@ -44,9 +43,7 @@ function buildSidebar(matieres) {
     const items = mat.cours.map(c => {
       const isActive = c.code === activeCode;
       // Chemin relatif vers le fichier du cours
-      const href = depth <= 1
-        ? `${mat.id}/${c.code}.html`
-        : (activeMat === mat.id ? `${c.code}.html` : `../${mat.id}/${c.code}.html`);
+      const href = `${ROOT}${mat.id}/${c.code}.html`;
       return `
         <a class="sidebar-cours-item${isActive ? ' active' : ''}" href="${href}">
           <span class="code">${c.code}</span>${c.titre.split('—')[0].trim()}
