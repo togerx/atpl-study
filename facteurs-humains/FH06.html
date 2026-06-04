@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH06 — Vision et Physiologie Oculaire · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH06 · Vision & Physiologie Oculaire</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH06" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH06</span>
+      </div>
+      <div class="cours-code-badge">FH06</div>
+      <h1 class="cours-title">Vision et Physiologie Oculaire</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA 040</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~35 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ─── 1. INTRODUCTION ─── -->
+        <h1 id="introduction">1. Introduction — La Vision comme Fonction Sensorielle</h1>
+
+        <p>La vision est une fonction sensorielle complexe qui implique deux éléments distincts : le <strong>capteur</strong> (l'œil), qui collecte les informations lumineuses, et l'<strong>organe de traitement</strong> (le cerveau), qui interprète ces signaux pour construire une représentation mentale du monde. Cette distinction est fondamentale pour comprendre pourquoi l'environnement aéronautique peut générer de graves erreurs de perception visuelle.</p>
+
+        <p>En aviation, les conditions particulières — faible luminosité, absence de repères, vibrations, fatigue, hypoxie — peuvent perturber autant le capteur que le système de traitement. Comprendre ces mécanismes est indispensable pour anticiper les pièges liés à la vision en vol.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La vision n'est pas une photographie passive de la réalité : c'est une construction active du cerveau à partir de signaux imparfaits. L'environnement aéronautique peut provoquer des erreurs à chaque étape de ce processus.
+        </div>
+
+        <!-- ─── 2. ANATOMIE ─── -->
+        <h1 id="anatomie">2. Anatomie de l'Œil</h1>
+
+        <p>L'œil est souvent comparé à un appareil photo : il possède un diaphragme (iris), une ouverture (pupille), un objectif (cristallin) et une pellicule (rétine). Mais contrairement à une caméra, l'œil est un système vivant, adaptatif et imparfait.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH06_anatomie_oeil.svg" alt="Anatomie de l'œil en coupe sagittale">
+          <div class="fig-caption">Fig. 1 — Anatomie de l'œil en coupe sagittale</div>
+        </div>
+
+        <h2 id="structures-externes">2.1 Structures externes et de protection</h2>
+
+        <p>La <strong>sclérotique</strong> (le blanc de l'œil) est l'enveloppe protectrice résistante de l'œil. La <strong>cornée</strong> est la partie antérieure transparente de la sclérotique, ouverte vers l'avant, qui constitue le premier élément réfractant de l'œil (environ 70 % du pouvoir de réfraction total). La <strong>choroïde</strong> est une membrane interne richement vascularisée qui joue le rôle de chambre noire, absorbant les rayons lumineux parasites.</p>
+
+        <h2 id="structures-optiques">2.2 Structures optiques</h2>
+
+        <p>L'<strong>iris</strong> est la partie colorée de l'œil, formant un diaphragme dont l'ouverture centrale — la <strong>pupille</strong> — régule mécaniquement la quantité de lumière entrant dans l'œil. Le diamètre pupillaire varie de 2 à 8 mm selon l'intensité lumineuse.</p>
+
+        <p>Le <strong>cristallin</strong> est une lentille biconvexe transparente à convergence variable, contrôlée par les <strong>muscles ciliaires</strong>. C'est l'organe de l'accommodation : en se déformant, il ajuste la mise au point sur des objets à différentes distances, comme l'autofocus d'une caméra.</p>
+
+        <p>L'<strong>humeur aqueuse</strong> est un liquide transparent situé entre la cornée et le cristallin (chambre antérieure), assurant la nutrition des structures avasculaires. L'<strong>humeur vitrée</strong> (ou corps vitré) est une substance gélatineuse transparente occupant la chambre postérieure de l'œil, entre le cristallin et la rétine.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          La pression intraoculaire normale est maintenue par l'équilibre entre production et résorption de l'humeur aqueuse. Une augmentation de cette pression peut entraîner un glaucome (voir section pathologies).
+        </div>
+
+        <h2 id="structures-nerveuses">2.3 Structures nerveuses et vasculaires</h2>
+
+        <p>Le <strong>nerf optique</strong> collecte les influx nerveux générés par la rétine et les transmet au cortex visuel (cerveau). L'<strong>artère ophtalmique</strong> irrigue l'œil. La <strong>papille optique</strong> (ou papilla) est le point d'émergence commun du nerf optique et des vaisseaux sur la rétine. Cette zone ne contient aucun photorécepteur : elle constitue donc la <strong>tache aveugle</strong> (blind spot), invisible en vision binoculaire normale mais pouvant masquer un objet lors d'une vision monoculaire.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La tache aveugle est physiologiquement normale — le cerveau la "comble" automatiquement en vision binoculaire. Mais en vision monoculaire (œil fermé, NVG défaillant), un objet peut disparaître sans que le pilote en ait conscience. En vision nocturne, la zone centrale (fovéa, riche en cônes) crée également une zone de faible sensibilité.
+        </div>
+
+        <!-- Valeurs clés anatomie -->
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">2–8 mm</span>
+            <span class="val-label">Diamètre pupillaire</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">200°</span>
+            <span class="val-label">Champ visuel total</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–2°</span>
+            <span class="val-label">Champ fovéal (vision détaillée)</span>
+          </div>
+        </div>
+
+        <!-- ─── 3. ACCOMMODATION ET ADAPTATION ─── -->
+        <h1 id="accommodation-adaptation">3. Accommodation et Adaptation</h1>
+
+        <h2 id="accommodation">3.1 Accommodation</h2>
+
+        <p>L'accommodation est la capacité de l'œil à modifier sa vergence pour focaliser nettement les objets à différentes distances. Elle est assurée par la déformation du cristallin sous l'action des muscles ciliaires : pour la vision de près, le cristallin se bombe (augmentation de convergence) ; pour la vision de loin, il s'aplatit.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Définition</div>
+          <strong>Accommodation :</strong>
+          <div class="formula-display">= autofocus de l'œil</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Organe : cristallin + muscles ciliaires. Permet la mise au point de l'infini jusqu'à quelques centimètres.</p>
+        </div>
+
+        <h2 id="adaptation">3.2 Adaptation</h2>
+
+        <p>L'adaptation est un mécanisme à deux niveaux permettant à l'œil de fonctionner sur une plage de luminosité extrêmement large (de la lumière solaire à la nuit étoilée, soit environ 10 ordres de grandeur).</p>
+
+        <p>Le mécanisme <strong>mécanique</strong> repose sur le réflexe pupillaire : la contraction ou la dilatation de l'iris modifie la quantité de lumière entrant dans l'œil. Ce processus est rapide (secondes) mais limité en amplitude (rapport 16:1 entre pupille dilatée et contractée).</p>
+
+        <p>Le mécanisme <strong>neurophysiologique</strong> implique les photorécepteurs eux-mêmes : en forte lumière, les pigments photosensibles des cônes et bâtonnets se "blanchissent" (réduction de la sensibilité) ; dans l'obscurité, ils se "régénèrent" progressivement (augmentation de la sensibilité). Ce processus est beaucoup plus lent — jusqu'à 30 minutes pour une adaptation complète à l'obscurité.</p>
+
+        <!-- ─── 4. VISION BINOCULAIRE ─── -->
+        <h1 id="vision-binoculaire">4. Vision Binoculaire et Estimation des Distances</h1>
+
+        <p>La vision binoculaire est le principal mécanisme de perception des distances à courte portée. Comme les deux yeux sont espacés d'environ 6,5 cm, ils perçoivent des images légèrement différentes (disparité binoculaire). Le cerveau analyse cette différence pour calculer la distance relative ou absolue des objets.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La vision binoculaire est efficace jusqu'à <strong>100 mètres</strong>. Au-delà, le cerveau utilise des indices monoculaires de perspective (taille relative des objets connus, occlusion, gradient de texture, parallaxe de mouvement) pour estimer les distances.
+        </div>
+
+        <p>En aviation, cette limite est critique : lors de l'approche finale, à moins de 100 m de la piste, la vision binoculaire reprend le relais et peut détecter des anomalies que la perspective seule ne révèle pas. En vol de croisière à haute altitude, seule la perspective est disponible, ce qui peut créer des illusions d'altitude ou de distance.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Les jumelles de vision nocturne (NVG) ne sont pas contrôlées par les mouvements naturels des globes oculaires. Elles perturbent la vision binoculaire normale et requièrent une formation spécifique. De plus, les deux tubes sont fixes relativement à la tête, éliminant la parallaxe de mouvement oculaire.
+        </div>
+
+        <!-- ─── 5. RÉTINE ─── -->
+        <h1 id="retine">5. La Rétine — Cônes et Bâtonnets</h1>
+
+        <p>La rétine est une fine membrane tapissant la face interne du globe oculaire, contenant environ 130 millions de photorécepteurs répartis en deux types fondamentalement différents.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH06_cones_batonnets.svg" alt="Comparaison cônes et bâtonnets — vision centrale et périphérique">
+          <div class="fig-caption">Fig. 2 — Vision centrale (cônes) vs vision périphérique (bâtonnets)</div>
+        </div>
+
+        <h2 id="cones">5.1 Les Cônes — Vision Centrale et Diurne</h2>
+
+        <p>Les cônes (5 à 7 millions) sont concentrés dans la région centrale de la rétine, notamment à la <strong>fovéa</strong>. Il en existe trois types, encodant les trois couleurs primaires : rouge, vert et bleu. Leur combinaison permet la perception de toutes les nuances du spectre visible. Les cônes nécessitent une bonne luminosité pour fonctionner : ce sont les photorécepteurs de la <strong>vision photopique</strong> (diurne).</p>
+
+        <p>La fovéa est une dépression centrale de la rétine, pauvre en bâtonnets et richement dotée en cônes, correspondant au point de vision maximale. Elle ne couvre qu'un angle de <strong>1 à 2°</strong> autour du point central de regard. C'est elle qui assure l'acuité visuelle.</p>
+
+        <h2 id="batonnets">5.2 Les Bâtonnets — Vision Périphérique et Nocturne</h2>
+
+        <p>Les bâtonnets (130 millions) sont répartis sur toute la rétine périphérique, avec une densité maximale à environ <strong>20° de la fovéa</strong>. Ils ne distinguent pas les couleurs (perception en niveaux de gris uniquement) mais sont extrêmement sensibles à la lumière. Ce sont les photorécepteurs de la <strong>vision scotopique</strong> (nocturne). Ils sont spécialisés dans la détection des formes, des mouvements et des objets peu lumineux.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          De nuit, regarder <strong>légèrement à côté</strong> d'un objet (vision excentrique, 20° de décalage) active les bâtonnets périphériques, bien plus sensibles que les cônes centraux. Regarder directement un objet peu lumineux de nuit peut le faire "disparaître" (blind spot nocturne des cônes insensibles).
+        </div>
+
+        <h2 id="vision-couleurs">5.3 Vision des Couleurs et Dyschromatopsie</h2>
+
+        <p>La perception des couleurs dépend de la luminance de l'objet : en dessous d'un seuil chromatique (intervalle photochromatique), les cônes ne peuvent plus distinguer les couleurs et la vision devient achromatique. C'est le phénomène de transition entre vision photopique et scotopique (vision mésopique).</p>
+
+        <p>La <strong>dyschromatopsie</strong> (déficit de perception des couleurs) affecte environ 8 % des hommes. Elle est détectée par le <strong>test d'Ishihara</strong> (planches de points colorés dissimulant des chiffres). En aviation, ce déficit peut être éliminatoire selon le niveau de la licence (ATPL) car les feux d'aérodrome et les signaux lumineux utilisent des codes couleur (rouge, vert, blanc).</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La dyschromatopsie touche 8 % des hommes et 0,5 % des femmes. Elle est généralement congénitale et non évolutive. Elle n'affecte pas l'acuité visuelle (clarté), seulement la discrimination des couleurs. Un pilote daltonien peut passer les tests d'acuité mais échouer au test Ishihara.
+        </div>
+
+        <!-- ─── 6. ACUITÉ VISUELLE ─── -->
+        <h1 id="acuite-visuelle">6. Acuité Visuelle et ses Troubles</h1>
+
+        <h2 id="definition-acuite">6.1 Définition et Standards Réglementaires</h2>
+
+        <p>L'acuité visuelle est le <em>pouvoir séparateur de l'œil</em> — la capacité à distinguer deux points ou détails séparés par une distance angulaire minimale. Elle est mesurée à la <strong>fovéa</strong> (vision centrale). L'acuité de 10/10 signifie que l'œil peut résoudre un angle d'une minute d'arc (1').</p>
+
+        <div class="box box-formule">
+          <div class="box-label">📋 Référence réglementaire</div>
+          <strong>Exigences EASA Part-MED (ATPL) :</strong>
+          <div class="formula-display">7/10 par œil · 10/10 binoculaire</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec ou sans correction optique (lunettes ou lentilles). Le pilote avec amétropie doit emporter des lunettes de secours en cabine.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">7/10</span>
+            <span class="val-label">Acuité min. par œil (ATPL)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">10/10</span>
+            <span class="val-label">Acuité binoculaire (ATPL)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1'</span>
+            <span class="val-label">Angle résolu à 10/10</span>
+          </div>
+        </div>
+
+        <h2 id="facteurs-acuite">6.2 Facteurs Limitant l'Acuité Visuelle</h2>
+
+        <p>En pratique, l'acuité est limitée par de nombreux facteurs physiologiques et environnementaux. Les principaux sont la distance angulaire par rapport à la fovéa, les imperfections du système optique (amétropies), l'âge, l'hypoxie (dès FL100 sans masque), le tabagisme et l'alcool, la visibilité atmosphérique, la quantité de lumière disponible, la taille et le contraste de l'objet, son éloignement, son mouvement relatif et les médicaments.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'hypoxie dégrade la vision nocturne dès 1 500 m (5 000 ft) sans supplémentation en oxygène. La vision des couleurs et l'acuité sont également réduites. Le tabagisme provoque une hypoxie relative chronique (carboxyhémoglobine) affectant les bâtonnets. Ces dégradations sont insidieuses : le pilote ne les perçoit pas toujours lui-même.
+        </div>
+
+        <!-- ─── 6.3 à 6.6 Amétropies ─── -->
+        <h2 id="ametropies">6.3 Les Amétropies — Troubles de la Réfraction</h2>
+
+        <p>L'<strong>emmétrope</strong> est l'œil de puissance optique normale : l'image d'un objet lointain se forme exactement sur la rétine sans effort d'accommodation. Toute déviation de cette norme constitue une <strong>amétropie</strong> : l'image ne se forme pas sur la rétine.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH06_ametropies.svg" alt="Schéma des trois principales amétropies : myopie, hypermétropie, astigmatisme">
+          <div class="fig-caption">Fig. 3 — Les trois principales amétropies et leur correction optique</div>
+        </div>
+
+        <p>La <strong>myopie</strong> résulte d'un globe oculaire trop long ou d'une cornée trop courbée : l'image se forme en avant de la rétine. La vision de loin est floue ; la vision de près est conservée. Correction : verre divergent (concave, à bords épais).</p>
+
+        <p>L'<strong>hypermétropie</strong> résulte d'un globe oculaire trop court : l'image se formerait en arrière de la rétine. La vision de près est affectée en priorité, puis la vision de loin en cas d'hypermétropie forte. Correction : verre convergent (convexe, à centre épais).</p>
+
+        <p>L'<strong>astigmatisme</strong> résulte d'une cornée non parfaitement sphérique, ce qui crée deux foyers distincts. La vision est floue à toutes les distances (lignes horizontales et verticales ne peuvent être nettes simultanément). Correction : verre torique (cylindrique).</p>
+
+        <p>La <strong>presbytie</strong> est une perte progressive du pouvoir d'accommodation liée à la rigidification du cristallin avec l'âge, généralement à partir de 45 ans. La vision de près devient difficile. Correction : verres bifocaux, trifocaux ou progressifs.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La presbytie peut poser des difficultés spécifiques en cockpit : un pilote presbyte avec des lunettes progressives peut avoir du mal à lire les instruments situés en bas et à voir la piste au-delà du pare-brise. Les verres progressifs nécessitent des mouvements de tête plus importants pour trouver la zone focale correcte.
+        </div>
+
+        <h2 id="myopie-champ-vide">6.4 Myopie de Champ Vide (Empty Field Myopia)</h2>
+
+        <p>En l'absence de toute cible sur laquelle l'œil peut se focaliser (ciel clair sans nuages, nuit noire, brouillard uniforme), le cristallin adopte spontanément un point de repos correspondant à une distance de <strong>1 à 1,5 mètre</strong> — c'est la myopie de champ vide. L'œil n'est donc pas focalisé à l'infini alors que le pilote croit regarder dehors.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH06_myopie_champ_vide.png" alt="Myopie de champ vide vs vision correcte">
+          <div class="fig-caption">Fig. 4 — Myopie de champ vide : un aéronef distant peut ne pas être détecté</div>
+        </div>
+
+        <p>Ce phénomène est particulièrement dangereux pour la détection des aéronefs adverses ou des conflits de trafic. Les conditions favorisantes incluent les cieux sans nuages à haute altitude, l'obscurité totale, un ciel uniformément couvert, et le repos oculaire (regarder sans fixer).</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Prévention de la myopie de champ vide :</strong> regarder régulièrement des repères visuels à distance (bord d'aile, bord de nuage, horizon) pour forcer l'accommodation à l'infini. Ne pas "reposer les yeux" en fixant l'infini — forcer une cible précise.
+        </div>
+
+        <!-- ─── 7. CORRECTIONS ─── -->
+        <h1 id="corrections">7. Corrections Optiques et Contraintes en Aviation</h1>
+
+        <p>Les amétropies se corrigent par des aides optiques appropriées. Le principe de la correction est simple : ajouter devant l'œil une lentille dont la puissance compense le défaut de focalisation du système oculaire.</p>
+
+        <p>Tout pilote amétrope doit disposer en cabine de <strong>lunettes de secours</strong> en cas de perte ou de détérioration de sa correction habituelle. Cette obligation réglementaire s'applique que le pilote utilise des lunettes ou des lentilles de contact.</p>
+
+        <h2 id="lunettes-soleil">7.1 Lunettes de Soleil</h2>
+
+        <p>Les lunettes de soleil doivent être de bonne qualité optique. Trois types sont à éviter ou utiliser avec précaution en vol.</p>
+
+        <p>Les <strong>verres polarisants</strong> doivent être évités en aviation : utilisés avec les pare-brises feuilletés des aéronefs, ils peuvent créer des interférences optiques et produire des motifs colorés gênants (effet moiré). Ils masquent également les reflets de surface utiles pour la détection VFR des plans d'eau et des autres aéronefs.</p>
+
+        <p>Les <strong>verres photochromiques</strong> (teintés selon la luminosité) sont généralement déconseillés en vol car leur décoloration est lente (plusieurs minutes) lorsque le pilote passe de l'extérieur lumineux à un poste de pilotage plus sombre. Cette période de transition crée une dégradation temporaire de la vision.</p>
+
+        <p>Les <strong>verres jaunes</strong> augmentent le contraste mais réduisent la luminosité transmise, ce qui n'est pas souhaitable dans toutes les conditions.</p>
+
+        <h2 id="lentilles">7.2 Lentilles de Contact</h2>
+
+        <p>Les lentilles offrent une correction optique satisfaisante pour toutes les amétropies sauf la presbytie (lentilles progressives peu adaptées à l'environnement cockpit). Le principal inconvénient en aviation est la sécheresse de l'air pressurisé et climatisé des cabines : l'air sec assèche la cornée, provoquant un inconfort, un flou visuel transitoire et un risque d'irritation. L'utilisation de larmes artificielles est recommandée lors des vols prolongés.</p>
+
+        <h2 id="chirurgie-refractive">7.3 Chirurgie Réfractive</h2>
+
+        <p>La chirurgie réfractive (LASIK, PKR) vise à modifier la courbure de la cornée pour corriger l'amétropie. Les résultats sont généralement excellents mais la cornée est fragilisée par l'intervention, notamment vis-à-vis des traumatismes. L'aptitude médicale après chirurgie réfractive est accordée au cas par cas selon les autorités médicales EASA, avec une période d'exclusion post-opératoire.</p>
+
+        <!-- ─── 8. ADAPTATION LUMIÈRE / OBSCURITÉ ─── -->
+        <h1 id="adaptation-lumiere-obscurite">8. Adaptation à la Lumière et à l'Obscurité</h1>
+
+        <h2 id="adaptation-lumiere">8.1 Adaptation à la Lumière</h2>
+
+        <p>Lors d'une exposition soudaine à une forte luminosité, l'œil s'adapte rapidement en <strong>environ 10 secondes</strong> grâce au réflexe pupillaire (constriction de la pupille). Simultanément, les photorécepteurs réduisent leur sensibilité par "blanchiment" des pigments photosensibles. Toutefois, si une forte lumière a été subie pendant une longue période, une proportion importante des pigments des cônes et bâtonnets est dégradée, réduisant durablement la sensibilité.</p>
+
+        <p>L'éblouissement (<em>glare</em>) est parfois inévitable (soleil, éclairements de piste) et peut temporairement masquer des informations critiques.</p>
+
+        <h2 id="adaptation-obscurite">8.2 Adaptation à l'Obscurité</h2>
+
+        <p>Le passage de la lumière à l'obscurité déclenche une régénération progressive des pigments photosensibles. Ce processus se déroule en deux phases : d'abord les cônes s'adaptent (3 à 5 minutes), puis les bâtonnets prennent le relais et continuent à augmenter leur sensibilité pendant <strong>25 à 30 minutes</strong>. Une adaptation complète — la nuit la plus noire — nécessite donc environ 30 minutes.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH06_adaptation_obscurite.png" alt="Courbe d'adaptation à l'obscurité — cônes et bâtonnets">
+          <div class="fig-caption">Fig. 5 — Courbe d'adaptation à l'obscurité (seuil lumineux minimal = haute sensibilité en bas)</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Adaptation à l'obscurité : 30 minutes pour un maximum.</strong> Un bref éblouissement (flash de lampe, lumière de piste) réinitialise le processus dès les cônes. Il faut ensuite recommencer l'adaptation depuis le début pour les bâtonnets.
+        </div>
+
+        <!-- ─── 9. VISION NOCTURNE ─── -->
+        <h1 id="vision-nocturne">9. Vision Nocturne</h1>
+
+        <h2 id="mecanisme-nocturne">9.1 Mécanisme de la Vision Nocturne</h2>
+
+        <p>La vision nocturne repose principalement sur les bâtonnets. Comme la fovéa est pratiquement dépourvue de bâtonnets, elle constitue paradoxalement une <strong>tache aveugle nocturne</strong> : regarder directement un objet peu lumineux la nuit le fait "disparaître" dans le champ de vision. Pour le détecter, il faut regarder légèrement à côté — technique de la <em>vision excentrique</em> (off-center viewing).</p>
+
+        <p>Les trois régimes de vision se définissent par la luminance ambiante. La vision <strong>photopique</strong> (cônes actifs, bâtonnets saturés) correspond à la vision diurne normale. La vision <strong>mésopique</strong> (transition) correspond au crépuscule où les deux types de photorécepteurs fonctionnent simultanément. La vision <strong>scotopique</strong> (bâtonnets seuls actifs) correspond à la nuit noire, sans perception des couleurs.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">30 min</span>
+            <span class="val-label">Adaptation nocturne complète</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">20°</span>
+            <span class="val-label">Décalage optimal vision excentrique</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">~510 nm</span>
+            <span class="val-label">Pic de sensibilité des bâtonnets (vert)</span>
+          </div>
+        </div>
+
+        <h2 id="facteurs-nuit">9.2 Facteurs Dégradant la Vision Nocturne</h2>
+
+        <p>Plusieurs substances et conditions physiologiques réduisent significativement l'efficacité de la vision nocturne.</p>
+
+        <p>Le <strong>tabac et l'alcool</strong> réduisent l'oxygénation rétinienne. L'<strong>hypoxie</strong> (manque d'oxygène) est particulièrement néfaste pour les bâtonnets : la vision nocturne se dégrade dès 1 500 m (5 000 ft) d'altitude sans supplémentation en O₂. La <strong>fatigue</strong> et l'effort physique intense altèrent la vigilance et le traitement des informations visuelles. L'<strong>hypoglycémie</strong> prive les cellules rétiniennes de leur source d'énergie. L'<strong>éblouissement</strong> et toute exposition récente à la lumière vive détruisent l'adaptation acquise. La <strong>quinine</strong> (antipaludéen de synthèse) et l'<strong>hypovitaminose A</strong> (carence en vitamine A, précurseur de la rhodopsine — pigment des bâtonnets) réduisent directement la fonction des bâtonnets.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Bonne pratique avant vol de nuit :</strong> éviter la lumière vive pendant les 30 minutes précédant le vol, ne pas fumer, ne pas consommer d'alcool, assurer un repas correct (contre l'hypoglycémie), utiliser un éclairage rouge en cabine (qui préserve l'adaptation scotopique car les bâtonnets sont peu sensibles au rouge).
+        </div>
+
+        <h2 id="impact-couleurs-nuit">9.3 Impact des Couleurs sur la Vision Nocturne</h2>
+
+        <p>Les bâtonnets ont un pic de sensibilité vers 510 nm (vert-bleu). Au-delà de 610 nm (rouge), leur sensibilité chute drastiquement. C'est pourquoi les éclairages rouges de cockpit préservent l'adaptation nocturne : ils permettent de lire les instruments sans "réinitialiser" l'adaptation des bâtonnets. C'est l'effet Purkinje (décalage du pic de sensibilité spectrale entre vision photopique et scotopique).</p>
+
+        <!-- ─── 10. PATHOLOGIES OCULAIRES ─── -->
+        <h1 id="pathologies-oculaires">10. Pathologies Oculaires</h1>
+
+        <h2 id="glaucome">10.1 Glaucome</h2>
+
+        <p>Le glaucome est une augmentation pathologique de la pression intraoculaire qui comprime les vaisseaux rétiniens et entraîne une atrophie progressive de la rétine. L'évolution est insidieuse : la vision périphérique disparaît progressivement puis, sans traitement, la cécité totale s'installe. Le glaucome est traitable par médicaments (collyres hypotenseurs) ou chirurgie, mais les dommages déjà causés sont irréversibles. La subtilité diagnostique réside dans l'absence de symptômes douloureux au début : le dépistage nécessite une mesure de pression oculaire et un examen du champ visuel.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le glaucome est asymptomatique à ses débuts — le pilote ne ressent rien. La perte progressive du champ visuel périphérique n'est pas toujours consciente (le cerveau compense). Ce n'est qu'au stade avancé que le déficit devient apparent. D'où l'importance des visites médicales aéronautiques régulières incluant la mesure de la pression intra-oculaire.
+        </div>
+
+        <h2 id="cataracte">10.2 Cataracte</h2>
+
+        <p>La cataracte est une opacification progressive du cristallin, entraînant une réduction de la transparence et de la qualité optique. Elle est le plus souvent liée à l'âge (cataracte sénile) mais peut aussi être causée par un traumatisme, un diabète ou une exposition prolongée aux UV. Le traitement est exclusivement chirurgical : ablation du cristallin opaque et implantation d'une lentille artificielle (cristallin artificiel). L'aptitude aéronautique est généralement récupérable après intervention réussie.</p>
+
+        <!-- ─── 11. VITESSE DE TRAITEMENT VISUEL ─── -->
+        <h1 id="vitesse-traitement">11. Vitesse de Traitement Visuel en Aviation</h1>
+
+        <p>La chaîne visuelle complète — de la fixation d'une cible à la réponse motrice — prend un temps incompressible. Chaque étape ajoute sa latence :</p>
+
+        <table>
+          <thead>
+            <tr><th>Étape</th><th>Durée</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fixation oculaire</td><td>180 ms</td></tr>
+            <tr><td>Accommodation</td><td>1 000 ms</td></tr>
+            <tr><td>Convergence binoculaire</td><td>200 ms</td></tr>
+            <tr><td>Traitement rétinocortical</td><td>40 ms</td></tr>
+            <tr><td>Identification</td><td>650 – 1 000 ms</td></tr>
+            <tr><td>Décision</td><td>variable</td></tr>
+            <tr><td>Commande motrice</td><td>200 – 1 000 ms</td></tr>
+            <tr><td><strong>Total minimum</strong></td><td><strong>~3 secondes</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Au mieux, <strong>3 secondes</strong> s'écoulent entre la détection d'une menace et la réponse motrice. À Mach 1, cela représente <strong>1 000 mètres</strong> parcourus. En aviation à haute vitesse, la détection précoce par balayage systématique (scan) est vitale. En vol aux instruments, la durée d'accommodation contribue à la fatigue oculaire lors de la transition intérieur/extérieur.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">7/10</span>
+            <span class="val-label">Acuité min. par œil (ATPL)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">10/10</span>
+            <span class="val-label">Acuité binoculaire (ATPL)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5–7M</span>
+            <span class="val-label">Cônes dans la rétine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">130M</span>
+            <span class="val-label">Bâtonnets dans la rétine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–2°</span>
+            <span class="val-label">Champ fovéal (vision nette)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">20°</span>
+            <span class="val-label">Zone de densité max bâtonnets</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">200°</span>
+            <span class="val-label">Champ visuel total binoculaire</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">100 m</span>
+            <span class="val-label">Portée vision binoculaire efficace</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 min</span>
+            <span class="val-label">Adaptation nocturne complète</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">10 sec</span>
+            <span class="val-label">Adaptation à la lumière</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–1,5 m</span>
+            <span class="val-label">Focus repos (myopie champ vide)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">~3 sec</span>
+            <span class="val-label">Réaction visuelle min. complète</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">8%</span>
+            <span class="val-label">Hommes atteints de dyschromatopsie</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">45 ans</span>
+            <span class="val-label">Début presbytie (rigidification cristallin)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">510 nm</span>
+            <span class="val-label">Sensibilité max bâtonnets (vert-bleu)</span>
+          </div>
+        </div>
+
+        <!-- Rappel À RETENIR -->
+        <h1 id="points-cles">Récapitulatif — Points Essentiels</h1>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Anatomie</div>
+          Cornée = 70% réfraction. Cristallin = accommodation. Iris = diaphragme. Pupille = ouverture. Fovéa = vision nette (cônes). Papille = tache aveugle (pas de photorécepteurs). Sclérotique = protection. Choroïde = chambre noire + vascularisation.
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Cônes vs Bâtonnets</div>
+          Cônes (fovéa) : couleurs, détails, acuité, jour. Bâtonnets (périphérie, max 20°) : gris, formes, mouvement, nuit. Vision nocturne = regarder à 20° de l'objet. Adaptation obscurité : cônes 5 min, bâtonnets 30 min.
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Amétropies</div>
+          Myopie → verre divergent (concave). Hypermétropie → verre convergent (convexe). Astigmatisme → verre torique. Presbytie (45 ans+) → verres progressifs. Emergency glasses obligatoires en cabine pour tout pilote amétrope.
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Lunettes en vol</div>
+          INTERDIT : polarisant (interférence pare-brise feuilleté) + photochromique (décoloration lente). Teintes neutres recommandées. Verres jaunes : déconseillés (réduction luminosité). Rouge = préserve adaptation nocturne (bâtonnets peu sensibles au rouge).
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Vision nocturne directe = tache aveugle</div>
+              <div class="piege-explication">La fovéa (centre visuel) est pauvre en bâtonnets. Regarder directement un objet peu lumineux de nuit peut le faire disparaître. Solution : vision excentrique à 20° de l'objet cible.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Éblouissement réinitialise l'adaptation nocturne</div>
+              <div class="piege-explication">Une brève exposition à une lumière vive détruit l'adaptation scotopique acquise. Le pilote doit recommencer les 30 minutes d'adaptation. Prévoir l'éclairage rouge en cockpit.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Myopie de champ vide — cible non détectée</div>
+              <div class="piege-explication">Sans repère visuel, l'œil se focalise à 1–1,5 m. Un aéronef lointain est flou ou invisible. Forcer régulièrement l'accommodation sur une cible distante (bord d'aile, nuage, horizon).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Verres polarisants = danger avec pare-brise feuilleté</div>
+              <div class="piege-explication">La combinaison verre polarisant + pare-brise feuilleté crée des interférences optiques (effet moiré coloré) et réduit les reflets utiles à la détection VFR. Ces verres sont généralement interdits en vol.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Hypoxie dégrade la vision nocturne dès 5 000 ft</div>
+              <div class="piege-explication">Les bâtonnets sont très sensibles à l'hypoxie. La vision nocturne se dégrade significativement dès 1 500 m (5 000 ft) sans oxygène supplémentaire — même si aucun autre symptôme n'est perçu.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Tache aveugle en vision monoculaire</div>
+              <div class="piege-explication">La papille (point d'émergence du nerf optique) est une zone sans photorécepteurs. En vision binoculaire, le cerveau compense. En monoculaire (œil fermé, NVG en panne), un objet peut tomber exactement sur cette zone et devenir invisible.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Dyschromatopsie ≠ baisse d'acuité</div>
+              <div class="piege-explication">Un daltonien peut avoir une acuité de 10/10 et échouer au test Ishihara. Les tests d'acuité et de discrimination chromatique sont distincts. La dyschromatopsie peut être éliminatoire pour l'ATPL.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Glaucome asymptomatique au début</div>
+              <div class="piege-explication">Le glaucome débute sans douleur ni symptôme visible. La perte du champ visuel périphérique est progressive et non perçue consciemment. Seul un dépistage médical (mesure pression + champ visuel) permet le diagnostic précoce.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Vision binoculaire efficace jusqu'à 100 m seulement</div>
+              <div class="piege-explication">Au-delà de 100 m, le cerveau utilise la perspective pour estimer les distances — avec ses biais et illusions potentielles. En approche, la transition de la perspective à la vision binoculaire peut révéler une anomalie de trajectoire non perçue avant.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Verres photochromiques — décoloration trop lente</div>
+              <div class="piege-explication">En sortant d'une zone ensoleillée vers une zone sombre (poste de pilotage sombre), les verres photochromiques prennent plusieurs minutes à s'éclaircir. Cette période de vision réduite peut être dangereuse en phase critique du vol.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">3 secondes minimum de réaction visuelle</div>
+              <div class="piege-explication">La chaîne complète fixation → identification → décision → action prend au minimum 3 secondes. À Mach 1 = 1 000 m parcourus. En vol rapproché (chasse) ou en finale rapide, le scan systématique du ciel est vital.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Presbytie et verres progressifs en cockpit</div>
+              <div class="piege-explication">Les verres progressifs nécessitent de placer la tête dans une position précise pour voir net à chaque distance. En cockpit, la lecture des instruments (bas) et la surveillance extérieure (haut) sont dans des zones focales différentes. Un mouvement de tête excessif et une fatigue accrue peuvent en résulter.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'organe de l'accommodation ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Le cristallin</strong>, dont la courbure est modifiée par les muscles ciliaires. Il permet la mise au point de l'infini jusqu'au proche.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la papille optique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>La tache aveugle</strong> : point d'émergence commun du nerf optique et de l'artère sur la rétine, sans photorécepteurs. Invisible en binoculaire (cerveau compense).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Combien de cônes ? Combien de bâtonnets ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>5 à 7 millions de cônes</strong> (fovéa) et <strong>130 millions de bâtonnets</strong> (densité max à 20° de la fovéa).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles couleurs perçoivent les cônes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Trois types de cônes pour les 3 couleurs primaires : <strong>rouge, vert et bleu</strong>. Leur combinaison permet de percevoir toutes les nuances du spectre visible.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Acuité visuelle minimale ATPL par œil ? Binoculaire ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>7/10 par œil</strong> et <strong>10/10 en binoculaire</strong>, avec correction optique si nécessaire (Part-MED EASA).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Correction de la myopie : quel type de verre ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Verre <strong>divergent (concave)</strong>. L'image se formant en avant de la rétine, on la "repousse" vers l'arrière avec une lentille divergente.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Correction de l'hypermétropie : quel type de verre ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Verre <strong>convergent (convexe)</strong>. L'image se formant en arrière de la rétine, on la "rapproche" avec une lentille convergente.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle distance la vision binoculaire est-elle efficace ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Jusqu'à <strong>100 mètres</strong>. Au-delà, le cerveau utilise les indices de perspective monoculaires pour estimer les distances.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée d'adaptation complète à l'obscurité ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>30 minutes</strong> environ (cônes ~5 min, bâtonnets ~25–30 min). Toute exposition à la lumière vive réinitialise ce processus.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Durée d'adaptation à la lumière (lumière vive soudaine) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Environ 10 secondes</strong> grâce au réflexe pupillaire (constriction) et au "blanchiment" des pigments photosensbiles.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la myopie de champ vide ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">En l'absence de cible à fixer, l'œil se focalise spontanément à <strong>1–1,5 m</strong> (point de repos du cristallin). Dangers : non-détection de cibles distantes. Prévention : fixer régulièrement une cible distante.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les verres polarisants sont-ils interdits en vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Interaction avec les <strong>pare-brises feuilletés</strong> : création d'interférences optiques (motifs colorés). Ils masquent aussi les reflets de surface utiles à la détection VFR.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les verres photochromiques sont-ils déconseillés ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Leur décoloration est <strong>lente</strong> lors du passage lumière→ombre. La vision reste temporairement réduite lors de la transition vers un environnement sombre (phase critique de vol).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment regarder un objet peu lumineux de nuit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Vision excentrique</strong> : regarder à environ 20° à côté de la cible pour activer les bâtonnets périphériques. Regarder directement = utiliser la fovéa pauvre en bâtonnets → l'objet disparaît.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels facteurs dégradent la vision nocturne ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Tabac, alcool, hypoxie</strong> (dès 5 000 ft), fatigue, hypoglycémie, éblouissement, quinine (antipaludéen), <strong>hypovitaminose A</strong> (carence vitamine A).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le glaucome ? Symptômes initiaux ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Augmentation de la pression intraoculaire → atrophie rétinienne → perte du champ visuel périphérique → cécité. <strong>Asymptomatique au début</strong> : détectable uniquement par examen médical.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la cataracte et son traitement ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Opacification progressive du cristallin → flou visuel croissant. Traitement : <strong>chirurgie</strong> (ablation + implant de cristallin artificiel). Aptitude médicale généralement récupérable.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée minimale de réaction visuelle complète ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>~3 secondes</strong> (de la fixation à la commande motrice). À Mach 1 = 1 000 mètres parcourus. Justifie le balayage systématique du ciel en vol.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'astigmatisme ? Sa correction ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Cornée non parfaitement sphérique → deux foyers distincts → vision floue à toutes distances. Correction : <strong>verre torique (cylindrique)</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi recommander la lumière rouge en cockpit de nuit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les bâtonnets sont peu sensibles aux longueurs d'onde >610 nm (rouge). La lumière rouge permet de lire les instruments sans détruire l'<strong>adaptation scotopique</strong> des bâtonnets (effet Purkinje).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la prévalence de la dyschromatopsie chez les hommes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>8 % des hommes</strong> (contre ~0,5 % des femmes). Elle est congénitale et non progressive. Testée par le test d'Ishihara.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi un pilote amétrope doit-il emporter des lunettes de secours ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Obligation réglementaire (Part-MED). En cas de perte ou détérioration de sa correction habituelle, il doit pouvoir maintenir l'acuité minimale requise pour piloter.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la presbytie ? À quel âge ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Rigidification progressive du cristallin → perte d'accommodation → difficulté de vision de près. Débute vers <strong>45 ans</strong>. Correction : bifocaux, trifocaux ou progressifs.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel rôle jouent les muscles ciliaires ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Ils contrôlent la déformation du cristallin : contraction → cristallin se bombe (vision de près) ; relâchement → cristallin s'aplatit (vision de loin). Assurent ainsi l'accommodation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle altitude l'hypoxie dégrade-t-elle la vision nocturne ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dès <strong>1 500 m (~5 000 ft)</strong> sans supplémentation en oxygène. Les bâtonnets sont particulièrement sensibles à la réduction de pression partielle d'O₂.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les trois régimes de vision ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Photopique</strong> (diurne, cônes actifs) — <strong>Mésopique</strong> (transition, crépuscule) — <strong>Scotopique</strong> (nocturne, bâtonnets seuls, pas de couleurs).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la bonne pratique 30 minutes avant un vol de nuit ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Éviter toute lumière vive pour préserver l'adaptation nocturne. Ne pas fumer, assurer un repas correct, utiliser l'éclairage rouge en pré-vol.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment fonctionne la détection des distances binoculaires ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les deux yeux (décalés ~6,5 cm) perçoivent des images légèrement différentes (<strong>disparité binoculaire</strong>). Le cerveau analyse cet écart pour calculer la distance. Efficace jusqu'à 100 m.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">La dyschromatopsie affecte-t-elle l'acuité visuelle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Non.</strong> Acuité et perception des couleurs sont deux fonctions indépendantes. Un daltonien peut avoir une acuité parfaite (10/10) mais échouer aux tests chromatiques.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'emmétrope ? L'amétrope ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Emmétrope</strong> = œil normal (image focalisée sur la rétine sans correction). <strong>Amétrope</strong> = tout défaut de réfraction (myopie, hypermétropie, astigmatisme, presbytie) nécessitant une correction.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation prev/next — remplie automatiquement par main.js -->
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

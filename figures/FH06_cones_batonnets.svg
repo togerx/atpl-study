@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" width="680" height="320">
+  <!-- FH06 Cônes vs Bâtonnets - tableau comparatif visuel -->
+  <!-- Deux colonnes : Vision Centrale (Cônes) et Vision Périphérique (Bâtonnets) -->
+
+  <!-- Colonne gauche : Vision Centrale / Cônes -->
+  <rect x="10" y="10" width="320" height="300" rx="10" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <rect x="10" y="10" width="320" height="44" rx="10" fill="#2E75B6"/>
+  <text x="170" y="37" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">VISION CENTRALE</text>
+  <text x="170" y="68" font-family="Arial" font-size="13" fill="#1F3864" text-anchor="middle" font-weight="bold">🔵 CÔNES</text>
+  <text x="170" y="88" font-family="Arial" font-size="11" fill="#2E75B6" text-anchor="middle">5 à 7 millions — concentrés à la fovéa</text>
+
+  <!-- Séparateur -->
+  <line x1="30" y1="98" x2="310" y2="98" stroke="#2E75B6" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Items cônes -->
+  <text x="38" y="120" font-family="Arial" font-size="11.5" fill="#1F3864">🎨  Perception des <tspan font-weight="bold">couleurs</tspan></text>
+  <text x="38" y="141" font-family="Arial" font-size="11.5" fill="#1F3864">🔍  Perception des <tspan font-weight="bold">détails</tspan></text>
+  <text x="38" y="162" font-family="Arial" font-size="11.5" fill="#1F3864">🧱  Perception des <tspan font-weight="bold">textures</tspan></text>
+  <text x="38" y="183" font-family="Arial" font-size="11.5" fill="#1F3864">✈️  Identification des <tspan font-weight="bold">objets</tspan></text>
+  <text x="38" y="204" font-family="Arial" font-size="11.5" fill="#1F3864">👁️  <tspan font-weight="bold">Acuité visuelle</tspan></text>
+  <text x="38" y="225" font-family="Arial" font-size="11.5" fill="#548235" font-weight="bold">☀️  Vision <tspan fill="#548235">diurne</tspan></text>
+
+  <!-- Fovéa chip -->
+  <rect x="30" y="244" width="270" height="28" rx="6" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="165" y="262" font-family="Arial" font-size="11" fill="#548235" text-anchor="middle" font-weight="bold">Champ fovéal : 1° à 2° autour du point central</text>
+
+  <!-- Colonne droite : Vision Périphérique / Bâtonnets -->
+  <rect x="350" y="10" width="320" height="300" rx="10" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <rect x="350" y="10" width="320" height="44" rx="10" fill="#C00000"/>
+  <text x="510" y="37" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">VISION PÉRIPHÉRIQUE</text>
+  <text x="510" y="68" font-family="Arial" font-size="13" fill="#1F3864" text-anchor="middle" font-weight="bold">🔴 BÂTONNETS</text>
+  <text x="510" y="88" font-family="Arial" font-size="11" fill="#C00000" text-anchor="middle">130 millions — max. densité à 20° de la fovéa</text>
+
+  <!-- Séparateur -->
+  <line x1="370" y1="98" x2="650" y2="98" stroke="#C00000" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Items bâtonnets -->
+  <text x="378" y="120" font-family="Arial" font-size="11.5" fill="#1F3864">🔷  Perception des <tspan font-weight="bold">formes</tspan></text>
+  <text x="378" y="141" font-family="Arial" font-size="11.5" fill="#1F3864">⚫  Perception des <tspan font-weight="bold">niveaux de gris</tspan></text>
+  <text x="378" y="162" font-family="Arial" font-size="11.5" fill="#1F3864">🏃  Perception du <tspan font-weight="bold">mouvement</tspan></text>
+  <text x="378" y="183" font-family="Arial" font-size="11.5" fill="#1F3864">🔦  Détection des <tspan font-weight="bold">objets</tspan></text>
+  <text x="378" y="204" font-family="Arial" font-size="11.5" fill="#1F3864">👁️  <tspan font-weight="bold">Pas de perception des couleurs</tspan></text>
+  <text x="378" y="225" font-family="Arial" font-size="11.5" fill="#C00000" font-weight="bold">🌙  Vision <tspan fill="#C00000">nocturne</tspan></text>
+
+  <!-- Nuit chip -->
+  <rect x="370" y="244" width="270" height="28" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="505" y="262" font-family="Arial" font-size="11" fill="#BF8F00" text-anchor="middle" font-weight="bold">Regarder à 20° de l'objet pour vision nocturne</text>
+</svg>

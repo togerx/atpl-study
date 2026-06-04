@@ -81,6 +81,13 @@
               "lecture_min": 30
             },
             {
+              "code": "FH06",
+              "titre": "Vision et Physiologie Oculaire",
+              "description": "Anatomie de l'œil, cônes et bâtonnets, acuité visuelle, amétropies, vision nocturne, adaptation lumineuse et pathologies oculaires.",
+              "tags": ["easa", "exam"],
+              "lecture_min": 35
+            },
+            {
               "code": "FH07",
               "titre": "Audition & Équilibre",
               "description": "Anatomie de l'oreille, perception auditive, bruit aéronautique, pertes auditives, protection et système vestibulaire.",
