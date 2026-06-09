@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH03 — Atmosphère et Hypoxie · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH03 · Atmosphère &amp; Hypoxie</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH03" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH03</span>
+      </div>
+      <div class="cours-code-badge">FH03</div>
+      <h1 class="cours-title">Atmosphère et Hypoxie</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA 040</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~25 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ═══════════════════════════════
+             1. COMPOSITION ET STRUCTURE DE L'ATMOSPHÈRE
+        ════════════════════════════════ -->
+        <h1 id="structure-atmosphere">1. Structure et composition de l'atmosphère</h1>
+
+        <h2 id="composition-homosphere">1.1 Composition chimique — Homosphère</h2>
+        <p>L'atmosphère peut être divisée en deux grandes couches selon sa composition chimique :</p>
+        <ul>
+          <li><strong>L'homosphère</strong> (0 à 120 km) : composition gazeuse fixe et uniforme. C'est là que nous volons.</li>
+          <li><strong>L'hétérosphère</strong> (au-dessus de 120 km) : la composition chimique varie avec l'altitude.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Composition de l'air dans l'homosphère : <strong>Azote N₂ = 78 %</strong>, <strong>Oxygène O₂ = 21 %</strong>, gaz rares (Ar, Ne, He…) + CO₂ = 1 %. Ces proportions restent <em>constantes</em> avec l'altitude — seule la pression totale diminue.
+        </div>
+
+        <h2 id="couches-temperature">1.2 Couches atmosphériques par température</h2>
+        <p>La classification la plus utilisée en aviation découpe l'atmosphère selon le profil de température :</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH03_couches_atmosphere.svg" alt="Couches atmosphériques selon la température">
+          <div class="fig-caption">Fig. 1 — Couches atmosphériques : structure en température</div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Couche</th>
+              <th>Altitude</th>
+              <th>Gradient thermique</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Troposphère</strong></td>
+              <td>0 – 11 km (≈ 36 090 ft)</td>
+              <td>−2 °C / 1 000 ft</td>
+              <td>Météo, aviation civile, nuages</td>
+            </tr>
+            <tr>
+              <td><strong>Tropopause</strong></td>
+              <td>≈ 11 km</td>
+              <td>−56,5 °C (isotherme)</td>
+              <td>Limite supérieure de la troposphère</td>
+            </tr>
+            <tr>
+              <td><strong>Stratosphère</strong></td>
+              <td>11 – 50 km</td>
+              <td>Remonte jusqu'à 0 °C à 50 km</td>
+              <td>Vols supersoniques, ozonosophère</td>
+            </tr>
+            <tr>
+              <td><strong>Mésosphère</strong></td>
+              <td>50 – 80 km</td>
+              <td>Descend jusqu'à −90 °C</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Thermosphère</strong></td>
+              <td>80 – 120+ km</td>
+              <td>Remonte fortement (+200 à +600 °C)</td>
+              <td>Satellites basse orbite</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="couches-electriques">1.3 Classification électrique</h2>
+        <p>En termes de propriétés électriques, l'atmosphère se divise en deux :</p>
+        <ul>
+          <li><strong>Neutrosphère</strong> (0 à ~90 km) : particules neutres dominantes — correspond à l'espace de vol habituel.</li>
+          <li><strong>Ionosphère</strong> (au-dessus de ~90 km) : particules chargées ionisées par le rayonnement solaire. Permet la propagation des ondes radio longues distances (HF) par réflexion.</li>
+        </ul>
+
+        <h2 id="couche-ozone">1.4 La couche d'ozone (Ozonosphère)</h2>
+        <p>L'ozone (O₃) résulte de l'action des rayonnements ultraviolets sur les molécules d'oxygène. L'ozonosphère se situe entre 20 et 70 km d'altitude, avec une concentration maximale autour de <strong>30 km</strong>.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">30 km</span>
+            <span class="val-label">Max concentration ozone</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Pôles</span>
+            <span class="val-label">Concentration ozone max</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Printemps</span>
+            <span class="val-label">Maximum saisonnier</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Automne</span>
+            <span class="val-label">Minimum saisonnier</span>
+          </div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          L'ozone joue un rôle essentiel en absorbant la majeure partie des UV solaires à effets biologiques dangereux. Paradoxalement, c'est un gaz très corrosif et toxique pour les organismes vivants. Dans les avions qui volent en haute altitude (SST), l'ozone est <strong>détruit par la chaleur de compression</strong> de l'air climatisé, et des filtres sont installés dans les circuits de conditionnement d'air.
+        </div>
+
+        <!-- ═══════════════════════════════
+             2. ATMOSPHÈRE STANDARD OACI
+        ════════════════════════════════ -->
+        <h1 id="atmosphere-standard-oaci">2. Atmosphère Standard OACI (ISA)</h1>
+
+        <p>L'Atmosphère Standard Internationale (ISA) est un modèle de référence défini par l'OACI permettant de standardiser les calculs de performances, d'altimétrie et de certification des aéronefs.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">📋 Référence OACI — Valeurs ISA au niveau de la mer (MSL)</div>
+          <div class="values-grid" style="margin-top:.5rem">
+            <div class="value-chip">
+              <span class="val">+15 °C</span>
+              <span class="val-label">Température MSL</span>
+            </div>
+            <div class="value-chip">
+              <span class="val">1 013,25 hPa</span>
+              <span class="val-label">Pression MSL (760 mmHg)</span>
+            </div>
+            <div class="value-chip">
+              <span class="val">1 225 g/m³</span>
+              <span class="val-label">Densité MSL</span>
+            </div>
+            <div class="value-chip">
+              <span class="val">−2 °C/1 000 ft</span>
+              <span class="val-label">Gradient jusqu'à 36 090 ft</span>
+            </div>
+            <div class="value-chip">
+              <span class="val">−56,5 °C</span>
+              <span class="val-label">Température isotherme (tropopause → 65 617 ft)</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="pression-altitude">2.1 Pression selon l'altitude — les fractions clés</h2>
+        <p>La pression atmosphérique décroît de façon non linéaire (exponentielle) avec l'altitude. Trois altitudes-repères à mémoriser absolument pour l'ATPL :</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">8 000 ft</span>
+            <span class="val-label">Pression = ¾ MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">18 000 ft</span>
+            <span class="val-label">Pression = ½ MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">36 000 ft</span>
+            <span class="val-label">Pression = ¼ MSL</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La diminution de pression n'est <strong>pas linéaire</strong> avec l'altitude — elle suit une courbe exponentielle. Passer de 0 à 18 000 ft réduit la pression de moitié ; passer de 18 000 à 36 000 ft ne réduit à nouveau la pression que de moitié. Le QCM vous fait parfois confondre la relation linéaire (température) et la relation exponentielle (pression).
+        </div>
+
+        <!-- ═══════════════════════════════
+             3. LOIS DES GAZ
+        ════════════════════════════════ -->
+        <h1 id="lois-gaz">3. Les lois des gaz et leurs conséquences physiologiques</h1>
+
+        <div class="fig-container">
+          <img src="../figures/FH03_lois_gaz.svg" alt="Les 4 lois des gaz et leurs conséquences physiologiques">
+          <div class="fig-caption">Fig. 2 — Les 4 lois des gaz et leurs conséquences en physiologie aéronautique</div>
+        </div>
+
+        <h2 id="loi-boyle">3.1 Loi de Boyle-Mariotte → Barotraumatismes</h2>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Boyle-Mariotte</div>
+          <strong>À température constante, le volume d'un gaz est inversement proportionnel à sa pression.</strong>
+          <div class="formula-display">P × V = constante&nbsp;&nbsp;&nbsp;&nbsp;ou&nbsp;&nbsp;&nbsp;&nbsp;P₁/P₂ = V₂/V₁</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec P₁ = pression initiale, P₂ = pression finale, V₁ = volume initial, V₂ = volume final</p>
+        </div>
+
+        <p>En aviation, lorsque l'avion monte, la pression ambiante chute. Les gaz piégés dans les cavités corporelles (oreille moyenne, sinus, intestins, dents cariées) se dilatent, causant des douleurs voire des lésions : ce sont les <strong>barotraumatismes</strong>. À la descente, c'est l'inverse : les gaz se compriment, mais si la cavité ne s'équilibre pas, une pression négative apparaît (blocage en descente = otalgie).</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          La manœuvre de Valsalva (souffler nez bouché) permet d'ouvrir la trompe d'Eustache et d'équilibrer la pression de l'oreille moyenne. Elle est efficace en montée, mais moins en descente (il faut déglutir, bâiller ou avaler).
+        </div>
+
+        <h2 id="loi-dalton">3.2 Loi de Dalton → Hypoxie d'altitude</h2>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Dalton</div>
+          <strong>La pression totale d'un mélange gazeux est égale à la somme des pressions partielles de chacun des gaz qui le composent.</strong>
+          <div class="formula-display">Pt = P₁ + P₂ + P₃ + … + Pn</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec Pt = pression totale du mélange, P₁…Pn = pression partielle de chaque gaz constituant</p>
+        </div>
+
+        <p>Au sol, la pression partielle de l'oxygène est de 160 mmHg (21 % × 760 mmHg). En altitude, la pression totale diminue, mais la proportion d'O₂ reste à 21 %. Donc la <strong>pression partielle d'O₂ (pO₂) diminue</strong> avec l'altitude. C'est la cause principale de l'hypoxie en aviation.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Constituant</th>
+              <th>Air atmosphérique (MSL)</th>
+              <th>Air alvéolaire (MSL)</th>
+              <th>Air alvéolaire (10 000 ft)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Oxygène O₂</strong></td>
+              <td>160 mmHg (21 %)</td>
+              <td>103 mmHg (14 %)</td>
+              <td>55 mmHg ← minimum !</td>
+            </tr>
+            <tr>
+              <td>Azote N₂</td>
+              <td>600 mmHg</td>
+              <td>570 mmHg</td>
+              <td>381 mmHg</td>
+            </tr>
+            <tr>
+              <td>Vapeur d'eau</td>
+              <td>—</td>
+              <td>47 mmHg</td>
+              <td>47 mmHg</td>
+            </tr>
+            <tr>
+              <td>CO₂</td>
+              <td>—</td>
+              <td>40 mmHg (5,3 %)</td>
+              <td>40 mmHg (5,3 %)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>55 mmHg</strong> = pression partielle alvéolaire minimale en O₂ pour fonctionner normalement (équivaut à 10 000 ft). En dessous, il faut enrichir en oxygène. L'objectif est de maintenir la pO₂ alvéolaire à <strong>103 mmHg</strong> (équivalent MSL).
+        </div>
+
+        <h2 id="loi-henry">3.3 Loi de Henry → Maladie de décompression (DCS)</h2>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Henry</div>
+          <strong>À l'équilibre, la quantité de gaz dissous dans un liquide est proportionnelle à la pression partielle de ce gaz.</strong>
+          <div class="formula-display">Quantité dissoute ∝ P (pression partielle du gaz)</div>
+        </div>
+
+        <p>Le corps humain est normalement saturé en azote dissous. Lors d'une montée rapide (ou d'une décompression explosive), la pression ambiante chute brutalement. L'azote ne peut plus rester dissous et forme des <strong>bulles dans les tissus et le sang</strong>, causant la <strong>maladie de décompression (DCS)</strong>.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">&lt; 14 000 ft</span>
+            <span class="val-label">DCS improbable</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 18 000 ft</span>
+            <span class="val-label">DCS probable (exposition prolongée)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 25 000 ft</span>
+            <span class="val-label">DCS presque certaine</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La DCS peut survenir ou persister <strong>après la descente</strong> et peut aller jusqu'au décès. Les facteurs aggravants sont : l'hypoxie, le froid, l'âge, le surpoids/obésité. Il ne faut pas confondre DCS (loi de Henry, bulles d'azote) avec le barotraumatisme (loi de Boyle, cavités gazeuses).
+        </div>
+
+        <h2 id="loi-charles">3.4 Loi de Charles → Gaz parfaits</h2>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Charles</div>
+          <strong>À pression constante, le volume d'une masse de gaz varie proportionnellement à sa température absolue.</strong>
+          <div class="formula-display">V₁ / V₂ = T₁ / T₂&nbsp;&nbsp;&nbsp;&nbsp;(T en Kelvin)&nbsp;&nbsp;&nbsp;&nbsp;ou&nbsp;&nbsp;&nbsp;&nbsp;PV = nRT</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Rappel : T(K) = T(°C) + 273,15 — La loi des gaz parfaits combine Boyle et Charles.</p>
+        </div>
+
+        <!-- ═══════════════════════════════
+             4. RAYONNEMENT COSMIQUE
+        ════════════════════════════════ -->
+        <h1 id="rayonnement-cosmique">4. Rayonnement cosmique</h1>
+
+        <h2 id="rayons-galactiques">4.1 Rayons cosmiques galactiques</h2>
+        <p>Les rayons cosmiques galactiques (GCR) sont composés principalement de protons (87 %), de particules alpha/hélium (12 %) et de noyaux lourds (1 %). L'unité de mesure de la dose d'irradiation en radioprotection est le <strong>Sievert (Sv)</strong>.</p>
+
+        <p>La quantité totale de rayonnement reçue par un équipage dépend de :</p>
+        <ul>
+          <li>La <strong>durée du vol</strong></li>
+          <li>La <strong>latitude</strong> : le champ magnétique terrestre et l'absorption stratosphérique protègent davantage les régions équatoriales. La protection est <em>minimale aux pôles</em>.</li>
+          <li>L'<strong>altitude</strong> (plus on monte, plus l'exposition augmente)</li>
+          <li>Le <strong>coefficient d'absorption</strong> de la structure de l'aéronef</li>
+        </ul>
+
+        <h2 id="rayonnement-solaire">4.2 Rayonnement solaire</h2>
+        <p>Le rayonnement solaire comprend les ondes électromagnétiques (ondes radio, rayons X, rayons gamma). Il est fonction des éruptions solaires, avec un cycle d'environ <strong>11 ans</strong> et des éruptions de haute intensité tous les <strong>3 ans</strong> environ.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">📋 Repères doses cosmiques pour pilotes</div>
+          <ul style="margin:.3rem 0;font-size:.9rem">
+            <li><strong>1 mSv</strong> = environ 200 heures à FL350 sur Paris–New York, ou 400 heures à FL350 à l'équateur</li>
+            <li>Surveillance obligatoire au-dessus de <strong>6 mSv/an</strong></li>
+            <li>Évaluation de dose recommandée au-dessus de <strong>1 mSv/an</strong></li>
+            <li>Limite maximale pour une <strong>femme enceinte</strong> : 1 mSv sur toute la grossesse</li>
+          </ul>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'exposition aux rayonnements cosmiques est <strong>maximale aux pôles</strong> (protection magnétique minimale) et <strong>minimale à l'équateur</strong>. C'est contre-intuitif car on associe souvent les pôles à un environnement "protégé" ou "froid". Les routes polaires (New York–Tokyo) exposent davantage les équipages.
+        </div>
+
+        <!-- ═══════════════════════════════
+             5. TRANSPORT DE L'OXYGÈNE
+        ════════════════════════════════ -->
+        <h1 id="transport-oxygene">5. Transport de l'oxygène dans l'organisme</h1>
+
+        <p>L'oxygène inspiré diffuse des alvéoles pulmonaires vers le sang. Dans le sang, il est transporté principalement lié à l'<strong>hémoglobine (Hb)</strong> des globules rouges (97–98 %), et accessoirement dissous dans le plasma (2–3 %). L'hémoglobine est la protéine-clé : chaque molécule peut fixer 4 molécules d'O₂ pour former l'<strong>oxyhémoglobine (HbO₂)</strong>.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le <strong>cerveau</strong> représente environ 2 % du poids corporel mais consomme <strong>20 % de l'oxygène total</strong>. C'est l'organe le plus sensible à l'hypoxie. L'azote se dissout aussi dans le sang mais ne joue aucun rôle dans les processus vitaux (sauf dans la DCS).
+        </div>
+
+        <h2 id="saturation-hemoglobine">5.1 Saturation de l'hémoglobine selon l'altitude</h2>
+        <p>La saturation en O₂ de l'hémoglobine (SpO₂) dépend directement de la pression partielle en O₂ (pO₂). La relation est non linéaire (courbe en S de dissociation Hb-O₂) :</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">~98 %</span>
+            <span class="val-label">SpO₂ au niveau de la mer</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">87 %</span>
+            <span class="val-label">SpO₂ à 10 000 ft</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">65 %</span>
+            <span class="val-label">SpO₂ à 20 000 ft</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5 000 ft</span>
+            <span class="val-label">Vision nocturne −10 %</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La dégradation de la <strong>vision nocturne</strong> commence dès <strong>5 000 ft</strong> (pas 10 000 ft !). Les photorécepteurs en bâtonnets de la rétine sont particulièrement gourmands en O₂. En vol de nuit non pressurisé à basse altitude, l'hypoxie peut affecter la vision avant tout autre symptôme perceptible.
+        </div>
+
+        <h2 id="besoins-oxygene-altitude">5.2 Besoins en oxygène selon l'altitude</h2>
+        <p>L'objectif est de maintenir une pO₂ alvéolaire ≥ 103 mmHg (équivalente au niveau de la mer) :</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH03_pression_partielle_altitude.svg" alt="Besoins en oxygène par altitude">
+          <div class="fig-caption">Fig. 3 — Régimes d'alimentation en oxygène selon l'altitude</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          L'altitude clé <strong>33 700 ft</strong> est le seuil où 100 % d'oxygène pur est requis pour maintenir la pression alvéolaire équivalente au sol. Au-dessus de 40 000 ft, même 100 % O₂ ne suffit plus — il faut une <strong>pressurisation positive</strong> (pressure breathing), technique fatigante réservée aux militaires.
+        </div>
+
+        <!-- ═══════════════════════════════
+             6. L'HYPOXIE
+        ════════════════════════════════ -->
+        <h1 id="hypoxie">6. L'Hypoxie</h1>
+
+        <p>L'hypoxie est un état d'oxygénation insuffisante des tissus. Elle est particulièrement dangereuse en aviation car son installation est <strong>insidieuse</strong> et le pilote affecté n'en est généralement pas conscient.</p>
+
+        <h2 id="types-hypoxie">6.1 Les 4 types d'hypoxie</h2>
+
+        <div class="fig-container">
+          <img src="../figures/FH03_types_hypoxie.svg" alt="Les 4 types d'hypoxie">
+          <div class="fig-caption">Fig. 4 — Les 4 types d'hypoxie selon le mécanisme</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Mnémotechnique des 4 types</div>
+          <strong>HIHS</strong> : <strong>H</strong>istotoxique (cellules bloquées) · <strong>H</strong>ypémique (sang incapable) · <strong>I</strong>schémique/Stagnante (circulation bloquée) · <strong>H</strong>ypoxique (pO₂ insuffisante). En aviation civile, c'est quasi exclusivement le type <strong>hypoxique</strong> qui est en cause (altitude → pO₂ ↓).
+        </div>
+
+        <h2 id="stades-hypoxie-temps">6.2 Stades d'hypoxie selon la durée d'exposition</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Durée</th>
+              <th>Altitude typique</th>
+              <th>Manifestation principale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Chronique</strong></td>
+              <td>Jours / mois / années</td>
+              <td>Vie en montagne</td>
+              <td>Adaptation physiologique (polyglobulie…)</td>
+            </tr>
+            <tr>
+              <td><strong>Prolongée</strong></td>
+              <td>Plusieurs heures</td>
+              <td>2 500 – 3 500 m</td>
+              <td>Fatigue progressive</td>
+            </tr>
+            <tr>
+              <td><strong>Aiguë</strong></td>
+              <td>Quelques minutes</td>
+              <td>4 000 – 6 000 m</td>
+              <td>Effets psychologiques, euphorie</td>
+            </tr>
+            <tr>
+              <td><strong>Soudaine</strong> (décompression explosive)</td>
+              <td>Quelques secondes</td>
+              <td>Très haute altitude</td>
+              <td>Perte de connaissance sans symptôme préalable</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="zones-hypoxie">6.3 Zones/Stades d'hypoxie par altitude</h2>
+        <p>Le tableau ci-dessous (à photographier depuis la diapositive 32 du cours) résume les 4 zones cliniques :</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH03_zones_hypoxie.png" alt="Stades et zones d'hypoxie selon l'altitude">
+          <div class="fig-caption">Fig. 5 — Zones d'hypoxie selon l'altitude (source : cours)</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — 4 zones d'hypoxie</div>
+          <ul>
+            <li><strong>Zone indifférente</strong> (0–10 000 ft) : léger impact vision nocturne, augmentation légère FC et FR</li>
+            <li><strong>Zone compensatoire</strong> (10 000–15 000 ft) : somnolence, ↑ débit cardiaque et respiratoire, jugement altéré</li>
+            <li><strong>Zone perturbatoire</strong> (15 000–20 000 ft) : euphorie, étourdissements, troubles sévères moteurs et cognitifs</li>
+            <li><strong>Zone critique</strong> (20 000–23 000 ft) : dégradation mentale rapide, perte de conscience en quelques minutes sans avertissement</li>
+          </ul>
+        </div>
+
+        <h2 id="symptomes-hypoxie">6.4 Symptômes de l'hypoxie hypoxique</h2>
+        <p>Les symptômes progressent de manière insidieuse, ce qui rend l'hypoxie particulièrement dangereuse — la victime ne se rend souvent pas compte de son état :</p>
+        <ul>
+          <li><strong>Changement de personnalité</strong> : euphorie ou agressivité, désinhibition, faux sentiment de bien-être</li>
+          <li><strong>Altération du jugement</strong> : perte d'autocritique, non-conscience des performances dégradées</li>
+          <li><strong>Céphalées</strong> : surtout en hypoxie modérée prolongée</li>
+          <li><strong>Fourmillements</strong> dans les mains et les pieds</li>
+          <li><strong>Hyperventilation</strong> : fréquence respiratoire augmentée (réflexe compensatoire)</li>
+          <li><strong>Altération motrice</strong> : mouvements fins difficiles, écriture illisible, spasmes dans les stades avancés</li>
+          <li><strong>Amnésie à court terme</strong> : difficultés à réaliser les procédures (commence ~12 000 ft)</li>
+          <li><strong>Troubles visuels</strong> : réduction de la perception des couleurs, perte de vision périphérique, tunnel visuel</li>
+          <li><strong>Cyanose</strong> : teinte bleutée des lèvres et des ongles (Hb désoxygénée)</li>
+          <li><strong>Formication</strong> : sensation de fourmis sur la peau</li>
+          <li><strong>Inconscience</strong> puis <strong>décès</strong> si non traité</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le symptôme le plus précoce et le plus fiable est la <strong>dégradation de la vision nocturne</strong> (dès 5 000–7 000 ft), bien avant les symptômes cognitifs perçus. De plus, le pilote hypoxique <strong>ne ressent pas la souffrance</strong> — au contraire, l'euphorie masque l'urgence de la situation.
+        </div>
+
+        <!-- ═══════════════════════════════
+             7. TUC / EPT
+        ════════════════════════════════ -->
+        <h1 id="tuc-ept">7. Temps de Conscience Utile (TUC) et Temps de Performance Efficace (EPT)</h1>
+
+        <h2 id="tuc-definition">7.1 Définition du TUC</h2>
+        <p>Le <strong>Temps de Conscience Utile (TUC)</strong> est la durée pendant laquelle le cerveau, en état d'hypoxie aiguë, peut encore initier des actions correctrices efficaces. Au-delà du TUC, le pilote est incapable d'agir correctement même s'il est encore conscient.</p>
+
+        <p>Le <strong>Temps de Performance Efficace (EPT)</strong> est encore plus court que le TUC : EPT &lt; TUC. C'est le temps pendant lequel les performances sont réellement efficaces.</p>
+
+        <h2 id="tuc-valeurs">7.2 Valeurs du TUC selon l'altitude</h2>
+
+        <div class="fig-container">
+          <img src="../figures/FH03_tuc_table.png" alt="Tableau TUC selon l'altitude">
+          <div class="fig-caption">Fig. 6 — Temps de Conscience Utile (TUC) selon l'altitude (source : cours)</div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">30 min</span>
+            <span class="val-label">TUC à 20 000 ft (activité légère)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–2 min</span>
+            <span class="val-label">TUC à 30 000 ft (activité légère)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30–90 s</span>
+            <span class="val-label">TUC à 35 000 ft (activité légère)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15–20 s</span>
+            <span class="val-label">TUC à 40 000 ft (activité légère)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">÷ 2</span>
+            <span class="val-label">TUC divisé par 2 en activité modérée</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          En cas d'<strong>activité physique modérée</strong> (agitation lors d'une décompression, port de masque…), le TUC est <strong>divisé par 2</strong>. À 35 000 ft avec activité modérée, vous n'avez que 15–45 secondes pour poser le masque et descendre. La décompression explosive (rupture de hublot) peut créer un nuage de brouillard et une brutale sensation de froid avant même la perte de conscience.
+        </div>
+
+        <h2 id="facteurs-tuc">7.3 Facteurs influençant le TUC</h2>
+        <p>Le TUC varie selon :</p>
+        <ul>
+          <li>La <strong>condition physique individuelle</strong></li>
+          <li>La <strong>charge de travail</strong> (workload)</li>
+          <li>Le <strong>tabagisme</strong> (réduit la capacité de transport O₂)</li>
+          <li>Le <strong>surpoids / obésité</strong></li>
+          <li>La nature de la décompression : <strong>progressive ou explosive</strong></li>
+        </ul>
+
+        <!-- ═══════════════════════════════
+             8. FACTEURS AGGRAVANTS
+        ════════════════════════════════ -->
+        <h1 id="facteurs-severite">8. Facteurs déterminant la gravité de l'hypoxie hypoxique</h1>
+
+        <p>La sévérité de l'hypoxie et la susceptibilité individuelle sont modulées par les facteurs suivants :</p>
+        <ul>
+          <li><strong>L'altitude</strong> : plus elle est élevée, plus l'hypoxie est sévère</li>
+          <li><strong>La durée d'exposition</strong></li>
+          <li><strong>L'exercice physique / charge de travail</strong> : augmente les besoins en O₂</li>
+          <li><strong>Les températures extrêmes</strong> : sollicitent le système circulatoire et diminuent la tolérance à l'hypoxie</li>
+          <li><strong>La maladie et la fatigue</strong></li>
+          <li><strong>L'alcool et les médicaments</strong></li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Conclusion pratique</div>
+          L'hypoxie est dangereuse pour trois raisons : son installation est insidieuse et non reconnaissable, elle dégrade les performances de l'équipage, et à haute altitude elle peut tuer en quelques minutes. <strong>Surveiller sa propre coloration des ongles</strong> est un geste de détection simple (les femmes navigantes évitent le vernis à ongles pour cette raison). La dernière faculté sensorielle à disparaître dans l'hypoxie sévère est <strong>l'ouïe</strong>.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">+15 °C</span>
+            <span class="val-label">Température ISA MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 013,25 hPa</span>
+            <span class="val-label">Pression ISA MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−2 °C/1 000 ft</span>
+            <span class="val-label">Gradient ISA (jusqu'à 36 090 ft)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−56,5 °C</span>
+            <span class="val-label">Temp. isotherme tropopause</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">8 000 ft</span>
+            <span class="val-label">Pression = ¾ MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">18 000 ft</span>
+            <span class="val-label">Pression = ½ MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">36 000 ft</span>
+            <span class="val-label">Pression = ¼ MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">N₂ 78 % / O₂ 21 %</span>
+            <span class="val-label">Composition homosphère</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">55 mmHg</span>
+            <span class="val-label">pO₂ alvéolaire min. (10 000 ft)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">103 mmHg</span>
+            <span class="val-label">Objectif pO₂ alvéolaire (= MSL)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">33 700 ft</span>
+            <span class="val-label">Seuil 100 % O₂ pur requis</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">40 000 ft</span>
+            <span class="val-label">Seuil pressure breathing requis</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">87 % / 65 %</span>
+            <span class="val-label">SpO₂ à 10 000 ft / 20 000 ft</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5 000 ft</span>
+            <span class="val-label">Vision nocturne −10 %</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15–20 s</span>
+            <span class="val-label">TUC à 40 000 ft (léger)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">÷ 2</span>
+            <span class="val-label">TUC en activité modérée</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">20 %</span>
+            <span class="val-label">Consommation O₂ du cerveau</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 km</span>
+            <span class="val-label">Max concentration ozone</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">6 mSv/an</span>
+            <span class="val-label">Seuil surveillance rayonnement</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">11 ans</span>
+            <span class="val-label">Cycle activité solaire</span>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Pression non linéaire avec l'altitude</div>
+              <div class="piege-explication">La pression chute de façon exponentielle. 18 000 ft = ½ MSL, 36 000 ft = ¼ MSL. Ne pas confondre avec le gradient de température qui, lui, est linéaire (−2 °C/1 000 ft).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">La proportion d'O₂ reste constante en altitude</div>
+              <div class="piege-explication">21 % d'O₂ à toutes les altitudes dans l'homosphère. C'est la pression totale qui diminue, donc la pression partielle d'O₂ aussi — mais pas son pourcentage.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Vision nocturne dégradée dès 5 000 ft</div>
+              <div class="piege-explication">Pas 10 000 ft ! Les photorécepteurs en bâtonnets sont très sensibles à l'hypoxie. En vol de nuit VFR ou IFR non pressurisé, cela peut affecter la détection des obstacles et trafic.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">L'hypoxique se sent bien — c'est là le danger</div>
+              <div class="piege-explication">L'euphorie est un symptôme classique. Le pilote hypoxique ne réalise pas l'altération de ses performances. L'auto-diagnostic est quasi impossible au-delà d'un certain seuil.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">TUC divisé par 2 en activité modérée</div>
+              <div class="piege-explication">À 35 000 ft, le TUC en activité légère est de 30–90 s. En activité modérée : 15–45 s. Ne pas négliger ce facteur lors du calcul du temps disponible pour réagir en décompression explosive.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">DCS vs Barotraumatisme — deux lois différentes</div>
+              <div class="piege-explication">Barotraumatisme → Loi de Boyle (cavités gazeuses corporelles). DCS → Loi de Henry (azote dissous qui forme des bulles). Deux mécanismes, deux lois, deux pathologies.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Rayonnement cosmique : maximum aux pôles</div>
+              <div class="piege-explication">Protection magnétique maximale à l'équateur → exposition minimale. Aux pôles, la protection est minimale → exposition maximale. Les routes polaires transpolaires sont les plus irradiantes.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">33 700 ft ≠ 40 000 ft</div>
+              <div class="piege-explication">33 700 ft = seuil où 100 % O₂ est requis (mais à pression ambiante). 40 000 ft = seuil où même 100 % O₂ ne suffit plus et où il faut du pressure breathing (sous pression positive).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Concentration ozone max au printemps, aux pôles</div>
+              <div class="piege-explication">Max saisonnier : printemps. Min : automne. Max géographique : pôles. Min géographique : équateur. La couche d'ozone protège des UV mais l'ozone lui-même est toxique et corrosif pour les être vivants.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">La DCS peut persister après la descente</div>
+              <div class="piege-explication">Les bulles d'azote ne disparaissent pas instantanément avec la descente. La DCS peut s'aggraver après l'atterrissage, voire être fatale. Facteurs aggravants : hypoxie, froid, âge, obésité.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Dernière faculté conservée en hypoxie sévère : l'ouïe</div>
+              <div class="piege-explication">La vue, le toucher, l'odorat et le goût sont perdus avant l'ouïe. Une alarme sonore peut donc réveiller un pilote hypoxique encore inconscient que des alarmes visuelles auraient raté.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Amnésie à court terme à partir de 12 000 ft</div>
+              <div class="piege-explication">La mémoire à court terme est la première fonction cognitive à se dégrader. Le pilote peut oublier une check-list ou une procédure, même récemment apprise, dès 12 000 ft de pression cabine.</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la composition de l'air dans l'homosphère ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>N₂ = 78 %, O₂ = 21 %, gaz rares + CO₂ = 1 %.</strong> Ces proportions sont constantes — seule la pression totale change avec l'altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la température ISA au niveau de la mer ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>+15 °C</strong> (288,15 K), pression 1 013,25 hPa, densité 1 225 g/m³.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle altitude la pression est-elle la moitié de la pression au sol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>18 000 ft.</strong> ¾ MSL à 8 000 ft, ½ MSL à 18 000 ft, ¼ MSL à 36 000 ft.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle loi des gaz explique les barotraumatismes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Loi de Boyle-Mariotte</strong> : P × V = constante. Les gaz piégés dans les cavités corporelles se dilatent quand la pression diminue (montée).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle loi explique la maladie de décompression (DCS) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Loi de Henry</strong> : la quantité de gaz dissous ∝ pression. Décompression rapide → l'azote dissous forme des bulles dans les tissus.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle loi explique l'hypoxie d'altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Loi de Dalton</strong> : Pt = somme des pressions partielles. Si Pt ↓ (altitude ↑), alors pO₂ ↓ (proportion O₂ reste 21 %).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le seuil minimal de pO₂ alvéolaire pour fonctionner normalement ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>55 mmHg</strong>, atteint à 10 000 ft. En dessous, il faut enrichir l'air en O₂. L'objectif est 103 mmHg (équivalent MSL).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À partir de quelle altitude faut-il 100 % O₂ pur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>33 700 ft</strong>. Au-dessus de 40 000 ft, il faut du pressure breathing (100 % O₂ sous pression positive).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le type d'hypoxie le plus fréquent en aviation civile ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Hypoxie hypoxique</strong> : pO₂ insuffisante en raison de la diminution de pression totale avec l'altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le TUC à 40 000 ft en activité légère ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>15 à 20 secondes.</strong> En activité modérée : 7–10 secondes seulement (TUC divisé par 2).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À partir de quelle altitude la vision nocturne est-elle affectée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Dès 5 000 ft</strong> (−10 % de performance). Les bâtonnets rétiniens sont très sensibles à la pO₂.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la saturation en O₂ de l'Hb à 10 000 ft et à 20 000 ft ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>87 %</strong> à 10 000 ft, <strong>65 %</strong> à 20 000 ft (contre ~98 % au sol).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les facteurs aggravant le risque de DCS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Hypoxie, froid, âge avancé, surpoids/obésité.</strong> La DCS peut persister après la descente et être fatale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Où est la concentration en ozone maximale géographiquement ? Saisonnièrement ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Aux pôles</strong> (max géographique), <strong>au printemps</strong> (max saisonnier). Min : équateur et automne.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la DCS est-elle improbable en dessous de 14 000 ft ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La pression reste suffisamment élevée pour maintenir l'azote dissous dans les tissus. Le risque devient significatif au-dessus de 18 000 ft et quasi certain au-dessus de 25 000 ft.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le rôle de l'hémoglobine dans le transport de l'O₂ ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'hémoglobine (Hb) transporte 97–98 % de l'O₂ dans les globules rouges en formant l'<strong>oxyhémoglobine</strong>. Le CO a 250× plus d'affinité pour l'Hb que l'O₂ → intoxication au CO = hypoxie hypémique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la zone d'hypoxie entre 20 000 et 23 000 ft ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Zone critique</strong> : dégradation mentale rapide, confusion en quelques minutes, perte de conscience totale sans avertissement préalable.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'impact du tabagisme sur le TUC et l'hypoxie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le CO inhalé dans la fumée de cigarette se fixe sur l'Hb (hypoxie hypémique), réduisant la capacité de transport de l'O₂. Cela réduit le TUC et aggrave l'hypoxie à altitude donnée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la dernière faculté sensorielle à disparaître lors d'une hypoxie sévère ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>L'ouïe</strong>. Une alarme sonore peut donc encore alerter un pilote hypoxique très avancé, contrairement aux alarmes visuelles.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'EPT et comment se compare-t-il au TUC ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>EPT (Effective Performance Time)</strong> = temps de performance réellement efficace. <strong>EPT &lt; TUC.</strong> Le pilote peut encore sembler actif pendant le TUC mais ses actions peuvent être inefficaces.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle altitude commence l'altération de la mémoire à court terme ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">À partir de <strong>~12 000 ft</strong>. Les procédures et checklists deviennent difficiles à exécuter correctement.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi l'équateur est-il mieux protégé du rayonnement cosmique que les pôles ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>champ magnétique terrestre</strong> canalise les particules cosmiques vers les pôles et les dévie à l'équateur. L'absorption stratosphérique renforce cette protection équatoriale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la formication en hypoxie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Sensation de fourmillement ou de fourmis marchant sur la peau. C'est un symptôme neurologique de l'hypoxie hypoxique avancée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Combien de temps dure un cycle d'activité solaire ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>~11 ans</strong>, avec des éruptions de haute intensité tous les ~3 ans. En cas d'éruption solaire majeure, les autorités peuvent alerter les opérateurs pour modifier les routes ou altitudes.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment détecter une hypoxie chez soi ou son co-pilote ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Observer la <strong>coloration bleutée (cyanose) des lèvres et ongles</strong>. En vol, surveiller la cabine altitude, les changements de comportement (euphorie, agressivité) et les oublis. Porter le masque O₂ à la moindre suspicion.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la principale différence entre l'hypoxie stagnante et l'hypémique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Stagnante (ischémique)</strong> : le sang ne peut pas atteindre les organes (circulation bloquée, ex. facteur de charge G-LOC). <strong>Hypémique</strong> : le sang circule mais ne peut pas transporter l'O₂ (ex. anémie, intoxication CO).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la limite de dose cosmique pour une femme enceinte ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1 mSv sur toute la durée de la grossesse.</strong> La dose reçue doit être évaluée dès qu'elle dépasse 1 mSv/an pour tout membre d'équipage.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la formule PV = nRT est-elle importante en aviation ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">C'est la loi des gaz parfaits (Charles + Boyle). Elle régit le comportement du carburant en réservoir, de l'air dans les systèmes de pressurisation, et des gaz corporels. T doit être en Kelvin.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle zone d'hypoxie correspond à 10 000–15 000 ft ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Zone compensatoire</strong> : le corps compense (↑ débit cardiaque, ↑ volume respiratoire) mais jugement et mémoire sont déjà altérés. Somnolence possible.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les femmes navigantes évitent-elles le vernis à ongles ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Pour pouvoir détecter la <strong>cyanose</strong> (teinte bleutée des ongles) signe d'hypoxie avancée. Le vernis masque ce signe clinique précoce de désaturation en O₂.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

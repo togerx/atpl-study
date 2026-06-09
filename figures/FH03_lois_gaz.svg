@@ -1,0 +1,75 @@
+<svg viewBox="0 0 540 290" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- 4 gas laws cards -->
+  <rect x="0" y="0" width="540" height="290" fill="#F8F9FA" rx="8"/>
+  <text x="270" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F3864">Les 4 lois des gaz — conséquences physiologiques</text>
+
+  <!-- Card 1: Boyle -->
+  <rect x="10" y="36" width="120" height="240" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5" rx="6"/>
+  <rect x="10" y="36" width="120" height="30" fill="#BF8F00" rx="6"/>
+  <rect x="10" y="54" width="120" height="12" fill="#BF8F00"/>
+  <text x="70" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Loi de Boyle</text>
+  <text x="70" y="84" text-anchor="middle" font-size="9.5" fill="#BF8F00" font-weight="bold">P × V = constante</text>
+  <text x="70" y="100" text-anchor="middle" font-size="9" fill="#555">(T constante)</text>
+  <line x1="20" y1="108" x2="120" y2="108" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="70" y="124" text-anchor="middle" font-size="9.5" fill="#333">Si P↓ alors V↑</text>
+  <text x="70" y="140" text-anchor="middle" font-size="9.5" fill="#333">Les gaz piégés</text>
+  <text x="70" y="154" text-anchor="middle" font-size="9.5" fill="#333">dans le corps</text>
+  <text x="70" y="168" text-anchor="middle" font-size="9.5" fill="#333">se dilatent</text>
+  <line x1="20" y1="178" x2="120" y2="178" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="70" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">⚠ Barotraumatisme</text>
+  <text x="70" y="214" text-anchor="middle" font-size="9" fill="#555">Oreille, sinus,</text>
+  <text x="70" y="228" text-anchor="middle" font-size="9" fill="#555">intestins, dents</text>
+
+  <!-- Card 2: Dalton -->
+  <rect x="142" y="36" width="120" height="240" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5" rx="6"/>
+  <rect x="142" y="36" width="120" height="30" fill="#BF8F00" rx="6"/>
+  <rect x="142" y="54" width="120" height="12" fill="#BF8F00"/>
+  <text x="202" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Loi de Dalton</text>
+  <text x="202" y="82" text-anchor="middle" font-size="9.5" fill="#BF8F00" font-weight="bold">Pt = P₁+P₂+…+Pn</text>
+  <text x="202" y="98" text-anchor="middle" font-size="9" fill="#555">(somme pressions part.)</text>
+  <line x1="152" y1="108" x2="252" y2="108" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="202" y="124" text-anchor="middle" font-size="9.5" fill="#333">Si altitude ↑</text>
+  <text x="202" y="138" text-anchor="middle" font-size="9.5" fill="#333">alors Pt ↓</text>
+  <text x="202" y="152" text-anchor="middle" font-size="9.5" fill="#333">donc pO₂ ↓</text>
+  <text x="202" y="166" text-anchor="middle" font-size="9.5" fill="#333">(21% restent)</text>
+  <line x1="152" y1="178" x2="252" y2="178" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="202" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">⚠ Hypoxie</text>
+  <text x="202" y="214" text-anchor="middle" font-size="9" fill="#555">Normal jusqu'à</text>
+  <text x="202" y="228" text-anchor="middle" font-size="9" fill="#555">10–12 000 ft</text>
+
+  <!-- Card 3: Henry -->
+  <rect x="274" y="36" width="120" height="240" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5" rx="6"/>
+  <rect x="274" y="36" width="120" height="30" fill="#BF8F00" rx="6"/>
+  <rect x="274" y="54" width="120" height="12" fill="#BF8F00"/>
+  <text x="334" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Loi de Henry</text>
+  <text x="334" y="82" text-anchor="middle" font-size="9.5" fill="#BF8F00" font-weight="bold">Gaz dissous ∝ P</text>
+  <text x="334" y="98" text-anchor="middle" font-size="9" fill="#555">(à l'équilibre)</text>
+  <line x1="284" y1="108" x2="384" y2="108" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="334" y="124" text-anchor="middle" font-size="9.5" fill="#333">Si P↓ brutalement</text>
+  <text x="334" y="138" text-anchor="middle" font-size="9.5" fill="#333">l'azote dissous</text>
+  <text x="334" y="152" text-anchor="middle" font-size="9.5" fill="#333">forme des bulles</text>
+  <text x="334" y="166" text-anchor="middle" font-size="9.5" fill="#333">dans les tissus</text>
+  <line x1="284" y1="178" x2="384" y2="178" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="334" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">⚠ DCS</text>
+  <text x="334" y="212" text-anchor="middle" font-size="9" fill="#555">Mal des caissons</text>
+  <text x="334" y="226" text-anchor="middle" font-size="9" fill="#555">&gt;25 000 ft (risque)</text>
+  <text x="334" y="240" text-anchor="middle" font-size="9" fill="#555">peu probable &lt;14 000</text>
+
+  <!-- Card 4: Charles -->
+  <rect x="406" y="36" width="120" height="240" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5" rx="6"/>
+  <rect x="406" y="36" width="120" height="30" fill="#BF8F00" rx="6"/>
+  <rect x="406" y="54" width="120" height="12" fill="#BF8F00"/>
+  <text x="466" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Loi de Charles</text>
+  <text x="466" y="82" text-anchor="middle" font-size="9.5" fill="#BF8F00" font-weight="bold">V₁/V₂ = T₁/T₂</text>
+  <text x="466" y="98" text-anchor="middle" font-size="9" fill="#555">(P constante, T en K)</text>
+  <line x1="416" y1="108" x2="516" y2="108" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="466" y="124" text-anchor="middle" font-size="9.5" fill="#333">PV = nRT</text>
+  <text x="466" y="140" text-anchor="middle" font-size="9.5" fill="#333">Volume ∝</text>
+  <text x="466" y="154" text-anchor="middle" font-size="9.5" fill="#333">température</text>
+  <text x="466" y="168" text-anchor="middle" font-size="9.5" fill="#333">absolue</text>
+  <line x1="416" y1="178" x2="516" y2="178" stroke="#BF8F00" stroke-width="0.8"/>
+  <text x="466" y="196" text-anchor="middle" font-size="10" fill="#2E75B6" font-weight="bold">ℹ Carburant / Gaz</text>
+  <text x="466" y="214" text-anchor="middle" font-size="9" fill="#555">Combinée avec</text>
+  <text x="466" y="228" text-anchor="middle" font-size="9" fill="#555">Boyle → Loi</text>
+  <text x="466" y="242" text-anchor="middle" font-size="9" fill="#555">des gaz parfaits</text>
+</svg>

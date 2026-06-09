@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" width="620" height="220">
+  <rect width="620" height="220" fill="#F8F9FA" rx="8"/>
+  <text x="310" y="26" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1F3864">Cardiac Output Formula</text>
+
+  <!-- Formula box -->
+  <rect x="30" y="45" width="560" height="60" rx="8" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <text x="310" y="70" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="bold" fill="#BF8F00">Cardiac Output = Stroke Volume × Heart Rate</text>
+  <text x="310" y="93" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1F3864">70 ml/stroke  ×  70 beats/min  =  4.9 L/min</text>
+
+  <!-- Key values chips row -->
+  <!-- Chip 1 -->
+  <rect x="30" y="125" width="130" height="60" rx="8" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="95" y="148" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#2E75B6">70 bpm</text>
+  <text x="95" y="165" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#333">Normal pulse rate</text>
+  <text x="95" y="178" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#555">(resting)</text>
+
+  <!-- Chip 2 -->
+  <rect x="175" y="125" width="130" height="60" rx="8" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="240" y="148" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#2E75B6">4.5 L</text>
+  <text x="240" y="165" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#333">Total blood volume</text>
+  <text x="240" y="178" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#555">in the body</text>
+
+  <!-- Chip 3 -->
+  <rect x="320" y="125" width="130" height="60" rx="8" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="385" y="148" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#C00000">180-200</text>
+  <text x="385" y="165" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#333">Max effective</text>
+  <text x="385" y="178" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#C00000">heart rate (bpm)</text>
+
+  <!-- Chip 4 -->
+  <rect x="465" y="125" width="130" height="60" rx="8" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="530" y="148" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#548235">30 L/min</text>
+  <text x="530" y="165" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#333">Max cardiac</text>
+  <text x="530" y="178" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="9" fill="#548235">output</text>
+
+  <text x="310" y="208" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="8.5" fill="#888" font-style="italic">Above 180-200 bpm: heart cannot fill fast enough → Cardiac Output decreases</text>
+</svg>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH05 — Accélérations et Vibrations · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH05 · Accélérations &amp; Vibrations</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH05" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH05</span>
+      </div>
+      <div class="cours-code-badge">FH05</div>
+      <h1 class="cours-title">Accélérations et Vibrations</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~20 min</span>
+        <span class="cours-meta-item">❓ 25 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ─── INTRO ─────────────────────────────────────── -->
+        <h1 id="intro">Introduction</h1>
+
+        <p>En aviation, le corps du pilote subit des forces bien supérieures à la simple gravité terrestre. Ces forces — les <strong>accélérations</strong> — ont des effets physiologiques directs pouvant aller jusqu'à la perte de conscience. Les <strong>vibrations</strong>, quant à elles, génèrent une fatigue chronique et des douleurs selon leur fréquence. Comprendre ces phénomènes est essentiel pour la sécurité des vols, notamment en contexte militaire mais aussi dans l'aviation commerciale.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Ce cours traite du module EASA 040 — Facteurs Humains, section physiologie du vol : accélérations et vibrations. Ces notions tombent régulièrement sous forme de QCM avec des valeurs précises de G à mémoriser.
+        </div>
+
+        <!-- ─── 1. SOURCES D'ACCÉLÉRATIONS ET VIBRATIONS ──── -->
+        <h1 id="sources">1. Sources d'accélérations et de vibrations</h1>
+
+        <h2 id="sources-acc">1.1 Sources d'accélérations / Sources of accelerations</h2>
+
+        <p>Les accélérations en vol proviennent de nombreuses situations :</p>
+
+        <ul>
+          <li>Décollage et atterrissage (<em>Take-off &amp; landing</em>)</li>
+          <li>Mise en palier (<em>Level off</em>)</li>
+          <li>Virage (<em>Turn</em>) — source principale de +Gz en vol civil</li>
+          <li>Turbulences (<em>Turbulence</em>)</li>
+          <li>Ajustement de puissance (<em>Power adjustment</em>)</li>
+          <li>Freinage (<em>Braking action</em>)</li>
+          <li>Domaine militaire : voltige, combat, manœuvres d'évitement (<em>aerobatics, combat, evasive manoeuvres</em>)</li>
+        </ul>
+
+        <h2 id="sources-vib">1.2 Sources de vibrations / Sources of vibrations</h2>
+
+        <ul>
+          <li>Moteurs (<em>Engine</em>)</li>
+          <li>Extension des volets (<em>Flaps extension</em>)</li>
+          <li>Sortie du train d'atterrissage (<em>Gear extension</em>)</li>
+          <li>Turbulences (<em>Turbulence</em>)</li>
+        </ul>
+
+        <!-- ─── 2. DÉFINITIONS ─────────────────────────────── -->
+        <h1 id="definitions">2. Définitions / Definitions</h1>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Définition fondamentale</div>
+          <strong>Accélération / Acceleration :</strong>
+          <div class="formula-display">a = Δv / Δt</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Variation de vitesse par unité de temps — <em>rate of change in velocity</em></p>
+        </div>
+
+        <h2 id="types-acc">2.1 Types d'accélérations en médecine aéronautique</h2>
+
+        <p>En médecine aéronautique, on distingue trois types d'accélérations :</p>
+        <ul>
+          <li><strong>Linéaire (<em>Linear</em>)</strong> : en ligne droite — décollage, atterrissage (T/O, LDG)</li>
+          <li><strong>Radiale (<em>Radial</em>)</strong> : en virage — c'est la plus importante physiologiquement</li>
+          <li><strong>Angulaire (<em>Angular</em>)</strong> : rotation autour d'un axe passant par le corps du pilote — voltige, vrille après éjection (<em>aerobatics / tumbling after ejection</em>)</li>
+        </ul>
+
+        <h2 id="axes">2.2 Les 3 axes / The 3 axes</h2>
+
+        <div class="fig-container">
+          <img src="../figures/FH05_axes_acceleration.svg" alt="Les 3 axes d'accélération Gx Gy Gz sur un pilote assis">
+          <div class="fig-caption">Fig. 1 — Les 3 axes d'accélération et leur orientation par rapport au corps du pilote</div>
+        </div>
+
+        <ul>
+          <li><strong>Gx</strong> : axe avant-arrière (<em>fore &amp; aft</em>) — accélération/décélération longitudinale</li>
+          <li><strong>Gy</strong> : axe gauche-droite (<em>right-left</em>) — latéral</li>
+          <li><strong>Gz</strong> : axe tête-pieds (<em>head-feet</em>) — le plus impactant physiologiquement</li>
+        </ul>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Référence</div>
+          <strong>Unité :</strong> Les forces sont exprimées en multiples du G terrestre
+          <div class="formula-display">1 G = 9,81 m/s² ≈ 10 m/s²</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem"><strong>JOLT</strong> = augmentation de l'accélération en une seconde, exprimée en g/s (<em>rate of increase of acceleration per second</em>)</p>
+          <p style="margin:.3rem 0 0;font-size:.85rem">Courte durée / <em>Short term</em> : &lt; 1 s &nbsp;|&nbsp; Longue durée / <em>Long term</em> : &gt; 5 s</p>
+        </div>
+
+        <!-- ─── 3. EFFETS DU +GZ ───────────────────────────── -->
+        <h1 id="effets-gz-positif">3. Effets du +Gz (G positif)</h1>
+
+        <p>Les accélérations radiales et angulaires, notamment selon l'axe Gz, ont des répercussions physiologiques majeures. Quand le +Gz augmente, la colonne de sang s'accumule vers le bas du corps. Le cœur doit travailler davantage pour maintenir la pression sanguine cérébrale, ce qu'il ne peut plus faire au-delà d'un certain seuil.</p>
+
+        <p><strong>Mécanisme principal :</strong> la distance cœur-pieds augmente (le sang descend par gravité), tandis que la distance cœur-cerveau devient difficile à compenser. De facto, le cerveau se retrouve en hypoperfusion.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH05_effets_gz.png" alt="Tableau des effets progressifs du +Gz de 2G à 8G avec effets physiologiques et internes">
+          <div class="fig-caption">Fig. 2 — Effets progressifs du +Gz sur le pilote : symptômes et valeurs seuils à mémoriser</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Seuils +Gz / Key thresholds</div>
+          <ul style="margin:.3rem 0">
+            <li><strong>+2 Gz</strong> : compression, membres lourds — <em>compression feeling, heavy limbs</em></li>
+            <li><strong>+2,5 Gz</strong> : impossible de se lever — <em>impossible to stand up</em></li>
+            <li><strong>+3 Gz</strong> : début du <em>greying out</em>, impossible de marcher</li>
+            <li><strong>+3,5 Gz</strong> : début de perte de vision périphérique → vision tunnel (<em>tunnel vision</em>)</li>
+            <li><strong>+4 Gz</strong> : perte totale de vision périphérique, difficultés inspiratoires (abaissement du diaphragme)</li>
+            <li><strong>+5 Gz</strong> : BLACK-OUT — perte totale de la vision (<em>total loss of vision</em>)</li>
+            <li><strong>+6 Gz</strong> : impossible de bouger la tête (<em>cannot move head</em>)</li>
+            <li><strong>+8 Gz</strong> : impossible de bouger les membres (<em>cannot move limbs</em>)</li>
+          </ul>
+        </div>
+
+        <h2 id="effets-internes">3.1 Effets internes du +Gz / Internal effects</h2>
+        <ul>
+          <li>Organes déformés et/ou déplacés vers le bas (<em>organs deformed and/or pushed down</em>)</li>
+          <li>Ventilation pulmonaire modifiée (<em>pulmonary ventilation modified</em>)</li>
+          <li>Fréquences cardiaque et respiratoire augmentées (<em>heart and respiratory rate increased</em>)</li>
+          <li>Pression artérielle augmentée <em>sous</em> le cœur, diminuée <em>au-dessus</em></li>
+          <li>Désaturation en oxygène (<em>oxygen desaturation</em>)</li>
+        </ul>
+
+        <!-- ─── 4. EFFETS DU -GZ ───────────────────────────── -->
+        <h1 id="effets-gz-negatif">4. Effets du −Gz (G négatif)</h1>
+
+        <p>Les manœuvres en G négatif sont bien plus inconfortables que les G positifs. L'ensemble des organes est refoulé vers le haut et le sang se concentre dans la tête.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le −Gz est bien plus inconfortable que le +Gz à valeur absolue équivalente. La tolérance au −Gz est très basse : le corps ne peut supporter que −3G en impact, contre +25G en +Gz. Ne pas confondre les valeurs !
+        </div>
+
+        <ul>
+          <li>Organes repoussés vers le haut, sang vers la tête (<em>organs pushed up, blood goes to the head</em>)</li>
+          <li>Difficultés respiratoires, visage gonflé, yeux injectés de sang</li>
+          <li><strong>RED-OUT (vision rouge / red mist)</strong> : phénomène visuel dû à la congestion des paupières inférieures</li>
+          <li>Rythme cardiaque ralenti, vaisseaux des membres inférieurs dilatés (<em>heart rate slows, lower body vessels dilate</em>)</li>
+          <li>Pression artérielle élevée dans la tête → éclatement de petits vaisseaux sanguins sur le visage et dans les yeux : <strong>pétéchies / <em>petechiae</em></strong></li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Comparaison +Gz / −Gz</div>
+          <ul style="margin:.3rem 0">
+            <li>+Gz → sang vers le bas → <strong>greying out → black-out</strong> (vision blanche puis noire)</li>
+            <li>−Gz → sang vers la tête → <strong>red-out</strong> (vision rouge)</li>
+            <li>Le −Gz est ressenti comme nettement plus inconfortable pour une valeur absolue équivalente</li>
+          </ul>
+        </div>
+
+        <!-- ─── 5. G-LOC ───────────────────────────────────── -->
+        <h1 id="gloc">5. Perte de conscience / Loss of Consciousness</h1>
+
+        <h2 id="gloc-def">5.1 G-LOC — Gravity-induced Loss Of Consciousness</h2>
+
+        <p>Le G-LOC survient +0,5G au-delà du seuil de black-out. Si un G positif élevé est appliqué <strong>soudainement</strong> (jolt élevé) :</p>
+        <ul>
+          <li>Le sang cérébral descend instantanément dans le corps</li>
+          <li>Le cœur ne peut pas compenser la chute de pression dans la partie supérieure</li>
+          <li>Le pilote perd immédiatement conscience <strong>sans greying out préalable</strong></li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — G-LOC sans avertissement</div>
+          Contrairement à un G progressif (greying-out précurseur), un G appliqué rapidement (fort jolt) peut provoquer une perte de conscience <em>immédiate</em> sans aucun signe avant-coureur. Le pilote peut ne se souvenir de rien.
+        </div>
+
+        <h2 id="gloc-caracteres">5.2 Caractéristiques du G-LOC / G-LOC features</h2>
+        <ul>
+          <li>Peut être totalement ignoré sans avertissement (<em>can be totally ignored without warning</em>)</li>
+          <li>Peut laisser des souvenirs étranges : sons de cloche, lumières (<em>strange souvenirs: bell sound, lights</em>)</li>
+          <li>Peut produire des mouvements convulsifs de la tête et des membres — <strong>ce n'est pas de l'épilepsie</strong> (<em>not epilepsy</em>)</li>
+          <li>Peut provoquer une amnésie (<em>can imply amnesia</em>)</li>
+        </ul>
+
+        <div class="box box-formule">
+          <div class="box-label">📋 3 phases du G-LOC</div>
+          <ul style="margin:.3rem 0">
+            <li><strong>Phase de latence / Latency phase :</strong> 5 secondes (après interruption de l'apport en oxygène)</li>
+            <li><strong>Incapacité absolue / Absolute incapacity :</strong> 5 à 20 s, en moyenne 15 s</li>
+            <li><strong>Incapacité partielle / Partial incapacity :</strong> 1 à 50 s, en moyenne 15 s</li>
+          </ul>
+          <p style="margin:.5rem 0 0;font-size:.85rem"><strong>A-LOC</strong> (Almost G-LOC) : quasi-perte de conscience avec confusion et désorientation spatiale, altération du jugement (<em>confusion with spatial disorientation and impaired judgment</em>)</p>
+        </div>
+
+        <h2 id="push-pull">5.3 Effet Push-Pull / Push-Pull Effect</h2>
+
+        <div class="fig-container">
+          <img src="../figures/FH05_push_pull.svg" alt="Mécanisme de l'effet push-pull : transition de −Gz vers +Gz soudain">
+          <div class="fig-caption">Fig. 3 — Mécanisme de l'effet push-pull : l'une des causes les plus fréquentes d'accidents mortels</div>
+        </div>
+
+        <p>L'effet push-pull est particulièrement dangereux car il peut survenir même à bord d'un avion léger comme un Cessna, à des niveaux de G apparemment faibles (+2G).</p>
+
+        <p><strong>Mécanisme :</strong> après une période prolongée en G négatif ou nul (−0,5G par exemple), le cœur bat lentement et les vaisseaux des jambes sont dilatés. Si le pilote bascule soudainement vers un G positif, même modéré, le cœur et les vaisseaux ne peuvent pas s'adapter : le cerveau est privé de sang instantanément.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Push-Pull sur avion léger</div>
+          L'effet push-pull peut provoquer un black-out immédiat à seulement +2G, si précédé d'un virage prolongé à −0,5G. Ce phénomène n'est pas réservé aux avions militaires ! De nombreux accidents mortels en aviation légère sont causés par le G-LOC ou le push-pull.
+        </div>
+
+        <!-- ─── 6. SUSCEPTIBILITÉ ──────────────────────────── -->
+        <h1 id="susceptibilite">6. Susceptibilité aux forces G / Susceptibility to G Forces</h1>
+
+        <p>Certains facteurs réduisent la capacité à supporter les forces G. Ces facteurs doivent être mémorisés — ils apparaissent régulièrement en examen.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ Facteurs réduisant la tolérance aux G / Factors reducing G tolerance</div>
+          <ul style="margin:.3rem 0;columns:2;column-gap:2rem">
+            <li>Hypoxie / <em>Hypoxia</em></li>
+            <li>Hyperventilation / <em>Hyperventilation</em></li>
+            <li>Hypotension / <em>Hypotension</em></li>
+            <li>Stress / <em>Stress</em></li>
+            <li>Fatigue / <em>Fatigue</em></li>
+            <li>Chaleur / <em>Heat</em></li>
+            <li>Hypoglycémie / <em>Low blood sugar</em></li>
+            <li>Déshydratation / <em>Dehydration</em></li>
+            <li>Digestion en cours / <em>Digestion</em></li>
+            <li>Tabagisme / <em>Smoking</em></li>
+            <li>Obésité / <em>Obesity</em></li>
+            <li>Alcool / <em>Alcohol</em></li>
+          </ul>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Morphologie et sédentarité</div>
+          Physiologiquement, un individu de grande taille avec un long cou est <em>moins résistant</em> aux G qu'une personne petite et trapue (distance cœur-cerveau plus courte). Le manque d'activité physique (sédentarité) est un facteur aggravant majeur !
+        </div>
+
+        <!-- ─── 7. TOLÉRANCE ET PROTECTION ────────────────── -->
+        <h1 id="tolerance">7. Tolérance et moyens de protection / Tolerance and Protection</h1>
+
+        <h2 id="tolerance-valeurs">7.1 Valeurs de tolérance / Tolerance values</h2>
+
+        <p>Un individu détendu non entraîné tolère jusqu'à <strong>+3,5G</strong> sans effets graves. L'entraînement et les équipements permettent de repousser ce seuil considérablement.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH05_seuils_tolerance.png" alt="Graphique des seuils de tolérance aux forces G selon les conditions et les équipements">
+          <div class="fig-caption">Fig. 4 — Seuils de tolérance aux forces G selon les conditions et équipements</div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">+3,5 g</span>
+            <span class="val-label">Sujet détendu / Relaxed subject</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+7-8 g</span>
+            <span class="val-label">Avec AGSM / With AGSM</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+25 g</span>
+            <span class="val-label">Impact vertical max / Max vertical impact</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+45 g</span>
+            <span class="val-label">Impact longit. max / Max fore-aft impact</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−3 g</span>
+            <span class="val-label">Tolérance G négatif / Negative G tolerance</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15-23 g</span>
+            <span class="val-label">Sièges éjectables / Ejection seats</span>
+          </div>
+        </div>
+
+        <h2 id="moyens-protection">7.2 Moyens d'amélioration de la tolérance / Ways to improve tolerance</h2>
+
+        <p><strong>1 — Réduire la distance verticale cœur-cerveau</strong> (<em>reduce the vertical distance between heart and brain</em>)</p>
+        <ul>
+          <li>Position allongée idéale (<em>lying position</em> — navette spatiale)</li>
+          <li>Inclinaison du siège vers l'arrière : 19° sur Mirage 2000, 30° sur Rafale/F-16</li>
+        </ul>
+
+        <p><strong>2 — AGSM : Anti-G Straining Manoeuvres (Manœuvres anti-G)</strong></p>
+        <ul>
+          <li>Contraction des muscles abdominaux et des jambes (<em>tensing abdominal and leg muscles</em>)</li>
+          <li>Courtes expirations saccadées (<em>short panting breaths</em>)</li>
+          <li>Surpression thoracique (<em>thorax surpression</em>)</li>
+        </ul>
+
+        <p><strong>3 — Combinaison anti-G / Anti-G trousers</strong></p>
+        <p>Augmente la tolérance de <strong>+1,5 à +2G</strong> (<em>tolerance raised by +1.5 to +2G</em>). Fonctionne par gonflage de poches abdominales et de jambes pour éviter la stagnation sanguine.</p>
+
+        <p><strong>4 — Sélection à 100% d'oxygène</strong> avant vol de voltige ou combat (<em>select 100% oxygen before aerobatic or combat flight</em>)</p>
+
+        <p><strong>5 — Entraînement physique et centrifugeuse</strong> (<em>training</em>) : l'entraînement régulier améliore significativement la résistance aux accélérations.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Sièges éjectables Martin-Baker / Martin Baker ejection seats</div>
+          Les sièges Martin-Baker sont dimensionnés pour absorber des accélérations de 15 à 23G lors de l'éjection. Les contraintes de poids du pilote sont critiques : le MK4 supporte 74 kg max, les MK10 et MK16 jusqu'à 89 kg.
+        </div>
+
+        <!-- ─── 8. ILLUSIONS SENSORIELLES ─────────────────── -->
+        <h1 id="illusions">8. Illusions sensorielles / Sensory Illusions</h1>
+
+        <p>Les accéléromètres physiologiques (otolithes dans l'oreille interne) sont des capteurs inertiels. Les accélérations dont l'intensité est inférieure au seuil de détection ne sont pas perçues consciemment, mais peuvent induire de fausses informations de position — des <strong>illusions sensorielles</strong> (<em>sensory illusions</em>).</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Illusions sensorielles et G</div>
+          Une accélération en dessous du seuil de détection vestibulaire ne sera pas "ressentie" par le pilote, mais le système vestibulaire peut néanmoins envoyer de faux signaux de référence spatiale. Ce phénomène est une cause majeure de désorientation spatiale.
+        </div>
+
+        <!-- ─── 9. EFFETS DES VIBRATIONS ─────────────────── -->
+        <h1 id="vibrations">9. Effets des vibrations / Effects of Vibrations</h1>
+
+        <h2 id="vib-frequences">9.1 Effets par plage de fréquences / Effects by frequency range</h2>
+
+        <div class="fig-container">
+          <img src="../figures/FH05_effets_vibrations.png" alt="Effets des vibrations par plage de fréquences de 1 Hz à 12 Hz">
+          <div class="fig-caption">Fig. 5 — Effets des vibrations par plage de fréquences en Hz</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Fréquences et effets / Frequency and effects</div>
+          <ul style="margin:.3rem 0">
+            <li><strong>1 – 4 Hz</strong> : perturbations respiratoires / <em>breathing disturbance</em></li>
+            <li><strong>4 – 10 Hz</strong> : douleurs thoraciques et abdominales / <em>chest and abdominal pain</em></li>
+            <li><strong>8 – 12 Hz</strong> : lombalgies / <em>backache</em></li>
+            <li><strong>10 – 12 Hz</strong> : maux de tête, douleurs gorge, tensions musculaires, dégradation de l'acuité visuelle / <em>headache, throat pain, muscle tension, degraded visual acuity</em></li>
+          </ul>
+        </div>
+
+        <h2 id="vib-chronique">9.2 Effet chronique / Chronic effect</h2>
+
+        <p>L'utilisation prolongée d'équipements vibrants (joystick, throttle, harnais) peut provoquer le <strong>syndrome du doigt blanc vasculaire</strong> (<em>vibration white finger</em>) : vasoconstriction chronique des doigts par lésion des vaisseaux sanguins distaux.</p>
+
+        <h2 id="vib-prevention">9.3 Prévention / Prevention</h2>
+        <ul>
+          <li>Équilibrage acoustique des moteurs (<em>acoustically balancing the engines</em>)</li>
+          <li>Amortissement des vibrations de panneaux (<em>damping down panel vibration</em>)</li>
+          <li>Sièges rembourrés / amortisseurs (<em>cushioned seats</em>)</li>
+        </ul>
+
+        <!-- ─── 10. CONCLUSION ─────────────────────────────── -->
+        <h1 id="conclusion">10. Résumé des valeurs clés / Key Values Summary</h1>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Synthèse globale / Overall summary</div>
+          <ul style="margin:.3rem 0">
+            <li><strong>Forces soutenues longue durée (&gt; 1 s) :</strong> +3,5G détendu — +7 à +8G avec AGSM</li>
+            <li><strong>Forces d'impact courte durée :</strong> +25G et −3G axe vertical — +45G axe longitudinal</li>
+            <li>Les effets sont principalement <strong>cardiovasculaires et pulmonaires</strong>, mais aussi neuro-sensoriels (illusions)</li>
+            <li>Accélérations et vibrations = <strong>source de fatigue</strong> à intégrer dans la gestion de vie professionnelle</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">+2 Gz</span>
+            <span class="val-label">Compression, membres lourds</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+3 Gz</span>
+            <span class="val-label">Greying out, impossible de marcher</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+3,5 Gz</span>
+            <span class="val-label">Début vision tunnel / Tunnel vision</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+4 Gz</span>
+            <span class="val-label">Perte vision périphérique + diaphragme</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+5 Gz</span>
+            <span class="val-label">BLACK-OUT — perte totale vision</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+5,5 Gz</span>
+            <span class="val-label">G-LOC (+0,5G après black-out)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+6 Gz</span>
+            <span class="val-label">Impossible de bouger la tête</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+8 Gz</span>
+            <span class="val-label">Impossible de bouger les membres</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+3,5 g</span>
+            <span class="val-label">Tolérance sujet détendu (relaxed)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+7-8 g</span>
+            <span class="val-label">Tolérance avec AGSM</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+1,5-2 g</span>
+            <span class="val-label">Gain combin. anti-G / Anti-G suit</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−3 g</span>
+            <span class="val-label">Tolérance max G négatif (impact)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+25 g</span>
+            <span class="val-label">Impact vertical max (+Gz impact)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+45 g</span>
+            <span class="val-label">Impact longitudinal max (+Gx impact)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15 s</span>
+            <span class="val-label">Durée moy. incapacité absolue G-LOC</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5 s</span>
+            <span class="val-label">Phase de latence G-LOC / LOC latency</span>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Black-out ≠ G-LOC</div>
+              <div class="piege-explication">Le black-out (+5G) = perte totale de vision SANS perte de conscience. Le G-LOC = perte de conscience, survient +0,5G après le black-out, soit vers +5,5G. Ne pas confondre les deux !</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">G-LOC sans signe précurseur</div>
+              <div class="piege-explication">Si le G est appliqué rapidement (fort jolt), le pilote peut perdre conscience DIRECTEMENT sans greying out ni black-out progressif. Pas de warning = danger maximal.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Push-Pull sur avion léger</div>
+              <div class="piege-explication">L'effet push-pull peut provoquer un G-LOC à seulement +2G si précédé d'une phase prolongée à −0,5G ou 0G. Ce n'est pas réservé aux jets militaires — un Cessna suffit !</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">−Gz &gt; +Gz en inconfort subjectif</div>
+              <div class="piege-explication">Les G négatifs sont ressentis comme bien plus inconfortables que les G positifs à valeur absolue égale. Et la tolérance au −Gz est bien plus faible : −3G max (impact) vs +25G max (+Gz impact).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Greying out vs Red-out</div>
+              <div class="piege-explication">Greying out puis Black-out = +Gz (sang vers le bas, cerveau sous-perfusé). Red-out = −Gz (sang vers la tête, congestion des paupières inférieures). Le "red" de red-out vient des paupières, pas de l'œil lui-même.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Grande taille = moins résistant aux G</div>
+              <div class="piege-explication">Contra-intuitif : un individu grand avec un long cou est physiologiquement moins résistant aux G qu'une personne petite et trapue, en raison de la distance cœur-cerveau plus importante.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">A-LOC ≠ G-LOC</div>
+              <div class="piege-explication">A-LOC (Almost G-LOC) = quasi-perte de conscience avec confusion et désorientation spatiale, altération du jugement, SANS perte totale de conscience. Le pilote peut croire qu'il contrôle alors qu'il ne le fait plus vraiment.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Fréquence 10-12 Hz → vision</div>
+              <div class="piege-explication">Seule la plage 10-12 Hz dégrade l'acuité visuelle. Les autres plages affectent la respiration (1-4 Hz), le thorax/abdomen (4-10 Hz) ou le dos (8-12 Hz). Ces valeurs tombent fréquemment en QCM.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Siège incliné 19° vs 30°</div>
+              <div class="piege-explication">L'inclinaison du siège vers l'arrière réduit la distance verticale cœur-cerveau et améliore la tolérance aux G. Le Mirage 2000 utilise 19°, le Rafale et le F-16 utilisent 30°. La position idéale serait allongée (navette spatiale).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Convulsions post-G-LOC ≠ épilepsie</div>
+              <div class="piege-explication">Les mouvements convulsifs de tête et de membres observés lors du retour à la conscience après G-LOC ne sont PAS de l'épilepsie. Il faut savoir distinguer ce phénomène pour ne pas disqualifier un pilote à tort.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle valeur de +Gz survient le greying out ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>+3 Gz</strong> — avec début de perte de vision périphérique à +3,5 Gz (tunnel vision).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le black-out en G ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Perte totale de la vision</strong> (mais pas de conscience) à +5 Gz. Le pilote reste conscient mais aveugle.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre G-LOC et A-LOC ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>G-LOC</strong> = perte totale de conscience. <strong>A-LOC</strong> = quasi-LOC avec confusion, désorientation spatiale et jugement altéré, sans perte totale de conscience.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée moyenne de l'incapacité absolue lors d'un G-LOC ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>15 secondes</strong> en moyenne (plage : 5 à 20 s). La phase de latence est de 5 s, l'incapacité partielle dure encore 1 à 50 s.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment fonctionne l'effet push-pull ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Après −G ou 0G prolongé, le cœur bat lentement et les vaisseaux des jambes sont dilatés. Une bascule soudaine vers +G, même faible (+2G), prive instantanément le cerveau de sang → G-LOC immédiat.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle tolérance au G pour un sujet détendu non entraîné ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>+3,5 G</strong> sans effets graves. Avec AGSM : +7 à +8G. Avec combinaison anti-G : gain de +1,5 à +2G supplémentaires.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel type de vision est altéré par −Gz ? Et par +Gz ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>−Gz</strong> → red-out (vision rouge, sang vers la tête). <strong>+Gz</strong> → greying out puis black-out (perte progressive puis totale de la vision par manque de sang cérébral).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les 3 types d'accélérations en médecine aéronautique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Linéaire</strong> (ligne droite : T/O, LDG) — <strong>Radiale</strong> (virage) — <strong>Angulaire</strong> (rotation autour d'un axe corporel : voltige, éjection).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle fréquence de vibration dégrade l'acuité visuelle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>10 – 12 Hz</strong> — cette plage provoque aussi maux de tête, douleurs de gorge et tensions musculaires.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles fréquences perturbent la respiration ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1 – 4 Hz</strong> interfèrent avec la respiration. 4-10 Hz = douleurs thoraco-abdominales. 8-12 Hz = lombalgies.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le JOLT ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>JOLT</strong> est l'augmentation de l'accélération pendant une seconde, exprimé en g/s. Un fort jolt peut provoquer un G-LOC sans avertissement (greying out absent).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle morphologie est plus vulnérable aux G ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un individu <strong>grand avec un long cou</strong> est plus vulnérable car la distance verticale entre le cœur et le cerveau est plus grande, rendant la perfusion cérébrale plus difficile sous +Gz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">L'inclinaison du siège du Rafale / F-16 est de combien de degrés ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>30°</strong> d'inclinaison vers l'arrière (contre 19° pour le Mirage 2000). Cela réduit la distance verticale cœur-cerveau et améliore la tolérance aux +Gz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que sont les pétéchies / petechiae ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Petits points rouges sur le visage ou dans les yeux dus à l'éclatement de micro-vaisseaux sanguins sous l'effet du −Gz (sang en surpression dans la tête).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la tolérance max aux G négatifs en impact ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>−3 G</strong> sur l'axe vertical (impact court). C'est bien plus faible que les +25G tolérés en +Gz d'impact ou +45G en axe longitudinal.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Citez 5 facteurs réduisant la tolérance aux G. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Parmi : <strong>hypoxie, hyperventilation, hypotension, stress, fatigue, chaleur, hypoglycémie, déshydratation, digestion en cours, tabac, obésité, alcool, sédentarité.</strong></div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment les AGSM améliorent-elles la tolérance aux G ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Par contraction musculaire abdominale et des jambes (empêche le pooling sanguin), respirations forcées saccadées et surpression thoracique → améliore la pression artérielle cérébrale. Permet de tolérer +7 à +8G.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le G-LOC peut-il se produire sans convulsions ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Oui. Il peut être <strong>totalement ignoré</strong> sans aucun signe (ni convulsions, ni souvenir). Les convulsions ne sont présentes que dans certains cas — et ne sont PAS de l'épilepsie.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quoi sert la sélection de 100% d'oxygène avant la voltige ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Maximiser la saturation en O₂ avant des manœuvres à fort G. L'hypoxie réduit la tolérance aux accélérations, donc 100% O₂ améliore la résistance cérébrale lors des G élevés.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le "vibration white finger" ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Syndrome du <strong>doigt blanc vasculaire</strong> (<em>Raynaud professionnel</em>) : vasoconstriction chronique et lésion des vaisseaux distaux des doigts causée par l'utilisation prolongée d'équipements vibrants (joystick, etc.).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les 3 axes d'accélération et leur orientation ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Gx</strong> : avant-arrière (fore &amp; aft) — <strong>Gy</strong> : gauche-droite (right-left) — <strong>Gz</strong> : tête-pieds (head-feet). Le +Gz est positif vers les pieds (vers le bas en vol normal).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Combien de G tolèrent les sièges éjectables ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les sièges éjectables absorbent entre <strong>15 et 23 G</strong> lors de l'éjection (ex. Martin-Baker MK4 : 23G max, poids pilote ≤ 74 kg ; MK10/MK16 : 16G max, ≤ 89 kg).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle valeur de +Gz devient-il impossible de marcher ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>+3 Gz</strong>. Se lever de son siège devient impossible à +2,5G. Bouger la tête est impossible à +6G, les membres à +8G.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'effet principal du +Gz sur la circulation sanguine ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le sang s'accumule dans le bas du corps. La pression artérielle augmente sous le cœur et diminue au-dessus (notamment dans le cerveau) → hypoperfusion cérébrale progressive.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les 3 sources de vibration principales en vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Moteurs</strong> (engine) — <strong>sortie des volets</strong> (flaps extension) — <strong>sortie du train</strong> (gear extension) — et turbulences.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la sédentarité aggrave-t-elle la sensibilité aux G ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le manque d'activité physique réduit la tonicité musculaire (moins d'effet anti-G naturel), la condition cardiovasculaire globale et la capacité du cœur à maintenir la pression artérielle cérébrale sous G élevé.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

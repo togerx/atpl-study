@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH02 — Respiratory &amp; Circulatory System · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">FH02 · Respiratory &amp; Circulatory</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- Sidebar injectée automatiquement par main.js — NE PAS TOUCHER -->
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="FH02" data-matiere="facteurs-humains">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Facteurs Humains</a>
+        <span class="sep">›</span>
+        <span>FH02</span>
+      </div>
+      <div class="cours-code-badge">FH02</div>
+      <h1 class="cours-title">Respiratory &amp; Circulatory System</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~25 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="introduction">1. Introduction — The Two Circulatory Systems</h1>
+
+        <p>The human circulatory system is a closed loop that continuously delivers oxygen to every cell of the body and removes metabolic waste. It is composed of two interconnected circuits working in series, both driven by the heart.</p>
+
+        <p>The <strong>pulmonary circuit</strong> (right heart) takes deoxygenated blood from the heart to the lungs for gas exchange, then returns oxygenated blood back to the heart. The <strong>systemic circuit</strong> (left heart) distributes oxygen-rich blood to all tissues of the body, collecting CO₂ and returning deoxygenated blood to the right heart.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH02_circulation_double.svg" alt="Schéma de la double circulation pulmonaire et systémique">
+          <div class="fig-caption">Fig. 1 — Double circulation: pulmonary (right heart ↔ lungs) and systemic (left heart ↔ body tissues)</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          The body has <strong>two circulations in series</strong>: pulmonary (right heart) and systemic (left heart). The circulatory system prioritises blood supply to the <strong>heart and brain</strong> above all other organs.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="besoins-oxygene">2. Oxygen Requirements of the Organism</h1>
+
+        <p>Every cell in the body undergoes constant chemical transformations collectively called <strong>metabolism</strong>. These reactions require energy, which is produced mainly by the oxidation of glucose: glucose + O₂ → energy + CO₂ + H₂O. Oxygen is therefore essential for sustaining cellular life.</p>
+
+        <p>However, different tissues have very different tolerances to oxygen deprivation (anoxia). Some tissues (e.g. skeletal muscle, skin) can survive several hours without oxygen. <strong>Neurological tissue</strong> (brain) is critically sensitive and survives only a few minutes without oxygen — typically 3 to 5 minutes before irreversible damage begins.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          The brain is the most critical organ for oxygen. Neurological tissue survives only <strong>a few minutes</strong> without O₂. This is why hypoxia incapacitation at altitude can be rapid and insidious — the pilot may feel euphoric rather than impaired (silent hypoxia).
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          At rest, the largest oxygen consumers are the brain, the heart muscle, and skeletal muscles. During exercise, skeletal muscle demand rises dramatically and becomes the dominant consumer. This drives the increase in cardiac output and respiratory rate during physical activity.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="systeme-respiratoire">3. The Respiratory System</h1>
+
+        <p>The lungs play a central role in the respiratory system, performing two vital functions: supplying fresh oxygen to the blood and eliminating carbon dioxide. These exchanges occur entirely by <strong>passive diffusion</strong> — gas molecules move from areas of higher partial pressure to lower partial pressure across the thin alveolar membranes. No active transport is required.</p>
+
+        <p>The gas exchange process relies on the coordinated action of the central nervous system (CNS), the circulatory system, and the muscular pump formed by the diaphragm and chest wall. The CNS controls breathing rate automatically, adjusting it to metabolic demand within seconds.</p>
+
+        <div class="fig-container">
+          <img src="../figures/FH02_voies_aeriennes.svg" alt="Voies aériennes supérieures et inférieures — structure et pressions partielles">
+          <div class="fig-caption">Fig. 2 — Respiratory airway structure, gas exchange pressures, and lung volumes</div>
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="echanges-gazeux">3.1 Gas Exchanges — Partial Pressures</h2>
+
+        <p>Gas exchange is governed exclusively by differences in <strong>partial pressure</strong> between alveolar gas and blood. In the lungs, the alveolar O₂ pressure (138 hPa) is higher than the venous blood O₂ pressure (52 hPa), so oxygen diffuses into the blood. Conversely, CO₂ pressure in venous blood (62 hPa) exceeds alveolar CO₂ pressure (53 hPa), driving CO₂ out into the lungs for exhalation.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Pressions partielles</div>
+          <strong>Dans les alvéoles (normal) :</strong>
+          <div class="formula-display">pO₂ alvéolaire = 138 hPa &nbsp;|&nbsp; pCO₂ alvéolaire = 53 hPa</div>
+          <div class="formula-display">pO₂ sang veineux = 52 hPa &nbsp;|&nbsp; pCO₂ sang veineux = 62 hPa</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">O₂ diffuses <strong>from alveoli to blood</strong> (138 > 52). CO₂ diffuses <strong>from blood to alveoli</strong> (62 > 53). The same principles apply in reverse at the tissue level.</p>
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="volumes-pulmonaires">3.2 Pulmonary Volumes and Flow Rates</h2>
+
+        <p>The total volume of gas that can be moved by the lungs is divided into several clinically important components. The <strong>tidal volume</strong> is the amount of air exchanged in each normal resting breath (0.5 L). This can be supplemented by the inspiratory reserve volume (3 L additional inhalation) and the expiratory reserve volume (1 L additional exhalation), together defining the <strong>vital capacity</strong>.</p>
+
+        <p>Even after a maximal forced exhalation, air remains trapped in the lungs — the <strong>residual volume</strong> (1–2 L). This prevents alveolar collapse and maintains a buffer of oxygen. The total lung capacity (TLC) is approximately 7 L.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">0.5 L</span>
+            <span class="val-label">Tidal Volume (at rest)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 L</span>
+            <span class="val-label">Inspiratory Reserve</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 L</span>
+            <span class="val-label">Expiratory Reserve</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4.5 L ♀</span>
+            <span class="val-label">Vital Capacity (female)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5.5 L ♂</span>
+            <span class="val-label">Vital Capacity (male)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–2 L</span>
+            <span class="val-label">Residual Volume</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">7 L</span>
+            <span class="val-label">Total Lung Capacity</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">12–16/min</span>
+            <span class="val-label">Normal breathing rate</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5.5–8 L/min</span>
+            <span class="val-label">Ventilatory flow rate</span>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="controle-ventilation">3.3 Control of Ventilation</h2>
+
+        <p>Breathing rate is regulated automatically by the brainstem (CNS). The primary driver of ventilation is the <strong>partial pressure of CO₂ in arterial blood</strong>: when pCO₂ rises (e.g. during exercise), the respiratory centre increases breathing rate and depth to eliminate excess CO₂. The role of O₂ is secondary — it is detected by <strong>carotid corpuscles</strong> (peripheral chemoreceptors), which provide a moderate supplementary stimulus when O₂ levels fall significantly.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Ventilation is primarily controlled by <strong>CO₂</strong>, not O₂. A person breathing 100% O₂ can still be driven to breathe normally because CO₂ accumulates. Conversely, hyperventilation (blowing off CO₂) can suppress the urge to breathe even when O₂ is low — a dangerous situation at altitude.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="voies-aeriennes">3.4 Upper and Lower Airway Anatomy</h2>
+
+        <p>The <strong>upper airway</strong> consists of the nasal pits and mouth, which filter and humidify inhaled air and detect odors. The <strong>lower airway</strong> is a series of conducting passages leading to the gas-exchange surfaces:</p>
+
+        <ul>
+          <li><strong>Pharynx:</strong> shared passage for breathing and swallowing (digestion). The epiglottis prevents food from entering the trachea during swallowing.</li>
+          <li><strong>Larynx:</strong> connects the pharynx to the trachea; houses the vocal cords. The glottis is the narrowest point of the upper airway.</li>
+          <li><strong>Trachea:</strong> flexible ringed tube leading air from the larynx to the bronchi. Bifurcates at the carina into left and right main bronchi.</li>
+          <li><strong>Bronchi and bronchioles:</strong> progressively branching airways that distribute air to all regions of the lungs.</li>
+          <li><strong>Alveolar ducts and alveoli:</strong> 300 million alveoli provide an enormous surface area (~70–80 m²) for gas exchange by diffusion.</li>
+        </ul>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="fonctions-annexes">3.5 Additional Functions of the Respiratory System</h2>
+
+        <p>Beyond gas exchange, the respiratory system performs several protective and regulatory functions: it warms and moistens inhaled air to body temperature before it reaches the delicate alveoli; it protects the body through coughing, sneezing, and olfactory alerting; and the lungs themselves are protected by cilia (which sweep debris upward), mucus (which traps particles), and alveolar macrophages (which engulf and destroy pathogens).</p>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="circulation-sanguine">4. Blood Circulation</h1>
+
+        <p>The circulatory system has three components working together: the <strong>blood</strong> (transport fluid), the <strong>heart</strong> (pump), and the <strong>vascular network</strong> (arteries, veins, and capillaries). Its three core functions are: transporting O₂ and nutrients to all tissues; removing CO₂ and metabolic waste; and carrying hormones, immune cells, and heat.</p>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="le-sang">4.1 The Blood</h2>
+
+        <p>Blood is a complex fluid composed of plasma (55%) and formed elements — red blood cells (41%), white blood cells and platelets (4%).</p>
+
+        <p><strong>Plasma</strong> is a pale yellow liquid containing approximately 90% water, plus proteins (including antibodies), sodium chloride, nutrients, and hormones. It serves as the carrier medium for all blood cells. Plasma does not itself carry haemoglobin; it transports the red and white blood cells that do.</p>
+
+        <p><strong>Red blood cells (erythrocytes)</strong> contain haemoglobin, an iron-containing protein that is the primary vehicle for O₂ transport. Each haemoglobin molecule can bind four O₂ molecules. Red blood cells are produced mainly in the bone marrow (with minor contributions from the liver and spleen) and have an average lifespan of approximately <strong>108 days</strong>.</p>
+
+        <p><strong>White blood cells (leukocytes)</strong> are the immune system's defenders. They destroy invading bacteria, produce antibodies, and neutralise bacterial toxins (antitoxins).</p>
+
+        <p><strong>Platelets (thrombocytes)</strong> are the smallest blood cells and are essential for blood clotting (haemostasis), preventing excessive blood loss after injury.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Haemoglobin</strong> is the primary oxygen carrier — a protein containing iron within red blood cells. <strong>Anaemia</strong> (insufficient haemoglobin or RBCs) reduces O₂-carrying capacity. <strong>Hypoxia</strong> arises when the partial pressure of O₂ in inspired air is insufficient (e.g. at altitude), causing the body's O₂ saturation to fall. People acclimatised to altitude produce more RBCs to compensate.
+        </div>
+
+        <p>Blood also assists in <strong>temperature regulation</strong>: vasoconstriction of peripheral blood vessels preserves core heat in cold conditions, while vasodilation dissipates heat when the body is warm. Blood additionally transports chemical messengers such as hormones (including adrenaline) that modulate organ function and the stress response.</p>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="le-coeur">4.2 The Heart</h2>
+
+        <p>The heart is a muscular pump divided into four chambers: two atria (receiving chambers) and two ventricles (pumping chambers), separated by the interventricular wall. The heart muscle itself is called the <strong>myocardium</strong>.</p>
+
+        <p>Blood flows through the heart in a strictly controlled sequence. Deoxygenated blood enters the <strong>right atrium</strong> from the vena cava, is pumped to the right ventricle, then into the pulmonary artery toward the lungs. Oxygenated blood returns from the lungs via the pulmonary veins into the <strong>left atrium</strong>, then into the powerful left ventricle, which propels it into the aorta for systemic distribution. Four valves (tricuspid, pulmonary, mitral, aortic) ensure unidirectional flow.</p>
+
+        <p>The cardiac cycle alternates between <strong>systole</strong> (contraction, ejecting blood) and <strong>diastole</strong> (relaxation, filling with blood). The heart rests for a fraction of a second between cycles — this diastolic period is critical for the coronary arteries to perfuse the heart muscle itself.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Left heart</strong> = oxygenated blood → systemic circuit (body). <strong>Right heart</strong> = deoxygenated blood → pulmonary circuit (lungs). Systole = contraction. Diastole = relaxation (filling).
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="debit-cardiaque">4.4 Cardiac Output</h2>
+
+        <div class="fig-container">
+          <img src="../figures/FH02_cardiac_output.svg" alt="Formule et valeurs du débit cardiaque">
+          <div class="fig-caption">Fig. 3 — Cardiac output formula and key reference values</div>
+        </div>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Débit cardiaque</div>
+          <strong>Cardiac Output (Q) :</strong>
+          <div class="formula-display">Q = Stroke Volume (ml) × Heart Rate (bpm)</div>
+          <div class="formula-display">Q = 70 ml × 70 bpm = 4,900 ml/min ≈ 4.9 L/min</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">At maximum exertion: up to <strong>30 L/min</strong>. Effective heart rate limit: <strong>180–200 bpm</strong>. Above this, diastolic filling time is insufficient and cardiac output paradoxically decreases.</p>
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="facteurs-pouls">4.5 Factors Determining Pulse Rate</h2>
+
+        <p>Heart rate adapts constantly to the body's oxygen demand. The principal factors that increase heart rate include: physical exercise (dominant stimulus), altitude (reduced pO₂), elevated temperature, psychological stress, emotional states (fear, anxiety, anger), and physiological shock. Conversely, sleep and deep relaxation lower the resting heart rate.</p>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="pression-arterielle">4.6 Blood Pressure</h2>
+
+        <p>Blood pressure is expressed as two values in mmHg. The <strong>systolic pressure</strong> (higher number, e.g. 120) is the peak arterial pressure produced by ventricular contraction (systole). The <strong>diastolic pressure</strong> (lower number, e.g. 70–80) is the residual pressure between beats, when the heart relaxes and the elastic arteries maintain baseline flow.</p>
+
+        <p>A healthy young adult typically has a blood pressure around <strong>120/70 mmHg</strong>. A useful approximation: diastolic pressure ≈ systolic / 2 + 1.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">120/70</span>
+            <span class="val-label">Normal BP (young adult, mmHg)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">160/95</span>
+            <span class="val-label">EASA unfit threshold (hypertension)</span>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="hypertension">4.7 Hypertension (High Blood Pressure)</h2>
+
+        <p>Hypertension is a sustained elevation of blood pressure above normal levels. It is the <strong>major risk factor for strokes</strong> and a significant contributor to cardiovascular disease. A blood pressure of <strong>160/95 mmHg or above</strong> is assessed by EASA as medically unfit for flight operations.</p>
+
+        <p>Principal causes of hypertension: stress, smoking, excessive dietary fat and/or salt intake, advancing age, obesity, lack of physical exercise, and narrowing/hardening of the arteries (arteriosclerosis).</p>
+
+        <p>Symptoms include heart palpitations, shortness of breath, angina (chest pain), headaches, and nosebleeds. Hypertension can be managed through medication, surgery, or lifestyle modification.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          EASA aeromedical limit for hypertension: <strong>160/95 mmHg</strong> or above → unfit. Hypertension is the <strong>leading cause of stroke</strong>, not heart attack per se (that is coronary artery disease). Know the distinction.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="hypotension">4.8 Hypotension (Low Blood Pressure)</h2>
+
+        <p>Mild hypotension is usually not dangerous. However, if blood pressure falls sufficiently to deprive tissues of adequate oxygen, it can cause lethargy and fatigue, reduced resistance to the effects of shock (fainting), pulmonary congestion, stagnation of blood flow, and — critically for pilots — <strong>reduced tolerance to positive G-forces</strong>.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Hypotension reduces a pilot's ability to withstand <strong>positive G-forces</strong> (+Gz). Blood pools in the lower body, reducing cerebral perfusion. This is particularly relevant for fast-jet operations and aerobatics. A pilot who has donated blood should not fly.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="vaisseaux">4.3 Blood Vessels</h2>
+
+        <p><strong>Arteries</strong> carry blood away from the heart at high pressure through thick, muscular, elastic walls. <strong>Veins</strong> return blood to the heart at low pressure; they are thinner-walled and contain valves to prevent backflow. <strong>Capillaries</strong> are the microscopic vessels with walls only one cell thick — this extreme thinness allows O₂ and nutrients to diffuse out into the surrounding tissues, while CO₂ and waste products diffuse inward. The <strong>coronary arteries and veins</strong> form the dedicated vascular supply for the heart muscle itself.</p>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="dysfonctionnements">5. System Failures and Pathologies</h1>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="troubles-rythme">5.1 Cardiac Rhythm Disorders</h2>
+
+        <p>The heart beats in response to coordinated electrical impulses that originate in the sinoatrial (SA) node. When these impulses are generated or conducted abnormally, the heartbeat becomes irregular. An <strong>irregular heartbeat (arrhythmia)</strong> may require implantation of a pacemaker to maintain a regular rhythm.</p>
+
+        <p><strong>Extrasystoles</strong> are premature cardiac contractions triggered from an abnormal location in the heart, outside the normal conduction pathway. Occasional extrasystoles are common and generally benign, but frequent or complex extrasystoles result in <strong>aeronautical unfitness</strong> until their safety has been evaluated and established.</p>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="coronaropathie">5.2 Coronary Artery Disease and Angina</h2>
+
+        <p>The heart muscle is perfused by the coronary arteries. Narrowing of these arteries (typically by atherosclerotic plaques) reduces blood flow to the myocardium. When oxygen demand rises — during exercise, stress, or cold exposure — this reduced supply produces <strong>angina pectoris</strong>: constricting chest pain that may radiate to the jaw, left arm, or wrist. Crucially, the pain lasts only a few minutes and stops with rest or nitrates.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>Angina</strong> = chest pain stopping with rest (reversible ischaemia). <strong>Myocardial infarction (MI)</strong> = persistent pain that does not stop (irreversible tissue death). Angina is frequently a precursor to MI. Both are disqualifying for flight, but MI has more severe licensing consequences.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="infarctus">5.3 Myocardial Infarction (Heart Attack)</h2>
+
+        <p>Myocardial infarction (MI) is the acute event in which the coronary blood supply is completely cut off, causing a portion of the heart muscle to die (an <strong>infarct</strong>). The dead tissue cannot conduct electrical impulses, causing the heartbeat to become irregular or to stop entirely (cardiac arrest). Symptoms resemble angina but do not resolve with rest — though in some cases there is no pain at all (silent MI).</p>
+
+        <p>Approximately <strong>50% of MI patients die immediately</strong>. Those who survive can potentially be treated with cardiac massage and defibrillation. Without treatment, cardiac arrest is fatal within <strong>4 minutes</strong>. Those who survive the first 24 hours have a reasonable chance of recovery, but regaining a flying licence requires extensive cardiac investigation, and a <strong>multicrew restriction is always imposed</strong>.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Predisposing factors for MI, in order of importance: <strong>family history (heredity)</strong>, age, previous cardiovascular history, hypertension, smoking, raised cholesterol, lack of exercise, diabetes. Stress, obesity, and alcohol are secondary factors.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="embolie">5.4 Pulmonary Embolism — "Economy Class Syndrome"</h2>
+
+        <p>A pulmonary embolism occurs when a blood clot (thrombus) — most commonly formed in the deep veins of the legs — becomes dislodged and travels through the venous system to the pulmonary artery, where it causes a blockage. This interrupts blood flow to a portion of the lung, causing lung tissue death and preventing oxygenation of blood in that region.</p>
+
+        <p>Prolonged immobility during long-haul flights predisposes the formation of deep vein thrombosis (DVT) in the lower limbs. Both flight crew and passengers should be encouraged to <strong>move and walk around the cabin</strong> during extended flights to reduce this risk.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Pulmonary embolism = blockage of <strong>pulmonary artery</strong> (not a systemic artery). The clot originates in the leg veins (DVT) and travels to the lungs — this is why it is associated with immobility on long flights ("economy class syndrome").
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h2 id="don-de-sang">5.5 Blood Donation and Aircrew</h2>
+
+        <p>A standard blood donation removes 350–450 ml, which represents approximately 10% of total blood volume. This transient reduction creates a risk of <strong>hypotension</strong>, which — combined with the physiological demands of flight — could impair performance and G-tolerance. Aircrew who donate blood must therefore <strong>refrain from flying duties for a minimum of 36 hours</strong>. Bone marrow donation requires a 1-week stand-down with a blood count check before returning to flight duties.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">36 h</span>
+            <span class="val-label">Min. rest after blood donation</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 week</span>
+            <span class="val-label">Rest after bone marrow donation</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">350–450 ml</span>
+            <span class="val-label">Volume donated (~10% total)</span>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="conclusion">6. Conclusion — Medical Fitness and Prevention</h1>
+
+        <p>Rigorous initial medical selection and periodic health checks are the primary safeguards against sudden incapacitation in the cockpit due to cardiovascular disease, epilepsy, or other conditions. As pilots age, the frequency of medical examinations increases, and ECG (electrocardiogram) recordings become a key tool for identifying individuals at elevated cardiovascular risk.</p>
+
+        <p>Healthy lifestyle choices are not optional extras for pilots — they are a professional responsibility. Effective exercise means at least <strong>20 minutes of aerobic activity, three times per week</strong>, sufficient to at least double the resting heart rate. Diet should avoid excessive saturated fat and salt, smoking must be eliminated, and alcohol consumption should be carefully controlled.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Lifestyle recommendations for pilots</div>
+          • Exercise: minimum 20 min × 3 per week, sufficient to double resting pulse rate<br>
+          • Avoid excessive fat and salt in diet<br>
+          • No smoking (major risk factor for coronary disease and stroke)<br>
+          • Careful with alcohol (cardiovascular and neurological effects)<br>
+          • Regular ECGs become mandatory as pilots age
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">0.5 L</span>
+            <span class="val-label">Tidal Volume (per breath)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 L</span>
+            <span class="val-label">Inspiratory reserve volume</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 L</span>
+            <span class="val-label">Expiratory reserve volume</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1–2 L</span>
+            <span class="val-label">Residual volume</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4.5 L ♀</span>
+            <span class="val-label">Vital Capacity female</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5.5 L ♂</span>
+            <span class="val-label">Vital Capacity male</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">7 L</span>
+            <span class="val-label">Total Lung Capacity</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">12–16/min</span>
+            <span class="val-label">Normal respiratory rate</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">138 hPa</span>
+            <span class="val-label">Alveolar pO₂</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">53 hPa</span>
+            <span class="val-label">Alveolar pCO₂</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">52 hPa</span>
+            <span class="val-label">Venous blood pO₂</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">62 hPa</span>
+            <span class="val-label">Venous blood pCO₂</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">70 bpm</span>
+            <span class="val-label">Normal resting heart rate</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">70 ml</span>
+            <span class="val-label">Stroke volume (rest)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4.9 L/min</span>
+            <span class="val-label">Resting cardiac output</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 L/min</span>
+            <span class="val-label">Max cardiac output</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">180–200 bpm</span>
+            <span class="val-label">Max effective heart rate</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4.5 L</span>
+            <span class="val-label">Total blood volume</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">108 days</span>
+            <span class="val-label">Red blood cell lifespan</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">120/70</span>
+            <span class="val-label">Normal BP (mmHg)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">160/95</span>
+            <span class="val-label">EASA unfit BP threshold</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4 min</span>
+            <span class="val-label">Fatal cardiac arrest (no treatment)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">36 h</span>
+            <span class="val-label">No-fly after blood donation</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">300M</span>
+            <span class="val-label">Alveolar ducts in lungs</span>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Ventilation driven by CO₂, not O₂</div>
+              <div class="piege-explication">Breathing rate is primarily regulated by arterial CO₂ partial pressure (CNS), not O₂. O₂ only has a moderate secondary influence (carotid corpuscles). Hyperventilation eliminates CO₂ and can paradoxically suppress the urge to breathe even during hypoxia.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Gas exchange is by diffusion only — partial pressure gradients</div>
+              <div class="piege-explication">O₂ moves from alveoli (138 hPa) → blood (52 hPa). CO₂ moves from blood (62 hPa) → alveoli (53 hPa). At altitude, alveolar pO₂ drops, reducing the gradient and therefore impairing O₂ uptake.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">EASA blood pressure limit: 160/95, not 140/90</div>
+              <div class="piege-explication">The EASA aeromedical unfitness threshold for hypertension is specifically 160/95 mmHg or above. 140/90 is the general clinical definition of hypertension but is not the EASA certification limit.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Cardiac output drops above 180–200 bpm</div>
+              <div class="piege-explication">Above the effective heart rate limit (180–200 bpm), diastolic filling time becomes too short, stroke volume drops, and cardiac output paradoxically decreases despite the faster heart rate.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Angina vs. myocardial infarction — the key difference</div>
+              <div class="piege-explication">Angina pain stops with rest (reversible ischaemia). MI pain does not stop. Angina is often a precursor to MI. Both disqualify from flight, but MI requires extensive cardiac investigation and always results in a multicrew restriction if the licence is recovered.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Pulmonary embolism — pulmonary artery, not veins</div>
+              <div class="piege-explication">Pulmonary embolism blocks the pulmonary artery (carrying deoxygenated blood FROM the heart TO the lungs). The clot originates in leg veins (DVT). Do not confuse with systemic arterial occlusion.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Blood donation: 36 hours rest minimum</div>
+              <div class="piege-explication">After a standard blood donation (350–450 ml ≈ 10% blood volume), aircrew must not fly for at least 36 hours due to the risk of hypotension and reduced G-tolerance. Bone marrow donation requires 1 week off.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Heart attack #1 risk factor: family history (heredity)</div>
+              <div class="piege-explication">The single most important predisposing factor for MI is family history/heredity, followed by age, then previous cardiovascular problems, hypertension, and smoking. Stress, obesity, and alcohol are secondary (less clearly understood).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Red blood cell lifespan: 108 days (not 120, not 90)</div>
+              <div class="piege-explication">Red blood cells live approximately 108 days. This is a specific numerical value that appears in ATPL exams. Produced mainly in bone marrow; some production in liver and spleen.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Hypertension = primary stroke risk; NOT heart attack</div>
+              <div class="piege-explication">High blood pressure (hypertension) is the major risk factor for strokes (cerebrovascular accident). Coronary artery disease and MI risk factors overlap but are distinct. Exam questions often test whether you correctly associate hypertension with stroke.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Hypotension reduces +Gz tolerance</div>
+              <div class="piege-explication">Low blood pressure directly reduces a pilot's capability to withstand positive G-forces. This is an aeronautically specific consequence — hypotension may be mild on the ground but becomes hazardous in manoeuvring flight.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Vital capacity vs. total lung capacity</div>
+              <div class="piege-explication">Vital capacity (4.5–5.5 L) is the maximum mobilisable volume — from max inhalation to max exhalation. Total lung capacity (7 L) includes the residual volume (1–2 L) that cannot be exhaled. TLC = VC + Residual Volume.</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">What is the primary stimulus driving increased breathing rate? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Rising CO₂ partial pressure in arterial blood</strong> (detected by the CNS brainstem). O₂ has only a moderate secondary influence via carotid corpuscles.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the normal tidal volume? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>0.5 L</strong> per breath at rest. At 12–16 breaths/min, this gives a ventilatory flow of 5.5–8 L/min.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is vital capacity, and what are the typical values? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Vital capacity is the maximum mobilisable volume between forced inhalation and forced exhalation. <strong>Female: 4.5 L ± 0.5 | Male: 5.5 L ± 0.5</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What alveolar O₂ partial pressure drives gas exchange? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>138 hPa</strong> (alveolar) vs. 52 hPa (venous blood). O₂ diffuses from alveoli into blood down this pressure gradient.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the EASA blood pressure unfitness threshold? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>160/95 mmHg</strong> or above. This triggers aeronautical unfitness. Note: clinical hypertension is typically defined at 140/90, but EASA uses 160/95.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the resting cardiac output formula and result? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Q = 70 ml/stroke × 70 bpm = 4,900 ml/min ≈ 4.9 L/min</strong>. Max cardiac output: ~30 L/min at maximum exertion.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What happens to cardiac output above 180–200 bpm? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">It <strong>decreases</strong>. The heart cannot fill (diastole) quickly enough, so stroke volume drops faster than heart rate rises. The effective limit of heart rate is 180–200 bpm.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">How long can neurological tissue survive without oxygen? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Only a few minutes</strong> (typically 3–5 min). After this, irreversible neurological damage occurs. This is why hypoxia in flight is immediately life-threatening.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the difference between systole and diastole? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Systole</strong> = ventricular contraction (blood ejected into aorta/pulmonary artery). <strong>Diastole</strong> = ventricular relaxation (heart fills with blood). Systolic BP > diastolic BP.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the composition of blood by percentage? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Plasma 55%</strong> (water + proteins + ions), <strong>Red Blood Cells 41%</strong> (haemoglobin, O₂ transport), <strong>White Blood Cells + Platelets 4%</strong> (immunity + clotting).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is anaemia and why does it matter in aviation? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Anaemia = insufficient haemoglobin or red blood cells, reducing O₂-carrying capacity. It effectively mimics hypoxia at lower altitudes. Caused by impaired bone marrow production or excessive bleeding.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">How long must a pilot wait after blood donation before flying? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Minimum 36 hours</strong> after standard blood donation (350–450 ml ≈ 10% volume). After bone marrow donation: <strong>1 week</strong> with a blood count check.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is a pulmonary embolism and what causes it in aviation? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">A blood clot (thrombus) from a leg vein (DVT) that travels to and blocks the pulmonary artery. Associated with prolonged immobility on long-haul flights ("economy class syndrome"). Prevention: walk around the cabin.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the most important predisposing factor for myocardial infarction? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Family history (heredity)</strong> is the #1 risk factor. Followed by age, previous cardiovascular history, hypertension, smoking, raised cholesterol, lack of exercise, and diabetes.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What happens after surviving a myocardial infarction regarding flying licence? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Recovery requires extensive cardiac investigation. If the licence is retrieved, <strong>a multicrew restriction is always imposed</strong>. Solo operations will not be possible after an MI.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the total lung capacity? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>7 L</strong> total. This includes vital capacity (4.5–5.5 L) plus residual volume (1–2 L). The residual volume cannot be expelled even by maximal forced exhalation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the difference between angina pectoris and MI? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Both cause chest pain, jaw/arm radiation. <strong>Angina</strong> = reversible ischaemia, pain stops with rest. <strong>MI</strong> = irreversible infarction, pain does not stop (or sometimes no pain at all — "silent MI"). ~50% die immediately from MI.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the average red blood cell lifespan? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>108 days</strong>. Produced mainly in the bone marrow, with minor production in the liver and spleen. They contain haemoglobin, the primary O₂ carrier.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What are extrasystoles and when do they ground a pilot? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Extrasystoles are cardiac contractions generated from an abnormal location. Occasional ones are benign. <strong>Too many extrasystoles result in aeronautical unfitness</strong> until their safety is established by investigation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the effective exercise recommendation for pilots? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">At least <strong>20 minutes, three times per week</strong>, sufficient to <strong>double the resting pulse rate</strong>. Regular aerobic exercise reduces cardiovascular risk and maintains fitness for flight.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What is the total blood volume in an adult? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>4.5 L</strong> total blood volume. The resting cardiac output (4.9 L/min) means the entire blood volume circulates approximately once per minute at rest.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Why does hypotension specifically concern pilots more than the general population? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Hypotension specifically reduces <strong>tolerance to positive G-forces (+Gz)</strong>. Blood pools in the lower body under positive G, and low baseline BP means cerebral perfusion falls to critical levels at lower G values — risk of G-LOC.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">What are the three components of the circulatory system? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>A fluid</strong> (blood) · <strong>A pump</strong> (the heart) · <strong>A network</strong> (arteries, veins, and capillaries). The arteries carry blood from the heart at high pressure; veins return it at low pressure; capillaries allow diffusion at the tissue level.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Why does cardiac arrest cause death within 4 minutes without treatment? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Neurological tissue (brain) survives only a few minutes without oxygen. Cardiac arrest stops blood flow entirely. Within 4 minutes of no perfusion, irreversible brain death occurs. Cardiac massage + defibrillation must be started immediately.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation prev/next -->
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <!-- TOC auto-générée par main.js -->
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

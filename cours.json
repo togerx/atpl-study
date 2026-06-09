@@ -74,11 +74,32 @@
       "couleur": "#FBE5E5",
       "cours": [
             {
+              "code": "FH02",
+              "titre": "Respiratory & Circulatory System",
+              "description": "Systèmes respiratoire et circulatoire : échanges gazeux, volumes pulmonaires, débit cardiaque, hypertension EASA, pathologies cardio-vasculaires.",
+              "tags": ["easa", "exam"],
+              "lecture_min": 25
+            },
+            {
+              "code": "FH03",
+              "titre": "Atmosphère et Hypoxie",
+              "description": "ISA, lois des gaz, types d'hypoxie, TUC, rayonnement cosmique",
+              "tags": ["oaci", "easa", "exam"],
+              "lecture_min": 25
+            },
+            {
               "code": "FH04",
               "titre": "DCS & Barotraumatismes",
               "description": "Maladie de décompression, barotraumatismes de l'oreille, des sinus et des poumons, pressurisation cabine.",
               "tags": ["easa", "exam"],
               "lecture_min": 30
+            },
+            {
+              "code": "FH05",
+              "titre": "Accélérations et Vibrations",
+              "description": "Effets physiologiques des forces G (+Gz, −Gz), G-LOC, push-pull, seuils de tolérance, AGSM et vibrations par fréquence.",
+              "tags": ["easa", "exam"],
+              "lecture_min": 20
             },
             {
               "code": "FH06",

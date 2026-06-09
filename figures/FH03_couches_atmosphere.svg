@@ -1,0 +1,87 @@
+<svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Legend: altitude layers by temperature -->
+  <!-- Elements:
+    Title bar: y=10,h=30
+    Troposphere: y=340,h=55 (0-10km)
+    Tropopause line: y=337
+    Stratosphere: y=230,h=107 (10-50km)
+    Mesosphere: y=165,h=65 (50-80km)
+    Thermosphere: y=55,h=110 (80-120km+)
+    Altitude axis labels: x=10
+    Temperature curve: inside chart
+    Chart box: x=60,y=45, w=300, h=360
+  -->
+
+  <!-- Background -->
+  <rect x="0" y="0" width="520" height="420" fill="#F8F9FA" rx="8"/>
+
+  <!-- Title -->
+  <text x="260" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F3864">Structure de l'atmosphère selon la température</text>
+
+  <!-- Chart box -->
+  <rect x="70" y="45" width="280" height="355" fill="white" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Troposphere band (0-10km) y=355 to y=320 in chart coords; chart bottom=400, top=45, range=355px for 0-120km -->
+  <!-- scale: 355px / 120km = ~2.96px/km -->
+  <!-- 0km -> y=400, 10km -> y=400-29.6=370, 11km -> y=367, 30km -> y=311, 60km -> y=222, 70km -> y=192, 80km -> y=163, 90km -> y=133, 120km -> y=45 -->
+
+  <!-- Troposphere (0-11km): y from 400 to 367 -->
+  <rect x="70" y="367" width="280" height="33" fill="#B7E1F5" opacity="0.8"/>
+  <text x="210" y="388" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">TROPOSPHÈRE</text>
+
+  <!-- Tropopause line -->
+  <line x1="70" y1="367" x2="350" y2="367" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="355" y="370" font-size="9" fill="#1F3864">Tropopause</text>
+
+  <!-- Stratosphere (11-50km): y from 367 to 252 -->
+  <rect x="70" y="252" width="280" height="115" fill="#1F3864" opacity="0.75"/>
+  <text x="210" y="316" text-anchor="middle" font-size="11" font-weight="bold" fill="white">STRATOSPHÈRE</text>
+
+  <!-- Mesosphere (50-80km): y from 252 to 163 -->
+  <rect x="70" y="163" width="280" height="89" fill="#90C8E8" opacity="0.7"/>
+  <text x="210" y="212" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">MÉSOSPHÈRE</text>
+
+  <!-- Thermosphere (80-120km): y from 163 to 45 -->
+  <rect x="70" y="45" width="280" height="118" fill="#F5C518" opacity="0.55"/>
+  <text x="210" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">THERMOSPHÈRE</text>
+
+  <!-- Temperature curve (approximate ISA shape) -->
+  <!-- At 0km: +15°C, at 11km: -56.5°C, stays flat to ~20km, rises in stratosphere to ~0°C at 50km, drops in mesosphere to -90°C at 80km, rises again in thermosphere -->
+  <!-- X axis: -60 to +120°C mapped across 280px: 0 at x=70, range=180°C, px/°C = 280/180 = 1.556 -->
+  <!-- xOffset for temp T: 70 + (T+60)*280/180 -->
+  <!-- y for altitude km: 400 - km*355/120 -->
+  <polyline
+    points="
+      163,400
+      70,367
+      70,308
+      152,252
+      235,163
+      70,45
+    "
+    fill="none" stroke="#C00000" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Labels for curve points -->
+
+  <!-- Altitude axis labels (left) -->
+  <text x="62" y="403" text-anchor="end" font-size="9" fill="#444">0</text>
+  <text x="62" y="370" text-anchor="end" font-size="9" fill="#444">10</text>
+  <text x="62" y="311" text-anchor="end" font-size="9" fill="#444">30</text>
+  <text x="62" y="252" text-anchor="end" font-size="9" fill="#444">50</text>
+  <text x="62" y="163" text-anchor="end" font-size="9" fill="#444">80</text>
+  <text x="62" y="133" text-anchor="end" font-size="9" fill="#444">90</text>
+  <text x="62" y="48" text-anchor="end" font-size="9" fill="#444">120</text>
+
+  <!-- Altitude axis title -->
+  <text x="18" y="230" text-anchor="middle" font-size="10" fill="#444" transform="rotate(-90 18 230)">Altitude (km)</text>
+
+  <!-- Temperature axis (bottom) labels -->
+  <text x="70" y="413" text-anchor="middle" font-size="9" fill="#444">-60</text>
+  <text x="148" y="413" text-anchor="middle" font-size="9" fill="#444">0</text>
+  <text x="226" y="413" text-anchor="middle" font-size="9" fill="#444">+60</text>
+  <text x="304" y="413" text-anchor="middle" font-size="9" fill="#444">+120</text>
+  <text x="210" y="420" text-anchor="middle" font-size="10" fill="#444">Température (°C)</text>
+
+  <!-- 0°C vertical reference line -->
+  <line x1="148" y1="45" x2="148" y2="400" stroke="#999" stroke-width="0.7" stroke-dasharray="3,3"/>
+
+</svg>

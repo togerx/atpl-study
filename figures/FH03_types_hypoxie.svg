@@ -1,0 +1,71 @@
+<svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- 4 boxes side by side, each type of hypoxia -->
+  <!-- Box width: 120px, gap: 16px, start x: 14 -->
+  <!-- Box positions: 14, 150, 286, 422 -->
+
+  <rect x="0" y="0" width="560" height="280" fill="#F8F9FA" rx="8"/>
+  <text x="280" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F3864">Les 4 types d'hypoxie</text>
+
+  <!-- Type 1: Histotoxique -->
+  <rect x="14" y="38" width="120" height="225" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5" rx="6"/>
+  <rect x="14" y="38" width="120" height="32" fill="#C00000" rx="6"/>
+  <rect x="14" y="58" width="120" height="12" fill="#C00000"/>
+  <text x="74" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="white">1. Histotoxique</text>
+  <text x="74" y="95" text-anchor="middle" font-size="10" fill="#C00000" font-weight="bold">Mécanisme bloqué</text>
+  <text x="74" y="115" text-anchor="middle" font-size="9.5" fill="#333">Une toxine bloque</text>
+  <text x="74" y="129" text-anchor="middle" font-size="9.5" fill="#333">le métabolisme</text>
+  <text x="74" y="143" text-anchor="middle" font-size="9.5" fill="#333">cellulaire</text>
+  <text x="74" y="165" text-anchor="middle" font-size="9" fill="#555">Ex : cyanure (CN)</text>
+  <text x="74" y="188" text-anchor="middle" font-size="9.5" fill="#333">L'O₂ arrive aux</text>
+  <text x="74" y="202" text-anchor="middle" font-size="9.5" fill="#333">cellules mais elles</text>
+  <text x="74" y="216" text-anchor="middle" font-size="9.5" fill="#333">ne peuvent pas</text>
+  <text x="74" y="230" text-anchor="middle" font-size="9.5" fill="#333">l'utiliser</text>
+
+  <!-- Type 2: Hypémique / Anémique -->
+  <rect x="150" y="38" width="120" height="225" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5" rx="6"/>
+  <rect x="150" y="38" width="120" height="32" fill="#C00000" rx="6"/>
+  <rect x="150" y="58" width="120" height="12" fill="#C00000"/>
+  <text x="210" y="54" text-anchor="middle" font-size="10.5" font-weight="bold" fill="white">2. Hypémique</text>
+  <text x="210" y="67" text-anchor="middle" font-size="9.5" fill="white">(Anémique)</text>
+  <text x="210" y="95" text-anchor="middle" font-size="10" fill="#C00000" font-weight="bold">Transport réduit</text>
+  <text x="210" y="115" text-anchor="middle" font-size="9.5" fill="#333">Diminution de la</text>
+  <text x="210" y="129" text-anchor="middle" font-size="9.5" fill="#333">capacité du sang</text>
+  <text x="210" y="143" text-anchor="middle" font-size="9.5" fill="#333">à transporter O₂</text>
+  <text x="210" y="165" text-anchor="middle" font-size="9" fill="#555">Hémorragie,</text>
+  <text x="210" y="178" text-anchor="middle" font-size="9" fill="#555">intoxication CO</text>
+  <text x="210" y="200" text-anchor="middle" font-size="9.5" fill="#333">CO a 250× plus</text>
+  <text x="210" y="214" text-anchor="middle" font-size="9.5" fill="#333">d'affinité pour Hb</text>
+  <text x="210" y="228" text-anchor="middle" font-size="9.5" fill="#333">que l'O₂</text>
+
+  <!-- Type 3: Stagnante / Ischémique -->
+  <rect x="286" y="38" width="120" height="225" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5" rx="6"/>
+  <rect x="286" y="38" width="120" height="32" fill="#C00000" rx="6"/>
+  <rect x="286" y="58" width="120" height="12" fill="#C00000"/>
+  <text x="346" y="54" text-anchor="middle" font-size="10.5" font-weight="bold" fill="white">3. Stagnante</text>
+  <text x="346" y="67" text-anchor="middle" font-size="9.5" fill="white">(Ischémique)</text>
+  <text x="346" y="95" text-anchor="middle" font-size="10" fill="#C00000" font-weight="bold">Circulation bloquée</text>
+  <text x="346" y="115" text-anchor="middle" font-size="9.5" fill="#333">Le sang n'atteint</text>
+  <text x="346" y="129" text-anchor="middle" font-size="9.5" fill="#333">pas les organes</text>
+  <text x="346" y="155" text-anchor="middle" font-size="9" fill="#555">Facteur de charge</text>
+  <text x="346" y="168" text-anchor="middle" font-size="9" fill="#555">(G-LOC)</text>
+  <text x="346" y="192" text-anchor="middle" font-size="9.5" fill="#333">Insuffisance</text>
+  <text x="346" y="206" text-anchor="middle" font-size="9.5" fill="#333">cardiaque,</text>
+  <text x="346" y="220" text-anchor="middle" font-size="9.5" fill="#333">choc, manœuvres</text>
+
+  <!-- Type 4: Hypoxique -->
+  <rect x="422" y="38" width="120" height="225" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5" rx="6"/>
+  <rect x="422" y="38" width="120" height="32" fill="#C00000" rx="6"/>
+  <rect x="422" y="58" width="120" height="12" fill="#C00000"/>
+  <text x="482" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="white">4. Hypoxique</text>
+  <text x="482" y="95" text-anchor="middle" font-size="10" fill="#C00000" font-weight="bold">pO₂ insuffisante</text>
+  <text x="482" y="115" text-anchor="middle" font-size="9.5" fill="#333">pO₂ diminue</text>
+  <text x="482" y="129" text-anchor="middle" font-size="9.5" fill="#333">avec l'altitude</text>
+  <text x="482" y="155" text-anchor="middle" font-size="9" fill="#555">Ou composition</text>
+  <text x="482" y="168" text-anchor="middle" font-size="9" fill="#555">de l'air modifiée</text>
+  <text x="482" y="168" text-anchor="middle" font-size="9" fill="#555"></text>
+  <text x="482" y="188" text-anchor="middle" font-size="9" fill="#555">FiO₂ &lt; 0,21</text>
+  <text x="482" y="210" text-anchor="middle" font-size="9.5" fill="#333">Type le plus</text>
+  <text x="482" y="224" text-anchor="middle" font-size="9.5" fill="#333">fréquent en</text>
+  <text x="482" y="238" text-anchor="middle" font-size="9.5" fill="#333">aviation</text>
+
+</svg>

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <!-- Fond transparent -->
+
+  <!-- Titre -->
+  <text x="260" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F3864">Les 3 axes d'accélération / The 3 Acceleration Axes</text>
+
+  <!-- Corps humain assis (silhouette stylisée) -->
+  <!-- Tête -->
+  <circle cx="260" cy="100" r="28" fill="#D6E4F0" stroke="#2E75B6" stroke-width="2"/>
+  <!-- Tronc -->
+  <rect x="235" y="130" width="50" height="90" rx="8" fill="#D6E4F0" stroke="#2E75B6" stroke-width="2"/>
+  <!-- Bras gauche -->
+  <rect x="200" y="135" width="30" height="14" rx="6" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+  <!-- Bras droit -->
+  <rect x="290" y="135" width="30" height="14" rx="6" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+  <!-- Siège -->
+  <rect x="220" y="220" width="80" height="14" rx="4" fill="#BF8F00" stroke="#7F5F00" stroke-width="1.5"/>
+  <!-- Jambes -->
+  <rect x="235" y="234" width="18" height="60" rx="6" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+  <rect x="267" y="234" width="18" height="60" rx="6" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+  <!-- Pieds -->
+  <rect x="225" y="292" width="30" height="12" rx="4" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+  <rect x="257" y="292" width="30" height="12" rx="4" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+
+  <!-- AXE Gz (vertical tête-pieds) -->
+  <!-- +Gz (vers le bas, pieds) -->
+  <line x1="260" y1="240" x2="260" y2="335" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="260,345 254,330 266,330" fill="#C00000"/>
+  <rect x="214" y="336" width="50" height="22" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="239" y="345" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">+Gz</text>
+  <text x="239" y="355" text-anchor="middle" font-size="8.5" fill="#7F0000">head→feet</text>
+
+  <!-- -Gz (vers le haut, tête) -->
+  <line x1="260" y1="68" x2="260" y2="25" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="260,15 254,30 266,30" fill="#548235"/>
+  <rect x="214" y="8" width="50" height="22" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="239" y="17" text-anchor="middle" font-size="10" font-weight="bold" fill="#548235">−Gz</text>
+  <text x="239" y="27" text-anchor="middle" font-size="8.5" fill="#375225">feet→head</text>
+
+  <!-- AXE Gx (avant-arrière) -->
+  <!-- +Gx (vers l'avant) -->
+  <line x1="286" y1="175" x2="395" y2="175" stroke="#2E75B6" stroke-width="2.5"/>
+  <polygon points="405,175 390,169 390,181" fill="#2E75B6"/>
+  <rect x="408" y="164" width="50" height="22" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="433" y="173" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E75B6">+Gx</text>
+  <text x="433" y="183" text-anchor="middle" font-size="8.5" fill="#1A4B7A">fore (fwd)</text>
+
+  <!-- -Gx (vers l'arrière) -->
+  <line x1="234" y1="175" x2="125" y2="175" stroke="#BF8F00" stroke-width="2.5"/>
+  <polygon points="115,175 130,169 130,181" fill="#BF8F00"/>
+  <rect x="62" y="164" width="50" height="22" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="87" y="173" text-anchor="middle" font-size="10" font-weight="bold" fill="#BF8F00">−Gx</text>
+  <text x="87" y="183" text-anchor="middle" font-size="8.5" fill="#7F5F00">aft (bwd)</text>
+
+  <!-- AXE Gy (latéral gauche-droite) -->
+  <!-- Flèche sortant vers le bas-gauche (plan du siège) -->
+  <line x1="250" y1="205" x2="155" y2="275" stroke="#7030A0" stroke-width="2.5"/>
+  <polygon points="145,282 158,268 168,280" fill="#7030A0"/>
+  <rect x="60" y="276" width="50" height="22" rx="4" fill="#EFE0F8" stroke="#7030A0" stroke-width="1"/>
+  <text x="85" y="285" text-anchor="middle" font-size="10" font-weight="bold" fill="#7030A0">+Gy</text>
+  <text x="85" y="295" text-anchor="middle" font-size="8.5" fill="#4B1E70">right→left</text>
+
+  <!-- Légende durée -->
+  <rect x="10" y="335" width="195" height="38" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="107" y="350" text-anchor="middle" font-size="9" fill="#1F3864">Courte durée / Short term: &lt; 1 s</text>
+  <text x="107" y="362" text-anchor="middle" font-size="9" fill="#1F3864">Longue durée / Long term: &gt; 5 s</text>
+
+  <!-- Légende G -->
+  <rect x="318" y="335" width="196" height="38" rx="6" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="416" y="350" text-anchor="middle" font-size="9" fill="#1F3864">1 G = 9,81 m/s² ≈ 10 m/s²</text>
+  <text x="416" y="362" text-anchor="middle" font-size="9" fill="#1F3864">Le JOLT = accélération en 1 s (g/s)</text>
+
+</svg>
