@@ -96,11 +96,7 @@ function initNavigation(matieres) {
   const prev = all[idx - 1];
   const next = all[idx + 1];
 
-  const hrefFor = (c) => depth <= 1
-    ? `${c.matiere}/${c.code}.html`
-    : (document.querySelector('main').dataset.matiere === c.matiere
-        ? `${c.code}.html`
-        : `../${c.matiere}/${c.code}.html`);
+const hrefFor = (c) => `${ROOT}${c.matiere}/${c.code}.html`;
 
   if (navPrev) {
     if (prev) {
@@ -211,7 +207,7 @@ function buildMatierePage(matieres) {
   document.getElementById('topbar-subtitle').textContent = mat.nom;
 
   list.innerHTML = mat.cours.map((c, i) => `
-    <a href="/${mat.id}/${c.code}" class="cours-list-item">
+    <a href="${ROOT}${mat.id}/${c.code}.html" class="cours-list-item">
       <span class="cours-list-code">${c.code}</span>
       <div class="cours-list-body">
         <div class="cours-list-titre">${c.titre}</div>
