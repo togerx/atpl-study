@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INS05 — Tachymètre, EPR/N1, Torquemètre, Synchroscope · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">INS05 · Tachymètre, EPR/N1, Couple</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="INS05" data-matiere="instruments">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Instrumentation</a>
+        <span class="sep">›</span>
+        <span>INS05</span>
+      </div>
+      <div class="cours-code-badge">INS05</div>
+      <h1 class="cours-title">Tachymètre, EPR/N1, Torquemètre, Synchroscope et Vibrations</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA 022</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~22 min</span>
+        <span class="cours-meta-item">❓ 24 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="tachymetre">1. Tachymètre (Tachometer)</h1>
+
+        <p>Le tachymètre mesure la <strong>vitesse de rotation du moteur</strong> et permet au pilote de surveiller la puissance et de maintenir le moteur dans ses limites certifiées. La grandeur mesurée diffère selon le type de motorisation :</p>
+        <ul>
+          <li><strong>Moteur à pistons</strong> : vitesse du vilebrequin en <strong>RPM</strong> (tours par minute) ;</li>
+          <li><strong>Turbomoteur</strong> : vitesse des compresseurs exprimée en <strong>pourcentage d'une vitesse de référence</strong> (N1 %, N2 %).</li>
+        </ul>
+
+        <p>Il existe trois technologies de mesure de la vitesse de rotation :</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS05_tachometres_comparaison.svg" alt="Comparatif des 3 types de tachymètres : magnétique, tacho-générateur, inductif">
+          <div class="fig-caption">Fig. 1 — Comparatif des trois types de tachymètres et leurs caractéristiques</div>
+        </div>
+
+        <h2 id="tacho-magnetique">1.1 Tachymètre magnétique (mécanique)</h2>
+
+        <p>Le tachymètre magnétique est la solution la plus ancienne, réservée aux vieux avions à pistons. Un <strong>arbre flexible</strong> relie le vilebrequin à l'instrument de tableau de bord. À l'intérieur de l'instrument, un <strong>aimant permanent</strong> entraîné par l'arbre tourne à l'intérieur d'une <strong>drag-cup</strong> non magnétique. Le champ magnétique rotatif induit des courants de Foucault dans la drag-cup, qui entraînent sa rotation. Un <strong>ressort de rappel</strong> (hair spring) compense la rotation, de sorte que l'angle d'équilibre de la cup est proportionnel au RPM.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Le tachymètre magnétique ne nécessite aucune alimentation électrique. Il fonctionne de manière entièrement autonome par couplage mécano-magnétique. Son inconvénient principal est une précision limitée à ±5 % due à l'influence de la température sur les propriétés magnétiques.
+        </div>
+
+        <h2 id="tacho-electrique">1.2 Tachymètre électrique (tacho-générateur)</h2>
+
+        <p>Le tacho-générateur est un <strong>alternateur 3-phases</strong> entraîné par la boîte de vitesse moteur. Le signal produit est une <strong>tension triphasée dont la fréquence est proportionnelle au RPM</strong>. Cette tension alimente un <strong>moteur synchrone</strong> à distance, dont la vitesse de rotation est exactement la même que celle du générateur. Ce moteur synchrone entraîne à son tour un tachymètre magnétique classique (aimant + drag-cup + ressort).</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Principe</div>
+          <strong>Tacho-générateur :</strong>
+          <div class="formula-display">f (Hz) ∝ N (RPM)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">La fréquence du signal 3-phases est directement proportionnelle à la vitesse de rotation. Le moteur synchrone côté indicateur tourne exactement à la même vitesse que le générateur côté moteur.</p>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le tacho-générateur est <strong>simple, précis, sans alimentation électrique externe, sans interférence électronique et sans perte en ligne</strong> (la fréquence est indépendante de la résistance des câbles). Seule l'influence de la température reste un inconvénient.
+        </div>
+
+        <h2 id="tacho-inductif">1.3 Tachymètre électronique à sonde inductive</h2>
+
+        <p>Le système inductif utilise une <strong>roue phonique dentée</strong> (<em>phonic notched wheel</em>) montée sur l'arbre du moteur, en regard d'un capteur électromagnétique. Lorsque les dents de la roue passent devant le capteur, le flux magnétique varie, générant une impulsion électrique à chaque dent. Un compteur électronique mesure la fréquence de ces impulsions et l'affiche en N1 %.</p>
+
+        <p>Sur les turbines à soufflante, les <strong>pales du fan elles-mêmes</strong> peuvent jouer le rôle de la roue dentée, le capteur détectant le passage de chaque pale.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le tachymètre inductif est le seul des trois qui <strong>nécessite une alimentation électrique</strong>. Contrairement aux deux autres, la sonde inductive est active (électro-aimant alimenté) et ne peut pas fonctionner sans courant. C'est son principal inconvénient.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="poussee">2. Mesure de la poussée turbine — EPR vs N1</h1>
+
+        <p>Sur un turboréacteur, la poussée est gérée selon deux paramètres alternatifs : l'EPR ou le N1, selon la version du moteur et les procédures de l'opérateur.</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS05_epr_n1_turbine.svg" alt="Architecture EPR et N1 sur un turboréacteur — Pt2, Pt7, N1, N2">
+          <div class="fig-caption">Fig. 2 — Architecture de mesure de poussée : EPR (Pt7/Pt2) et N1 (rotor BP)</div>
+        </div>
+
+        <h2 id="epr">2.1 EPR — Engine Pressure Ratio</h2>
+
+        <p>L'EPR est le rapport entre la <strong>pression totale en sortie de tuyère (Pt7)</strong> et la <strong>pression totale à l'entrée du compresseur LP (Pt2)</strong>. C'est un indicateur de performance aérothermodynamique du moteur.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Engine Pressure Ratio :</strong>
+          <div class="formula-display">EPR = Pt7 / Pt2</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Pt7 = pression totale sortie tuyère (turbine outlet) · Pt2 = pression totale entrée compresseur LP. L'EPR est sans unité, toujours &gt; 1 en poussée. Valeur TOGA typique : 1,4–1,6.</p>
+        </div>
+
+        <p>L'EPR est affecté par la <strong>température et l'altitude</strong>. À EPR constant, si la OAT varie, la poussée reste constante (auto-compensée). C'est son avantage : il donne une mesure directe de la performance thermodynamique.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL — Obstruction de la sonde Pt2</div>
+          Si la <strong>sonde frontale Pt2 est obstruée</strong> (glace, insecte), elle indique une pression inférieure à la réelle. Le rapport Pt7/Pt2 est alors <strong>artificiellement élevé</strong>. L'indicateur EPR affiche une poussée plus haute que la réalité, les pilotes <strong>réduisent la manette</strong>, entraînant une sous-puissance dangereuse au décollage.
+        </div>
+
+        <h2 id="n1">2.2 N1 — Vitesse du rotor basse pression</h2>
+
+        <p>Le N1 est la vitesse de rotation du rotor basse pression (LP shaft), qui comprend la soufflante (<em>fan</em>) et le compresseur BP. Il est exprimé en <strong>pourcentage d'une vitesse de référence</strong>. Le N1 est le paramètre principal de réglage de poussée sur la majorité des turbines modernes (CFM56, LEAP, Trent…).</p>
+
+        <p>Avantages du N1 par rapport à l'EPR :</p>
+        <ul>
+          <li><strong>Non affecté par les variations atmosphériques</strong> (température, altitude) — plus stable que l'EPR ;</li>
+          <li>Déterminé par l'angle de la manette, l'altitude et la température totale d'entrée ;</li>
+          <li>En zone de <strong>turbulences</strong>, N1 est utilisé comme référence même si l'EPR est disponible (les fluctuations de pression dynamique fausseraient l'EPR) ;</li>
+          <li>La valeur maximale peut <strong>dépasser 100 %</strong> (valeur de certification en sur-régime transitoire) ;</li>
+          <li>En montée continue, le calculateur de poussée moderne <strong>ajuste automatiquement N1</strong> à mesure que l'avion monte.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          EPR = paramètre de performance thermodynamique (affecté par T° et altitude). N1 = paramètre de vitesse rotor BP (non affecté par l'atmosphère, référence préférée en turbulence). Sur Airbus A320 avec CFM56 : N1 est le paramètre principal. Sur certains anciens moteurs (JT8D, RB211) : EPR est le paramètre principal.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="torquemetre">3. Couple-mètre moteur (Torquemeter)</h1>
+
+        <p>Les <strong>turbopropulseurs</strong> transmettent leur puissance à l'hélice via un arbre de sortie. Contrairement aux turboréacteurs, ils produisent essentiellement un <strong>couple</strong> (moment de rotation) plutôt qu'une poussée directe par réaction des gaz.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Relation Puissance — Couple — Vitesse :</strong>
+          <div class="formula-display">P = T × ω</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">P = puissance (Watts ou HP) · T = couple (N·m, ft·lb, in·lb) · ω = vitesse angulaire (rad/s). Le tachymètre donne ω, le couple-mètre donne T, les deux ensemble déterminent la puissance.</p>
+        </div>
+
+        <p>Le <strong>couple</strong> est le moment de force produit par l'hélice autour de l'axe de l'arbre de sortie. Il peut être déterminé en mesurant la <strong>torsion d'un arbre de longueur connue</strong>. Son affichage en cockpit peut être en PSI (couple-mètre mécanique), ft·lb ou en pourcentage de la valeur maximale.</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS05_torquemetre.svg" alt="Couple-mètre mécanique (pression d'huile) et électronique (déphasage)">
+          <div class="fig-caption">Fig. 3 — Couple-mètres mécanique et électronique — principes et formule P = T × ω</div>
+        </div>
+
+        <h2 id="torque-mecanique">3.1 Couple-mètre mécanique</h2>
+
+        <p>Le couple-mètre mécanique est intégré dans le <strong>réducteur épicycloïdal</strong> entre l'arbre moteur et l'arbre hélice. Des <strong>engrenages hélicoïdaux</strong> génèrent un mouvement axial proportionnel au couple transmis. Ce mouvement axial agit sur un <strong>piston hydraulique</strong> qui crée une pression d'huile proportionnelle au couple. Cette pression est mesurée par un manomètre (Bourdon) et envoyée à l'indicateur cockpit.</p>
+
+        <h2 id="torque-electronique">3.2 Couple-mètre électronique</h2>
+
+        <p>Le couple-mètre électronique utilise <strong>deux roues dentées</strong> fixées sur l'arbre de sortie à deux positions différentes. Sous l'effet du couple, l'arbre se tord légèrement : les deux roues se décalent angulairement l'une par rapport à l'autre. Ce <strong>déphasage angulaire</strong> (phase shift) est mesuré par deux capteurs inductifs (Pickup 1 et Pickup 2). Un circuit électronique convertit ce déphasage en une <strong>tension DC proportionnelle au couple</strong>, envoyée à l'EFIS/ECAM.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le couple-mètre électronique est <strong>plus léger</strong> que le mécanique et <strong>compatible avec l'affichage numérique EFIS</strong>. Il est plus complexe mais ne nécessite pas de raccordements hydrauliques. Le mécanique est robuste et éprouvé mais intégré à la réduction mécanique (plus lourd, entretien complexe).
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="synchroscope">4. Synchroscope</h1>
+
+        <p>Sur les avions multi-moteurs (notamment à pistons ou turbopropulseurs), il est essentiel que tous les moteurs tournent à la <strong>même vitesse</strong> pour minimiser les vibrations structurelles, le bruit en cabine et la consommation de carburant. Le synchroscope facilite la synchronisation manuelle des régimes.</p>
+
+        <p>Le synchroscope fonctionne sur le principe d'un <strong>voltmètre alimenté par deux tacho-génies</strong>. Il compare les fréquences des alternateurs des différents moteurs. Un moteur est désigné comme <strong>moteur maître</strong> (habituellement le moteur gauche extérieur, numéro 1), les autres sont les <strong>moteurs esclaves</strong>. L'instrument indique clairement si un moteur esclave est plus rapide ou plus lent que le maître, permettant au pilote d'ajuster la manette de gaz en conséquence.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le synchroscope donne une indication <strong>qualitative</strong> (pas quantitative) du différentiel de régime entre moteurs. L'aiguille qui tourne vers la gauche (INCREASE) indique que l'esclave est plus lent → augmenter sa puissance. Vers la droite (DECREASE) → l'esclave est plus rapide → réduire. Le moteur maître est conventionnellement le moteur gauche externe (numéro 1).
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="vibrations">5. Surveillance des vibrations moteur</h1>
+
+        <p>Le but d'un système de surveillance des vibrations est de <strong>détecter tout déséquilibre rotor ou défaillance</strong> avant qu'il n'entraîne une panne moteur. Tout changement de niveau de vibration est révélateur d'un endommagement potentiel. Des alertes cockpit sont déclenchées si les seuils sont dépassés.</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS05_vibrations_synchroscope.svg" alt="Deux méthodes de surveillance des vibrations et chaîne de traitement du signal">
+          <div class="fig-caption">Fig. 4 — Surveillance des vibrations (piézoélectrique et inductif) et synchroscope multi-moteurs</div>
+        </div>
+
+        <h2 id="vib-piezo">5.1 Accéléromètre piézoélectrique</h2>
+
+        <p>Un cristal piézoélectrique est monté rigidement sur le corps du moteur avec une masse en contact. Les vibrations compriment et décompriment alternativement le cristal, qui génère une <strong>tension électrique par effet piézoélectrique</strong>, proportionnelle aux accélérations. Ce signal est envoyé à la chaîne de traitement.</p>
+
+        <h2 id="vib-bobine">5.2 Accéléromètre à bobine et aimant suspendu</h2>
+
+        <p>Le corps du capteur est boulonné au moteur. À l'intérieur, un <strong>aimant est suspendu élastiquement</strong> dans une bobine fixe. Lorsque le moteur vibre, le corps du capteur suit les vibrations, mais l'aimant reste quasi-immobile par inertie (suspendu). Le mouvement relatif de l'aimant dans la bobine génère une <strong>tension AC par induction électromagnétique</strong> (loi de Faraday), proportionnelle aux vibrations.</p>
+
+        <h2 id="vib-traitement">5.3 Chaîne de traitement et affichage</h2>
+
+        <p>Le signal brut du capteur est amplifié, puis filtré. Le filtre est l'élément clé : il <strong>supprime les fréquences normales</strong> au fonctionnement du moteur et ne laisse passer que les fréquences potentiellement <strong>dangereuses</strong>. Le signal filtré est redressé et envoyé au circuit d'alarme et à l'indicateur cockpit.</p>
+
+        <p>Les vibrations sont mesurées et affichées en <strong>Amplitude Relative</strong>, sans unité physique spécifique — uniquement des seuils numériques définis par le constructeur. Sur chaque moteur turbine, <strong>deux accéléromètres</strong> sont utilisés : un à l'entrée (lié à N1) et un à la sortie (lié à N2). L'ECAM affiche VIB N1 et VIB N2.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Les vibrations n'ont <strong>pas d'unité physique normalisée</strong> (pas de N, pas de Hz). L'affichage est en "amplitude relative" avec des seuils propres à chaque constructeur. Le filtre du système laisse passer les fréquences <strong>anormales</strong> (dangereuses) et supprime les fréquences normales — c'est l'inverse de ce qu'on pourrait attendre intuitivement.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="temps">6. Mesure du temps</h1>
+
+        <p>Certains avions enregistrent et affichent l'<strong>utilisation des moteurs en vol</strong> (heures de fonctionnement) pour suivre l'état et la maintenance. Le <strong>compteur d'heures de vol</strong> peut être couplé à un capteur embarqué qui s'active à partir d'une certaine vitesse (typiquement à l'envol).</p>
+
+        <p>L'<strong>horloge de bord</strong> fournit une référence temporelle pour plusieurs systèmes :</p>
+        <ul>
+          <li>l'<strong>ACARS</strong> (Aircraft Communications Addressing and Reporting System) — messages et comptes-rendus automatiques ;</li>
+          <li>la maintenance moteur et systèmes ;</li>
+          <li>les systèmes de navigation (FMS, RNAV) ;</li>
+          <li>les enregistreurs (FDR, CVR) — horodatage des événements.</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          L'ACARS (Aircraft Communications Addressing and Reporting System) est un système de transmission de données numériques courtes par liaison VHF ou satellite entre l'avion et les opérateurs sol. L'horloge de bord horodate chaque message ACARS, permettant le suivi en temps réel des vols et la maintenance prédictive des moteurs.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">RPM</span>
+            <span class="val-label">Unité tachymètre moteur piston</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">N1 / N2 %</span>
+            <span class="val-label">Unité tachymètre turbine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">EPR = Pt7/Pt2</span>
+            <span class="val-label">Engine Pressure Ratio turbine</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 100%</span>
+            <span class="val-label">N1 max peut dépasser 100%</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">P = T × ω</span>
+            <span class="val-label">Puissance = Couple × Vitesse ang.</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">N·m / ft·lb</span>
+            <span class="val-label">Unités de couple (torquemètre)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">±5 %</span>
+            <span class="val-label">Précision tachymètre magnétique</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3-phases</span>
+            <span class="val-label">Signal tacho-générateur</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Moteur 1</span>
+            <span class="val-label">Moteur maître synchroscope (gauche ext.)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">2 accéléro.</span>
+            <span class="val-label">Par moteur turbine (entrée + sortie)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Ampl. Relative</span>
+            <span class="val-label">Unité vibrations (sans unité physique)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">ACARS</span>
+            <span class="val-label">Système utilisant l'horloge de bord</span>
+          </div>
+        </div>
+
+        <h1 id="tacho-synthese">Tachymètres — Récapitulatif</h1>
+        <table>
+          <thead>
+            <tr><th>Type</th><th>Principe</th><th>Signal</th><th>Alimentation</th><th>Précision</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Magnétique</strong></td><td>Aimant + drag-cup + ressort</td><td>Mécanique (arbre)</td><td>Non</td><td>±5 % (T° sensitive)</td></tr>
+            <tr><td><strong>Tacho-générateur</strong></td><td>Alternateur 3-φ + moteur synchro</td><td>f ∝ RPM (3-φ AC)</td><td>Non</td><td>Haute (T° sensitive)</td></tr>
+            <tr><td><strong>Inductif</strong></td><td>Roue phonique + capteur magnétique</td><td>f impulsions ∝ RPM</td><td><strong>Oui</strong></td><td>Très haute (digital)</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="epr-n1-synthese">EPR vs N1 — Tableau comparatif</h1>
+        <table>
+          <thead>
+            <tr><th>Paramètre</th><th>Définition</th><th>Affecté par T°/Altitude</th><th>Usage préférentiel</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>EPR</strong></td><td>Pt7 / Pt2 (ratio sans unité)</td><td>Oui</td><td>Gestion poussée (anciens moteurs)</td></tr>
+            <tr><td><strong>N1 %</strong></td><td>% vitesse rotor LP (fan)</td><td>Non</td><td>Turbines modernes, zones turbulentes</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Seul le tachymètre inductif nécessite une alimentation électrique</div>
+              <div class="piege-explication">Le magnétique (arbre flexible) et le tacho-générateur (alternateur autonome) fonctionnent sans alimentation externe. Seul le tachymètre inductif (sonde inductive) nécessite du courant pour alimenter l'électro-aimant.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Obstruction Pt2 → EPR affiché trop élevé → réduction de poussée intempestive</div>
+              <div class="piege-explication">Si Pt2 est bloqué bas (glace, insecte), le dénominateur de l'EPR est artificiellement petit → EPR affiché > EPR réel → pilotes réduisent la poussée → sous-puissance au décollage. Danger critique.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">N1 peut dépasser 100%</div>
+              <div class="piege-explication">Le N1 maximum certifié peut légalement être supérieur à 100%. Cette valeur est le pourcentage d'une vitesse de référence définie par le constructeur, pas une vitesse physique absolue. Ce n'est pas une anomalie.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">En turbulences : N1 est la référence, pas EPR</div>
+              <div class="piege-explication">En zone turbulente, les fluctuations de pression dynamique faussent les indications EPR. On utilise donc N1 comme référence de poussée même si l'indicateur EPR est disponible, car N1 n'est pas affecté par les variations atmosphériques.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Torquemètre = turbopropulseurs seulement (pas turboréacteurs)</div>
+              <div class="piege-explication">Le torquemètre mesure le couple sur l'arbre d'hélice des turbopropulseurs. Les turboréacteurs purs n'ont pas de torquemètre (la poussée est mesurée par EPR ou N1). Ne pas confondre les deux familles.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Le filtre vibrations laisse passer les fréquences ANORMALES</div>
+              <div class="piege-explication">Contre-intuitif : le filtre du système de surveillance des vibrations élimine les fréquences NORMALES (inoffensives) et laisse passer les fréquences ANORMALES (dangereuses) vers l'amplificateur et le circuit d'alarme.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Vibrations : pas d'unité physique normalisée</div>
+              <div class="piege-explication">Les vibrations sont affichées en "Amplitude Relative" — un nombre sans unité physique (pas de Newton, pas de Hz). Seuls des seuils numériques définis par le constructeur sont utilisés. N1 ou N2 identifient la source de la vibration.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Moteur maître synchroscope = moteur gauche externe (n°1)</div>
+              <div class="piege-explication">Par convention, le moteur maître du synchroscope est le moteur gauche le plus externe (numéro 1). Tous les autres moteurs (esclaves) sont ajustés pour correspondre à sa fréquence.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Tacho-générateur : la fréquence est proportionnelle au RPM, pas la tension</div>
+              <div class="piege-explication">Dans un tacho-générateur, c'est la FRÉQUENCE du signal 3-phases qui est proportionnelle au RPM, pas son amplitude (tension). C'est pourquoi il n'y a pas de perte due à la résistance des câbles : la fréquence ne dépend pas de la résistance.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Torquemètre électronique : DC proportionnel au DÉPHASAGE (phase shift)</div>
+              <div class="piege-explication">Le torquemètre électronique mesure le déphasage entre deux capteurs (Pickup 1 et Pickup 2) sur l'arbre tordu. Ce déphasage est proportionnel à la torsion de l'arbre, donc au couple. La sortie est une tension DC continue.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">En quoi un tachymètre turbine diffère-t-il d'un tachymètre piston ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Piston : RPM du vilebrequin.</strong> Turbine : pourcentage N1/N2 d'une vitesse de référence compresseur. L'affichage en % permet de comparer des moteurs de tailles différentes.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel tachymètre nécessite une alimentation électrique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Le tachymètre inductif (inductive probe).</strong> Magnétique et tacho-générateur fonctionnent sans alimentation externe.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Dans le tacho-générateur, qu'est-ce qui est proportionnel au RPM ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>La fréquence du signal 3-phases AC</strong> (pas la tension). C'est pourquoi il n'y a pas de perte en ligne : la fréquence est indépendante de la résistance des câbles.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la formule de l'EPR ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>EPR = Pt7 / Pt2</strong> — Pression totale sortie tuyère divisée par pression totale entrée compresseur LP. Sans unité, toujours &gt; 1 en poussée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il si la sonde Pt2 est obstruée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>EPR affiché trop élevé</strong> (Pt2 bas → Pt7/Pt2 grand). Les pilotes réduisent la poussée → sous-puissance réelle → danger au décollage.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi N1 est-il préféré à EPR en zone turbulente ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>N1 n'est pas affecté par les variations atmosphériques</strong> (turbulences, rafales). L'EPR dépend de pressions dynamiques qui fluctuent en turbulence, rendant son indication instable.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le N1 peut-il dépasser 100 % ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Oui, parfois.</strong> Le pourcentage est relatif à une vitesse de référence du constructeur. La valeur maximale certifiée peut être légèrement supérieure à 100 %.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la formule Puissance / Couple pour les turbopropulseurs ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>P = T × ω</strong> (Puissance = Couple × Vitesse angulaire). Unités couple : N·m, ft·lb, in·lb. Affichage cockpit : PSI, ft·lb ou % de la valeur max.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le principe du torquemètre mécanique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Engrenages hélicoïdaux → force axiale ∝ couple → piston hydraulique → pression huile ∝ couple.</strong> Intégré au réducteur épicycloïdal entre arbre moteur et arbre hélice.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le principe du torquemètre électronique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Deux pickups sur l'arbre mesurent un déphasage angulaire ∝ torsion ∝ couple → tension DC proportionnelle au couple.</strong> Plus léger, données numériques compatibles EFIS.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel moteur est le moteur maître dans un synchroscope ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Le moteur gauche externe (n°1), conventionnellement.</strong> Les moteurs esclaves sont synchronisés sur sa fréquence pour réduire vibrations, bruit et consommation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur quoi travaille le synchroscope pour comparer les régimes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Il compare les fréquences des alternateurs (tacho-génies) des différents moteurs.</strong> Principe voltmètre alimenté par 2 tacho-génies. Indication qualitative (pas la valeur exacte du différentiel).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En quelles unités sont mesurées les vibrations moteur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Amplitude Relative — sans unité physique normalisée.</strong> Seuils numériques définis par le constructeur. N1 ou N2 identifient la source.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Combien d'accéléromètres par moteur turbine et où sont-ils ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 accéléromètres par moteur :</strong> un à l'entrée (lié à N1/soufflante) et un à la sortie (lié à N2/turbine HP). Affichage ECAM : VIB N1 et VIB N2.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que fait le filtre dans un système de surveillance des vibrations ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Il supprime les fréquences normales</strong> (fond de vibration harmless) et laisse passer les fréquences ANORMALES (dangereuses pour le moteur) vers l'amplificateur et l'alarme.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les deux types de capteurs de vibration ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1) Piézoélectrique</strong> : cristal comprimé/décomprimé → tension. <strong>2) Bobine/aimant suspendu</strong> : aimant inertiel dans bobine fixe → tension AC par induction (loi Faraday).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel système de communication utilise l'horloge de bord pour l'horodatage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>ACARS</strong> (Aircraft Communications Addressing and Reporting System). Aussi : FDR/CVR (horodatage), FMS (navigation), maintenance moteur.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la précision du tachymètre magnétique et pourquoi est-elle limitée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>±5 % de précision</strong>, limitée par l'influence de la température sur les propriétés magnétiques de l'aimant permanent et du matériau de la drag-cup.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur quel type de moteur utilise-t-on un torquemètre ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Turbopropulseurs uniquement.</strong> Les turbopropulseurs transmettent leur puissance principalement via un couple sur l'arbre hélice, contrairement aux turboréacteurs dont la poussée est mesurée par EPR ou N1.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le synchroscope réduit-il la consommation de carburant ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>En synchronisant les régimes,</strong> on élimine les battements (beat frequencies) entre moteurs, ce qui réduit les vibrations, améliore l'efficacité aérodynamique de l'hélice et permet un réglage de puissance optimal.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que N2 sur un turbomoteur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Vitesse de rotation du rotor Haute Pression (HP compresseur + HP turbine)</strong>, exprimée en % d'une vitesse de référence. N1 = rotor LP (fan + LP compresseur). Les deux sont affichés séparément en cockpit.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel paramètre de poussée turbine est affecté par la température OAT ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>EPR est affecté par la température et l'altitude.</strong> Mais à EPR CONSTANT, si l'OAT varie, la poussée reste constante (EPR compense automatiquement). N1 n'est pas affecté par les variations atmosphériques.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre le torquemètre mécanique et électronique en termes de masse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>L'électronique est plus léger</strong> que le mécanique (pas de raccordements hydrauliques, pas de piston, pas d'intégration dans le réducteur). Il est aussi plus complexe et ses données sont directement compatibles avec l'EFIS.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pendant la montée en palier stable, comment évolue N1 sur avion moderne ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>N1 est automatiquement ajusté à la hausse</strong> par le calculateur de poussée (FADEC/autothrust) à mesure que l'avion monte, pour maintenir la poussée de montée avec la diminution de densité de l'air.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="760" height="380" fill="#F8F9FA"/>
+  <text x="380" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F3864">Vent géostrophique vs Vent de gradient (NH)</text>
+
+  <!-- === LOW PRESSURE (left) === -->
+  <rect x="15" y="40" width="350" height="28" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="190" y="59" text-anchor="middle" font-size="12" font-weight="bold" fill="#C00000">DÉPRESSION (L) — Basses pressions</text>
+
+  <!-- Isobar arc depression -->
+  <path d="M60,220 Q190,80 320,220" fill="none" stroke="#C00000" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="190" y="100" text-anchor="middle" font-size="10" fill="#C00000">L</text>
+  <!-- Radius -->
+  <line x1="190" y1="140" x2="190" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="200" y="185" font-size="9" fill="#888">R</text>
+
+  <!-- Particle at top of curve -->
+  <circle cx="190" cy="140" r="8" fill="#2E75B6"/>
+
+  <!-- Fph (towards L, upward = towards center) -->
+  <line x1="190" y1="140" x2="190" y2="105" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="190,100 185,112 195,112" fill="#C00000"/>
+  <text x="200" y="110" font-size="10" fill="#C00000" font-weight="bold">Fp</text>
+
+  <!-- Fch (outward from center = downward) -->
+  <line x1="190" y1="140" x2="190" y2="175" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="190,180 185,168 195,168" fill="#548235"/>
+  <text x="200" y="178" font-size="10" fill="#548235" font-weight="bold">Fc</text>
+
+  <!-- Fcent (outward, same direction as Fc, adds to it) -->
+  <line x1="190" y1="140" x2="190" y2="198" stroke="#BF8F00" stroke-width="2.5"/>
+  <polygon points="190,203 185,191 195,191" fill="#BF8F00"/>
+  <text x="200" y="200" font-size="10" fill="#BF8F00" font-weight="bold">Fcent</text>
+
+  <!-- Wind vector (horizontal, to the right) -->
+  <line x1="190" y1="140" x2="250" y2="140" stroke="#1F3864" stroke-width="3"/>
+  <polygon points="255,140 243,134 243,146" fill="#1F3864"/>
+  <text x="258" y="144" font-size="11" fill="#1F3864" font-weight="bold">Vh</text>
+
+  <!-- Vg shorter, below Vh -->
+  <line x1="190" y1="155" x2="235" y2="155" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="240,155 228,149 228,161" fill="#1F3864"/>
+  <text x="243" y="159" font-size="10" fill="#1F3864">Vg</text>
+
+  <!-- Result box depression -->
+  <rect x="20" y="255" width="340" height="90" rx="6" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="190" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">En dépression : Fp &gt; Fc seule → force centrifuge AJOUTE à Fc</text>
+  <text x="190" y="292" text-anchor="middle" font-size="10" fill="#333">Pour équilibrer Fp, Vh doit être &gt; Vg</text>
+  <text x="190" y="310" text-anchor="middle" font-size="11" font-weight="bold" fill="#C00000">Vh (gradient) &gt; Vg (géostrophique)</text>
+  <text x="190" y="332" text-anchor="middle" font-size="9.5" fill="#555">La force centrifuge DIMINUE le vent de gradient par rapport au Vg</text>
+  <text x="190" y="348" text-anchor="middle" font-size="9.5" fill="#555">(le vent réel Vh est ici supérieur à Vg car Fcent aide Fc)</text>
+
+  <!-- === HIGH PRESSURE (right) === -->
+  <rect x="395" y="40" width="350" height="28" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="570" y="59" text-anchor="middle" font-size="12" font-weight="bold" fill="#548235">ANTICYCLONE (H) — Hautes pressions</text>
+
+  <!-- Isobar arc anticyclone (curves other way) -->
+  <path d="M440,100 Q570,240 700,100" fill="none" stroke="#548235" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="570" y="230" text-anchor="middle" font-size="10" fill="#548235">H</text>
+  <!-- Radius -->
+  <line x1="570" y1="165" x2="570" y2="225" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="580" y="200" font-size="9" fill="#888">R</text>
+
+  <!-- Particle at top -->
+  <circle cx="570" cy="165" r="8" fill="#2E75B6"/>
+
+  <!-- Fph (toward H = downward) -->
+  <line x1="570" y1="165" x2="570" y2="200" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="570,205 565,193 575,193" fill="#C00000"/>
+  <text x="580" y="202" font-size="10" fill="#C00000" font-weight="bold">Fp</text>
+
+  <!-- Fch (outward from H = upward) -->
+  <line x1="570" y1="165" x2="570" y2="130" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="570,125 565,137 575,137" fill="#548235"/>
+  <text x="580" y="127" font-size="10" fill="#548235" font-weight="bold">Fc</text>
+
+  <!-- Fcent (away from center = upward too, OPPOSES Fp by adding to Fc) -->
+  <line x1="570" y1="165" x2="570" y2="110" stroke="#BF8F00" stroke-width="2.5"/>
+  <polygon points="570,105 565,117 575,117" fill="#BF8F00"/>
+  <text x="580" y="108" font-size="10" fill="#BF8F00" font-weight="bold">Fcent</text>
+
+  <!-- Wind vector (horizontal to the right) -->
+  <line x1="570" y1="165" x2="620" y2="165" stroke="#1F3864" stroke-width="3"/>
+  <polygon points="625,165 613,159 613,171" fill="#1F3864"/>
+  <text x="628" y="169" font-size="11" fill="#1F3864" font-weight="bold">Vh</text>
+
+  <!-- Vg longer dashed -->
+  <line x1="570" y1="180" x2="632" y2="180" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="637,180 625,174 625,186" fill="#1F3864"/>
+  <text x="640" y="184" font-size="10" fill="#1F3864">Vg</text>
+
+  <!-- Result box anticyclone -->
+  <rect x="400" y="255" width="340" height="90" rx="6" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="570" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#548235">En anticyclone : Fcent RÉDUIT la force centrifuge nette</text>
+  <text x="570" y="292" text-anchor="middle" font-size="10" fill="#333">Fp doit être plus faible pour l'équilibre → Vh &lt; Vg</text>
+  <text x="570" y="310" text-anchor="middle" font-size="11" font-weight="bold" fill="#548235">Vh (gradient) &lt; Vg (géostrophique)</text>
+  <text x="570" y="332" text-anchor="middle" font-size="9.5" fill="#555">La force centrifuge AUGMENTE le vent géostrophique</text>
+  <text x="570" y="348" text-anchor="middle" font-size="9.5" fill="#555">(le vent réel Vh est ici inférieur au Vg calculé)</text>
+</svg>

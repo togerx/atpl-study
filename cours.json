@@ -7,6 +7,35 @@
       "description": "Convention de Chicago, OACI, EASA, règles de l'air — Module 010",
       "couleur": "#E2EFDA",
       "cours": [
+        {
+          "code": "AL01",
+          "titre": "Civil World Organisations — Organisations mondiales de l'aviation civile",
+          "description": "OACI (Convention de Chicago, structure, SARPs), EASA (Hard/Soft Law), Eurocontrol (ATFM, FUA, CTOT), IATA",
+          "tags": ["oaci", "easa"],
+          "lecture_min": 25
+        },
+        {
+          "code": "AL04",
+          "titre": "Règles de l'Air — ICAO Annexe 2 & SERA",
+          "matiere": "droit-aerien",
+          "fichier": "droit-aerien/AL04.html",
+          "tags": ["OACI", "EASA", "SERA", "exam-frequent"],
+          "lo": ["010.05.01.00", "010.05.03.01"]
+        },
+        {
+          "code": "AL1213",
+          "titre": "Service de Contrôle d'Aérodrome",
+          "description": "Zones d'aérodrome, clearances, séparation sur piste, turbulence de sillage OACI et RECAT-EU.",
+          "tags": ["oaci", "easa"],
+          "lecture_min": 25
+        },
+        {
+          "code": "AL14",
+          "titre": "Flight Information Service & Air Traffic Advisory Service",
+          "description": "FIS, AFIS, ATIS (Voice & D-ATIS) et service consultatif classe F — Annexe 11 OACI, ICAO Doc 4444, EASA SERA",
+          "tags": ["oaci", "easa"],
+          "lecture_min": 20
+        }
       ]
     },
     {
@@ -40,6 +69,48 @@
       "description": "Pitot-statique, gyroscopes, compas, FMS, EFIS — Module 022",
       "couleur": "#DEEAF6",
       "cours": [
+        {
+          "code": "INS02",
+          "titre": "Manomètres et capteurs de pression",
+          "description": "Définitions pression absolue/manométrique/différentielle, unités (hPa, PSI, inHg), types de capteurs (diaphragme, capsule, soufflet, Bourdon, solid state) et instruments de pression avion.",
+          "tags": ["easa", "exam"],
+          "lecture_min": 20
+        },
+        {
+          "code": "INS03",
+          "titre": "Mesures et Systèmes de Détection de Température",
+          "description": "Étude approfondie des capteurs thermiques aéronautiques (bilames, thermocouples, Pt100) et de l'interprétation de leurs indicateurs.",
+          "tags": ["easa", "instruments", "exam"],
+          "lecture_min": 8
+        },
+        {
+          "code": "INS04",
+          "titre": "Jauges de Carburant et Débitmètres",
+          "description": "Analyse des circuits de jaugeage volumétriques et massiques (capacitifs), calculs d'avitaillement et fonctionnement des débitmètres intégrateurs.",
+          "tags": ["easa", "instruments", "exam"],
+          "lecture_min": 10
+        },
+        {
+          "code": "INS05",
+          "titre": "Tachymètre, EPR/N1, Torquemètre, Synchroscope et Vibrations",
+          "description": "3 types de tachymètres (magnétique, tacho-générateur, inductif), EPR vs N1 turbine, torquemètre turbopropulseur (P=Tω), synchroscope multi-moteurs, surveillance vibrations et mesure du temps.",
+          "tags": ["easa", "exam"],
+          "lecture_min": 22
+        },
+        {
+          "code": "INS08",
+          "titre": "Mesure de l'Angle d'Attaque",
+          "description": "Définition de l'AoA, sondes (paddle, alpha vane, null-seeking), ADC, stall warning, indicateurs et pannes.",
+          "tags": ["easa"],
+          "lecture_min": 18
+        },
+        {
+          "code": "INS11",
+          "titre": "Variomètre — Vertical Speed Indicator (VSI)",
+          "description": "Principe barométrique, IVSI (dash-pot), VSI inertiel ADIRS, erreurs (time lag, blocage statique), calcul ROD/pente.",
+          "tags": ["easa"],
+          "lecture_min": 18
+        }
       ]
     },
     {
@@ -138,6 +209,20 @@
       "description": "Atmosphère, nuages, phénomènes dangereux, codes METAR/TAF — Module 050",
       "couleur": "#DEEAF6",
       "cours": [
+        {
+          "code": "MET08",
+          "titre": "Pression atmosphérique",
+          "description": "Définition, mesure, QFE/QFF, variations verticales (loi de Laplace, mètre géopotentiel), représentation isobarique et centres d'action thermiques/dynamiques.",
+          "tags": ["oaci", "easa", "exam"],
+          "lecture_min": 30
+        },
+        {
+          "code": "MET15",
+          "titre": "Le vent",
+          "description": "Définition, unités, vent géostrophique, force de Coriolis, règle de Buys-Ballot, vent de gradient, couche limite, spirale d'Ekman, convergence/divergence, brises côtières.",
+          "tags": ["oaci", "easa", "exam"],
+          "lecture_min": 35
+        }
       ]
     },
     {
@@ -185,6 +270,13 @@
           "description": "Mach, compressibilité, ondes de choc, Mcrit, Mach tuck, aile en flèche, profil supercritique, coffin corner.",
           "tags": ["easa", "exam"],
           "lecture_min": 30
+        },
+        {
+          "code": "PFL16",
+          "titre": "Limitations structurales — Flutter, Enveloppes de manœuvre et de rafale",
+          "description": "Flutter aéroélastique, diagramme V-n CS-25/CS-23, vitesses de conception VA/VB/VC/VD, enveloppe de rafale et VRA.",
+          "tags": ["easa", "exam"],
+          "lecture_min": 35
         }
       ]
     }

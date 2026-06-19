@@ -1,0 +1,84 @@
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="720" height="360" fill="#F8F9FA"/>
+  <text x="360" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F3864">Vent de surface (10 m) — Déviation par rapport aux isobares</text>
+
+  <!-- ===  LEFT: Over sea === -->
+  <rect x="15" y="42" width="330" height="26" rx="5" fill="#2E75B6"/>
+  <text x="180" y="60" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Sur MER (faible rugosité)</text>
+
+  <!-- Isobar over sea -->
+  <line x1="30" y1="190" x2="345" y2="190" stroke="#2E75B6" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="20" y="194" text-anchor="end" font-size="9" fill="#2E75B6" font-weight="bold">Isobare</text>
+  <text x="280" y="184" font-size="9" fill="#2E75B6">HP →</text>
+  <text x="280" y="202" font-size="9" fill="#C00000">← BP</text>
+
+  <!-- Vg (along isobar) -->
+  <line x1="110" y1="190" x2="260" y2="190" stroke="#1F3864" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <polygon points="265,190 251,184 251,196" fill="#1F3864"/>
+  <text x="175" y="178" text-anchor="middle" font-size="10" fill="#1F3864">Vg (vent géostrophique)</text>
+
+  <!-- Wind at surface over sea: 15° deviation, 2/3 Vg -->
+  <!-- Particle -->
+  <circle cx="165" cy="190" r="7" fill="#2E75B6"/>
+  <!-- Surface wind vector: 15° from isobar towards LP, 2/3 length of Vg -->
+  <!-- angle 15° below the isobar direction (toward LP = downward here) -->
+  <line x1="165" y1="190" x2="258" y2="165" stroke="#2E75B6" stroke-width="3"/>
+  <polygon points="262,163 248,162 254,175" fill="#2E75B6"/>
+  <text x="268" y="161" font-size="10" fill="#2E75B6" font-weight="bold">V surface</text>
+
+  <!-- Angle arc 15° -->
+  <path d="M195,190 A30,30 0 0,0 194,181" fill="none" stroke="#BF8F00" stroke-width="1.8"/>
+  <text x="200" y="188" font-size="11" fill="#BF8F00" font-weight="bold">15°</text>
+
+  <!-- Friction force (opposing wind) -->
+  <line x1="165" y1="190" x2="100" y2="208" stroke="#888" stroke-width="1.8" stroke-dasharray="4,3"/>
+  <polygon points="97,209 110,205 106,218" fill="#888"/>
+  <text x="70" y="222" font-size="9" fill="#888">Ffh (friction)</text>
+
+  <!-- Values box sea -->
+  <rect x="20" y="255" width="320" height="68" rx="6" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="180" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">Sur mer — Faible rugosité de surface</text>
+  <text x="180" y="293" text-anchor="middle" font-size="11" font-weight="bold" fill="#2E75B6">V = 2/3 · Vg</text>
+  <text x="180" y="311" text-anchor="middle" font-size="11" font-weight="bold" fill="#BF8F00">μ = 15° avec les isobares (vers les BP)</text>
+
+  <!-- ===  RIGHT: Over land === -->
+  <rect x="375" y="42" width="330" height="26" rx="5" fill="#548235"/>
+  <text x="540" y="60" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Sur TERRE (forte rugosité)</text>
+
+  <!-- Isobar over land -->
+  <line x1="390" y1="190" x2="705" y2="190" stroke="#548235" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="380" y="194" text-anchor="end" font-size="9" fill="#548235" font-weight="bold">Isobare</text>
+  <text x="640" y="184" font-size="9" fill="#2E75B6">HP →</text>
+  <text x="640" y="202" font-size="9" fill="#C00000">← BP</text>
+
+  <!-- Vg (along isobar) -->
+  <line x1="470" y1="190" x2="620" y2="190" stroke="#1F3864" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <polygon points="625,190 611,184 611,196" fill="#1F3864"/>
+  <text x="535" y="178" text-anchor="middle" font-size="10" fill="#1F3864">Vg (vent géostrophique)</text>
+
+  <!-- Wind at surface over land: 30° deviation, 1/2 Vg -->
+  <circle cx="525" cy="190" r="7" fill="#548235"/>
+  <!-- 30° angle - more deviation -->
+  <line x1="525" y1="190" x2="593" y2="152" stroke="#548235" stroke-width="3"/>
+  <polygon points="597,150 581,152 587,165" fill="#548235"/>
+  <text x="600" y="148" font-size="10" fill="#548235" font-weight="bold">V surface</text>
+
+  <!-- Angle arc 30° -->
+  <path d="M555,190 A30,30 0 0,0 551,175" fill="none" stroke="#BF8F00" stroke-width="1.8"/>
+  <text x="558" y="183" font-size="11" fill="#BF8F00" font-weight="bold">30°</text>
+
+  <!-- Friction force -->
+  <line x1="525" y1="190" x2="450" y2="212" stroke="#888" stroke-width="1.8" stroke-dasharray="4,3"/>
+  <polygon points="447,213 460,208 456,221" fill="#888"/>
+  <text x="420" y="226" font-size="9" fill="#888">Ffh (friction)</text>
+
+  <!-- Values box land -->
+  <rect x="380" y="255" width="320" height="68" rx="6" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="540" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">Sur terre — Forte rugosité de surface</text>
+  <text x="540" y="293" text-anchor="middle" font-size="11" font-weight="bold" fill="#548235">V = 1/2 · Vg</text>
+  <text x="540" y="311" text-anchor="middle" font-size="11" font-weight="bold" fill="#BF8F00">μ = 30° avec les isobares (vers les BP)</text>
+
+  <!-- Memory tip -->
+  <rect x="15" y="330" width="690" height="24" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="360" y="346" text-anchor="middle" font-size="10" font-weight="bold" fill="#BF8F00">Mnémotechnique : Plus la surface est rugueuse → plus la friction est forte → plus la déviation est grande et la vitesse réduite</text>
+</svg>

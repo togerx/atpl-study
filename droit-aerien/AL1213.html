@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL1213 — Service de Contrôle d'Aérodrome · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">AL1213 · Contrôle d'Aérodrome</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="AL1213" data-matiere="droit-aerien">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Droit Aérien</a>
+        <span class="sep">›</span>
+        <span>AL1213</span>
+      </div>
+      <div class="cours-code-badge">AL1213</div>
+      <h1 class="cours-title">Service de Contrôle d'Aérodrome</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA / SERA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~25 min</span>
+        <span class="cours-meta-item">❓ 20 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="definitions">1. Définitions essentielles</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <p>Le service de contrôle d'aérodrome (<em>aerodrome control service</em>) s'applique à un ensemble précis de zones et de trafics dont la connaissance exacte est indispensable à l'examen ATPL.</p>
+
+        <h2 id="trafic-aerodrome">1.1 Trafic d'aérodrome (Aerodrome traffic)</h2>
+        <p>Le trafic d'aérodrome comprend <strong>deux composantes</strong> : tout le trafic circulant sur l'aire de manœuvre d'un aérodrome, et tous les aéronefs évoluant dans les environs de l'aérodrome (<em>vicinity of an aerodrome</em>). Cette définition est importante car elle détermine le périmètre de responsabilité de la tour.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Trafic d'aérodrome = Aire de manœuvre + aéronefs dans les environs (vicinity)</strong><br>
+          "Vicinity" = aéronefs entrant ou quittant le circuit de circulation d'aérodrome.
+        </div>
+
+        <h2 id="zones-aerodrome">1.2 Les zones de l'aérodrome</h2>
+        <p>L'aérodrome est structuré en zones emboîtées qu'il faut distinguer rigoureusement, car elles déterminent les règles de séparation et les autorités compétentes.</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_zones_aerodrome.svg" alt="Zones de l'aérodrome : manoeuvring area, apron, movement area">
+          <div class="fig-caption">Fig. 1 — Structure des zones d'un aérodrome (OACI Annexe 11)</div>
+        </div>
+
+        <p>L'<strong>aire de trafic</strong> (Apron ou Traffic Area) est la zone définie destinée à accueillir les aéronefs pour l'embarquement ou le débarquement de passagers, du courrier, du fret, ainsi que pour l'avitaillement, le stationnement ou la maintenance.</p>
+
+        <p>L'<strong>aire de manœuvre</strong> (<em>manoeuvring area</em>) désigne la partie de l'aérodrome utilisée pour les décollages, atterrissages et le roulage des aéronefs — à l'exclusion des aires de trafic. Elle comprend donc la piste (<em>runway</em>) et les voies de circulation (<em>taxiways</em>).</p>
+
+        <p>L'<strong>aire de mouvement</strong> (<em>movement area</em>) est l'union des deux : <strong>Apron + Manoeuvring area</strong>. C'est la totalité de la surface de l'aérodrome utilisée par les aéronefs.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">Manoeuvring</span>
+            <span class="val-label">Piste + Taxiways (hors apron)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Apron</span>
+            <span class="val-label">Aire de trafic (stationnement)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Movement</span>
+            <span class="val-label">Manoeuvring + Apron</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'<strong>apron</strong> (aire de trafic) fait partie de la <em>movement area</em> mais <strong>pas</strong> de la <em>manoeuvring area</em>. Le service de contrôle sol gère les taxiways <em>et</em> l'apron, mais il n'y a <strong>pas de prévention des collisions</strong> sur l'apron car le contact radio est obligatoire pour les aéronefs seulement (pas pour les véhicules ou le personnel).
+        </div>
+
+        <h2 id="atz-ctr">1.3 ATZ et CTR</h2>
+        <p>L'<strong>ATZ</strong> (<em>Aerodrome Traffic Zone</em>) est un espace aérien cylindrique entourant l'aérodrome, géré par la tour de contrôle. La <strong>CTR</strong> (<em>Control Zone</em>, zone de contrôle) est un espace aérien contrôlé s'étendant vers le bas jusqu'au sol autour d'un aérodrome à trafic IFR, s'inscrivant dans une TMA (<em>Terminal Manoeuvring Area</em>).</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_atz_ctr.svg" alt="ATZ vs CTR/TMA">
+          <div class="fig-caption">Fig. 2 — ATZ (à gauche, simple aérodrome) vs CTR + TMA (à droite, aérodrome IFR)</div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="fonctions">2. Fonctions du service de contrôle d'aérodrome</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="deux-missions">2.1 Les deux missions fondamentales</h2>
+        <p>Le service de contrôle d'aérodrome a deux missions complémentaires :</p>
+        <ul>
+          <li><strong>Assurer un écoulement sûr, ordonné et rapide du trafic</strong> (<em>safe, orderly and expeditious flow of traffic</em>)</li>
+          <li><strong>Prévenir les collisions</strong> entre aéronefs et entre aéronefs et obstacles</li>
+        </ul>
+
+        <h2 id="prevention-collisions">2.2 Prévention des collisions — quoi et où</h2>
+        <p>La prévention active s'applique dans six situations précises :</p>
+        <ul>
+          <li>Entre aéronefs évoluant dans le circuit de trafic d'aérodrome</li>
+          <li>Entre aéronefs manœuvrant sur l'aire de manœuvre (piste et taxiway)</li>
+          <li>Entre aéronefs en atterrissage et au décollage</li>
+          <li>Entre aéronefs et véhicules sur l'aire de manœuvre</li>
+          <li>Entre aéronefs sur l'aire de manœuvre et les obstacles (<em>obstructions</em>) sur cette aire</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          La tour utilise <strong>3 services ATS</strong> simultanément : le service de <strong>contrôle</strong> (séparation et ordre du trafic), le service d'<strong>information de vol</strong> (<em>flight information service</em>) et le service d'<strong>alerte</strong> (<em>alerting service</em>).
+        </div>
+
+        <h2 id="positions-travail">2.3 Postes de travail (Working Positions)</h2>
+        <p>La tour de contrôle d'aérodrome est organisée en plusieurs postes, chacun responsable d'une zone précise :</p>
+
+        <table>
+          <thead>
+            <tr><th>Poste</th><th>Zone de responsabilité</th><th>Exemple d'indicatif</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tower Controller</strong></td>
+              <td>Piste (runway) + circuit de trafic d'aérodrome</td>
+              <td>SALON TOWER</td>
+            </tr>
+            <tr>
+              <td><strong>Ground Controller</strong></td>
+              <td>Taxiways + aire de trafic (apron)<br><em>Pas de prévention collision sur apron</em></td>
+              <td>SALON GROUND</td>
+            </tr>
+            <tr>
+              <td><strong>Clearance Delivery</strong></td>
+              <td>Clairances de démarrage + clairances ATC pour vols IFR au départ</td>
+              <td>PROVENCE DELIVERY</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>Tower Controller = Piste + Circuit</strong> — <strong>Ground Controller = Taxiways + Apron</strong>. Le contact radio est obligatoire pour les aéronefs sur l'apron, mais pas pour les véhicules/personnel, d'où l'absence de service de prévention des collisions sur l'apron.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="clearances-circuit">3. Clairances et circuit de trafic</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="sequence-clearances">3.1 Séquence des clairances</h2>
+        <p>Un vol type depuis un aérodrome contrôlé reçoit ses clairances dans un ordre précis, attribuées par deux contrôleurs différents selon la phase :</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_circuit_clearances.svg" alt="Circuit d'aérodrome et séquence des clairances">
+          <div class="fig-caption">Fig. 3 — Séquence des clairances et circuit d'aérodrome (TWR = bleu, GND = rouge)</div>
+        </div>
+
+        <p>La séquence complète est la suivante :</p>
+        <ol>
+          <li><strong>Start-up &amp; Taxy clearance</strong> avec la piste en service et les informations de départ → <em>Ground controller</em></li>
+          <li><strong>Lining-up clearance</strong> (<em>autorisation d'alignement</em>) : mise en attente au point d'arrêt, transfert au Tower controller → <em>Tower controller</em></li>
+          <li><strong>Take-off clearance</strong> (autorisation de décollage) → <em>Tower controller</em></li>
+          <li><strong>Landing clearance</strong> (autorisation d'atterrissage) → <em>Tower controller</em></li>
+          <li><strong>Taxy clearance to apron</strong> (vers l'aire de trafic, une fois la piste dégagée) → <em>Ground controller</em></li>
+          <li>Stationnement (parking)</li>
+        </ol>
+
+        <h2 id="patterns">3.2 Types d'intégration en circuit (Different Patterns)</h2>
+        <p>Un aéronef peut intégrer le circuit d'aérodrome de différentes façons. Dans tous les cas sauf le Final, le contrôleur attribue un <em>numéro dans le circuit</em> (<em>number in the circuit</em>) :</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_patterns.svg" alt="Différents types d'intégration en circuit d'aérodrome">
+          <div class="fig-caption">Fig. 4 — Types d'intégration au circuit d'aérodrome</div>
+        </div>
+
+        <table>
+          <thead>
+            <tr><th>Intégration</th><th>Position</th><th>Altitude typique</th><th>Numéro attribué</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Downwind</strong></td><td>Vent arrière parallèle à la piste</td><td>1500'/1000' AGL (abeam tower)</td><td>Oui</td></tr>
+            <tr><td><strong>Long final</strong> (straight-in)</td><td>Finale étendue, dans l'axe piste</td><td>4/5 NM, axe piste, 1500' AGL</td><td>Oui</td></tr>
+            <tr><td><strong>Join base</strong></td><td>Intégration directe en vent traversier</td><td>1500' AGL</td><td>Oui</td></tr>
+            <tr><td><strong>Initial Point</strong></td><td>Point initial (arrivée chasse)</td><td>4/5 NM, axe piste, 2000' AGL</td><td>Oui (chasse)</td></tr>
+            <tr><td><strong>Final</strong></td><td>En finale courte</td><td>—</td><td>Non → Landing clearance</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La <strong>landing clearance</strong> n'est délivrée qu'en <strong>finale (pos. 5)</strong>, pas dès l'intégration en downwind. Dans le circuit, le contrôleur donne l'information de trafic et le numéro dans le circuit. Une fois "traffic in sight" annoncé, <strong>le pilote est responsable</strong> de maintenir l'espacement derrière le n°1 — la séparation active ne s'applique que sur la piste.
+        </div>
+
+        <h2 id="selection-piste">3.3 Sélection de la piste en service</h2>
+        <p>En règle générale, les aéronefs décollent et atterrissent face au vent (<em>into wind</em>). Cependant, l'unité de contrôle peut tenir compte d'autres facteurs :</p>
+        <ul>
+          <li>Le circuit de trafic d'aérodrome (<em>aerodrome traffic circuit</em>)</li>
+          <li>Les aides à l'approche et à l'atterrissage disponibles</li>
+          <li>Les procédures de réduction du bruit (<em>noise abatement purposes</em>)</li>
+        </ul>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="separation-piste">4. Séparation sur la piste et positions d'attente</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="holding-position">4.1 Position d'attente (Holding Position)</h2>
+        <p>Un aéronef ne peut s'aligner (<em>line up</em>) sur la piste tant qu'un autre aéronef est en train d'atterrir et n'a pas encore franchi le <strong>holding position point</strong>. La distance de la position d'attente au bord de la piste dépend de la longueur de piste :</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_holding_position.svg" alt="Positions d'attente selon la longueur de piste">
+          <div class="fig-caption">Fig. 5 — Positions d'attente : 50 m (piste ≥ 900 m) ou 30 m (piste &lt; 900 m)</div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">50 m</span>
+            <span class="val-label">Holding position — RWY ≥ 900 m</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 m</span>
+            <span class="val-label">Holding position — RWY &lt; 900 m</span>
+          </div>
+        </div>
+
+        <h2 id="runway-vacated">4.2 Compte rendu "Runway Vacated"</h2>
+        <p>Le compte rendu "runway vacated" (<em>piste libérée</em>) est fait lorsque l'aéronef en entier (<em>entire aircraft</em>) se trouve au-delà du <strong>holding position point</strong> pertinent. Ce n'est qu'à ce moment que la piste est considérée comme dégagée par le contrôleur.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          "Runway vacated" ne signifie pas simplement que l'avion a quitté la piste revêtue — il faut que <strong>l'intégralité de l'appareil</strong> soit au-delà du <em>holding position point</em>, y compris le winglet ou la queue. Ne pas confondre avec le simple engagement sur la voie de sortie.
+        </div>
+
+        <h2 id="separation-standard">4.3 Séparation standard sur la piste</h2>
+        <p>Une clairance de décollage ou d'atterrissage peut être accordée dès lors que l'aéronef précédent a rempli l'une des trois conditions suivantes :</p>
+        <ul>
+          <li>A dégagé la piste (<em>runway vacated</em>)</li>
+          <li>A survolé l'extrémité opposée de la piste (<em>overflying the opposite runway end</em>)</li>
+          <li>A commencé un virage (<em>beginning turn</em>)</li>
+        </ul>
+
+        <p>En présence de turbulence de sillage, une séparation minimale de <strong>2 minutes</strong> s'applique dans les cas suivants :</p>
+        <ul>
+          <li>Même piste (<em>same runway</em>)</li>
+          <li>Pistes parallèles dont les axes sont séparés de moins de 760 mètres</li>
+          <li>Pistes croisées (<em>crossing runways</em>)</li>
+          <li>Pistes parallèles séparées de 760 m ou plus, si les trajectoires de départ se croisent (<em>if crossing departure tracks</em>)</li>
+        </ul>
+
+        <h2 id="priority-landing">4.4 Priorité d'atterrissage</h2>
+        <p>Certains aéronefs ont une priorité absolue d'atterrissage. Par ordre de priorité :</p>
+        <ul>
+          <li>Aéronefs déclarant une <strong>urgence ou une détresse</strong> (<em>emergency or urgency</em>)</li>
+          <li><strong>Aéronefs hospitaliers</strong> ou transportant des blessés graves nécessitant des soins médicaux urgents</li>
+          <li>Aéronefs engagés dans des <strong>opérations de recherche et sauvetage</strong> (<em>search and rescue</em>)</li>
+          <li>Autres aéronefs désignés par l'autorité compétente</li>
+        </ul>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="turbulence-sillage">5. Turbulence de sillage (Wake Turbulence)</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="categories-oaci">5.1 Catégories OACI</h2>
+        <p>L'OACI classe les aéronefs en quatre catégories basées sur la <strong>MTOW</strong> (masse maximale certifiée au décollage) :</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">L (Light)</span>
+            <span class="val-label">MTOW ≤ 7 t</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">M (Medium)</span>
+            <span class="val-label">7 t &lt; MTOW ≤ 136 t</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">H (Heavy)</span>
+            <span class="val-label">MTOW &gt; 136 t</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">S / J (Super)</span>
+            <span class="val-label">A380 uniquement</span>
+          </div>
+        </div>
+
+        <p>Exemples de MTOW à connaître : A380 = 520 t, A124 = 392 t, B747 = 330 t. Ces trois appareils sont tous en catégorie <strong>H ou S</strong> (le A380 est le seul Super J).</p>
+
+        <p>Un aéronef classé <strong>HEAVY ou SUPER</strong> doit inclure ces mots immédiatement après son indicatif d'appel lors du <strong>premier contact avec la tour au départ</strong> (et avec l'approche à l'arrivée).</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Seuls HEAVY et SUPER annoncent leur catégorie. MEDIUM et LIGHT ne le font pas. Le A380 est la seule catégorie Super/J — toute question sur une "catégorie spéciale A380" pointe vers Super J.
+        </div>
+
+        <h2 id="minima-temps-oaci">5.2 Minima de séparation temporelle OACI</h2>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_wake_turb_oaci.png" alt="Minima de séparation temporelle turbulence de sillage OACI">
+          <div class="fig-caption">Fig. 6 — Minima de séparation temporelle OACI (arrivées et départs)</div>
+        </div>
+
+        <h3 id="deux-arrivees">5.2.1 Deux aéronefs en arrivée</h3>
+        <p>Lorsque deux aéronefs arrivent en séquence, les minima de séparation temporelle sont :</p>
+        <ul>
+          <li><strong>3 minutes</strong> : L derrière H ou M</li>
+          <li><strong>3 minutes</strong> : M derrière A380 (Super J)</li>
+          <li><strong>4 minutes</strong> : L derrière A380 (Super J)</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Il n'y a pas de minima spéciaux entre M derrière H (catégories identiques ou proches), ni entre H derrière H — la séparation standard s'applique. Les minima supplémentaires ne concernent que les cas où l'aéronef suiveur risque réellement de rencontrer le sillage du précédent.
+        </div>
+
+        <h3 id="deux-departs">5.2.2 Deux aéronefs au départ</h3>
+        <p>Pour deux aéronefs au départ depuis le même point de décollage :</p>
+        <ul>
+          <li><strong>3 minutes</strong> : L ou M derrière A380</li>
+        </ul>
+        <p>Lorsque le deuxième aéronef décolle depuis une partie intermédiaire de la piste (<em>intermediate part</em>) :</p>
+        <ul>
+          <li><strong>3 minutes</strong> : L ou M derrière H, et L derrière M</li>
+          <li><strong>4 minutes</strong> : L ou M derrière A380</li>
+        </ul>
+        <p>Lorsque le deuxième aéronef décolle en direction opposée :</p>
+        <ul>
+          <li><strong>2 minutes</strong> : L ou M derrière H, et L derrière M</li>
+        </ul>
+
+        
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Le décollage depuis un point intermédiaire est plus risqué car l'aéronef pénètre dans la zone où le sillage du précédent s'est déposé au sol et peut encore stationner. D'où des minima <strong>plus longs</strong> que pour un décollage depuis le seuil.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="recat-eu">6. RECAT-EU — Recatégorisation européenne</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="principe-recat">6.1 Principe et contexte</h2>
+        <p>Le système RECAT-EU (<em>European Wake Separation RECATgorisation</em>) est un système de classification plus fin, développé pour augmenter la capacité des aéroports à fort trafic. Paris-CDG a été le pionnier de son implémentation en Europe, depuis le <strong>22 mars 2016</strong> (AIC France A 03/16), suivi de Paris-Le Bourget et Pontoise-Cormeilles-en-Vexin.</p>
+
+        <p>Alors que le système OACI classique utilise 4 catégories basées sur la seule MTOW, RECAT-EU en utilise <strong>6</strong>, en combinant la MTOW et l'<strong>envergure</strong> (<em>wingspan</em>) :</p>
+
+        <table>
+          <thead>
+            <tr><th>Catégorie RECAT-EU</th><th>Critères</th><th>Exemples</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Super Gros Porteur</strong></td><td>MTOW ≥ 100 000 kg et envergure &gt; 72 m</td><td>A380, A124</td></tr>
+            <tr><td><strong>Gros Porteur Cl. Supérieure</strong></td><td>MTOW ≥ 100 000 kg et 60 m ≤ envergure ≤ 72 m</td><td>B777, B747, A330, A350, B787</td></tr>
+            <tr><td><strong>Gros Porteur Cl. Inférieure</strong></td><td>MTOW ≥ 100 000 kg et envergure &lt; 52 m</td><td>B757, B767, A310, A300</td></tr>
+            <tr><td><strong>Moyen Tonnage Cl. Supérieure</strong></td><td>15 000 kg &lt; MTOW &lt; 100 000 kg et envergure &gt; 32 m</td><td>B737-6/7/8/9, A318-321, C130</td></tr>
+            <tr><td><strong>Moyen Tonnage Cl. Inférieure</strong></td><td>15 000 kg &lt; MTOW &lt; 100 000 kg et envergure ≤ 32 m</td><td>B737-3/4/5, ATR, DH8, CRJ</td></tr>
+            <tr><td><strong>Faible Tonnage</strong></td><td>MTOW ≤ 15 000 kg</td><td>D328, C560, FA10, EMB120</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="table-recat">6.2 Table des séparations RECAT-EU</h2>
+        <p>Les minima de séparation RECAT-EU, exprimés en secondes, permettent souvent des intervalles <strong>plus courts</strong> que les 3-4 minutes OACI classiques (notamment entre catégories proches), augmentant ainsi la capacité de la piste.</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL1213_recat_eu.png" alt="Table RECAT-EU des minima de séparation temporelle">
+          <div class="fig-caption">Fig. 7 — Table RECAT-EU : minima de séparation temporelle en secondes (Paris-CDG depuis 2016)</div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          À Paris-CDG (4 pistes, 3 tours de contrôle, ~1 500 vols/jour), RECAT-EU vise une capacité de 82 mouvements/heure à l'horizon 2020. Pendant les heures de pointe : 1 décollage et 1 atterrissage toutes les 50 secondes.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="service-information-vol">7. Service d'information de vol de l'aérodrome</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="informations-fournies">7.1 Informations fournies par la tour</h2>
+        <p>La tour de contrôle fournit un service d'information de vol comprenant des informations sur les conditions météorologiques, l'état de la piste et les aides à la navigation. Les informations spécifiques à transmettre incluent :</p>
+        <ul>
+          <li>Travaux ou travaux de maintenance sur l'aire de mouvement</li>
+          <li>Surfaces dégradées (<em>broken surfaces</em>)</li>
+          <li>Neige, givre, glace, eau, slush sur l'aire de mouvement</li>
+          <li>Autres dangers temporaires (oiseaux, etc.)</li>
+          <li>Panne partielle ou totale du système d'éclairage de l'aérodrome</li>
+          <li>Toute autre information pertinente</li>
+        </ul>
+
+        <h2 id="info-depart">7.2 Informations avant le roulage (Départ)</h2>
+        <p>Avant le roulage, l'équipage doit être informé des éléments suivants :</p>
+        <ul>
+          <li>La piste à utiliser</li>
+          <li>Le vent de surface (vitesse et direction, y compris variations) — <strong>en degrés magnétiques</strong></li>
+          <li>Le calage altimétrique QNH (et QFE si requis)</li>
+          <li>La température de l'air pour la piste à utiliser (pour les aéronefs à réaction)</li>
+          <li>La visibilité</li>
+          <li>L'heure exacte</li>
+          <li>Le CTOT (<em>Calculated Take-Off Time</em>) si un créneau ATFM est attribué (-5 / +10)</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le vent de surface transmis aux pilotes par les unités ATS est toujours exprimé en <strong>degrés magnétiques</strong> — contrairement à la météorologie qui utilise les degrés vrais.
+        </div>
+
+        <h2 id="info-avant-decollage">7.3 Avant le décollage</h2>
+        <p>Juste avant le décollage, l'équipage est informé de tout changement significatif dans :</p>
+        <ul>
+          <li>Le vent de surface, la température et la visibilité/RVR</li>
+          <li>Les conditions météorologiques significatives dans la zone de décollage et de montée initiale (<em>take-off and climb-out area</em>)</li>
+        </ul>
+
+        <h2 id="info-arrivee">7.4 Avant l'entrée dans le circuit (Arrivée)</h2>
+        <p>Avant d'entrer dans le circuit, l'équipage doit recevoir : la piste en service, le vent de surface (avec variations) et le calage QNH (et QFE si requis).</p>
+
+        <h2 id="vfr-svfr">7.5 Suspension du trafic VFR — SVFR</h2>
+        <p>Lorsque les conditions météorologiques passent en IMC (visi 5km/ htal 1500m/ vtal 300m/ pfond 1500m) , la tour est responsable de la suspension du trafic VFR. Dans ce cas, seul le trafic <strong>SVFR</strong> (<em>Special VFR</em>) peut être autorisé, mais uniquement pour entrer ou quitter la zone de contrôle :</p>
+        <ul>
+          <li>La clairance SVFR est délivrée par le contrôleur de l'aérodrome (<em>aerodrome controller</em>)</li>
+          <li>SVFR peut être accordé en dessous de 1500 ft (plafond) ou moins de 5 km (visibilité)</li>
+          <li>La clairance SVFR ne peut pas être accordée si la visibilité est inférieure à <strong>1500 m</strong></li>
+        </ul>
+
+        <p>Dans la CTR, le service de contrôle assure la séparation IFR/VFR spécial (SVFR) et fournit des informations de trafic entre VFR spéciaux.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La limite basse pour accorder une clairance SVFR est de <strong>1 500 m de visibilité</strong> (pas 1 500 ft !). Le SVFR est autorisé lorsque les conditions sont en dessous de 1 500 ft de plafond ou 5 km de visibilité VFR, mais la visibilité au sol ne peut pas être inférieure à 1 500 m.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h1 id="preflight-postflight">8. Informations pré- et post-vol</h1>
+        <!-- ═══════════════════════════════════════════ -->
+
+        <h2 id="preflight">8.1 Informations pré-vol (Pre-flight Information)</h2>
+        <p>L'aérodrome de départ doit rendre disponibles les informations aéronautiques pour les étapes de route prévues. En plus des éléments AIP/cartes standard, les informations courantes doivent inclure : travaux/maintenance, surfaces dégradées, neige/glace/eau sur piste, bancs de neige proches des pistes, aéronefs garés proches des voies de circulation, dangers temporaires (oiseaux), état des équipements lumineux, état des aides radio et communications, opérations d'aide humanitaire. Un résumé des NOTAM en cours et des informations urgentes doit être fourni aux équipages, éventuellement sous forme de PIB (<em>Pre-flight Information Bulletin</em>).</p>
+
+        <h2 id="postflight">8.2 Informations post-vol (Post-flight Information)</h2>
+        <p>Les aérodromes participant aux opérations internationales doivent pouvoir recueillir les informations transmises par les équipages concernant l'état des aides de navigation et services, et la présence d'oiseaux ou autres dangers. Ces informations sont transmises aux autres équipages et au personnel opérationnel. Les événements pouvant affecter la sécurité future doivent être signalés à l'ATS dès que possible ; ceux sans impact de sécurité (ex. : impact d'oiseau isolé) peuvent être reportés dans les 72 heures.</p>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">50 m</span>
+            <span class="val-label">Holding position — RWY ≥ 900 m</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 m</span>
+            <span class="val-label">Holding position — RWY &lt; 900 m</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">2 min</span>
+            <span class="val-label">Séparation standard même piste (WT)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 min</span>
+            <span class="val-label">L derrière H/M (arrivée)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 min</span>
+            <span class="val-label">M derrière A380 (arrivée)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4 min</span>
+            <span class="val-label">L derrière A380 (arrivée)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3 min</span>
+            <span class="val-label">Départ L/M derrière A380 (même seuil)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">4 min</span>
+            <span class="val-label">Départ L/M derrière A380 (intermédiaire)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 500 m</span>
+            <span class="val-label">Visibilité mini SVFR clearance</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">≤ 7 t</span>
+            <span class="val-label">Catégorie L (Light) MTOW</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">7–136 t</span>
+            <span class="val-label">Catégorie M (Medium) MTOW</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 136 t</span>
+            <span class="val-label">Catégorie H (Heavy) MTOW</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">520 t</span>
+            <span class="val-label">A380 MTOW (Super J)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">760 m</span>
+            <span class="val-label">Seuil espacement pistes parallèles (WT)</span>
+          </div>
+        </div>
+
+        <h1 id="recap-zones">Récap zones d'aérodrome</h1>
+        <table>
+          <thead><tr><th>Zone</th><th>Contenu</th><th>Contrôleur</th><th>Séparation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Runway</strong></td><td>Piste décollage/atterrissage</td><td>Tower</td><td>Oui (séparation active)</td></tr>
+            <tr><td><strong>Taxiway</strong></td><td>Voies de circulation</td><td>Ground</td><td>Info de trafic</td></tr>
+            <tr><td><strong>Apron / Traffic Area</strong></td><td>Stationnement, embarquement</td><td>Ground</td><td>Non (radio obligatoire avions seulement)</td></tr>
+            <tr><td><strong>Manoeuvring Area</strong></td><td>Runway + Taxiways</td><td>Tower + Ground</td><td>Oui</td></tr>
+            <tr><td><strong>Movement Area</strong></td><td>Manoeuvring + Apron</td><td>Tower + Ground</td><td>Partielle</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="recap-wake-turb">Minima de séparation WT — Tableau récap</h1>
+        <table>
+          <thead>
+            <tr><th>Situation</th><th>Précède</th><th>Suit</th><th>Minimum</th></tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="3">Arrivée</td><td>H ou M</td><td>L</td><td><strong>3 min</strong></td></tr>
+            <tr><td>A380 (Super J)</td><td>M</td><td><strong>3 min</strong></td></tr>
+            <tr><td>A380 (Super J)</td><td>L</td><td><strong>4 min</strong></td></tr>
+            <tr><td>Départ (même seuil)</td><td>A380</td><td>L ou M</td><td><strong>3 min</strong></td></tr>
+            <tr><td rowspan="2">Départ (intermédiaire)</td><td>H ou M (derrière H) / M (derrière L)</td><td>L ou M</td><td><strong>3 min</strong></td></tr>
+            <tr><td>A380</td><td>L ou M</td><td><strong>4 min</strong></td></tr>
+            <tr><td colspan="3">Standard (même piste / parallèles &lt;760m / croisées)</td><td><strong>2 min</strong></td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Manoeuvring Area ≠ Movement Area</div>
+              <div class="piege-explication">L'apron (aire de trafic) fait partie de la Movement Area mais PAS de la Manoeuvring Area. La Manoeuvring Area = piste + taxiways uniquement.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Pas de prévention collision sur l'apron</div>
+              <div class="piege-explication">Le contact radio est obligatoire pour les aéronefs sur l'apron, mais pas pour les véhicules ou le personnel. Donc il n'y a pas de service de prévention des collisions sur cette zone.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Holding position : 50 m vs 30 m</div>
+              <div class="piege-explication">50 m du bord de piste si la piste fait ≥ 900 m. 30 m si &lt; 900 m. La longueur de référence est celle de la piste, pas d'une taxiway.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Runway vacated = tout l'avion au-delà du holding point</div>
+              <div class="piege-explication">Pas seulement quand le nez est hors de la piste — il faut que l'intégralité de l'appareil (y compris la queue) se trouve au-delà du holding position point.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Traffic in sight → responsabilité pilote</div>
+              <div class="piege-explication">Quand le pilote annonce "traffic in sight", il reprend la responsabilité du maintien de l'espacement derrière le n°1 dans le circuit. La séparation active du contrôleur ne s'applique que sur la piste.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Vent magnétique (pas vrai) aux pilotes</div>
+              <div class="piege-explication">Le vent de surface transmis par les unités ATS aux pilotes est TOUJOURS en degrés magnétiques. La météo utilise les degrés vrais, mais pas l'ATS.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">SVFR mini = 1 500 m de visibilité (pas 1 500 ft)</div>
+              <div class="piege-explication">La clairance SVFR peut être accordée en dessous de 1 500 ft de plafond ou 5 km de visi VFR, mais ne peut pas l'être si la visibilité au sol est inférieure à 1 500 MÈTRES.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Séparation HEAVY derrière HEAVY = standard (2 min)</div>
+              <div class="piege-explication">Les minima de 3 et 4 minutes ne s'appliquent que dans des combinaisons spécifiques (L/M derrière H/M ou A380). Deux Heavy entre eux = séparation standard 2 minutes.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Départ intermédiaire → minima plus longs</div>
+              <div class="piege-explication">Un décollage depuis une partie intermédiaire de la piste augmente les minima de séparation WT (3 min au lieu de rien pour H/M, 4 min au lieu de 3 min pour A380), car l'avion décolle dans le sillage déposé sur la piste.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">RECAT-EU ≠ OACI — 6 catégories, critère envergure</div>
+              <div class="piege-explication">RECAT-EU utilise 6 catégories (OACI : 4) basées sur la MTOW ET l'envergure. Il n'est applicable qu'aux aéroports l'ayant adopté (CDG, Le Bourget, Pontoise depuis 2016).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Température fournie au départ = pour avions à réaction</div>
+              <div class="piege-explication">La température de l'air pour la piste est transmise avant le roulage pour les jets uniquement. C'est un des éléments de l'information de départ pré-roulage, pas pré-décollage.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">HEAVY et SUPER annoncent leur catégorie — pas MEDIUM</div>
+              <div class="piege-explication">Seuls les aéronefs classés HEAVY ou SUPER (A380) doivent inclure ces mots dans leur indicatif au premier contact avec la tour. MEDIUM et LIGHT ne le font pas.</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre Manoeuvring Area et Movement Area ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Manoeuvring Area</strong> = piste + taxiways (hors apron). <strong>Movement Area</strong> = Manoeuvring Area + Apron.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la distance de holding position pour une piste de 1 200 m ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>50 m</strong> du bord de piste (piste ≥ 900 m).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la distance de holding position pour une piste de 800 m ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>30 m</strong> du bord de piste (piste &lt; 900 m).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle séparation entre un L et un A380 en arrivée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>4 minutes</strong> (L derrière A380/Super J).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle séparation entre un M et un H en arrivée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Séparation standard</strong> — il n'y a pas de minima spéciaux entre M derrière H.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle séparation entre deux Heavy sur même piste ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 minutes</strong> (séparation standard turbulence de sillage).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quand peut-on accorder une clairance SVFR ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">En dessous de <strong>1 500 ft de plafond ou 5 km de visibilité</strong>, pour entrer ou quitter la CTR. La visibilité minimale pour délivrer la clairance est <strong>1 500 m</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le vent transmis aux pilotes par ATS est en degrés vrais ou magnétiques ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Degrés magnétiques</strong> toujours — contrairement à la météo qui utilise les degrés vrais.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles informations sont données avant roulage (départ) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Piste, vent de surface, QNH (et QFE si requis), <strong>température</strong> (jets), visibilité, heure, CTOT si ATFM.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qui donne la Take-off clearance ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>Tower Controller</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qui donne la Start-up and Taxy clearance ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>Ground Controller</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles catégories OACI doivent annoncer leur catégorie WT à la tour ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>HEAVY et SUPER (A380)</strong> uniquement, au premier contact avec la tour.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Combien de catégories dans RECAT-EU et quel(s) critère(s) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>6 catégories</strong>, basées sur la MTOW et l'<strong>envergure</strong> (vs 4 catégories OACI sur MTOW seule).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la séparation WT standard pour deux pistes croisées ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 minutes</strong> (séparation standard, identique à la même piste).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la MTOW de l'A380 ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>520 t</strong>. (B747 = 330 t, A124 = 392 t — tous en catégorie H ou S)</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quand le pilote annonce "traffic in sight", qui est responsable de la séparation ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>pilote</strong> reprend la responsabilité du maintien de l'espacement dans le circuit. La séparation active du contrôleur ne s'applique que sur la piste.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle condition pour qu'un aéronef puisse s'aligner (line up) lorsqu'un aéronef est en atterrissage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'aéronef en atterrissage doit avoir franchi le <strong>holding position point</strong> (50 m ou 30 m selon longueur de piste).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les 3 conditions pour délivrer une clairance de décollage/atterrissage sur une piste déjà utilisée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'aéronef précédent a : (1) dégagé la piste, <strong>ou</strong> (2) survolé l'extrémité opposée, <strong>ou</strong> (3) commencé un virage.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle séparation WT entre L et M en départ depuis seuil normal (pas intermédiaire) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Séparation standard 2 minutes</strong> — les minima spéciaux (3 min) ne s'appliquent que pour le départ intermédiaire.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le "trafic local essentiel" (Essential Local Traffic) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Tout aéronef, véhicule ou personnel se trouvant sur ou à proximité de l'aire de manœuvre ou de l'aire de trafic, évoluant dans les environs de l'aérodrome.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

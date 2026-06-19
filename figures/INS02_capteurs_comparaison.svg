@@ -1,0 +1,104 @@
+<svg viewBox="0 0 740 370" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <!-- Titre -->
+  <text x="370" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F3864">Comparatif des capteurs de pression</text>
+
+  <!-- En-têtes colonnes -->
+  <rect x="10" y="40" width="140" height="30" rx="4" fill="#1F3864"/>
+  <text x="80" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Capteur</text>
+
+  <rect x="155" y="40" width="130" height="30" rx="4" fill="#1F3864"/>
+  <text x="220" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Plage / Type</text>
+
+  <rect x="290" y="40" width="140" height="30" rx="4" fill="#1F3864"/>
+  <text x="360" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Principe</text>
+
+  <rect x="435" y="40" width="290" height="30" rx="4" fill="#1F3864"/>
+  <text x="580" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Applications avion</text>
+
+  <!-- LIGNE 1 : DIAPHRAGME -->
+  <rect x="10" y="75" width="140" height="48" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="80" y="97" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">Diaphragme</text>
+  <text x="80" y="112" text-anchor="middle" font-size="9" fill="#1F3864">(membrane ondulée)</text>
+
+  <rect x="155" y="75" width="130" height="48" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="220" y="97" text-anchor="middle" font-size="10" fill="#1F3864">0,1 à 50 PSI</text>
+  <text x="220" y="112" text-anchor="middle" font-size="9" fill="#1F3864">Basses pressions</text>
+
+  <rect x="290" y="75" width="140" height="48" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="360" y="94" text-anchor="middle" font-size="9" fill="#1F3864">Déflexion proportionnelle</text>
+  <text x="360" y="108" text-anchor="middle" font-size="9" fill="#1F3864">à la pression appliquée</text>
+
+  <rect x="435" y="75" width="290" height="48" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="580" y="94" text-anchor="middle" font-size="9" fill="#1F3864">Pression de carburant, pression d'admission</text>
+  <text x="580" y="108" text-anchor="middle" font-size="9" fill="#1F3864">Instruments de vol (pitot-statique)</text>
+
+  <!-- LIGNE 2 : CAPSULE ANÉROÏDE -->
+  <rect x="10" y="128" width="140" height="48" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="80" y="150" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">Capsule</text>
+  <text x="80" y="165" text-anchor="middle" font-size="9" fill="#1F3864">(2 diaphragmes)</text>
+
+  <rect x="155" y="128" width="130" height="48" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="220" y="147" text-anchor="middle" font-size="10" fill="#1F3864">≤ 50 PSI</text>
+  <text x="220" y="162" text-anchor="middle" font-size="9" fill="#1F3864">Basses pressions</text>
+
+  <rect x="290" y="128" width="140" height="48" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="360" y="147" text-anchor="middle" font-size="9" fill="#1F3864">Soudée → pression absolue</text>
+  <text x="360" y="162" text-anchor="middle" font-size="9" fill="#1F3864">Ouverte → pression diff.</text>
+
+  <rect x="435" y="128" width="290" height="48" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="580" y="147" text-anchor="middle" font-size="9" fill="#1F3864">Pression collecteur (MAP), pompe carburant BP</text>
+  <text x="580" y="162" text-anchor="middle" font-size="9" fill="#1F3864">Pression admission GTR (anéroïde)</text>
+
+  <!-- LIGNE 3 : SOUFFLET -->
+  <rect x="10" y="181" width="140" height="48" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="80" y="203" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">Soufflet</text>
+  <text x="80" y="218" text-anchor="middle" font-size="9" fill="#1F3864">(bellows)</text>
+
+  <rect x="155" y="181" width="130" height="48" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="220" y="200" text-anchor="middle" font-size="10" fill="#1F3864">Toutes gammes</text>
+  <text x="220" y="215" text-anchor="middle" font-size="9" fill="#1F3864">HP / BP / Diff.</text>
+
+  <rect x="290" y="181" width="140" height="48" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="360" y="200" text-anchor="middle" font-size="9" fill="#1F3864">Expansion/compression</text>
+  <text x="360" y="215" text-anchor="middle" font-size="9" fill="#1F3864">selon pression interne</text>
+
+  <rect x="435" y="181" width="290" height="48" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="580" y="200" text-anchor="middle" font-size="9" fill="#1F3864">ΔP cabine, sortie pompe BP, MAP</text>
+  <text x="580" y="215" text-anchor="middle" font-size="9" fill="#1F3864">Pression collecteur moteur piston</text>
+
+  <!-- LIGNE 4 : TUBE DE BOURDON -->
+  <rect x="10" y="234" width="140" height="48" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="80" y="256" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">Tube de Bourdon</text>
+  <text x="80" y="271" text-anchor="middle" font-size="9" fill="#C00000">(hautes pressions)</text>
+
+  <rect x="155" y="234" width="130" height="48" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="220" y="253" text-anchor="middle" font-size="10" fill="#1F3864">&gt; 50 PSI</text>
+  <text x="220" y="268" text-anchor="middle" font-size="9" fill="#1F3864">Hautes pressions</text>
+
+  <rect x="290" y="234" width="140" height="48" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="360" y="253" text-anchor="middle" font-size="9" fill="#1F3864">Tube C ovale qui se</text>
+  <text x="360" y="268" text-anchor="middle" font-size="9" fill="#1F3864">redresse sous pression</text>
+
+  <rect x="435" y="234" width="290" height="48" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="580" y="253" text-anchor="middle" font-size="9" fill="#1F3864">Huile moteur, hydraulique (2500–3000 PSI)</text>
+  <text x="580" y="268" text-anchor="middle" font-size="9" fill="#1F3864">Oxygène. ⚠️ Ne peut PAS mesurer ΔP</text>
+
+  <!-- LIGNE 5 : SOLID STATE -->
+  <rect x="10" y="287" width="140" height="48" rx="4" fill="#e8e8f8" stroke="#5050a0" stroke-width="1"/>
+  <text x="80" y="309" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">Solid State</text>
+  <text x="80" y="324" text-anchor="middle" font-size="9" fill="#5050a0">(semi-conducteur)</text>
+
+  <rect x="155" y="287" width="130" height="48" rx="4" fill="#e8e8f8" stroke="#5050a0" stroke-width="1"/>
+  <text x="220" y="306" text-anchor="middle" font-size="10" fill="#1F3864">Toutes gammes</text>
+  <text x="220" y="321" text-anchor="middle" font-size="9" fill="#1F3864">Signal électrique</text>
+
+  <rect x="290" y="287" width="140" height="48" rx="4" fill="#e8e8f8" stroke="#5050a0" stroke-width="1"/>
+  <text x="360" y="306" text-anchor="middle" font-size="9" fill="#1F3864">Variation résistance / tension</text>
+  <text x="360" y="321" text-anchor="middle" font-size="9" fill="#1F3864">piézoélectrique / piézorésistif</text>
+
+  <rect x="435" y="287" width="290" height="48" rx="4" fill="#e8e8f8" stroke="#5050a0" stroke-width="1"/>
+  <text x="580" y="306" text-anchor="middle" font-size="9" fill="#1F3864">Systèmes avioniques modernes (ADIRU)</text>
+  <text x="580" y="321" text-anchor="middle" font-size="9" fill="#1F3864">FMS, capteurs de pression numérique</text>
+
+</svg>

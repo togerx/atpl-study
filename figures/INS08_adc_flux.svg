@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 310" width="740" height="310">
+  <!--
+    LAYOUT
+    Capteurs (gauche, colonne) : y=55,105,155,205,255
+    ADC box centre : x=290, y=80 → 230h
+    Sorties (droite) : y=65,110,155,200,245,285
+    Flèches capteurs→ADC : x=130→285
+    Flèche ADC→sorties : x=395→440
+  -->
+  <defs>
+    <marker id="aBlue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#2E75B6"/>
+    </marker>
+    <marker id="aGold" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#BF8F00"/>
+    </marker>
+    <marker id="aGray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Titre -->
+  <text x="370" y="22" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">Air Data Computer (ADC) — Flux de données</text>
+  <line x1="30" y1="28" x2="710" y2="28" stroke="#CCC" stroke-width="1"/>
+
+  <!-- ===== CAPTEURS (inputs) ===== -->
+  <!-- AOA sensor -->
+  <rect x="20" y="42" width="130" height="36" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <text x="85" y="58" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#C00000">Sonde AOA</text>
+  <text x="85" y="71" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000">(alpha vane / null-seeking)</text>
+
+  <!-- Pitot -->
+  <rect x="20" y="92" width="130" height="36" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="85" y="108" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">Tube de Pitot</text>
+  <text x="85" y="121" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">Pt (pression totale)</text>
+
+  <!-- Static -->
+  <rect x="20" y="142" width="130" height="36" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="85" y="158" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">Prise statique</text>
+  <text x="85" y="171" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">Ps (pression statique)</text>
+
+  <!-- TAT -->
+  <rect x="20" y="192" width="130" height="36" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="85" y="208" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#548235">Sonde TAT</text>
+  <text x="85" y="221" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">Température totale</text>
+
+  <!-- Flèches capteurs → ADC -->
+  <line x1="150" y1="60" x2="278" y2="145" stroke="#C00000" stroke-width="1.8" marker-end="url(#aBlue)"/>
+  <line x1="150" y1="110" x2="278" y2="150" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#aBlue)"/>
+  <line x1="150" y1="160" x2="278" y2="158" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#aBlue)"/>
+  <line x1="150" y1="210" x2="278" y2="170" stroke="#548235" stroke-width="1.5" marker-end="url(#aBlue)"/>
+
+  <!-- ===== ADC BOX ===== -->
+  <rect x="280" y="100" width="120" height="100" rx="8" fill="#1F3864" stroke="#0D2240" stroke-width="2"/>
+  <text x="340" y="128" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="white">ADC</text>
+  <text x="340" y="143" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#BDD7EE">Air Data</text>
+  <text x="340" y="155" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#BDD7EE">Computer</text>
+  <!-- Paramètres calculés dans l'ADC -->
+  <text x="340" y="174" text-anchor="middle" font-family="Arial" font-size="8" fill="#FFF2CC">Zp · CAS · Mach</text>
+  <text x="340" y="185" text-anchor="middle" font-family="Arial" font-size="8" fill="#FFF2CC">Vz · TAT · SAT · α · TAS</text>
+
+  <!-- Grande flèche ADC → outputs -->
+  <polygon points="400,140 430,118 430,162" fill="#BF8F00" stroke="#7A5800" stroke-width="1"/>
+  <line x1="430" y1="140" x2="455" y2="140" stroke="#BF8F00" stroke-width="3"/>
+
+  <!-- ===== OUTPUTS ===== -->
+  <!-- Cockpit displays -->
+  <rect x="460" y="42" width="140" height="32" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="530" y="58" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">🖥 Cockpit / EFIS</text>
+  <text x="530" y="68" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">affichage α, CAS, Mach, Zp…</text>
+
+  <!-- AP / FD -->
+  <rect x="460" y="88" width="140" height="32" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="530" y="104" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">✈ AP / FD</text>
+  <text x="530" y="115" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Pilote automatique / Directeur de vol</text>
+
+  <!-- α Max protection -->
+  <rect x="460" y="134" width="140" height="32" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <text x="530" y="150" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#C00000">⚠ α Max Protection</text>
+  <text x="530" y="161" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Flight envelope protection</text>
+
+  <!-- FDR -->
+  <rect x="460" y="180" width="140" height="32" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="530" y="196" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#548235">📦 FDR</text>
+  <text x="530" y="207" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Flight Data Recorder</text>
+
+  <!-- FADECs -->
+  <rect x="460" y="226" width="140" height="32" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="530" y="242" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#548235">⚙ FADECs</text>
+  <text x="530" y="253" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">gestion moteurs</text>
+
+  <!-- GPWS -->
+  <rect x="460" y="272" width="140" height="32" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="530" y="288" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#C00000">⚠ GPWS</text>
+  <text x="530" y="299" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Ground Proximity Warning</text>
+
+  <!-- Flèches ADC → chaque output -->
+  <line x1="456" y1="105" x2="458" y2="58" stroke="#BF8F00" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="456" y1="117" x2="458" y2="104" stroke="#BF8F00" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="456" y1="133" x2="458" y2="150" stroke="#BF8F00" stroke-width="1.5"/>
+  <line x1="456" y1="155" x2="458" y2="196" stroke="#BF8F00" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="456" y1="162" x2="458" y2="242" stroke="#BF8F00" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="456" y1="168" x2="458" y2="288" stroke="#BF8F00" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <!-- Colonne outputs labels flèches -->
+  <line x1="440" y1="58" x2="458" y2="58" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#aGold)"/>
+  <line x1="440" y1="104" x2="458" y2="104" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#aGold)"/>
+  <line x1="440" y1="150" x2="458" y2="150" stroke="#C00000" stroke-width="2" marker-end="url(#aGold)"/>
+  <line x1="440" y1="196" x2="458" y2="196" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#aGold)"/>
+  <line x1="440" y1="242" x2="458" y2="242" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#aGold)"/>
+  <line x1="440" y1="288" x2="458" y2="288" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#aGold)"/>
+
+  <!-- Ligne verticale de distribution -->
+  <line x1="440" y1="52" x2="440" y2="295" stroke="#BF8F00" stroke-width="2"/>
+</svg>

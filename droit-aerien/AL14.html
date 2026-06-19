@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL14 — Flight Information Service · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">AL14 · FIS &amp; Advisory</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- Sidebar injectée automatiquement par main.js — NE PAS TOUCHER -->
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="AL14" data-matiere="droit-aerien">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Droit Aérien</a>
+        <span class="sep">›</span>
+        <span>AL14</span>
+      </div>
+      <div class="cours-code-badge">AL14</div>
+      <h1 class="cours-title">Flight Information Service &amp; Air Traffic Advisory Service</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA SERA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~20 min</span>
+        <span class="cours-meta-item">❓ 20 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ─── CHAPITRE 1 : FIS ─── -->
+        <h1 id="fis-definition">1. Flight Information Service (FIS)</h1>
+
+        <h2 id="fis-def-oaci">1.1 Définition OACI</h2>
+        <p>Le <strong>Flight Information Service (FIS)</strong> — service d'information de vol — est, selon l'Annexe 11 de l'OACI, un service fourni <em>dans le but de donner des avis et des renseignements utiles à l'exécution sûre et efficace des vols</em>.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le FIS ne fournit que des <strong>informations et des avis</strong> : il ne délivre pas d'instructions de contrôle. La responsabilité de la séparation reste en totalité à la charge du pilote commandant de bord.
+        </div>
+
+        <h2 id="fis-beneficiaires">1.2 Bénéficiaires du FIS</h2>
+        <p>Le FIS est fourni à <strong>tous les aéronefs</strong> qui remplissent au moins l'une des deux conditions suivantes :</p>
+        <ul>
+          <li>Les aéronefs qui reçoivent un <strong>service du contrôle de la circulation aérienne (ATC)</strong> ;</li>
+          <li>Les aéronefs <strong>autrement connus</strong> des unités des services de la circulation aérienne (ATS) compétentes, c'est-à-dire ceux qui évoluent en espace non contrôlé mais qui maintiennent un contact radio avec une unité ATS.</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Un aéronef en espace non contrôlé <strong>sans contact radio</strong> avec une unité ATS ne bénéficie pas du FIS, même s'il évolue dans une FIR (Flight Information Region). La condition "autrement connu" implique obligatoirement un contact radio établi.
+        </div>
+
+        <h2 id="fis-priorite">1.3 Priorité ATC sur FIS</h2>
+        <p>Lorsqu'un organisme fournit à la fois l'ATC et le FIS, le <strong>service du contrôle de la circulation aérienne (ATC) a la priorité</strong> sur la fourniture du FIS. Autrement dit, si la charge de travail du contrôleur augmente, il peut réduire ou suspendre temporairement la fourniture du FIS pour se concentrer sur le contrôle.</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL14_ats_services.svg" alt="Diagramme de la structure des services ATS — FIS, ATC, Advisory">
+          <div class="fig-caption">Fig. 1 — Structure des services ATS : hiérarchie ATC / FIS / Advisory Service</div>
+        </div>
+
+        <!-- ─── CHAPITRE 2 : Contenu du FIS ─── -->
+        <h1 id="fis-contenu">2. Contenu du Flight Information Service</h1>
+
+        <h2 id="fis-meteo">2.1 Informations météorologiques</h2>
+        <p>Le FIS comprend obligatoirement les informations météorologiques suivantes :</p>
+
+        <h3 id="fis-sigmet">SIGMET (Significant Meteorological Information)</h3>
+        <p>Le <strong>SIGMET</strong> est une information émise par un bureau de veille météorologique (meteorological watch office) concernant la survenance ou l'occurrence probable de phénomènes météorologiques en route (phenomena) qui peuvent affecter la sécurité de l'exploitation des aéronefs. Il couvre les vols jusqu'à <strong>60 000 ft</strong>.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Exemple SIGMET en phraséologie</div>
+          <em>"Rapidair 3 2 4 5, SIGMET report, moderate to severe icing between level 9 0 and level 1 3 0 on your route."</em><br>
+          Le contrôleur transmet le SIGMET au vol concerné dès réception ; le pilote décide de la conduite à tenir.
+        </div>
+
+        <h3 id="fis-airmet">AIRMET (Airmen's Meteorological Information)</h3>
+        <p>L'<strong>AIRMET</strong> couvre les mêmes types de phénomènes mais pour les <strong>vols à basse altitude</strong>, jusqu'à <strong>24 000 ft (FL 240)</strong>. Il traite des phénomènes non encore inclus dans les prévisions basse altitude émises pour la FIR ou sous-région concernée.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">FL 600</span>
+            <span class="val-label">Limite SIGMET</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">FL 240</span>
+            <span class="val-label">Limite AIRMET</span>
+          </div>
+        </div>
+
+        <h2 id="fis-autres-infos">2.2 Autres informations du FIS</h2>
+        <p>Au-delà des informations météorologiques, le FIS comprend des renseignements concernant :</p>
+        <ul>
+          <li><strong>Risques de collision pour les aéronefs</strong> opérant dans les espaces aériens de classes <strong>E, F et G</strong> (espaces non contrôlés) ainsi que sur les <strong>aérodromes AFIS</strong> ;</li>
+          <li><strong>Conditions météorologiques</strong> aux aérodromes de départ, de destination et de dégagement (alternate) ;</li>
+          <li><strong>Activité volcanique</strong> (ash cloud, VOLMET…) ;</li>
+          <li><strong>Disponibilité des aides radio à la navigation</strong> : pannes radar, pannes radio-nav (VOR, NDB, ILS…) ;</li>
+          <li><strong>Aérodromes et infrastructures associées</strong> : état de la piste, balisage lumineux, taxiways, aire de trafic (apron)… ;</li>
+          <li>Tout autre renseignement <strong>susceptible d'affecter la sécurité du vol</strong>.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La liste du contenu du FIS est ouverte : le critère final est toujours <em>"likely to affect flight safety"</em>. Tout renseignement utile à la sécurité doit être transmis.
+        </div>
+
+        <!-- ─── CHAPITRE 3 : AFIS ─── -->
+        <h1 id="afis">3. AFIS — Aerodrome Flight Information Service</h1>
+
+        <h2 id="afis-definition">3.1 Définition et contexte</h2>
+        <p>L'<strong>AFIS (Aerodrome Flight Information Service)</strong> est le service d'information de vol rendu sur un aérodrome sur lequel la fourniture du service du contrôle d'aérodrome (TWR) n'est pas justifiée, ou n'est pas justifiée en permanence (par exemple, un aérodrome contrôlé uniquement en journée qui devient AFIS la nuit).</p>
+        <p>L'aérodrome est alors qualifié d'<strong>aérodrome AFIS</strong>, par opposition aux aérodromes contrôlés, afin d'éviter toute confusion dans la phraséologie et les responsabilités.</p>
+
+        <!-- Figure à réutiliser du document source (slide 7) et nommer : AL14_afis_aerodrome.png -->
+
+        <h2 id="afis-services">3.2 Services fournis sur un aérodrome AFIS</h2>
+        <p>L'opérateur AFIS (AFISO — Aerodrome Flight Information Service Officer) fournit uniquement :</p>
+        <ul>
+          <li>Le <strong>Flight Information Service</strong> : informations de circulation, météo, état de la piste… ;</li>
+          <li>Le <strong>service d'alerte (Alerting Service)</strong>.</li>
+        </ul>
+        <p>Il ne fournit <strong>pas</strong> de service de contrôle. Il n'émet que des informations, jamais des autorisations (clearances) ou des instructions de contrôle.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Sur un aérodrome AFIS, la <strong>responsabilité de la séparation incombe entièrement aux pilotes</strong>, qui doivent maintenir leur propre écartement conformément aux règles de l'air. L'AFISO ne sépare pas les aéronefs.
+        </div>
+
+        <!-- ─── CHAPITRE 4 : ATIS ─── -->
+        <h1 id="atis">4. ATIS — Automatic Terminal Information Service</h1>
+
+        <h2 id="atis-definition">4.1 Définition et objectif</h2>
+        <p>L'<strong>ATIS (Automatic Terminal Information Service)</strong> — service automatique d'information de région terminale — est une composante du FIS qui consiste en la <strong>diffusion continue et répétitive</strong> d'informations météorologiques et opérationnelles essentielles à destination des aéronefs en approche et au départ.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          L'ATIS allège considérablement la charge de travail sur les fréquences ATC (TWR, APP) en évitant que le contrôleur répète continuellement les informations de routine à chaque nouveau vol.
+        </div>
+
+        <h2 id="atis-voice">4.2 Voice-ATIS</h2>
+        <p>Le Voice-ATIS obéit aux règles suivantes :</p>
+        <ul>
+          <li>Il est diffusé en continu (broadcast <strong>continu et répétitif</strong>) ;</li>
+          <li>Il utilise une <strong>fréquence VHF discrète</strong> (possible également sur la fréquence VOR collocalisé) ;</li>
+          <li>Chaque message est identifié par une <strong>lettre de l'alphabet OACI</strong> (Alpha, Bravo, Charlie…) ;</li>
+          <li>L'information est <strong>mise à jour immédiatement</strong> dès qu'un élément change (changement de QNH, de piste en service, etc.) ;</li>
+          <li>Un seul aérodrome par message ATIS ;</li>
+          <li>La durée du message ne doit pas dépasser <strong>30 secondes</strong> (dans la mesure du possible) ;</li>
+          <li>À l'établissement du contact initial avec l'ATS, le pilote <strong>doit accuser réception</strong> en citant la lettre d'information reçue ; le <strong>QNH doit être repassé en read-back</strong>.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le QNH est l'unique élément du message ATIS qui fait l'objet d'un <strong>read-back obligatoire</strong> lors du contact initial avec l'unité ATS.
+        </div>
+
+        <h2 id="atis-contenu">4.3 Contenu du message ATIS</h2>
+        <p>Le message Voice-ATIS contient les éléments suivants, dans l'ordre :</p>
+        <ul>
+          <li>Nom de l'aérodrome ;</li>
+          <li>Indicateur arrivée et/ou départ (arrival / departure indicator) ;</li>
+          <li>Heure d'observation ;</li>
+          <li>Type d'approche attendue (si arrivée) ;</li>
+          <li>Piste en service (runway in use) ;</li>
+          <li>État de la surface de la piste (braking action si applicable) ;</li>
+          <li>Niveau de transition (transition level — TL) ;</li>
+          <li>Autres informations opérationnelles essentielles ;</li>
+          <li>Vent de surface — moyenne sur <strong>2 minutes</strong> ;</li>
+          <li>Visibilité et RVR (Runway Visual Range — portée visuelle de piste) si applicable — moyenne sur <strong>1 minute</strong> ;</li>
+          <li>Temps présent (present weather) ;</li>
+          <li>Nuages inférieurs à <strong>5 000 ft</strong> ou à la plus haute altitude minimale de secteur, cumulonimbus ;</li>
+          <li>Température de l'air et température du point de rosée (dew point) ;</li>
+          <li>Calage altimétrique (altimeter setting — QNH) ;</li>
+          <li>Phénomènes météorologiques significatifs en zones d'approche et de montée initiale, y compris le wind shear ;</li>
+          <li>Prévision de tendance (trend forecast) si disponible.</li>
+        </ul>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">2 min</span>
+            <span class="val-label">Moyenne vent ATIS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 min</span>
+            <span class="val-label">Moyenne visibilité/RVR</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5 000 ft</span>
+            <span class="val-label">Seuil nuages ATIS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 s</span>
+            <span class="val-label">Durée max message</span>
+          </div>
+        </div>
+
+        <h2 id="atis-exemple">4.4 Exemple réel — ATIS Bordeaux Mérignac</h2>
+        <p>Voici comment se lit un message ATIS réel, en suivant la séquence normalisée. Les éléments en rouge dans le document source correspondent aux items obligatoires :</p>
+
+        <!-- Figure à réutiliser du document source (slide 13) et nommer : AL14_atis_bordeaux.png -->
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Lecture ATIS Bordeaux Mérignac — Information F</div>
+          <strong>Aérodrome :</strong> Mérignac &nbsp;|&nbsp; <strong>Lettre :</strong> F &nbsp;|&nbsp; <strong>Heure :</strong> 0802 UTC<br>
+          <strong>Approche :</strong> ILS RWY 23 &nbsp;|&nbsp; <strong>Piste en service :</strong> 23 &nbsp;|&nbsp; <strong>Piste 29 :</strong> fermée (travaux)<br>
+          <strong>État piste :</strong> wet, braking action good &nbsp;|&nbsp; <strong>TL :</strong> 60<br>
+          <strong>Vent :</strong> 290°/4 kt max 10 kt &nbsp;|&nbsp; <strong>Visibilité :</strong> 9 km<br>
+          <strong>Nuages :</strong> FEW 1 500 ft, BKN 4 600 ft &nbsp;|&nbsp; <strong>Temp :</strong> 10°C &nbsp;|&nbsp; <strong>QNH : 1022</strong><br>
+          <strong>Tendance :</strong> NOSIG<br>
+          <em>→ Le pilote doit accuser réception de la lettre F et répéter le QNH 1022 au premier contact.</em>
+        </div>
+
+        <h2 id="d-atis">4.5 D-ATIS (Digital ATIS)</h2>
+        <p>Le <strong>D-ATIS (Digital ATIS)</strong> est la version numérique de l'ATIS. Les mêmes informations que le Voice-ATIS sont transmises à bord via une liaison de données (datalink), typiquement par le réseau <strong>ACARS</strong> (Aircraft Communications Addressing and Reporting System — système de communication numérique avion/sol) et s'affichent sur les MCDU (Multipurpose Control Display Unit — unité d'affichage et de contrôle multifonctions). La plupart des grands aérodromes proposent les deux formats simultanément.</p>
+
+        <!-- Figure à réutiliser du document source (slide 14) et nommer : AL14_d_atis_mcdu.png -->
+
+        <!-- ─── CHAPITRE 5 : Paramètres d'aérodrome FIS ─── -->
+        <h1 id="fis-airfield">5. Paramètres FIS d'aérodrome</h1>
+        <p>Lorsque le FIS est fourni depuis un aérodrome (y compris AFIS), les paramètres minimaux transmis sont les suivants :</p>
+        <ul>
+          <li><strong>Runway in use</strong> — piste en service ;</li>
+          <li><strong>Wind</strong> — vent de surface ;</li>
+          <li><strong>Visibility</strong> — visibilité ;</li>
+          <li><strong>Ceiling</strong> — plafond (si applicable) ;</li>
+          <li><strong>Temperature</strong> — température (si applicable) ;</li>
+          <li><strong>QNH / QFE</strong> — calages altimétriques ;</li>
+          <li><strong>Transition level (TL)</strong> — niveau de transition (si applicable).</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ QNH vs QFE</div>
+          Le <strong>QNH</strong> est le calage altimétrique donnant l'altitude au niveau de la mer (MSL). Le <strong>QFE</strong> est le calage donnant l'altitude zéro au seuil de piste ou au point de référence de l'aérodrome. Le QNH est le plus couramment utilisé en Europe ; le QFE est encore utilisé en opérations militaires ou dans certains pays.
+        </div>
+
+        <!-- ─── CHAPITRE 6 : Advisory Service ─── -->
+        <h1 id="advisory-service">6. Air Traffic Advisory Service</h1>
+
+        <h2 id="advisory-definition">6.1 Définition et espace aérien concerné</h2>
+        <p>Le <strong>service consultatif de la circulation aérienne (Air Traffic Advisory Service)</strong> est un service fourni dans les espaces aériens consultatifs (advisory airspace) à destination des <strong>vols IFR</strong> circulant sur des routes consultatives ou dans des espaces consultatifs — c'est-à-dire les espaces de <strong>classe F</strong>.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          L'Advisory Service s'applique <strong>exclusivement en classe F</strong> et <strong>exclusivement aux vols IFR</strong>. Les vols VFR en classe F reçoivent uniquement le FIS et l'alerting service (si contact radio).
+        </div>
+
+        <h2 id="advisory-objectif">6.2 Objectif</h2>
+        <p>L'objectif du service consultatif est de rendre l'information sur les risques de collision <strong>plus efficace qu'elle ne le serait avec le seul FIS</strong>. Il se situe donc à un niveau d'assistance intermédiaire entre le FIS et l'ATC : il ne sépare pas, mais informe de manière plus proactive.</p>
+
+        <h2 id="advisory-suggestions">6.3 Nature des messages : suggestions, non instructions</h2>
+        <p>Une distinction fondamentale sépare l'ATC de l'Advisory Service : les messages de l'Advisory Service constituent des <strong>suggestions</strong> (non des instructions ni des clearances). Concrètement :</p>
+        <ul>
+          <li>L'ATS suggère une action d'évitement possible au pilote IFR ;</li>
+          <li>Le pilote <strong>décide librement</strong> de suivre ou non la suggestion ;</li>
+          <li>Le pilote <strong>informe l'ATS sans délai</strong> de sa décision (acceptation ou refus).</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Les suggestions de l'Advisory Service <strong>ne constituent pas des instructions</strong> : le pilote n'est pas tenu de les respecter. C'est l'opposé de l'ATC où les instructions doivent être suivies (sauf urgence). Ne pas confondre les deux régimes de responsabilité.
+        </div>
+
+        <h2 id="advisory-classe-f">6.4 Classe F — règles détaillées</h2>
+        <p>En espace aérien de <strong>classe F</strong>, les règles de service sont les suivantes :</p>
+        <ul>
+          <li>Les vols IFR <em>et</em> VFR sont autorisés ;</li>
+          <li>Les vols <strong>IFR</strong> reçoivent le service consultatif <strong>sur demande</strong>, ainsi que le FIS et l'alerting service ;</li>
+          <li>Les vols <strong>VFR</strong> reçoivent le FIS et l'alerting service <strong>si contact radio</strong> ;</li>
+          <li>Pour bénéficier du service consultatif, un vol IFR doit <strong>déposer un plan de vol</strong> ;</li>
+          <li>Les aéronefs qui <em>ne souhaitent pas</em> le service consultatif doivent tout de même <strong>notifier à l'ATS les modifications de leur plan de vol</strong>.</li>
+        </ul>
+
+        <h2 id="advisory-exemples">6.5 Exemples de classe F dans le monde</h2>
+        <p>La classe F est peu utilisée en Europe continentale mais existe dans d'autres États. Deux exemples illustrent des interprétations nationales différentes :</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Canada</div>
+          En droit canadien, la classe F désigne un espace aux dimensions définies dans lequel les activités menées <em>doivent y être confinées en raison de leur nature</em> (activités militaires, par exemple), avec des restrictions imposées aux aéronefs non participants.
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Royaume-Uni</div>
+          Au Royaume-Uni, la classe F désigne des <em>routes avec un service consultatif ATC</em>. Par exemple, une route de classe F relie le nord-ouest de l'Angleterre à l'île de Man. Disposer d'une route préférée et d'un service ATC dans cette zone de mer ouverte facilite les opérations SAR (Search and Rescue).
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">FL 600</span>
+            <span class="val-label">Limite SIGMET</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">FL 240</span>
+            <span class="val-label">Limite AIRMET</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">2 min</span>
+            <span class="val-label">Moyenne vent ATIS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1 min</span>
+            <span class="val-label">Moyenne visibilité/RVR</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">5 000 ft</span>
+            <span class="val-label">Seuil nuages ATIS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">30 s</span>
+            <span class="val-label">Durée max ATIS</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Classe F</span>
+            <span class="val-label">Advisory Service</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">IFR seul</span>
+            <span class="val-label">Bénéficiaire Advisory</span>
+          </div>
+        </div>
+
+        <h1 id="figures-synthese">Figures de référence</h1>
+        <div class="fig-container" id="fig-ats-synth">
+          <img src="../figures/AL14_ats_services.svg" alt="Structure des services ATS — FIS, ATC, Advisory">
+          <div class="fig-caption">Fig. 1 — Structure ATS : FIS / ATC / Advisory Service</div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">FIS ≠ ATC</div>
+              <div class="piege-explication">Le FIS n'assure aucune séparation. Il fournit des informations et avis. La responsabilité de l'espacement reste au pilote.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">FIS sans contact radio = pas de FIS</div>
+              <div class="piege-explication">En espace non contrôlé, un aéronef inconnu des unités ATS (pas de contact radio) ne bénéficie pas du FIS, même dans une FIR.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">ATC prioritaire sur FIS</div>
+              <div class="piege-explication">Quand une unité fournit les deux services, l'ATC prime. Le contrôleur peut suspendre le FIS si la charge de travail le nécessite.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">SIGMET vs AIRMET : limites</div>
+              <div class="piege-explication">SIGMET couvre tous les vols (jusqu'à FL 600) ; AIRMET concerne spécifiquement les vols à basse altitude (jusqu'à FL 240). Ne pas les inverser.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">AFIS ≠ TWR</div>
+              <div class="piege-explication">L'AFISO ne contrôle pas. Sur un aérodrome AFIS, il n'y a aucune instruction ATC : seules des informations sont transmises. La séparation revient aux pilotes.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Read-back ATIS : QNH obligatoire</div>
+              <div class="piege-explication">À la prise de contact initiale, le pilote accuse réception de la lettre ATIS ET répasse le QNH en read-back. Aucun autre élément de l'ATIS ne nécessite de read-back.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Advisory = suggestions, non instructions</div>
+              <div class="piege-explication">Les messages de l'Advisory Service sont des suggestions. Le pilote décide librement de les suivre ou non, mais doit informer l'ATS de sa décision sans délai.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Advisory Service : IFR uniquement, sur demande</div>
+              <div class="piege-explication">En classe F, les VFR ne bénéficient PAS du service consultatif. Les IFR l'obtiennent uniquement sur demande (et en déposant un plan de vol).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Vent ATIS : moyenne 2 min, pas 10 min</div>
+              <div class="piege-explication">La moyenne du vent diffusé dans l'ATIS est calculée sur 2 minutes (et non sur 10 minutes comme dans un METAR). La visibilité/RVR est une moyenne sur 1 minute.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Durée ATIS : 30 s "whenever practicable"</div>
+              <div class="piege-explication">La durée de 30 secondes est une recommandation ("whenever practicable"), non une règle absolue. Un aérodrome complexe peut diffuser un message plus long.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Classe F : Advisory si refusé → plan de vol quand même notifié</div>
+              <div class="piege-explication">Un vol IFR qui ne souhaite pas le service consultatif doit quand même notifier à l'ATS toute modification de son plan de vol.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">ATIS fréquence : VHF discrète ou VOR</div>
+              <div class="piege-explication">L'ATIS utilise une fréquence VHF dédiée, mais peut aussi être diffusé sur la fréquence d'un VOR collocalisé. Ne pas considérer que l'ATIS a toujours sa propre fréquence exclusive.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Définition du FIS selon l'OACI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Service fourni pour donner des avis et des renseignements utiles à l'exécution sûre et efficace des vols.</strong> Il n'assure pas de séparation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quels aéronefs s'applique le FIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Aéronefs sous ATC</strong> + aéronefs <strong>autrement connus des unités ATS</strong> (contact radio en espace non contrôlé).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel service est prioritaire : ATC ou FIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>L'ATC a la priorité</strong> sur la fourniture du FIS.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Limite d'altitude du SIGMET ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>60 000 ft (FL 600)</strong> — couvre tous les vols.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Limite d'altitude de l'AIRMET ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>24 000 ft (FL 240)</strong> — spécifique aux vols basse altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un aérodrome AFIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Aérodrome où le service du contrôle d'aérodrome <strong>n'est pas justifié</strong> (ou pas en continu). L'AFISO fournit FIS + alerting service uniquement, <strong>pas de contrôle</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qui maintient la séparation sur un aérodrome AFIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Les pilotes</strong>, conformément aux règles de l'air. L'AFISO ne sépare pas.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur quelle fréquence est diffusé l'ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Sur une <strong>fréquence VHF discrète</strong>, ou éventuellement sur la fréquence d'un VOR collocalisé.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment est identifié un message ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Par une <strong>lettre de l'alphabet OACI</strong> (Alpha, Bravo… Zulu), mise à jour immédiatement à chaque changement d'information.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le read-back obligatoire lors du contact initial si on a l'ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Accuser réception de la <strong>lettre ATIS</strong> reçue et répéter le <strong>QNH en read-back</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur quelle période est calculée la moyenne du vent dans l'ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 minutes</strong> pour le vent de surface. <strong>1 minute</strong> pour la visibilité/RVR.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Durée maximale recommandée d'un message ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>30 secondes</strong> (whenever practicable — dans la mesure du possible).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le D-ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Digital ATIS</strong> : les mêmes informations que le Voice-ATIS, transmises via datalink (ACARS) et affichées sur les MCDU à bord.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Dans quel espace s'applique l'Advisory Service ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">En espace aérien de <strong>classe F</strong> uniquement (espaces et routes consultatifs).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">L'Advisory Service s'applique-t-il aux VFR ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Non.</strong> L'Advisory Service est exclusivement destiné aux vols <strong>IFR</strong>, sur demande. Les VFR en classe F reçoivent le FIS et l'alerting service uniquement.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre une instruction ATC et une suggestion Advisory ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une instruction ATC est contraignante. Une suggestion Advisory est <strong>facultative</strong> : le pilote décide librement de la suivre ou non, mais doit informer l'ATS sans délai de sa décision.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que doit faire un vol IFR qui refuse l'Advisory Service en classe F ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Il doit quand même <strong>notifier à l'ATS toute modification de son plan de vol</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le FIS inclut-il des informations sur l'activité volcanique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Oui.</strong> L'activité volcanique (ash cloud) fait partie des informations incluses dans le FIS.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Dans quels espaces aériens le FIS traite-t-il les risques de collision entre aéronefs ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Classes <strong>E, F et G</strong> (espaces non contrôlés) ainsi que sur les aérodromes <strong>AFIS</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'altitude seuil des nuages à signaler dans l'ATIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>5 000 ft</strong> ou en dessous de la plus haute altitude minimale de secteur, et les <strong>cumulonimbus</strong> quelle que soit leur altitude de base.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation prev/next — remplie automatiquement par main.js -->
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <!-- TOC auto-générée par main.js à partir des h1/h2/h3[id] du contenu -->
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

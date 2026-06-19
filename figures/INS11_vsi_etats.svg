@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280">
+  <!--
+    3 états côte à côte :
+    - Palier (level) : x=20→220
+    - Montée (climb) : x=260→460
+    - Descente (descent) : x=500→700
+    Chaque état : boîtier + capsule + choke + aiguille cadran
+  -->
+  <defs>
+    <marker id="aUp" markerWidth="7" markerHeight="7" refX="3.5" refY="5" orient="auto">
+      <path d="M3.5,0 L7,6 L0,6 z" fill="#548235"/>
+    </marker>
+    <marker id="aDown" markerWidth="7" markerHeight="7" refX="3.5" refY="1" orient="auto">
+      <path d="M3.5,7 L7,1 L0,1 z" fill="#C00000"/>
+    </marker>
+    <marker id="aBlue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#2E75B6"/>
+    </marker>
+    <marker id="aRed" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#C00000"/>
+    </marker>
+  </defs>
+
+  <!-- Titre -->
+  <text x="360" y="18" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">VSI barométrique — Les 3 états</text>
+  <line x1="10" y1="24" x2="710" y2="24" stroke="#CCC" stroke-width="1"/>
+
+  <!-- ============ ÉTAT 1 : PALIER ============ -->
+  <rect x="20" y="35" width="200" height="195" rx="8" fill="#F0F4F0" stroke="#548235" stroke-width="2"/>
+  <text x="120" y="54" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#548235">PALIER (Level flight)</text>
+
+  <!-- Capsule = taille normale -->
+  <ellipse cx="120" cy="130" rx="45" ry="30" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+  <text x="120" y="134" text-anchor="middle" font-family="Arial" font-size="9" fill="#1F3864">capsule</text>
+
+  <!-- Choke -->
+  <path d="M40,130 Q45,123 50,130 Q55,137 60,130 Q65,123 70,130 L75,130" stroke="#555" stroke-width="2" fill="none"/>
+  <line x1="28" y1="130" x2="40" y2="130" stroke="#555" stroke-width="2"/>
+  <!-- Flèche statique -->
+  <line x1="20" y1="155" x2="28" y2="130" stroke="#555" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="28" y="168" font-family="Arial" font-size="8.5" fill="#555">Ps stable</text>
+
+  <!-- Aiguille cadran (0) -->
+  <circle cx="120" cy="195" r="22" fill="#111" stroke="#888" stroke-width="1.5"/>
+  <line x1="120" y1="195" x2="142" y2="195" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="120" cy="195" r="3" fill="#888"/>
+  <text x="120" y="228" text-anchor="middle" font-family="Arial" font-size="9" fill="#548235" font-weight="bold">Aiguille = 0</text>
+  <text x="120" y="240" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">ΔP capsule/boîtier = 0</text>
+
+  <!-- ============ ÉTAT 2 : MONTÉE ============ -->
+  <rect x="260" y="35" width="200" height="195" rx="8" fill="#EEF4FF" stroke="#2E75B6" stroke-width="2"/>
+  <text x="360" y="54" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2E75B6">MONTÉE (Climb)</text>
+
+  <!-- Flèche montée avion -->
+  <line x1="320" y1="75" x2="320" y2="65" stroke="#548235" stroke-width="2.5" marker-end="url(#aUp)"/>
+  <text x="340" y="73" font-family="Arial" font-size="9" fill="#548235">avion ↑</text>
+  <!-- Ps diminue → flèche entrante plus petite -->
+  <text x="268" y="100" font-family="Arial" font-size="8.5" fill="#2E75B6">Ps ↓ (diminue)</text>
+
+  <!-- Capsule se contracte (plus petite) car Ps boîtier > Ps capsule -->
+  <ellipse cx="360" cy="130" rx="32" ry="22" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2.5"/>
+  <text x="360" y="127" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#1F3864">capsule</text>
+  <text x="360" y="139" text-anchor="middle" font-family="Arial" font-size="8" fill="#1F3864">contractée</text>
+  <!-- Flèches de compression -->
+  <line x1="338" y1="120" x2="330" y2="120" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#aBlue)"/>
+  <line x1="382" y1="120" x2="390" y2="120" stroke="#2E75B6" stroke-width="1.5"/>
+
+  <!-- Choke (retard) -->
+  <path d="M278,130 Q283,123 288,130 Q293,137 298,130 Q303,123 308,130 L314,130" stroke="#C00000" stroke-width="2" fill="none"/>
+  <line x1="265" y1="130" x2="278" y2="130" stroke="#C00000" stroke-width="2"/>
+  <text x="290" y="148" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#C00000">retard → boîtier</text>
+  <text x="290" y="158" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#C00000">Ps encore haute</text>
+
+  <!-- Aiguille CLIMB (vers haut-gauche) -->
+  <circle cx="360" cy="195" r="22" fill="#111" stroke="#888" stroke-width="1.5"/>
+  <!-- Aiguille pointant vers CLIMB (haut, ~135°) -->
+  <line x1="360" y1="195" x2="344" y2="179" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="360" cy="195" r="3" fill="#888"/>
+  <text x="360" y="228" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#2E75B6">Aiguille → CLIMB</text>
+  <text x="360" y="240" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Pcapsule &lt; Pboîtier</text>
+
+  <!-- ============ ÉTAT 3 : DESCENTE ============ -->
+  <rect x="500" y="35" width="200" height="195" rx="8" fill="#FFF0F0" stroke="#C00000" stroke-width="2"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#C00000">DESCENTE (Descent)</text>
+
+  <!-- Flèche descente avion -->
+  <line x1="560" y1="65" x2="560" y2="75" stroke="#C00000" stroke-width="2.5" marker-end="url(#aDown)"/>
+  <text x="577" y="73" font-family="Arial" font-size="9" fill="#C00000">avion ↓</text>
+  <!-- Ps augmente -->
+  <text x="508" y="100" font-family="Arial" font-size="8.5" fill="#C00000">Ps ↑ (augmente)</text>
+
+  <!-- Capsule se dilate (plus grande) car Ps capsule > Ps boîtier -->
+  <ellipse cx="600" cy="130" rx="55" ry="38" fill="#FBE5E5" stroke="#C00000" stroke-width="2.5"/>
+  <text x="600" y="126" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#1F3864">capsule</text>
+  <text x="600" y="138" text-anchor="middle" font-family="Arial" font-size="8" fill="#1F3864">dilatée</text>
+  <!-- Flèches de dilatation -->
+  <line x1="547" y1="130" x2="540" y2="130" stroke="#C00000" stroke-width="1.5"/>
+  <line x1="653" y1="130" x2="660" y2="130" stroke="#C00000" stroke-width="1.5" marker-end="url(#aRed)"/>
+
+  <!-- Choke (retard boîtier encore basse Ps) -->
+  <path d="M518,165 Q523,158 528,165 Q533,172 538,165 Q543,158 548,165 L553,165" stroke="#BF8F00" stroke-width="2" fill="none"/>
+  <text x="535" y="182" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#BF8F00">boîtier Ps encore basse</text>
+
+  <!-- Aiguille DESCENT (vers bas-gauche) -->
+  <circle cx="600" cy="195" r="22" fill="#111" stroke="#888" stroke-width="1.5"/>
+  <!-- Aiguille pointant vers DESCENT (bas, ~225°) -->
+  <line x1="600" y1="195" x2="584" y2="211" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="600" cy="195" r="3" fill="#888"/>
+  <text x="600" y="228" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#C00000">Aiguille → DESCENT</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Pcapsule &gt; Pboîtier</text>
+
+  <!-- Légende bas -->
+  <text x="360" y="260" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#555" font-style="italic">Le VSI mesure la différence de pression entre l'intérieur de la capsule (Ps directe) et le boîtier (Ps via choke à retard)</text>
+  <text x="360" y="273" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#555" font-style="italic">En palier : ΔP = 0. En montée : Ps ↓ → capsule se contracte → ΔP &gt; 0. En descente : Ps ↑ → capsule se dilate → ΔP &lt; 0.</text>
+</svg>

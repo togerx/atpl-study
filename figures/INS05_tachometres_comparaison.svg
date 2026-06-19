@@ -1,0 +1,135 @@
+<svg viewBox="0 0 760 390" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <text x="380" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F3864">Comparatif des 3 types de tachymètres</text>
+
+  <!-- En-têtes -->
+  <rect x="10" y="34" width="135" height="30" rx="4" fill="#1F3864"/>
+  <text x="77" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Type</text>
+  <rect x="150" y="34" width="130" height="30" rx="4" fill="#1F3864"/>
+  <text x="215" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Principe physique</text>
+  <rect x="285" y="34" width="130" height="30" rx="4" fill="#1F3864"/>
+  <text x="350" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Signal de sortie</text>
+  <rect x="420" y="34" width="155" height="30" rx="4" fill="#1F3864"/>
+  <text x="497" y="47" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Avantages (+)</text>
+  <text x="497" y="58" text-anchor="middle" font-size="9" fill="#aad">/ Inconvénients (−)</text>
+  <rect x="580" y="34" width="170" height="30" rx="4" fill="#1F3864"/>
+  <text x="665" y="54" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Application</text>
+
+  <!-- === LIGNE 1 : MAGNÉTIQUE === -->
+  <rect x="10" y="69" width="135" height="85" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="77" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">1. Magnétique</text>
+  <text x="77" y="104" text-anchor="middle" font-size="9" fill="#2E75B6">(Mechanical)</text>
+  <!-- Mini schéma -->
+  <ellipse cx="55" cy="132" rx="18" ry="13" fill="#ccc" stroke="#888" stroke-width="1"/>
+  <text x="55" y="136" text-anchor="middle" font-size="7" fill="#1F3864">Aimant</text>
+  <rect x="80" y="122" width="20" height="22" rx="3" fill="#BF8F00" stroke="#999" stroke-width="1"/>
+  <text x="90" y="136" text-anchor="middle" font-size="7" fill="white">Cup</text>
+  <line x1="100" y1="133" x2="115" y2="133" stroke="#888" stroke-width="1"/>
+  <text x="120" y="137" font-size="7" fill="#888">→</text>
+
+  <rect x="150" y="69" width="130" height="85" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="215" y="87" text-anchor="middle" font-size="9" fill="#1F3864">Aimant permanent entraîné</text>
+  <text x="215" y="100" text-anchor="middle" font-size="9" fill="#1F3864">par vilebrequin → champ</text>
+  <text x="215" y="113" text-anchor="middle" font-size="9" fill="#1F3864">magnétique → rotation</text>
+  <text x="215" y="126" text-anchor="middle" font-size="9" fill="#1F3864">drag-cup → ressort</text>
+  <text x="215" y="139" text-anchor="middle" font-size="9" fill="#1F3864">de rappel (hair spring)</text>
+
+  <rect x="285" y="69" width="130" height="85" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="350" y="90" text-anchor="middle" font-size="9" fill="#1F3864">Mécanique direct</text>
+  <text x="350" y="103" text-anchor="middle" font-size="9" fill="#1F3864">(arbre flexible)</text>
+  <text x="350" y="118" text-anchor="middle" font-size="9" fill="#1F3864">Rotation proportionnelle</text>
+  <text x="350" y="131" text-anchor="middle" font-size="9" fill="#1F3864">aux tr/min</text>
+
+  <rect x="420" y="69" width="155" height="85" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="497" y="87" text-anchor="middle" font-size="9" fill="#548235">✅ Simple, pas d'alim.</text>
+  <text x="497" y="100" text-anchor="middle" font-size="9" fill="#548235">✅ Autonome</text>
+  <text x="497" y="115" text-anchor="middle" font-size="9" fill="#C00000">⚠️ Influence temp.</text>
+  <text x="497" y="128" text-anchor="middle" font-size="9" fill="#C00000">⚠️ Précision ±5%</text>
+  <text x="497" y="141" text-anchor="middle" font-size="9" fill="#C00000">⚠️ Distance limitée</text>
+
+  <rect x="580" y="69" width="170" height="85" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="665" y="87" text-anchor="middle" font-size="9" fill="#1F3864">Vieux avions à pistons</text>
+  <text x="665" y="100" text-anchor="middle" font-size="9" fill="#1F3864">(Cessna, Piper anciens)</text>
+  <text x="665" y="114" text-anchor="middle" font-size="9" fill="#1F3864">Mesure RPM</text>
+  <text x="665" y="127" text-anchor="middle" font-size="9" fill="#1F3864">vilebrequin</text>
+
+  <!-- === LIGNE 2 : ELECTRIQUE (TACHOGENERATEUR) === -->
+  <rect x="10" y="159" width="135" height="85" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="77" y="177" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">2. Électrique</text>
+  <text x="77" y="191" text-anchor="middle" font-size="9" fill="#BF8F00">(Tachogénérateur)</text>
+  <rect x="25" y="205" width="32" height="20" rx="3" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="41" y="218" text-anchor="middle" font-size="7.5" fill="#1F3864">Réduct.</text>
+  <rect x="65" y="205" width="32" height="20" rx="3" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="81" y="218" text-anchor="middle" font-size="7.5" fill="#1F3864">Génér.</text>
+  <line x1="57" y1="215" x2="65" y2="215" stroke="#1F3864" stroke-width="1"/>
+  <text x="77" y="238" text-anchor="middle" font-size="7.5" fill="#1F3864">3-φ AC → moteur synchro</text>
+
+  <rect x="150" y="159" width="130" height="85" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="215" y="177" text-anchor="middle" font-size="9" fill="#1F3864">Générateur 3-phases</text>
+  <text x="215" y="190" text-anchor="middle" font-size="9" fill="#1F3864">entraîné par boîte de</text>
+  <text x="215" y="203" text-anchor="middle" font-size="9" fill="#1F3864">vitesse. Moteur synchro</text>
+  <text x="215" y="216" text-anchor="middle" font-size="9" font-weight="bold" fill="#BF8F00">f ∝ RPM</text>
+  <text x="215" y="229" text-anchor="middle" font-size="9" fill="#1F3864">entraîne tachymètre</text>
+  <text x="215" y="242" text-anchor="middle" font-size="9" fill="#1F3864">magnétique</text>
+
+  <rect x="285" y="159" width="130" height="85" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="350" y="178" text-anchor="middle" font-size="9" font-weight="bold" fill="#BF8F00">Tension 3-phases AC</text>
+  <text x="350" y="192" text-anchor="middle" font-size="9" fill="#1F3864">dont la fréquence</text>
+  <text x="350" y="205" text-anchor="middle" font-size="9" fill="#1F3864">varie avec le RPM</text>
+
+  <rect x="420" y="159" width="155" height="85" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="497" y="177" text-anchor="middle" font-size="9" fill="#548235">✅ Simple, précis</text>
+  <text x="497" y="190" text-anchor="middle" font-size="9" fill="#548235">✅ Pas interférence élec.</text>
+  <text x="497" y="203" text-anchor="middle" font-size="9" fill="#548235">✅ Pas résistance de ligne</text>
+  <text x="497" y="218" text-anchor="middle" font-size="9" fill="#C00000">⚠️ Influence température</text>
+
+  <rect x="580" y="159" width="170" height="85" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1"/>
+  <text x="665" y="177" text-anchor="middle" font-size="9" fill="#1F3864">Avions à pistons / turbines</text>
+  <text x="665" y="190" text-anchor="middle" font-size="9" fill="#1F3864">Mesure N1/N2</text>
+  <text x="665" y="203" text-anchor="middle" font-size="9" fill="#1F3864">(RPM % turbines)</text>
+
+  <!-- === LIGNE 3 : INDUCTIF === -->
+  <rect x="10" y="249" width="135" height="85" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="77" y="266" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">3. Inductif</text>
+  <text x="77" y="280" text-anchor="middle" font-size="9" fill="#C00000">(Electronic / Inductive)</text>
+  <!-- Roue phonique -->
+  <circle cx="55" cy="312" r="18" fill="none" stroke="#888" stroke-width="1.5"/>
+  <line x1="55" y1="294" x2="55" y2="298" stroke="#888" stroke-width="2"/>
+  <line x1="55" y1="308" x2="55" y2="312" stroke="#888" stroke-width="2"/>
+  <line x1="55" y1="316" x2="55" y2="320" stroke="#888" stroke-width="2"/>
+  <line x1="55" y1="326" x2="55" y2="330" stroke="#888" stroke-width="2"/>
+  <text x="55" y="315" text-anchor="middle" font-size="7" fill="#1F3864">Phonic</text>
+  <text x="90" y="310" font-size="7.5" fill="#C00000">→ impulses</text>
+  <text x="90" y="322" font-size="7.5" fill="#C00000">→ compteur</text>
+
+  <rect x="150" y="249" width="130" height="85" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="215" y="267" text-anchor="middle" font-size="9" fill="#1F3864">Roue phonique dentée</text>
+  <text x="215" y="280" text-anchor="middle" font-size="9" fill="#1F3864">(phonic notched wheel)</text>
+  <text x="215" y="293" text-anchor="middle" font-size="9" fill="#1F3864">devant électro-aimant.</text>
+  <text x="215" y="306" text-anchor="middle" font-size="9" font-weight="bold" fill="#C00000">f impulsions ∝ RPM</text>
+  <text x="215" y="319" text-anchor="middle" font-size="9" fill="#1F3864">Compteur → N1 %</text>
+
+  <rect x="285" y="249" width="130" height="85" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="350" y="268" text-anchor="middle" font-size="9" font-weight="bold" fill="#C00000">Tension AC pulsée</text>
+  <text x="350" y="282" text-anchor="middle" font-size="9" fill="#1F3864">Convertie en impulsions</text>
+  <text x="350" y="295" text-anchor="middle" font-size="9" fill="#1F3864">carrées comptées</text>
+  <text x="350" y="308" text-anchor="middle" font-size="9" fill="#1F3864">→ affichage N1 %</text>
+
+  <rect x="420" y="249" width="155" height="85" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="497" y="267" text-anchor="middle" font-size="9" fill="#548235">✅ Très précis (digital)</text>
+  <text x="497" y="280" text-anchor="middle" font-size="9" fill="#548235">✅ Compatible FADEC/ECAM</text>
+  <text x="497" y="295" text-anchor="middle" font-size="9" fill="#C00000">⚠️ Besoin alimentation</text>
+  <text x="497" y="308" text-anchor="middle" font-size="9" fill="#C00000">⚠️ Plus complexe</text>
+
+  <rect x="580" y="249" width="170" height="85" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="665" y="267" text-anchor="middle" font-size="9" fill="#1F3864">Turbines modernes</text>
+  <text x="665" y="280" text-anchor="middle" font-size="9" fill="#1F3864">Mesure N1 (soufflante)</text>
+  <text x="665" y="293" text-anchor="middle" font-size="9" fill="#1F3864">N2 (HP compresseur)</text>
+  <text x="665" y="306" text-anchor="middle" font-size="9" fill="#1F3864">Signal → FADEC/ECAM</text>
+
+  <!-- Note bas -->
+  <rect x="10" y="342" width="740" height="35" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="380" y="357" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1F3864">TURBINE : N1 = % vitesse rotor BP (soufflante) — N2 = % vitesse rotor HP — Affichage en % (parfois &gt; 100%)</text>
+  <text x="380" y="370" text-anchor="middle" font-size="9" fill="#1F3864">PISTON : tachymètre en RPM (tr/min) vilebrequin — Méthode magnétique ou tacho-générateur</text>
+
+</svg>

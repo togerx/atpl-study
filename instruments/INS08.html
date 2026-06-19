@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INS08 — Mesure de l'Angle d'Attaque · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">INS08 · Angle d'Attaque</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="INS08" data-matiere="instruments">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Instrumentation</a>
+        <span class="sep">›</span>
+        <span>INS08</span>
+      </div>
+      <div class="cours-code-badge">INS08</div>
+      <h1 class="cours-title">Mesure de l'Angle d'Attaque</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~18 min</span>
+        <span class="cours-meta-item">❓ 15 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════════════ -->
+        <h1 id="definition">1. Définition de l'angle d'attaque</h1>
+        <!-- ══════════════════════════════════════ -->
+
+        <p>L'<strong>angle d'attaque</strong> (AoA, ou <em>angle of attack</em>, ou angle alpha, ou incidence aérodynamique) est l'angle formé entre la <strong>corde de l'aile</strong> et la direction de l'<strong>écoulement relatif</strong> (<em>relative airflow</em>). Il se note <strong>α</strong> (alpha).</p>
+
+        <!-- Figure à extraire du document source (slide 4) et nommer : INS08_aoa_definition.png -->
+        <div class="fig-container">
+          <img src="../figures/INS08_aoa_definition.png" alt="Définition de l'angle d'attaque : chord line, velocity vector, pitch angle">
+          <div class="fig-caption">Fig. 1 — Angle d'attaque α : angle entre la corde de l'aile et le vecteur vitesse (airflow)</div>
+        </div>
+
+        <p>Il est fondamental de distinguer l'angle d'attaque de deux autres angles souvent confondus :</p>
+        <ul>
+          <li>L'<strong>angle d'assiette</strong> (<em>pitch angle</em>) : angle entre l'axe longitudinal de l'avion et l'horizon — c'est ce qu'affiche l'horizon artificiel.</li>
+          <li>L'<strong>angle de trajectoire</strong> (<em>flight path angle</em>) : angle entre le vecteur vitesse et l'horizon.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>α = angle entre la corde de l'aile et l'écoulement relatif.</strong><br>
+          Angle d'assiette = α + angle de trajectoire.<br>
+          Un avion peut piquer avec une forte assiette cabré et avoir un grand α si la trajectoire est encore plus cabrée — et vice versa.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'angle d'attaque n'est <strong>pas</strong> l'angle d'assiette. En virage serré, l'assiette reste faible mais l'angle d'attaque augmente fortement (facteur de charge). Un décrochage peut survenir à n'importe quelle vitesse et n'importe quelle assiette, dès que l'α dépasse l'α max.
+        </div>
+
+        <!-- ══════════════════════════════════════ -->
+        <h1 id="capteurs">2. Capteurs de mesure de l'angle d'attaque</h1>
+        <!-- ══════════════════════════════════════ -->
+
+        <h2 id="paddle-sensor">2.1 Capteur à palette (Paddle Sensor)</h2>
+
+        <p>Le capteur à palette est la forme la plus simple d'indicateur d'AoA. Il est utilisé sur les <strong>avions légers</strong> comme avertisseur de décrochage (<em>stall warning</em>). Il ne mesure pas l'angle précisément — il déclenche une alerte binaire (sonore ou lumineuse) dès que l'AoA devient anormal.</p>
+
+        <p>Le principe : une petite palette (<em>paddle</em>) ou languette (<em>switch tab</em>) est fixée sur le <strong>bord d'attaque de l'aile</strong>. En vol normal, le point de stagnation (<em>stagnation point</em>) se trouve en dessous de la palette qui reste abaissée. Lorsque l'AoA augmente vers le décrochage, le point de stagnation remonte et l'écoulement repousse la palette vers le haut, fermant le circuit d'alerte.</p>
+
+        <!-- Figure à extraire du document source (slide 5) et nommer : INS08_paddle_sensor.png -->
+        <div class="fig-container">
+          <img src="../figures/INS08_paddle_sensor.png" alt="Capteur paddle : position normale vs angle d'attaque élevé">
+          <div class="fig-caption">Fig. 2 — Capteur à palette : position basse (AoA normal) et poussée vers le haut (AoA proche décrochage)</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le paddle sensor ne mesure <strong>pas</strong> l'angle — il donne une <strong>alerte binaire</strong> (oui/non) quand l'AoA dépasse un seuil. Sortie : avertisseur sonore ou voyant.
+        </div>
+
+        <h2 id="alpha-vane">2.2 Girouette d'incidence (Vane Detector / Alpha Vane)</h2>
+
+        <p>Aussi appelée <em>floating vane sensor</em> (capteur à girouette flottante) ou <strong>alpha vane</strong>. C'est le capteur le plus répandu sur les avions de transport. La girouette est libre de pivoter dans le vent et s'aligne automatiquement avec l'écoulement relatif.</p>
+
+        <p>Quand l'angle d'attaque change, la girouette tourne. Cette rotation est transmise à un <strong>synchro transmitter</strong> (transformateur de position angulaire) qui envoie un signal électrique proportionnel à l'angle vers l'indicateur dans le cockpit ou vers l'ADC.</p>
+
+        <!-- Figure à extraire du document source (slide 6) et nommer : INS08_alpha_vane_schema.png -->
+        <div class="fig-container">
+          <img src="../figures/INS08_alpha_vane_schema.png" alt="Schéma alpha vane : vane, synchro, fuselage skin, index pins">
+          <div class="fig-caption">Fig. 3 — Structure de la girouette d'incidence (alpha vane) avec son synchro transmitter</div>
+        </div>
+
+        <p>Sur un Airbus A320, on trouve deux types de girouettes sur le fuselage avant :</p>
+        <ul>
+          <li>La <strong>girouette normale</strong> (<em>normal vane</em>) — position standard</li>
+          <li>La <strong>girouette de secours</strong> (<em>alternate vane</em>) — en cas de panne de la principale</li>
+        </ul>
+
+        <!-- Figure à extraire du document source (slide 7) et nommer : INS08_a320_vanes.png -->
+        <div class="fig-container">
+          <img src="../figures/INS08_a320_vanes.png" alt="Photo A320 avec girouettes normale et alternate sur fuselage">
+          <div class="fig-caption">Fig. 4 — Positions des girouettes sur l'A320 : normal vane et alternate vane</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          L'alpha vane est <strong>protégée contre le givrage par un réchauffage électrique</strong> (<em>protected against ice formation by heater</em>). En cas de défaut du chauffage, la girouette peut se bloquer et donner une indication erronée d'AoA.
+        </div>
+
+        <h2 id="null-seeking">2.3 Sonde conique à fentes — Null-Seeking Probe</h2>
+
+        <p>La sonde conique à fentes (<em>conical slotted probe</em>) est un système de mesure plus précis, utilisé sur les avions de transport modernes. Aussi appelée <em>null-seeking probe</em> (sonde à recherche du zéro) car elle pivote activement jusqu'à un état d'équilibre.</p>
+
+        <p><strong>Principe de fonctionnement :</strong></p>
+        <ul>
+          <li>La sonde conique s'étend dans l'écoulement. Elle comporte <strong>deux fentes</strong> (slots) disposées symétriquement, qui mesurent deux pressions totales <strong>Pt1</strong> (fente supérieure) et <strong>Pt2</strong> (fente inférieure).</li>
+          <li>Ces pressions sont envoyées de chaque côté d'une palette mobile (<em>movable paddle</em>). Quand l'AoA change, Pt1 ≠ Pt2 — la palette se déséquilibre.</li>
+          <li>Le déséquilibre provoque une <strong>rotation mécanique de la sonde</strong> jusqu'à ce que Pt1 = Pt2 (état "null" = zéro de différentiel).</li>
+          <li>La position angulaire résultante est convertie en signal électrique par un <strong>RVDT</strong> (<em>Rotary Variable Differential Transformer</em> — transformateur différentiel rotatif à variation), qui envoie la valeur d'α à l'ordinateur de données air (ADC).</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/INS08_null_seeking_probe.svg" alt="Schéma sonde null-seeking : Pt1, Pt2, paddle, RVDT, ADC">
+          <div class="fig-caption">Fig. 5 — Principe de la sonde null-seeking : la sonde tourne jusqu'à Pt1 = Pt2, la position est lue par le RVDT</div>
+        </div>
+
+        <p>La protection antigivrage est assurée par <strong>chauffage électrique</strong>. La null-seeking probe est plus précise que l'alpha vane car elle mesure directement une différence de pression plutôt qu'un déplacement mécanique.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          <strong>RVDT</strong> (Rotary Variable Differential Transformer) : capteur de position angulaire analogue au LVDT (linéaire). Une bobine primaire alimente deux secondaires ; selon la position du noyau rotatif, la tension différentielle entre les secondaires est proportionnelle à l'angle. Signal électrique robuste, insensible aux vibrations.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La null-seeking probe se positionne jusqu'à ce que Pt1 = Pt2 — c'est la <strong>sonde qui tourne</strong> pour s'équilibrer, pas l'avion. Ne pas confondre Pt (pression totale mesurée par les slots) avec la pression totale du tube de Pitot.
+        </div>
+
+        <!-- ══════════════════════════════════════ -->
+        <h1 id="systemes-utilisant-aoa">3. Systèmes utilisant l'angle d'attaque</h1>
+        <!-- ══════════════════════════════════════ -->
+
+        <h2 id="adc">3.1 Ordinateur de données air (ADC — Air Data Computer)</h2>
+
+        <p>L'ADC reçoit les données des capteurs (sonde AOA, Pitot, prise statique, sonde TAT) et calcule l'ensemble des paramètres de vol :</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS08_adc_flux.svg" alt="Flux ADC : capteurs → ADC → systèmes utilisateurs">
+          <div class="fig-caption">Fig. 6 — Flux de données de l'ADC : de la sonde AoA aux systèmes utilisateurs</div>
+        </div>
+
+        <p>Les paramètres calculés par l'ADC à partir des capteurs incluent : Zp (altitude pression), CAS (vitesse indiquée), Mach, Vz (vitesse verticale), TAT (température totale), SAT (température statique), <strong>α (angle d'attaque)</strong> et TAS (vraie vitesse air). Ces données sont distribuées à :</p>
+        <ul>
+          <li><strong>Cockpit / EFIS</strong> — affichage direct pour l'équipage</li>
+          <li><strong>AP / FD</strong> — pilote automatique et directeur de vol</li>
+          <li><strong>α Max Protection</strong> — protection d'enveloppe de vol (Flight Envelope Protection)</li>
+          <li><strong>FDR</strong> (<em>Flight Data Recorder</em>, boîte noire) — enregistrement</li>
+          <li><strong>FADECs</strong> (<em>Full Authority Digital Engine Control</em>) — gestion moteurs</li>
+          <li><strong>GPWS</strong> (<em>Ground Proximity Warning System</em>) — avertissement de proximité sol</li>
+        </ul>
+
+        <h2 id="stall-warning">3.2 Système d'avertissement de décrochage (Stall Warning)</h2>
+
+        <p>Le module d'avertissement de décrochage (<em>Stall Warning Module</em>) reçoit plusieurs paramètres d'entrée et peut générer plusieurs types d'alertes :</p>
+
+        <!-- Figure à extraire du document source (slide 10) et nommer : INS08_stall_warning_module.png -->
+        <div class="fig-container">
+          <img src="../figures/INS08_stall_warning_module.png" alt="Stall Warning Module : inputs (AoA, flaps, slats, ADC, thrust, gear) et outputs (stick-shaker, master warning, voice, AoA indicator, EFIS)">
+          <div class="fig-caption">Fig. 7 — Module d'avertissement de décrochage : entrées et sorties</div>
+        </div>
+
+        <p><strong>Entrées (inputs) :</strong></p>
+        <ul>
+          <li>Capteur d'angle d'attaque (AOA sensor) — entrée principale, mise en évidence en rouge</li>
+          <li>Position des volets (<em>flap position</em>) — car le Vmca et l'α max varient avec les volets</li>
+          <li>Position des becs (<em>slat position</em>)</li>
+          <li>Vitesse anémométrique depuis l'ADC (<em>airspeed</em>)</li>
+          <li>Poussée (<em>thrust</em>)</li>
+          <li>Microswitch de train (<em>landing gear micro switch</em>) — inhibe l'alerte au sol</li>
+        </ul>
+
+        <p><strong>Sorties (outputs) :</strong></p>
+        <ul>
+          <li><strong>Stick-shaker motor</strong> (<em>vibreur de manche</em>) — vibration physique du manche, alerte principale</li>
+          <li><strong>Master Warning lights</strong> (voyants d'alarme principale)</li>
+          <li><strong>Synthetic voice "STALL"</strong> (voix synthétique)</li>
+          <li><strong>Aural warning</strong> (avertissement sonore)</li>
+          <li><strong>AoA indicator</strong> (indicateur d'angle d'attaque dans le cockpit)</li>
+          <li><strong>EFIS / Symbol generator</strong> — affichage sur l'écran PFD</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          L'entrée principale du Stall Warning Module est le <strong>capteur d'AoA</strong>. Le premier avertissement de décrochage est typiquement le <strong>stick-shaker</strong> (vibreur de manche), qui précède le décrochage réel. La position des volets/becs est une correction car l'angle de décrochage varie avec la configuration.
+        </div>
+
+        <h2 id="flight-envelope">3.3 Systèmes de protection d'enveloppe de vol</h2>
+
+        <p>La protection haute incidence (<em>high angle of attack protection</em>) est une protection aérodynamique qui utilise l'AoA comme entrée principale. Sur les Airbus fly-by-wire (A320 et suivants), cette protection empêche le système de commandes de vol de dépasser l'α max — le pilote automatique ou le pilote lui-même ne peut pas commander un angle d'attaque supérieur au maximum autorisé. La limite est appliquée <strong>en temps réel</strong> par les calculateurs de commandes de vol.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Sur Boeing, la protection équivalente est le <strong>stick-pusher</strong> (<em>pousseur de manche</em>) : un actuateur physique qui pousse le manche vers l'avant juste avant le décrochage pour diminuer l'AoA. Airbus utilise une limitation logique dans les lois de vol plutôt qu'un actuateur mécanique.
+        </div>
+
+        <!-- ══════════════════════════════════════ -->
+        <h1 id="indicateurs">4. Indicateurs d'angle d'attaque</h1>
+        <!-- ══════════════════════════════════════ -->
+
+        <p>L'angle d'attaque peut être affiché de trois façons différentes selon le type d'aéronef :</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS08_indicateurs_aoa.png" alt="Trois types d'indicateurs AoA : linéaire, cadran circulaire, EFIS/PFD">
+          <div class="fig-caption">Fig. 8 — Les trois types d'indicateurs AoA : linéaire (militaire), cadran circulaire (transport), EFIS/PFD (numérique)</div>
+        </div>
+
+        <p>L'<strong>indicateur linéaire vertical</strong> est typiquement utilisé sur les avions militaires. Il affiche l'angle en degrés sur une graduation verticale, avec des zones colorées (vert = normal, rouge = décrochage). Un voyant "PANNE" signale la défaillance du capteur.</p>
+
+        <p>L'<strong>indicateur circulaire</strong> (cadran type "Angle of Attack / Buffet Mach") est utilisé sur certains avions de transport. Il affiche à la fois l'angle d'attaque (côté gauche, en unités normalisées par rapport à Vs) et le Mach de buffet (<em>buffet Mach</em>) côté droit. Des secteurs colorés indiquent les zones normale (vert), approche buffet (orange) et décrochage/buffet (rouge).</p>
+
+        <p>L'<strong>affichage EFIS / PFD</strong> représente l'angle d'attaque sous forme d'une valeur numérique dans un petit cercle, généralement situé en haut à droite du PFD. Il peut être mis en surbrillance (rouge) lorsque la valeur approche des limites.</p>
+
+        <!-- ══════════════════════════════════════ -->
+        <h1 id="pannes-indications">5. Indications incorrectes — Pannes et conséquences</h1>
+        <!-- ══════════════════════════════════════ -->
+
+        <h2 id="sonde-bloquee">5.1 Sonde bloquée en vol — scénario de panne</h2>
+
+        <p>Une panne typique survient lorsque la sonde AoA se bloque (givrage, obstruction physique) à une valeur fixe. Le scénario le plus dangereux se déroule comme suit :</p>
+
+        <ol>
+          <li>L'avion décélère (réduction de vitesse). Le pilote automatique (AP), pour maintenir la trajectoire, doit normalement augmenter l'incidence.</li>
+          <li>La sonde bloquée <strong>ne détecte aucun changement d'incidence</strong> — elle continue d'afficher une valeur figée.</li>
+          <li>L'AP, croyant que l'incidence est encore faible, continue de <strong>commander une augmentation de l'assiette à cabrer</strong> (<em>pitch up</em>), aggravant la situation.</li>
+          <li>L'avion peut entrer en décrochage <strong>sans qu'aucune alarme stall ne se déclenche</strong> (car le stall warning utilise la même sonde défaillante).</li>
+        </ol>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Une sonde AoA bloquée peut provoquer un <strong>décrochage sans alarme</strong> : le stall warning ne s'active pas car sa source (la sonde AoA) est défaillante. C'est un des scénarios les plus insidieux en avionique.
+        </div>
+
+        <h2 id="protection-et-panne">5.2 Interaction avec la protection d'enveloppe</h2>
+
+        <p>Sur les avions équipés d'une protection d'enveloppe de vol (<em>flight domain protection</em>), une indication d'AoA excessivement élevée (même si elle est erronée) peut déclencher la protection haute incidence. Le système commande alors un <strong>braquage automatique de profondeur à cabrer-bas</strong> (<em>nose-down trim</em>) — progressif et difficile à contrôler si le pilote n'intervient pas rapidement.</p>
+
+        <h2 id="procedure-incorrecte">5.3 Procédure en cas d'indication incorrecte</h2>
+
+        <p>Quelle que soit la configuration, en cas d'indication AoA incorrecte, la procédure est :</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          En cas d'indication AoA erronée : <strong>débrayer immédiatement le pilote automatique (AP) ET la poussée automatique (autothrust)</strong>. Reprendre le contrôle manuel et vérifier la cohérence des autres instruments.
+        </div>
+
+        <p>Ce cas rappelle l'accident du vol Air France 447 (2009), où la perte des données anémométriques (Pitot gelés) a conduit à une désorientation de l'équipage et à une perte de contrôle. La gestion des pannes de capteurs atmosphériques (Pitot, AoA) fait partie des priorités de la formation ATPL.</p>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">α</span>
+            <span class="val-label">Corde de l'aile / écoulement relatif</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Paddle</span>
+            <span class="val-label">Alerte binaire — avions légers seulement</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Alpha vane</span>
+            <span class="val-label">Girouette libre + synchro — transport</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Null-seeking</span>
+            <span class="val-label">Sonde conique — Pt1=Pt2 — RVDT</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">RVDT</span>
+            <span class="val-label">Transducteur angulaire → signal électrique</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Antigivrage</span>
+            <span class="val-label">Chauffage électrique sur toutes sondes</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Stick-shaker</span>
+            <span class="val-label">1ère alerte stall — vibreur de manche</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">AP + AT off</span>
+            <span class="val-label">Procédure sonde AoA incorrecte</span>
+          </div>
+        </div>
+
+        <!-- ════════════════════════════
+             FIGURES DE RÉFÉRENCE (synthèse)
+        ════════════════════════════ -->
+        <h1 id="figures-synthese">Figures de référence</h1>
+
+        <div id="adc-flux-synth">
+          <div class="fig-container">
+            <img src="../figures/INS08_adc_flux.svg" alt="Flux ADC : capteurs → ADC → systèmes">
+            <div class="fig-caption">ADC — Flux de données : des capteurs aux systèmes utilisateurs</div>
+          </div>
+        </div>
+
+        <div id="stall-warning-synth">
+          <!-- Figure à extraire du document source (slide 10) et nommer : INS08_stall_warning_module.png -->
+          <div class="fig-container">
+            <img src="../figures/INS08_stall_warning_module.png" alt="Stall Warning Module : inputs et outputs">
+            <div class="fig-caption">Stall Warning Module — Entrées (AoA, volets, slats, ADC, thrust, gear) et sorties (stick-shaker, master warning, voix, indicateur, EFIS)</div>
+          </div>
+        </div>
+
+        <!-- ════════════════════════
+             TABLEAU COMPARATIF SONDES
+        ════════════════════════ -->
+        <h1 id="recap-sondes">Comparatif des types de sondes AoA</h1>
+        <table>
+          <thead>
+            <tr><th>Type</th><th>Principe</th><th>Application</th><th>Sortie</th><th>Antigivrage</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Paddle sensor</strong></td>
+              <td>Languette mécanique sur bord d'attaque — point de stagnation</td>
+              <td>Avions légers</td>
+              <td>Alerte binaire (son/lumière)</td>
+              <td>Non</td>
+            </tr>
+            <tr>
+              <td><strong>Alpha vane</strong></td>
+              <td>Girouette libre + synchro transmitter</td>
+              <td>Transport civil (A320…)</td>
+              <td>Signal électrique continu → ADC / indicateur</td>
+              <td>Oui (chauffage électrique)</td>
+            </tr>
+            <tr>
+              <td><strong>Null-seeking probe</strong></td>
+              <td>Sonde conique à 2 fentes — Pt1=Pt2 — RVDT</td>
+              <td>Transport moderne</td>
+              <td>Signal électrique précis → ADC</td>
+              <td>Oui (chauffage électrique)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">AoA ≠ assiette (pitch angle)</div>
+              <div class="piege-explication">L'angle d'attaque est l'angle entre la corde et l'écoulement relatif. L'assiette est l'angle de l'axe longitudinal par rapport à l'horizon. Un avion peut avoir une forte assiette cabrée et un faible AoA (descente rapide à haute vitesse), ou une faible assiette et un grand AoA (cabré lent en virage serré).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Paddle sensor = alerte binaire uniquement</div>
+              <div class="piege-explication">Le paddle sensor ne mesure pas l'AoA en valeur continue — il déclenche juste une alarme au-delà d'un seuil. Il ne peut pas piloter un indicateur d'AoA ni alimenter l'ADC.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Chauffage alpha vane = obligatoire</div>
+              <div class="piege-explication">L'alpha vane est chauffée électriquement contre le givrage. Une panne du chauffage peut bloquer la girouette et donner une indication AoA figée, entraînant les mêmes conséquences qu'une sonde bloquée (voir #5).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Null-seeking : la sonde tourne, pas l'avion</div>
+              <div class="piege-explication">La sonde conique pivote mécaniquement jusqu'à ce que Pt1 = Pt2 ("null"). C'est la position angulaire de la sonde (lue par le RVDT) qui donne α, pas une mesure directe de l'angle de l'avion. Ne pas confondre Pt1/Pt2 de la sonde avec la pression totale du Pitot.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Sonde bloquée → décrochage sans alarme</div>
+              <div class="piege-explication">Si la sonde AoA est bloquée, le Stall Warning Module ne reçoit pas l'info d'augmentation d'incidence → pas d'alarme de décrochage. Le pilote automatique continue de piquer le nez sans que l'équipage soit alerté.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Protection d'enveloppe + sonde erronée = nose-down incontrôlable</div>
+              <div class="piege-explication">Si la sonde indique un AoA excessivement élevé (fausse indication), la protection d'enveloppe de vol déclenche un braquage automatique cabré-bas (nose-down trim) progressif. Sans intervention rapide (débrayer AP + AT), ce mouvement devient ingérable.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Entrée principale du Stall Warning = AoA sensor (pas la vitesse)</div>
+              <div class="piege-explication">Bien que l'airspeed (depuis l'ADC) soit aussi une entrée, l'entrée principale et déterminante du module de stall warning est le capteur d'AoA (encadré en rouge dans les schémas). La position des volets/becs module le seuil de déclenchement.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Procédure : débrayer AP ET autothrust simultanément</div>
+              <div class="piege-explication">En cas d'indication AoA incorrecte, il faut débrayer le pilote automatique ET l'autothrust. Débrayer uniquement le PA ne suffit pas — l'autothrust peut continuer à réduire la poussée en réponse à la fausse indication.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Définition de l'angle d'attaque ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Angle entre la <strong>corde de l'aile</strong> et la direction de l'<strong>écoulement relatif</strong> (airflow). Noté α (alpha).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel capteur AoA est utilisé sur les avions légers ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>paddle sensor</strong> (capteur à palette), qui donne une alarme binaire (son ou voyant) uniquement.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'autre nom de la "floating vane sensor" ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Alpha vane</strong> (girouette d'incidence). Elle est libre de pivoter et envoie sa position angulaire via un synchro transmitter.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment est protégée l'alpha vane contre le givrage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Par un <strong>chauffage électrique</strong> (heater) intégré dans le capteur.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le principe de la null-seeking probe ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Deux fentes (Pt1 haut, Pt2 bas) envoient des pressions de chaque côté d'une palette. La sonde tourne jusqu'à <strong>Pt1 = Pt2</strong> (null). La position angulaire est lue par un <strong>RVDT</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie RVDT ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Rotary Variable Differential Transformer</strong> — transducteur de position angulaire qui convertit un angle mécanique en signal électrique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les 6 systèmes alimentés par l'ADC ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Cockpit/EFIS, AP/FD, α Max Protection, FDR, FADECs, GPWS.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'entrée principale du Stall Warning Module ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>capteur d'AoA</strong> (angle of attack sensor) — entrée prioritaire, mise en évidence sur les schémas.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le premier avertissement de décrochage sur un avion de transport ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>stick-shaker</strong> (vibreur de manche) — vibration physique du manche avant le décrochage réel.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il si la sonde AoA se bloque en vol (avec PA enclenché) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le PA continue de piquer le nez jusqu'au décrochage <strong>sans déclencher d'alarme stall</strong>, car la sonde bloquée ne détecte pas l'augmentation d'incidence.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la procédure en cas d'indication AoA incorrecte ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Débrayer immédiatement le <strong>pilote automatique (AP) ET l'autothrust</strong>, puis reprendre le contrôle manuel.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la position des volets est-elle une entrée du Stall Warning Module ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Car l'angle d'attaque de décrochage (α max) varie selon la configuration en volets/becs — le seuil d'alerte doit être adapté à chaque configuration.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle différence entre alpha vane et null-seeking probe ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Alpha vane : girouette libre qui s'aligne passivement avec l'écoulement + synchro. Null-seeking : sonde conique qui tourne activement jusqu'à Pt1=Pt2 + RVDT. La null-seeking est plus précise.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la "flight envelope protection" liée à l'AoA ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un système (fly-by-wire, ex. Airbus) qui empêche de dépasser α max en limitant les commandes de vol. En cas de fausse indication d'AoA élevé, peut déclencher un nose-down trim incontrôlable.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur un A320, combien de girouettes AoA et où sont-elles ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Deux girouettes sur le fuselage avant : une <strong>normal vane</strong> et une <strong>alternate vane</strong> (de secours).</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

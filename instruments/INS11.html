@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INS11 — Variomètre (VSI) · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">INS11 · Variomètre VSI</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="INS11" data-matiere="instruments">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Instrumentation</a>
+        <span class="sep">›</span>
+        <span>INS11</span>
+      </div>
+      <div class="cours-code-badge">INS11</div>
+      <h1 class="cours-title">Variomètre — Vertical Speed Indicator (VSI)</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~18 min</span>
+        <span class="cours-meta-item">❓ 16 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="introduction">1. Introduction — Définition et unités</h1>
+        <!-- ════════════════════════════════ -->
+
+        <p>Le <strong>variomètre</strong> (VSI, <em>Vertical Speed Indicator</em>, parfois appelé <em>Rate of Climb Indicator</em>) indique au pilote la <strong>vitesse verticale</strong> Vz, c'est-à-dire le taux de variation d'altitude. Il mesure indirectement la vitesse de montée ou de descente en exploitant la variation de la <strong>pression statique</strong> Ps avec l'altitude.</p>
+
+        <p>Formellement, la vitesse verticale est la dérivée de l'altitude par rapport au temps, et elle est liée à la variation de pression statique :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule fondamentale</div>
+          <div class="formula-display">Vz = dZ/dt &nbsp;&nbsp;|&nbsp;&nbsp; Vz = f(dPs/dt)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Vz : vitesse verticale — Z : altitude — Ps : pression statique<br>
+          Le VSI mesure le taux de variation de Ps pour en déduire Vz.</p>
+        </div>
+
+        <p><strong>Unités :</strong> la vitesse verticale s'exprime en pieds par minute (ft/min) ou en mètres par seconde (m/s). La conversion à retenir :</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">1 m/s</span>
+            <span class="val-label">= 200 ft/min</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">0,5 m/s</span>
+            <span class="val-label">= 100 ft/min</span>
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="principe-baro">2. Principe du VSI barométrique</h1>
+        <!-- ════════════════════════════════ -->
+
+        <h2 id="principe-general">2.1 Principe général</h2>
+
+        <p>Le VSI barométrique utilise une <strong>capsule anéroïde</strong> placée dans un boîtier étanche. La pression statique est amenée à la fois à l'intérieur de la capsule (directement) et à l'intérieur du boîtier (par un passage calibré et étranglé appelé <strong>choke</strong> ou capillaire — littéralement « fuite calibrée »).</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS11_vsi_principe.svg" alt="Schéma interne du VSI barométrique : capsule, choke, renvoi mécanique, cadran">
+          <div class="fig-caption">Fig. 1 — Structure interne du VSI barométrique : deux chemins de pression statique créent un différentiel</div>
+        </div>
+
+        <p>Le choke (capillaire) introduit intentionnellement un <strong>retard</strong> : la pression à l'intérieur du boîtier s'équilibre plus lentement que celle à l'intérieur de la capsule. C'est cette différence de pression qui actionne l'aiguille :</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS11_vsi_etats.svg" alt="Les 3 états du VSI : palier (ΔP=0), montée (capsule contractée), descente (capsule dilatée)">
+          <div class="fig-caption">Fig. 2 — Les 3 états du VSI : palier, montée et descente selon ΔP entre capsule et boîtier</div>
+        </div>
+
+        <ul>
+          <li><strong>Palier :</strong> Ps est stable → la pression dans la capsule et dans le boîtier finissent par s'égaliser (ΔP = 0) → aiguille à zéro.</li>
+          <li><strong>Montée :</strong> Ps diminue. La capsule réagit immédiatement (se contracte). Le boîtier, freiné par le choke, conserve momentanément une pression plus haute → la capsule est comprimée par le boîtier → aiguille vers CLIMB.</li>
+          <li><strong>Descente :</strong> Ps augmente. La capsule réagit immédiatement (se dilate). Le boîtier garde une pression plus basse → la capsule pousse sur le boîtier → aiguille vers DESCENT.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le VSI mesure la <strong>différence de pression</strong> entre l'intérieur de la capsule (Ps directe, rapide) et l'intérieur du boîtier (Ps via choke, lente). En palier stable, ΔP = 0. Toute variation de Ps crée un ΔP proportionnel à Vz.
+        </div>
+
+        <h2 id="metering-unit">2.2 Compensation — Metering unit (capillaire + orifice)</h2>
+
+        <p>La précision du VSI dépend des caractéristiques du choke, qui varient avec la densité, la température et la viscosité de l'air. Différentes méthodes de compensation ont été développées :</p>
+
+        <ul>
+          <li>Un choke composé uniquement d'un <strong>tube capillaire</strong> : la résistance au flux d'air est proportionnelle à la viscosité. L'erreur augmente avec l'altitude.</li>
+          <li>Un choke composé uniquement d'un <strong>orifice</strong> : la différence de pression varie inversement à la température. L'erreur est de signe opposé au capillaire.</li>
+          <li>En pratique, le choke standard (<em>metering unit</em>) combine <strong>deux tubes capillaires</strong> (céramique), dont les erreurs sont de signes opposés avec l'altitude et s'annulent mutuellement. Cette combinaison assure une bonne compensation sur une large plage d'altitudes et de températures.</li>
+        </ul>
+
+        <!-- Figure à extraire du document source (slide 7) et nommer : INS11_metering_unit.png -->
+        <div class="fig-container">
+          <img src="../figures/INS11_metering_unit.png" alt="Graphe compensation capillaire/orifice/combiné et photo metering unit">
+          <div class="fig-caption">Fig. 3 — Compensation de la metering unit : combinaison capillaire + orifice pour annuler les erreurs d'altitude</div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Sur le graphe de la slide 7, la courbe "BOTH" (combinaison capillaire + orifice) est bien plus plate que les courbes individuelles "CAPILLARY ONLY" et "ORIFICE ONLY" — preuve que la compensation fonctionne sur toute la plage d'altitude (0 à 50 000 ft).
+        </div>
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="ivsi">3. IVSI — Variomètre instantané</h1>
+        <!-- ════════════════════════════════ -->
+
+        <p>Le VSI barométrique standard souffre d'un défaut important : le <strong>time lag</strong> (retard). Il faut quelques secondes pour que le différentiel de pression se stabilise après un changement de vitesse verticale. L'IVSI (<em>Instantaneous Vertical Speed Indicator</em>, variomètre instantané) est conçu pour éliminer ce retard.</p>
+
+        <h2 id="dash-pot">3.1 Principe — le dash-pot</h2>
+
+        <p>L'IVSI intègre un <strong>accéléromètre vertical</strong> appelé <em>dash-pot</em> (amortisseur à piston, ou palette). Cet organe détecte immédiatement toute accélération verticale et pompe de l'air dans le circuit de la capsule <em>avant même</em> que la variation de Ps ne soit perceptible. L'aiguille répond donc instantanément.</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS11_ivsi.svg" alt="Schéma IVSI : dash-pot (pompe accélérométrique), restriction principale, capsule, prise statique">
+          <div class="fig-caption">Fig. 4 — Schéma de l'IVSI : le dash-pot anticipe la variation de Ps et élimine le time lag</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          L'IVSI = VSI standard + <strong>dash-pot</strong> (accéléromètre). Le dash-pot <strong>anticipe</strong> la variation de Ps en injectant de l'air dans le circuit dès qu'il détecte une accélération verticale. Résultat : pas de time lag.
+        </div>
+
+        <h2 id="ivsi-limites">3.2 Limite critique de l'IVSI</h2>
+
+        <p>Le dash-pot est un accéléromètre — il détecte toute accélération, pas seulement les accélérations verticales liées à la montée ou à la descente. Il est sensible aux <strong>facteurs de charge</strong> (load factors). Cela génère des indications erronées dans deux situations précises :</p>
+
+        <ul>
+          <li><strong>Décollage (T/O) :</strong> l'accélération longitudinale de la course au décollage peut être interprétée comme une accélération verticale → l'IVSI indique une fausse montée alors que l'avion roule encore.</li>
+          <li><strong>Virages serrés :</strong> le facteur de charge (> 1 g) génère une accélération centripète → l'IVSI peut indiquer une fausse montée ou descente pendant un virage serré.</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'IVSI est <strong>moins fiable que le VSI standard au décollage et en virage serré</strong>. Paradoxalement, l'instrument "instantané" est moins précis dans ces phases critiques. À l'examen, toute question sur "fausse indication IVSI" pointe vers le facteur de charge ou le décollage.
+        </div>
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="vsi-inertiel">4. VSI inertiel (ADIRS)</h1>
+        <!-- ════════════════════════════════ -->
+
+        <p>Sur les avions de transport modernes, la vitesse verticale est calculée par l'<strong>ADIRS</strong> (<em>Air Data Inertial Reference System</em> — système de référence inertielle et de données air). L'ADIRS combine deux sources pour obtenir une <strong>vitesse verticale baro-inertielle</strong> (Vzi) plus précise :</p>
+
+        <ul>
+          <li><strong>Vzbi</strong> : dérivation de l'altitude standard (altitude barométrique) — même principe que le VSI barométrique, mais calculé numériquement.</li>
+          <li><strong>Vzi</strong> : intégration des accélérations mesurées par les accéléromètres inertiels du système de référence inertielle (IRS) — mesure directe sans dépendance à Ps.</li>
+        </ul>
+
+        <p>La fusion de ces deux sources donne une indication rapide (grâce à l'inertiel) et précise sur le long terme (grâce au baro). L'indication est affichée sur le PFD sous forme d'une bandelette verticale numérique (colonne droite du PFD Airbus).</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          ADIRS = ADC (Air Data Computer) + IRS (Inertial Reference System). Sur l'A320, il y a 3 ADIRS (ADIRU 1, 2, 3). La Vzi est affichée dans la colonne verticale à droite du PFD, en ft/min.
+        </div>
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="affichages">5. Affichages</h1>
+        <!-- ════════════════════════════════ -->
+
+        <p>La vitesse verticale peut être affichée de plusieurs façons selon le type d'équipement :</p>
+        <ul>
+          <li><strong>Cadran analogique circulaire</strong> : aiguille sur une graduation CLIMB (haut) / DESCENT (bas) / 0 (droite), gradué en milliers de ft/min. Format classique sur avions légers et certains avions de transport plus anciens.</li>
+          <li><strong>EFIS / PFD numérique</strong> : bandelette verticale analogique avec valeur numérique superposée, sur la droite du PFD. Utilisé sur tous les avions fly-by-wire modernes (Airbus A320/330/380, Boeing 737NG/787…).</li>
+          <li><strong>Écran multifonctions (G1000, Garmin…)</strong> : intégré dans l'affichage principal du PFD électronique.</li>
+        </ul>
+
+        <!-- Figure à extraire du document source (slide 10) et nommer : INS11_displays.png -->
+        <div class="fig-container">
+          <img src="../figures/INS11_displays.png" alt="Affichages VSI : cadran analogique, EFIS PFD, écran Garmin G1000">
+          <div class="fig-caption">Fig. 5 — Types d'affichages VSI : cadran analogique (haut droite), EFIS (bas droite), G1000 (gauche)</div>
+        </div>
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="erreurs">6. Erreurs du VSI</h1>
+        <!-- ════════════════════════════════ -->
+
+        <div class="fig-container">
+          <img src="../figures/INS11_erreurs_vsi.png" alt="Tableau des erreurs du VSI : instrument, position, manœuvre, time lag, blocage statique">
+          <div class="fig-caption">Fig. 6 — Erreurs du VSI : types, causes, effets et remarques</div>
+        </div>
+
+        <h2 id="erreur-instrument">6.1 Erreur d'instrument</h2>
+        <p>Liée aux imperfections de fabrication (calibration du choke, friction mécanique). Constante et non compensable en vol — minimisée lors de la construction.</p>
+
+        <h2 id="erreur-position">6.2 Erreur de position (ou de pression)</h2>
+        <p>Si la prise de pression statique est affectée par une erreur de position (perturbation aérodynamique locale), une variation brusque de vitesse peut faire varier la pression statique mesurée indépendamment de tout changement d'altitude. Le VSI indique alors faussement une montée ou une descente. Ce phénomène est particulièrement notable lors de l'<strong>accélération au décollage</strong>.</p>
+
+        <h2 id="erreur-manoeuvre">6.3 Erreur de manœuvre</h2>
+        <p>Tout changement d'assiette provoque des fluctuations de courte durée à la prise statique. Ces fluctuations sont interprétées comme des variations de Vz et l'instrument indique une fausse vitesse verticale pendant quelques secondes. De plus, la biellette de renvoi mécanique comprend souvent un petit contrepoids ; son inertie introduit un délai supplémentaire lors des manœuvres.</p>
+
+        <h2 id="time-lag">6.4 Time Lag (retard)</h2>
+        <p>C'est l'erreur la plus caractéristique du VSI standard. L'aiguille met quelques secondes à se stabiliser au début d'une montée ou d'une descente (délai pour établir le ΔP à travers le choke). Il existe aussi un time lag <strong>au passage en palier</strong> : les pressions mettent du temps à s'égaliser, donc l'aiguille pointe encore en montée ou descente alors que l'avion vole à altitude constante. Cette erreur est amplifiée après une longue montée ou descente à grand taux.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le time lag du VSI est <strong>double</strong> : au début d'une variation de Vz ET au retour en palier. L'aiguille continue d'indiquer une Vz non nulle quelques secondes après que l'avion s'est réellement mis en palier.
+        </div>
+
+        <h2 id="blocage-statique">6.5 Blocage de la ligne statique</h2>
+        <p>Si la prise de pression statique est bouchée (givre, insecte, etc.), la pression dans le circuit ne varie plus. Le différentiel de pression se résorbe progressivement et l'aiguille <strong>revient à zéro</strong> — quelle que soit la vraie Vz. C'est un symptôme important car les autres instruments statiques (ASI, altimètre, machmètre) sont alimentés par la même prise et seront également affectés.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Blocage statique → VSI à zéro + ASI + altimètre + machmètre aussi affectés. Le VSI à zéro en vol est une panne statique jusqu'à preuve du contraire.
+        </div>
+
+        <!-- ════════════════════════════════ -->
+        <h1 id="utilisation">7. Utilisation du VSI — Calcul de la pente</h1>
+        <!-- ════════════════════════════════ -->
+
+        <p>Le VSI est utilisé pour calculer et contrôler la pente de descente lors d'une approche. La relation entre le taux de descente (ROD, <em>Rate of Descent</em>), la vitesse sol et la pente est fondamentale en navigation et en procédures d'approche.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formules ROD / Pente</div>
+          <div class="formula-display">ROD (ft/min) = Vp (kt) × Pente (%)</div>
+          <p style="margin:.4rem 0 .2rem;font-size:.85rem">Vp = vitesse sol (Ground Speed) en nœuds</p>
+          <div class="formula-display">Pente (%) = ROD (ft/min) / Vp (kt)</div>
+          <p style="margin:.4rem 0 .2rem;font-size:.85rem">Avec Pente en degrés : ROD = (Pente° × 100 × Vp) / 60</p>
+          <div class="formula-display">Conversion : X° / 0,6 = X%</div>
+          <p style="margin:.4rem 0 0;font-size:.85rem">Ex : pente ILS = 3° → 3/0,6 = 5% &nbsp;|&nbsp; À 150 kt : ROD = 150 × 5 = 750 ft/min</p>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La formule <strong>ROD = Vp × Pente%</strong> donne un ROD en ft/min si Vp est en nœuds. Vérifier que la pente est bien en % et non en degrés. La conversion 3° ≈ 5% est à mémoriser (ILS standard = 3° = 5% = ~750 ft/min à 150 kt GS).
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">1 m/s</span>
+            <span class="val-label">= 200 ft/min</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">0,5 m/s</span>
+            <span class="val-label">= 100 ft/min</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">3° → 5%</span>
+            <span class="val-label">Pente ILS : 3°/0,6 = 5%</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">~750 ft/min</span>
+            <span class="val-label">ROD ILS 3° à 150 kt</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Choke</span>
+            <span class="val-label">Fuite calibrée → retard intentionnel</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Dash-pot</span>
+            <span class="val-label">IVSI : accéléromètre → pas de lag</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Vzbi</span>
+            <span class="val-label">Vitesse baro-inertielle (ADIRS)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">VSI → 0</span>
+            <span class="val-label">Blocage statique (+ ASI + alti + Mach)</span>
+          </div>
+        </div>
+
+        <!-- ════════════════════
+             FORMULES (aussi en synthèse)
+        ════════════════════ -->
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formules ROD / Pente</div>
+          <div class="formula-display">ROD (ft/min) = Vp (kt) × Pente (%)</div>
+          <div class="formula-display">Pente (%) = ROD / Vp &nbsp;|&nbsp; X° / 0,6 = X%</div>
+          <p style="margin:.4rem 0 0;font-size:.85rem">ILS 3° = 5% → ROD = Vp × 5 &nbsp;|&nbsp; À 150 kt : 750 ft/min, à 120 kt : 600 ft/min</p>
+        </div>
+
+        <!-- ════════════════════
+             FIGURES DE RÉFÉRENCE
+        ════════════════════ -->
+        <h1 id="figures-synthese">Figures de référence</h1>
+
+        <div id="vsi-etats-synth">
+          <div class="fig-container">
+            <img src="../figures/INS11_vsi_etats.svg" alt="VSI : palier, montée, descente — les 3 états">
+            <div class="fig-caption">Les 3 états du VSI : palier (ΔP=0), montée (capsule contractée), descente (capsule dilatée)</div>
+          </div>
+        </div>
+
+        <div id="erreurs-vsi-synth">
+          <div class="fig-container">
+            <img src="../figures/INS11_erreurs_vsi.png" alt="Tableau des erreurs VSI">
+            <div class="fig-caption">Erreurs du VSI — types, causes, effets et remarques</div>
+          </div>
+        </div>
+
+        <!-- ════════════════════
+             COMPARATIF VSI / IVSI / ADIRS
+        ════════════════════ -->
+        <h1 id="recap-types">Comparatif des types de VSI</h1>
+        <table>
+          <thead>
+            <tr><th>Type</th><th>Principe</th><th>Time lag</th><th>Risque spécifique</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>VSI barométrique</strong></td>
+              <td>Capsule + choke (capillaire) — ΔPs direct vs retardé</td>
+              <td>Oui — quelques secondes</td>
+              <td>Time lag au palier — blocage statique → zéro</td>
+            </tr>
+            <tr>
+              <td><strong>IVSI</strong></td>
+              <td>VSI baro + dash-pot (accéléromètre vertical)</td>
+              <td>Non</td>
+              <td>Fausse indication si facteur de charge ≠ 1g (décollage, virage serré)</td>
+            </tr>
+            <tr>
+              <td><strong>VSI inertiel (ADIRS)</strong></td>
+              <td>Vzbi (baro) + intégration accéléromètre IRS</td>
+              <td>Quasi-nul</td>
+              <td>Dérive IRS sur long terme — dépend ADC et IRS</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">VSI mesure dPs/dt — pas l'altitude</div>
+              <div class="piege-explication">Le VSI ne mesure pas l'altitude (c'est l'altimètre) ni la vitesse sol. Il mesure le TAUX DE VARIATION de la pression statique, qu'il traduit en Vz. Si Ps varie pour une raison autre qu'un changement d'altitude (vent, erreur de position), l'indication est fausse.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Time lag double : début ET fin de variation</div>
+              <div class="piege-explication">Le retard existe au début d'une montée/descente (ΔP met du temps à s'établir) ET au retour en palier (ΔP met du temps à se résorber). L'aiguille continue de pointer en montée quelques secondes après la mise en palier.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">IVSI : fausse indication au décollage et en virage serré</div>
+              <div class="piege-explication">Le dash-pot répond à toute accélération, pas seulement verticale. Au décollage (accélération longitudinale) et en virage serré (facteur de charge > 1g), il génère une fausse indication. L'IVSI "instantané" est donc moins fiable dans ces phases.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Blocage statique → VSI à zéro (pas à une valeur erronée)</div>
+              <div class="piege-explication">Contrairement à l'altimètre qui se fige sur sa dernière valeur, le VSI revient à ZÉRO quand la ligne statique est bouchée — car les deux côtés du choke se mettent à la même pression figée → ΔP = 0.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Blocage statique affecte VSI + ASI + altimètre + machmètre</div>
+              <div class="piege-explication">Ces 4 instruments partagent la même source de pression statique. Un blocage les affecte tous simultanément. C'est un indice de diagnostic : si plusieurs instruments statiques ont des comportements anormaux en même temps, suspecter la prise statique.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Erreur de position au décollage → fausse indication VSI</div>
+              <div class="piege-explication">L'accélération au décollage modifie la pression perçue à la prise statique (erreur de position). Le VSI peut indiquer une montée ou descente alors que l'avion roule encore. C'est l'erreur de pression (position error).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Pente ILS : 3° = 5% — formule ROD</div>
+              <div class="piege-explication">La conversion degrés → % est X°/0,6 = X%. L'ILS standard est à 3° = 5%. ROD = Vp × 5. À 150 kt : 750 ft/min. À 120 kt : 600 ft/min. À 180 kt : 900 ft/min. Ces valeurs tombent souvent en QCM de performances.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Capillaire seul : erreur augmente avec l'altitude</div>
+              <div class="piege-explication">Un VSI avec un seul capillaire n'est pas bien compensé en altitude — l'erreur croît avec la hauteur. La combinaison capillaire + orifice (metering unit moderne) donne des erreurs de signe opposé qui s'annulent.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Que mesure réellement le VSI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le taux de variation de la <strong>pression statique</strong> (dPs/dt), qu'il traduit en vitesse verticale Vz = dZ/dt.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Conversion : 1 m/s = ? ft/min <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>200 ft/min</strong>. (0,5 m/s = 100 ft/min)</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Rôle du choke (capillaire) dans le VSI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Introduire un <strong>retard intentionnel</strong> sur la pression alimentant le boîtier, créant un différentiel de pression avec la capsule (directe) proportionnel à Vz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En palier stabilisé, que vaut le ΔP du VSI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>ΔP = 0</strong> — les pressions capsule et boîtier se sont équilibrées → aiguille à zéro.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'avantage de l'IVSI sur le VSI standard ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Pas de <strong>time lag</strong> — le dash-pot (accéléromètre) anticipe la variation de Ps et fait répondre l'aiguille instantanément.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Dans quelles phases l'IVSI est-il moins fiable ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Décollage</strong> (accélération longitudinale) et <strong>virages serrés</strong> (facteur de charge > 1g) — le dash-pot détecte ces facteurs de charge et génère de fausses indications.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il si la ligne statique est bouchée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'aiguille VSI revient à <strong>ZÉRO</strong>. Les autres instruments statiques (ASI, altimètre, machmètre) sont aussi affectés.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre erreur de position et time lag ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Erreur de position : variation brusque de vitesse → Ps semble changer → fausse Vz (surtout au décollage). Time lag : retard du choke → aiguille met quelques secondes à se stabiliser au début et à la fin de chaque variation de Vz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment calcule-t-on le ROD pour une pente de 5% à 150 kt ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">ROD = Vp × Pente% = <strong>150 × 5 = 750 ft/min</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pente ILS standard en degrés et en % ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>3° = 5%</strong> (conversion : 3 / 0,6 = 5).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la Vzbi (vitesse baro-inertielle) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Vitesse verticale calculée par l'<strong>ADIRS</strong>, fusionnant la dérivation barométrique (Vzbi) et l'intégration des accéléromètres inertiels. Plus précise et sans time lag.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la metering unit combine-t-elle capillaire ET orifice ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Les erreurs liées à l'altitude ont des <strong>signes opposés</strong> pour le capillaire et l'orifice → en les combinant, les erreurs s'annulent sur toute la plage d'altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le time lag du VSI existe-t-il aussi au retour en palier ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Oui</strong> — les pressions mettent du temps à s'égaliser → l'aiguille continue d'indiquer une Vz non nulle quelques secondes après la mise en palier.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">ROD à 120 kt pour une pente ILS de 3° ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">3° = 5% → ROD = 120 × 5 = <strong>600 ft/min</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la source de pression du VSI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>pression statique uniquement</strong> (Ps). Pas de pression totale (Pt). C'est pourquoi le blocage de la prise statique affecte aussi l'ASI et l'altimètre.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">En montée, que se passe-t-il dans la capsule du VSI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Ps diminue → la capsule <strong>se contracte</strong> immédiatement (pression directe). Le boîtier conserve momentanément une pression plus haute (choke retarde). ΔP positif → aiguille vers CLIMB.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

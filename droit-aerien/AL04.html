@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL04 — Règles de l'Air · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">AL04 · Règles de l'Air</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="AL04" data-matiere="droit-aerien">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Droit Aérien</a>
+        <span class="sep">›</span>
+        <span>AL04</span>
+      </div>
+      <div class="cours-code-badge">AL04</div>
+      <h1 class="cours-title">Règles de l'Air — ICAO Annexe 2 &amp; SERA</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA / SERA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~35 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ─── 1. CADRE JURIDIQUE ─── -->
+        <h1 id="section-cadre">1. Cadre juridique — Convention de Chicago, Art. 12</h1>
+
+        <p>Les Règles de l'Air trouvent leur fondement dans l'<strong>Article 12 de la Convention de Chicago (1944)</strong>. Chaque État contractant s'engage à adopter des mesures pour que tout aéronef survolant son territoire, ainsi que tout aéronef immatriculé sous son pavillon où qu'il se trouve, respecte les règles applicables à cet endroit.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Au-dessus de la <strong>haute mer</strong>, les règles en vigueur sont exclusivement celles établies par l'<strong>OACI</strong> (Annexe 2). Tout État contractant doit poursuivre tout contrevenant aux Règles de l'Air.
+        </div>
+
+        <p>En Europe, la mise en œuvre pratique des Règles de l'Air est confiée à l'EASA via le règlement <strong>SERA</strong> (<em>Standardised European Rules of the Air</em>), qui transpose l'Annexe 2 OACI en droit européen avec quelques spécificités.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          <strong>LO couverts :</strong> 010.05.01.00 (Rules of the Air — ICAO Annex 2) et 010.05.03.01 (General European Rules — SERA).
+        </div>
+
+        <!-- ─── 2. RESPONSABILITÉS DU PIC ─── -->
+        <h1 id="section-pic">2. Responsabilités du Commandant de Bord (PIC)</h1>
+
+        <p>Le <strong>Commandant de Bord</strong> (PIC — <em>Pilot In Command</em>) est responsable de la conduite sûre du vol, qu'il tienne lui-même les commandes ou non. Cette responsabilité est permanente et inaliénable.</p>
+
+        <h2 id="section-pic-obligations">2.1 Obligations fondamentales</h2>
+
+        <p>Le respect des Règles de l'Air est <strong>obligatoire</strong>, sauf si des impératifs de sécurité immédiate imposent d'y déroger. Le PIC doit notamment :</p>
+        <ul>
+          <li>S'être familiarisé avant le vol avec les <strong>rapports météorologiques</strong> disponibles.</li>
+          <li>Avoir vérifié les <strong>besoins en carburant</strong> pour accomplir le vol.</li>
+          <li>Avoir défini des <strong>actions alternatives</strong> si le vol ne peut être achevé comme prévu.</li>
+          <li>Ne <strong>jamais voler sous l'influence d'une substance psychoactive</strong> (alcool, drogues, médicaments altérant les facultés).</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le PIC est responsable <strong>même s'il ne tient pas les commandes</strong>. En cas d'infraction par le copilote, c'est le PIC qui est tenu responsable devant la réglementation.
+        </div>
+
+        <h2 id="section-sanctions">2.2 Sanctions applicables</h2>
+
+        <p>La violation des Règles de l'Air peut entraîner trois types de sanctions, cumulables :</p>
+        <ul>
+          <li><strong>Professionnelle</strong> — suspension ou retrait de licence.</li>
+          <li><strong>Pénale</strong> — amende ou emprisonnement.</li>
+          <li><strong>Militaire</strong> — sanctions disciplinaires (pour le personnel militaire).</li>
+        </ul>
+
+        <!-- ─── 3. PROTECTION DES PERSONNES ET BIENS ─── -->
+        <h1 id="section-protection">3. Protection des personnes et des biens</h1>
+
+        <p>Un aéronef ne doit pas être utilisé de façon imprudente ou négligente de nature à mettre en danger la vie ou les biens d'autrui.</p>
+
+        <h2 id="section-hauteurs">3.1 Hauteurs minimales de survol</h2>
+
+        <h2 id="section-hauteurs-vfr">3.1.1 Vol VFR (règles de vol à vue)</h2>
+        <ul>
+          <li><strong>500 ft</strong> au-dessus du sol ou de la mer (règle générale).</li>
+          <li><strong>1 000 ft</strong> au-dessus des zones peuplées (villes, agglomérations), dans un rayon de <strong>600 m</strong> autour de l'obstacle le plus élevé.</li>
+        </ul>
+
+        <h2 id="section-hauteurs-ifr">3.1.2 Vol IFR (règles de vol aux instruments)</h2>
+        <ul>
+          <li><strong>1 000 ft</strong> dans un rayon de <strong>8 km</strong> (5 NM) autour de la position estimée.</li>
+          <li><strong>2 000 ft</strong> en zone montagneuse dans un rayon de <strong>8 km</strong> (5 NM) — la zone montagneuse correspond à ±3 000 ft dans un rayon de 10 NM.</li>
+        </ul>
+
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">500 ft</span><span class="val-label">VFR – terrain dégagé</span></div>
+          <div class="value-chip"><span class="val">1 000 ft</span><span class="val-label">VFR – zone peuplée (r=600 m)</span></div>
+          <div class="value-chip"><span class="val">1 000 ft</span><span class="val-label">IFR – r=8 km (5 NM)</span></div>
+          <div class="value-chip"><span class="val">2 000 ft</span><span class="val-label">IFR – zone montagneuse</span></div>
+        </div>
+
+        <h2 id="section-hauteurs-france">3.1.3 Spécificités françaises (FRA4001)</h2>
+        <p>La réglementation française prévoit des hauteurs minimales plus contraignantes selon le type de turbine et la taille de l'agglomération :</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Zone / situation</th>
+              <th>Turbopropulseur mono</th>
+              <th>Turbopropulseur multi / Turboréacteur</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Autoroute</td><td>1 000 ft</td><td>3 300 ft</td></tr>
+            <tr><td>Agglomération &lt; 1 200 m</td><td>1 650 ft</td><td>3 300 ft</td></tr>
+            <tr><td>Agglomération 1 200 – 3 600 m</td><td colspan="2">3 300 ft</td></tr>
+            <tr><td>Agglomération ≥ 3 600 m</td><td colspan="2">5 000 ft</td></tr>
+            <tr><td>Paris P23</td><td colspan="2">6 500 ft</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="section-niveaux">3.2 Choix des niveaux de croisière</h2>
+        <p>L'expression des niveaux de vol dépend du calage altimétrique utilisé :</p>
+        <ul>
+          <li><strong>Flight Level (FL)</strong> — calage standard à <strong>1 013,25 hPa</strong>.</li>
+          <li><strong>Altitude</strong> — calage QNH.</li>
+          <li><strong>Hauteur</strong> (<em>Height</em>) — calage QFE (au-dessus du terrain de référence).</li>
+        </ul>
+
+        <h2 id="section-zones">3.3 Zones interdites et réglementées</h2>
+        <p>Les aéronefs ne peuvent survoler les zones interdites ou réglementées (dont l'existence a été dûment publiée) qu'avec l'<strong>autorisation de l'État</strong> concerné.</p>
+
+        <h2 id="section-activites">3.4 Activités nécessitant une autorisation ATS</h2>
+        <p>Les activités suivantes requièrent toutes une autorisation ou un avis de l'unité ATS (<em>Air Traffic Service</em>) compétente :</p>
+        <ul>
+          <li><strong>Largage ou pulvérisation</strong> depuis un aéronef en vol.</li>
+          <li><strong>Remorquage</strong> d'un aéronef ou d'un autre objet.</li>
+          <li><strong>Descentes en parachute</strong> (hors urgence).</li>
+          <li><strong>Vol acrobatique</strong> (<em>Acrobatic flight</em>).</li>
+          <li><strong>Vol en formation</strong> (<em>Formation flight</em>).</li>
+          <li>Opération de <strong>drones (UAV)</strong> et de <strong>ballons</strong>.</li>
+        </ul>
+
+        <h2 id="section-formation">3.5 Vol en formation — règles spécifiques</h2>
+        <ul>
+          <li>La formation est traitée comme un <strong>aéronef unique</strong> vis-à-vis du contrôle aérien.</li>
+          <li>La séparation entre aéronefs est sous la <strong>responsabilité du leader</strong> de la formation.</li>
+          <li>Chaque membre maintient une distance ≤ <strong>0,5 NM latéralement</strong> et ≤ <strong>100 ft verticalement</strong> par rapport au leader.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La formation = 1 seul aéronef pour l'ATC. La séparation interne est gérée par le leader. Limites : 0,5 NM / 100 ft.
+        </div>
+
+        <!-- ─── 4. PRÉVENTION DES ABORDAGES ─── -->
+        <h1 id="section-abordages">4. Prévention des abordages (Avoidance of Collisions)</h1>
+
+        <h2 id="section-proximite">4.1 Proximité</h2>
+        <p>Tout aéronef doit maintenir une <strong>distance minimale de 150 m</strong> vis-à-vis des autres aéronefs. Cette règle s'applique <strong>même lors d'une interception</strong> militaire.</p>
+
+        <!-- Figure réutilisée depuis slide 14 du PDF -->
+        <div class="fig-container">
+          <img src="../figures/AL04_proximite_150m.png" alt="Schéma montrant la distance minimale de 150 m entre deux aéronefs lors d'un dépassement">
+          <div class="fig-caption">Fig. 1 — Distance minimale de 150 m entre aéronefs (dépassement — slide 14 du PDF source)</div>
+        </div>
+
+        <h2 id="section-priorites">4.2 Priorités entre catégories d'aéronefs</h2>
+
+        <div class="fig-container">
+          <img src="../figures/AL04_priorites_aeronefs.svg" alt="Hiérarchie des priorités entre catégories d'aéronefs">
+          <div class="fig-caption">Fig. 2 — Hiérarchie des priorités de passage selon la catégorie d'aéronef (OACI Annexe 2)</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Mémo des priorités</div>
+          <strong>Ballons > Planeurs > Dirigeables > Remorqueur+remorqué > Aéronefs motorisés</strong><br>
+          Règle générale : priorité à l'aéronef venant de la <strong>droite</strong>.<br>
+          L'aéronef qui est dépassé a <strong>toujours la priorité</strong>.
+        </div>
+
+        <h2 id="section-depassement">4.3 Définition du dépassement</h2>
+        <p>Un aéronef est en situation de dépassement lorsqu'il s'approche d'un autre aéronef par l'arrière, sur une ligne formant un angle inférieur à <strong>70°</strong> par rapport à l'axe de l'aéronef dépassé. L'aéronef dépassé a la priorité absolue.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'angle de 70° est mesuré <strong>depuis l'axe de l'aéronef dépassé</strong>. Si l'approche se fait à moins de 70° en arrière, il y a dépassement. Au-delà, c'est une convergence latérale (règle droite-gauche).
+        </div>
+
+        <h2 id="section-priorites-atterrissage">4.4 Priorités à l'atterrissage</h2>
+        <ol>
+          <li>Aéronef en situation d'<strong>urgence ou de détresse</strong> (MAYDAY / PAN PAN).</li>
+          <li>Aéronef en <strong>finale (circuit normal)</strong>.</li>
+        </ol>
+
+        <h2 id="section-aerodrome">4.5 Aire de manœuvre (Aerodrome movement area)</h2>
+        <p>Un aéronef doit s'arrêter à la <strong>position d'attente</strong> (<em>holding position</em>) — marquée d'une barre d'arrêt rouge si elle existe — et attend l'autorisation de s'aligner donnée par la tour (<strong>feux éteints</strong> sur la barre).</p>
+
+        <h2 id="section-vol-instruments">4.6 Vol aux instruments simulé</h2>
+        <ul>
+          <li>Aéronef à <strong>double commande</strong> obligatoire.</li>
+          <li>Le siège de droite doit être occupé par un <strong>pilote qualifié</strong>, avec vue extérieure non obstruée (<em>safety pilot</em>).</li>
+        </ul>
+
+        <h2 id="section-manoeuvres-aero">4.7 Manœuvres à proximité d'un aérodrome</h2>
+        <ul>
+          <li>Surveiller la fréquence de la tour pour connaître le trafic entrant/sortant.</li>
+          <li>Éviter les zones de circuit ou prendre contact avec la tour.</li>
+          <li>Effectuer tous les virages vers la <strong>gauche</strong> (sauf instruction contraire).</li>
+          <li>Décoller et atterrir <strong>vent de face</strong> (sauf instruction contraire).</li>
+        </ul>
+
+        <!-- ─── 5. FEUX DE NAVIGATION ─── -->
+        <h1 id="section-feux">5. Feux réglementaires</h1>
+
+        <h2 id="section-types-feux">5.1 Types de feux</h2>
+        <ul>
+          <li><strong>Feu anticollision (beacon)</strong> : blanc ou rouge — stroboscopique ou tournant.</li>
+          <li><strong>Feux de navigation</strong> : rouge (gauche/bâbord), vert (droite/tribord), blanc (arrière).</li>
+        </ul>
+
+        <h2 id="section-obligation-feux">5.2 Obligation d'allumage</h2>
+        <ul>
+          <li><strong>De nuit</strong> : feux anticollision <em>et</em> feux de navigation obligatoires dès que les moteurs tournent.</li>
+          <li><strong>De jour</strong> : feux anticollision (<em>beacon</em>) obligatoires dès que les moteurs tournent.</li>
+        </ul>
+
+        <!-- Figure réutilisée depuis slide 17 du PDF -->
+        <div class="fig-container">
+          <img src="../figures/AL04_feux_nav.png" alt="Diagramme des secteurs angulaires des feux de navigation : rouge 110° gauche, vert 110° droit, blanc 140° arrière">
+          <div class="fig-caption">Fig. 3 — Secteurs angulaires des feux de navigation (rouge 110°, vert 110°, blanc 140°) — slide 17 du PDF source</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Feux de nav</div>
+          <strong>110° + 110° + 140° = 360°</strong> — Rouge à gauche (Port = Red), vert à droite (Starboard = Green), blanc à l'arrière. Moyen mnémotechnique : <em>PGSR</em> ou "Port Gauche Star-board Right".
+        </div>
+
+        <!-- ─── 6. ÉQUIPEMENTS NUIT ─── -->
+        <h1 id="section-nuit">6. Équipements pour opérations de nuit</h1>
+
+        <p>Pour un avion opérant de nuit, les équipements suivants doivent être installés :</p>
+        <ul>
+          <li>Tous les équipements répondant aux exigences d'éclairage en vol et sur l'aire de manœuvre.</li>
+          <li><strong>2 projecteurs d'atterrissage</strong>, ou 1 projecteur à <strong>2 filaments indépendants</strong>.</li>
+          <li>Éclairage de tous les instruments et équipements essentiels du poste de pilotage.</li>
+          <li>Éclairage dans tous les <strong>compartiments passagers</strong>.</li>
+          <li>Une <strong>lampe de poche indépendante</strong> par poste d'équipage.</li>
+        </ul>
+
+        <!-- ─── 7. PLAN DE VOL ─── -->
+        <h1 id="section-fpl">7. Plan de vol (Flight Plan)</h1>
+
+        <h2 id="section-fpl-types">7.1 Types de plans de vol</h2>
+        <ul>
+          <li><strong>Plan de vol déposé</strong> (<em>Filed flight plan</em>) : déposé auprès de l'ATS sans modification.</li>
+          <li><strong>Plan de vol courant</strong> (<em>Current flight plan</em>) : inclut les modifications survenues après dépôt (amendements).</li>
+          <li><strong>RPL</strong> (<em>Repetitive Flight Plan</em>) : plans IFR récurrents (≥ 10 fois ou quotidiennement sur ≥ 10 jours consécutifs). <em>Note : EUROCONTROL a supprimé le RPL depuis le 27 mars 2020</em>.</li>
+        </ul>
+
+        <h2 id="section-fpl-obligatoire">7.2 Cas d'obligation du plan de vol</h2>
+
+        <p><strong>EASA (SERA) — plan de vol obligatoire pour :</strong></p>
+        <ul>
+          <li>Tout <strong>vol contrôlé</strong> : VFR ou IFR dans un espace contrôlé.</li>
+          <li>Vol IFR dans un espace avec <strong>service consultatif</strong> (<em>advisory service</em>).</li>
+          <li>Vol dans des zones désignées pour faciliter les <strong>services d'information et d'alerte</strong>.</li>
+          <li>Vol dans des zones désignées pour faciliter la <strong>coordination civilo-militaire</strong>.</li>
+          <li>Vol traversant des <strong>frontières internationales</strong>.</li>
+          <li>Tout <strong>vol de nuit non local</strong>.</li>
+        </ul>
+
+        <p><strong>FRA4001 (France) — plan de vol obligatoire pour :</strong> vol IFR, vol VFR de nuit (hors local), vol VFR maritime, vol VFR en zones inhospitalières, vol VFR franchissant une frontière.</p>
+
+        <h2 id="section-fpl-delais">7.3 Délais de dépôt</h2>
+
+        <div class="fig-container">
+          <img src="../figures/AL04_fpl_delais.png" alt="Tableau des délais de dépôt des plans de vol IFR et VFR selon OACI, EASA et FRA4001">
+          <div class="fig-caption">Fig. 4 — Délais de dépôt et seuils d'amendement des plans de vol</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>AFIL</strong> (<em>Air-Filed</em>) = plan déposé en vol. Il n'est accepté qu'après un délai de <strong>10 minutes</strong> — avant le point d'entrée en espace contrôlé ou le franchissement d'une route aérienne. Pour le FPL VFR en France (FRA4001), le dépôt est à H-<strong>30 min</strong> (et non H-60 min comme en OACI).
+        </div>
+
+        <h2 id="section-fpl-retard">7.4 Gestion des retards</h2>
+        <ul>
+          <li>Vol <strong>contrôlé</strong> en retard de plus de <strong>30 min</strong> : FPL à amender ou annuler.</li>
+          <li>Vol <strong>non contrôlé</strong> en retard de plus de <strong>1 heure</strong> : FPL à amender ou annuler.</li>
+          <li><strong>FRA4001</strong> : tout retard > 30 min → amender ou annuler.</li>
+        </ul>
+
+        <h2 id="section-fpl-activation">7.5 Activation du plan de vol</h2>
+        <ul>
+          <li>Activé <strong>automatiquement par l'ATS</strong> au décollage.</li>
+          <li>Le PIC l'active lui-même si l'aérodrome de départ n'a pas d'unité ATS ou AFIS.</li>
+        </ul>
+
+        <h2 id="section-fpl-changements">7.6 Modifications en vol</h2>
+        <p>Toute modification (niveau, route, destination) doit être signalée à l'ATS <strong>dès que possible</strong>.</p>
+
+        <h2 id="section-fpl-cloture">7.7 Clôture du plan de vol</h2>
+        <p>Le plan de vol est clôturé par l'ATS de l'aérodrome de destination. En l'absence d'ATS, le PIC doit clôturer par les moyens les plus rapides. Le compte rendu d'arrivée contient : indicatif d'appel / type d'appareil, aérodrome de départ, aérodrome d'arrivée, heure d'arrivée.</p>
+
+        <!-- ─── 8. SIGNAUX ─── -->
+        <h1 id="section-signaux">8. Signaux</h1>
+
+        <h2 id="section-detresse">8.1 Signaux de détresse</h2>
+        <p>La <strong>détresse</strong> (<em>Distress</em>) signale un danger grave immédiat nécessitant une assistance immédiate :</p>
+        <ul>
+          <li><strong>MAYDAY × 3</strong> à la radio.</li>
+          <li><strong>SOS</strong> en morse (· · · — — — · · ·).</li>
+          <li>Fusée rouge.</li>
+          <li>Fusée rouge avec parachute.</li>
+          <li>Transpondeur <strong>SSR code 7700</strong>.</li>
+        </ul>
+
+        <h2 id="section-urgence">8.2 Signaux d'urgence</h2>
+        <p>L'<strong>urgence</strong> (<em>Urgency</em>) signale une situation préoccupante ne nécessitant pas d'assistance immédiate :</p>
+        <ul>
+          <li><strong>PAN PAN × 3</strong> à la radio.</li>
+          <li><strong>XXX</strong> en morse.</li>
+          <li>Allumage/extinction des phares d'atterrissage.</li>
+          <li>Allumage/extinction des feux de navigation.</li>
+        </ul>
+
+        <h2 id="section-freq-urgence">8.3 Fréquences d'urgence</h2>
+
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">121.5 MHz</span><span class="val-label">VHF Détresse (civil)</span></div>
+          <div class="value-chip"><span class="val">243.0 MHz</span><span class="val-label">UHF Détresse (militaire)</span></div>
+          <div class="value-chip"><span class="val">2 182 kHz</span><span class="val-label">HF Maritime Détresse</span></div>
+          <div class="value-chip"><span class="val">406 MHz</span><span class="val-label">SARSAT / ELT</span></div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info — ELT</div>
+          L'<strong>ELT</strong> (<em>Emergency Locator Transmitter</em> — radiobalise de détresse) émet sur 406 MHz via le système SARSAT (<em>Search And Rescue Satellite-Aided Tracking</em>). Sa portée est mondiale et sa localisation est bien plus précise que l'ancien 121.5 MHz.
+        </div>
+
+        <!-- ─── 9. SIGNAUX TOUR DE CONTRÔLE ─── -->
+        <h1 id="section-signaux-tour">9. Signaux lumineux de la tour de contrôle</h1>
+
+        <div class="fig-container">
+          <img src="../figures/AL04_signaux_lumineux.png" alt="Tableau récapitulatif des signaux lumineux de la tour de contrôle pour aéronefs en vol et au sol">
+          <div class="fig-caption">Fig. 5 — Signaux lumineux de la tour de contrôle (résumé complet)</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>Vert continu</strong> : autorisé à atterrir (en vol) ou autorisé au décollage (au sol) — la même couleur verte a deux significations distinctes selon la situation.<br><br>
+          <strong>Blanc clignotant (en vol)</strong> : atterrir ET se rendre à l'aire de trafic (pas juste atterrir).<br><br>
+          <strong>Fusée rouge</strong> = annule toute autorisation précédente, quelle qu'elle soit.
+        </div>
+
+        <h2 id="section-acquittement">9.1 Accusé de réception des signaux lumineux</h2>
+        <p>Un aéronef doit accuser réception d'un signal lumineux de la tour :</p>
+        <ul>
+          <li><strong>En vol, de jour</strong> : balancement des ailes (sauf en base ou en finale).</li>
+          <li><strong>En vol, de nuit</strong> : clignoter les feux d'atterrissage ou de navigation 2 fois.</li>
+          <li><strong>Au sol, de jour</strong> : mouvement des ailerons ou de la gouverne de direction.</li>
+          <li><strong>Au sol, de nuit</strong> : clignoter les feux d'atterrissage ou de navigation 2 fois.</li>
+        </ul>
+
+        <!-- ─── 10. SIGNAUX AU SOL / SIGNAL AREA ─── -->
+        <h1 id="section-signaux-sol">10. Signaux visuels au sol (Signal Area)</h1>
+
+        <h2 id="section-panneaux">10.1 Panneaux de la signal area</h2>
+
+        <table>
+          <thead>
+            <tr><th>Panneau</th><th>Signification</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Croix rouge sur fond rouge (<em>Red panel, yellow cross</em>)</td><td>Atterrissages interdits</td></tr>
+            <tr><td>Bande jaune sur fond rouge (<em>Red panel, yellow stripe</em>)</td><td>Précautions particulières à l'approche et à l'atterrissage</td></tr>
+            <tr><td>Haltère blanc (<em>White dumbbell</em>)</td><td>Roulage, décollage, atterrissage uniquement sur piste et voies de circulation</td></tr>
+            <tr><td>Haltère blanc avec bandes noires</td><td>Décollage et atterrissage sur piste uniquement ; le roulage peut se faire ailleurs</td></tr>
+            <tr><td>Forme en T blanc</td><td>Sens de décollage/atterrissage à utiliser (QFU en service)</td></tr>
+            <tr><td>Double croix blanche</td><td>Vols de planeurs en cours — prudence</td></tr>
+            <tr><td>Flèche à angle droit (white)</td><td>Circuit main droite obligatoire</td></tr>
+            <tr><td>Croix blanche ou jaune</td><td>Piste ou voie fermée (jaune pour taxiway/aire)</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le <strong>T</strong> indique le QFU en service : on décolle et on atterrit dans le sens de la <strong>barre horizontale</strong> du T (pas dans le sens du manche). Le T est éclairé de nuit.
+        </div>
+
+        <!-- ─── 11. CONDITIONS VMC ─── -->
+        <h1 id="section-vmc">11. Conditions VMC pour le vol VFR</h1>
+
+        <p>Le vol VFR est autorisé si les conditions météorologiques permettent de respecter les <strong>minima VMC</strong> (<em>Visual Meteorological Conditions</em>) définis en termes de visibilité et de distances aux nuages.</p>
+
+        <div class="fig-container">
+          <img src="../figures/AL04_vmc_minima.png" alt="Tableau des minima VMC selon la classe d'espace aérien et l'altitude">
+          <div class="fig-caption">Fig. 6 — Minima VMC selon la classe d'espace aérien et l'altitude (SERA)</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — VMC minima</div>
+          <strong>Au-dessus de 10 000 ft</strong> : 8 km / 1 500 m horiz / 300 m vert.<br>
+          <strong>Sous 10 000 ft, au-dessus de 3 000 ft AMSL ou 1 000 ft AGL</strong> : 5 km / 1 500 m / 300 m.<br>
+          <strong>Espace non contrôlé (F/G) ≤ 3 000 ft AMSL ou ≤ 1 000 ft AGL</strong> : 1 500 m / hors nuages ET sol en vue.<br>
+          SERA : vitesse max <strong>140 kt IAS</strong> en VMC sous 10 000 ft.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La limite basse de la tranche intermédiaire est <strong>3 000 ft AMSL OU 1 000 ft AGL, la plus haute des deux</strong>. En montagne (terrain à 3 000 ft), 1 000 ft AGL donne 4 000 ft AMSL, et c'est cette valeur qui est retenue. La formulation "la plus haute" fait souvent tomber les candidats.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">500 ft</span><span class="val-label">VFR min. terrain</span></div>
+          <div class="value-chip"><span class="val">1 000 ft</span><span class="val-label">VFR agglomération (r=600 m)</span></div>
+          <div class="value-chip"><span class="val">1 000 ft</span><span class="val-label">IFR r=8 km (5 NM)</span></div>
+          <div class="value-chip"><span class="val">2 000 ft</span><span class="val-label">IFR montagne r=8 km</span></div>
+          <div class="value-chip"><span class="val">150 m</span><span class="val-label">Proximité mini entre A/C</span></div>
+          <div class="value-chip"><span class="val">70°</span><span class="val-label">Angle max dépassement</span></div>
+          <div class="value-chip"><span class="val">0,5 NM</span><span class="val-label">Formation — séparation latérale</span></div>
+          <div class="value-chip"><span class="val">100 ft</span><span class="val-label">Formation — séparation verticale</span></div>
+          <div class="value-chip"><span class="val">H−60 min</span><span class="val-label">Dépôt IFR/VFR (OACI)</span></div>
+          <div class="value-chip"><span class="val">H−30 min</span><span class="val-label">Dépôt VFR FRA4001</span></div>
+          <div class="value-chip"><span class="val">10 min</span><span class="val-label">Délai AFIL</span></div>
+          <div class="value-chip"><span class="val">30 min</span><span class="val-label">Retard max vol contrôlé</span></div>
+          <div class="value-chip"><span class="val">1 heure</span><span class="val-label">Retard max vol non-ctrl</span></div>
+          <div class="value-chip"><span class="val">121.5 MHz</span><span class="val-label">Détresse VHF</span></div>
+          <div class="value-chip"><span class="val">243.0 MHz</span><span class="val-label">Détresse UHF</span></div>
+          <div class="value-chip"><span class="val">7700</span><span class="val-label">Code SSR détresse</span></div>
+          <div class="value-chip"><span class="val">110° / 140°</span><span class="val-label">Secteurs feux de nav</span></div>
+          <div class="value-chip"><span class="val">140 kt</span><span class="val-label">Vitesse max VMC SERA</span></div>
+        </div>
+
+        <!-- Figures de référence -->
+        <h1 id="figures-synthese">Figures de référence</h1>
+
+        <div class="fig-container" id="fig-feux-nav-synth">
+          <img src="../figures/AL04_feux_nav.png" alt="Secteurs angulaires des feux de navigation 110°/110°/140°">
+          <div class="fig-caption">Fig. 3 — Feux de navigation : rouge 110° (gauche), vert 110° (droite), blanc 140° (arrière)</div>
+        </div>
+
+        <div class="fig-container" id="fig-signaux-lumineux-synth">
+          <img src="../figures/AL04_signaux_lumineux.png" alt="Tableau complet des signaux lumineux de la tour de contrôle">
+          <div class="fig-caption">Fig. 5 — Signaux lumineux de la tour — résumé complet</div>
+        </div>
+
+        <div class="fig-container" id="fig-fpl-delais-synth">
+          <img src="../figures/AL04_fpl_delais.png" alt="Tableau des délais de dépôt des plans de vol IFR et VFR">
+          <div class="fig-caption">Fig. 4 — Délais de dépôt des plans de vol</div>
+        </div>
+
+        <div class="fig-container" id="fig-vmc-synth">
+          <img src="../figures/AL04_vmc_minima.png" alt="Minima VMC par classe d'espace aérien">
+          <div class="fig-caption">Fig. 6 — Minima VMC selon la classe d'espace et l'altitude (SERA)</div>
+        </div>
+
+        <!-- Pièges ATPL -->
+        <h1 id="pieges">Pièges ATPL</h1>
+
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">PIC responsable même sans tenir les commandes</div>
+              <div class="piege-explication">La responsabilité du PIC est permanente. Si le copilote enfreint une règle, c'est le PIC qui est poursuivi, pas le copilote.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Dépassement : angle &lt; 70° par rapport à l'axe de l'avion dépassé</div>
+              <div class="piege-explication">L'angle est mesuré depuis l'AXE de l'aéronef qu'on dépasse, non depuis le nôtre. Si l'angle est &lt; 70°, il y a dépassement et l'autre a la priorité.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Vert continu = deux significations différentes</div>
+              <div class="piege-explication">En vol : "Autorisé à atterrir". Au sol : "Autorisé au décollage". La même couleur ≠ même instruction.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Blanc clignotant (vol) ≠ simple atterrissage</div>
+              <div class="piege-explication">Blanc clignotant en vol = "Atterrir ET se rendre à l'aire de trafic" (deux actions). Ne pas omettre la seconde.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">VFR France : dépôt FPL à H−30 min (non H−60 min)</div>
+              <div class="piege-explication">FRA4001 raccourcit le délai VFR à 30 minutes. En OACI/EASA, c'est H−60 min.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">AFIL : 10 min de délai, pas immédiat</div>
+              <div class="piege-explication">Un plan déposé en vol (Air Filed) n'est accepté qu'après un délai de 10 min avant le point d'entrée en espace contrôlé ou l'axe à traverser.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">VMC sous 3 000 ft : "la plus haute des deux limites"</div>
+              <div class="piege-explication">3 000 ft AMSL ou 1 000 ft AGL — la plus haute. En montagne, 1 000 ft AGL peut être supérieur à 3 000 ft AMSL ; c'est alors 1 000 ft AGL qui fait foi.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Formation = 1 seul aéronef pour l'ATC, séparation par le leader</div>
+              <div class="piege-explication">L'ATC traite la formation comme un seul aeronef. Limites : 0,5 NM latéral + 100 ft vertical. La séparation interne relève UNIQUEMENT du leader.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Fusée rouge (pyrotechnique) = annule toute autorisation précédente</div>
+              <div class="piege-explication">Même si la tour a donné un "Vert continu" juste avant, une fusée rouge annule immédiatement cette autorisation. Priorité absolue.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Haute mer : règles OACI exclusivement (pas EASA)</div>
+              <div class="piege-explication">Au-dessus de la haute mer, seules les règles OACI (Annexe 2) s'appliquent. SERA n'a pas de portée extraterritoriale.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Vol contrôlé retard > 30 min vs. vol non contrôlé > 1 heure</div>
+              <div class="piege-explication">Les seuils sont différents : 30 min pour les vols contrôlés, 1 heure pour les non contrôlés. FRA4001 aligné sur 30 min pour tous.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Moteur allumé = beacon obligatoire de jour ; beacon + nav de nuit</div>
+              <div class="piege-explication">Le beacon doit être allumé dès que les moteurs tournent, même en plein jour. Les feux de nav deviennent obligatoires uniquement de nuit.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Check -->
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quel article de la Convention de Chicago régit les Règles de l'Air ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Article 12.</strong></div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qui est responsable de la sécurité d'un vol si le copilote pilote ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Le PIC (Commandant de Bord)</strong>, même s'il ne tient pas les commandes.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la hauteur minimale VFR au-dessus d'une ville (agglomération) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1 000 ft</strong> dans un rayon de 600 m autour de l'obstacle le plus élevé.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la hauteur minimale IFR en zone montagneuse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 000 ft</strong> dans un rayon de 8 km (5 NM) autour de la position estimée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle distance minimale doit être maintenue entre aéronefs ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>150 m</strong> — même lors d'une interception.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle catégorie a la priorité maximale entre toutes ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Les ballons</strong> ont la priorité sur tous les autres aéronefs.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Un aéronef motorisé doit-il céder le passage à un remorqueur + remorqué ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Oui</strong> — la combinaison remorqueur/remorqué est prioritaire sur tout aéronef motorisé seul.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À partir de quel angle une approche est-elle un dépassement ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Approche par l'arrière sur une ligne formant un angle inférieur à <strong>70°</strong> de l'axe de l'aéronef dépassé.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les limites de séparation en vol en formation ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>0,5 NM latéralement</strong> et <strong>100 ft verticalement</strong> par rapport au leader.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">La formation est traitée comme combien d'aéronefs par l'ATC ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Un seul aéronef.</strong></div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels feux sont obligatoires de nuit dès que les moteurs tournent ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Feux <strong>anticollision (beacon) et feux de navigation</strong> (rouge, vert, blanc).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le secteur du feu blanc de navigation couvre combien de degrés ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>140°</strong> vers l'arrière (les feux rouges et verts couvrent chacun 110°).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle fréquence VHF transmettre un MAYDAY ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>121,5 MHz</strong> (fréquence internationale de détresse VHF).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel code transpondeur pour une urgence/détresse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>7700</strong> (détresse/urgence générale).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie un feu vert continu de la tour vers un aéronef au sol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Autorisé au décollage</strong> (si le pilote est convaincu qu'il n'y a pas risque de collision).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie un feu vert continu de la tour vers un aéronef en vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Autorisé à atterrir</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifient des éclairs rouges de la tour vers un aéronef en vol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Aérodrome dangereux — n'atterrissez pas</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment un aéronef en vol accuse-t-il réception d'un signal lumineux de jour ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Balancement des ailes</strong> (sauf en base ou en finale).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie un haltère blanc dans la signal area ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Taxi, décollage et atterrissage <strong>uniquement sur les pistes et voies de circulation</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie un haltère blanc avec bandes noires ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Décollage et atterrissage <strong>uniquement sur la piste</strong> ; le roulage peut se faire hors piste.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le délai OACI pour déposer un FPL IFR avant le décollage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>H−60 min</strong> avant l'heure estimée de départ (EOBT).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel délai supplémentaire un AFIL (plan en vol) requiert-il ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>10 minutes</strong> avant le point d'entrée en espace contrôlé.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il si un vol contrôlé est retardé de plus de 30 min ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le plan de vol doit être <strong>amendé ou annulé</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle visibilité est requise en VMC au-dessus de 10 000 ft ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>8 km</strong> de visibilité (plus 1 500 m horizontalement / 300 m verticalement des nuages).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le minimum VMC en espace non contrôlé (F/G) ≤ 3 000 ft AMSL ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1 500 m</strong> de visibilité, <strong>hors nuages et sol en vue</strong> (pas de distance aux nuages chiffrée).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle vitesse maximale en VMC sous 10 000 ft selon SERA ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>140 kt IAS</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Au-dessus de la haute mer, quelles règles de l'air s'appliquent ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Les règles OACI</strong> (Annexe 2) — pas SERA, qui ne couvre que le territoire européen.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Un vol de nuit en France nécessite-t-il toujours un FPL ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Oui</strong>, sauf pour un vol local de nuit (FRA4001). Le vol de nuit non local impose toujours un FPL.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie un panneau rouge avec croix jaune dans la signal area ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Atterrissages interdits</strong> sur cet aérodrome.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qui active le FPL si l'aérodrome de départ n'a pas d'ATS ni d'AFIS ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Le PIC</strong> active lui-même le plan de vol.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

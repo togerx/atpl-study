@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" width="700" height="310">
+  <!--
+    LAYOUT — VSI barométrique interne
+    Prise statique (gauche) : x=20, y=130
+    Boîtier étanche (case) : x=90,y=60 → 380x190
+    Capsule : ellipse cx=230, cy=155 r=55x40
+    Choke/capillaire : x=90→120, y=130
+    Renvoi mécanique : x=285→370
+    Cadran : x=420, y=60 → 200x190
+    Aiguille : centre cadran x=520, y=155
+  -->
+  <defs>
+    <marker id="aBlue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#2E75B6"/>
+    </marker>
+    <marker id="aRed" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#C00000"/>
+    </marker>
+    <marker id="aGray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
+    </marker>
+    <marker id="aGold" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#BF8F00"/>
+    </marker>
+  </defs>
+
+  <!-- Titre -->
+  <text x="350" y="18" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">VSI Barométrique — Principe interne</text>
+  <line x1="20" y1="24" x2="680" y2="24" stroke="#CCC" stroke-width="1"/>
+
+  <!-- === PRISE STATIQUE ENTRÉE === -->
+  <rect x="10" y="118" width="80" height="26" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="50" y="130" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#1F3864" font-weight="bold">Ps statique</text>
+  <text x="50" y="142" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">(prise statique)</text>
+
+  <!-- Flèche pression statique vers 2 chemins -->
+  <line x1="90" y1="131" x2="110" y2="131" stroke="#2E75B6" stroke-width="2" marker-end="url(#aBlue)"/>
+
+  <!-- CHEMINEMENT 1 : vers capsule directement (rapide) -->
+  <line x1="110" y1="131" x2="110" y2="95" stroke="#2E75B6" stroke-width="2"/>
+  <line x1="110" y1="95" x2="175" y2="95" stroke="#2E75B6" stroke-width="2" marker-end="url(#aBlue)"/>
+  <!-- Label capsule direct -->
+  <text x="143" y="88" text-anchor="middle" font-family="Arial" font-size="9" fill="#2E75B6" font-weight="bold">alimentation directe</text>
+  <text x="143" y="99" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">(intérieur capsule)</text>
+
+  <!-- CHEMINEMENT 2 : vers boîtier via choke (lent) -->
+  <line x1="110" y1="131" x2="110" y2="167" stroke="#C00000" stroke-width="2"/>
+  <!-- CHOKE / CAPILLAIRE -->
+  <!-- Dessin du choke (tube étroit ondulé) -->
+  <path d="M110,167 L130,167" stroke="#C00000" stroke-width="2"/>
+  <path d="M130,167 Q135,160 140,167 Q145,174 150,167 Q155,160 160,167 Q165,174 170,167 L175,167" stroke="#C00000" stroke-width="2.5" fill="none"/>
+  <line x1="175" y1="167" x2="200" y2="167" stroke="#C00000" stroke-width="2" marker-end="url(#aRed)"/>
+  <!-- Label choke -->
+  <text x="152" y="183" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#C00000" font-weight="bold">CHOKE</text>
+  <text x="152" y="195" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">(fuite calibrée /</text>
+  <text x="152" y="206" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">capillaire)</text>
+  <text x="152" y="218" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#C00000" font-style="italic">→ retard intentionnel</text>
+
+  <!-- BOÎTIER ÉTANCHE (case) -->
+  <rect x="95" y="62" width="285" height="170" rx="8" fill="#F8F9FA" stroke="#888" stroke-width="2" stroke-dasharray="7,4"/>
+  <text x="237" y="79" text-anchor="middle" font-family="Arial" font-size="10" fill="#888" font-style="italic">Boîtier étanche (airtight case)</text>
+
+  <!-- CAPSULE (à l'intérieur du boîtier) -->
+  <ellipse cx="237" cy="145" rx="58" ry="42" fill="#E2EFDA" stroke="#548235" stroke-width="2.5"/>
+  <text x="237" y="140" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">CAPSULE</text>
+  <text x="237" y="153" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">(soufflet)</text>
+  <!-- Flèche expansion capsule -->
+  <line x1="295" y1="145" x2="313" y2="145" stroke="#548235" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- RENVOI MÉCANIQUE (biellette + crémaillère) -->
+  <rect x="315" y="132" width="45" height="26" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="337" y="144" text-anchor="middle" font-family="Arial" font-size="9" fill="#7A5800">Renvoi</text>
+  <text x="337" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#7A5800">méca.</text>
+  <!-- Flèche vers cadran -->
+  <line x1="360" y1="145" x2="395" y2="145" stroke="#BF8F00" stroke-width="2" marker-end="url(#aGold)"/>
+
+  <!-- === CADRAN VSI === -->
+  <circle cx="510" cy="155" r="90" fill="#111" stroke="#555" stroke-width="2"/>
+  <circle cx="510" cy="155" r="85" fill="none" stroke="#888" stroke-width="1"/>
+  <!-- Graduation CLIMB/DESCENT -->
+  <!-- Zéro (droite) -->
+  <line x1="595" y1="155" x2="583" y2="155" stroke="white" stroke-width="2.5"/>
+  <text x="600" y="159" font-family="Arial" font-size="11" fill="white">0</text>
+  <!-- CLIMB haut -->
+  <text x="478" y="78" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">CLIMB</text>
+  <!-- DESCENT bas -->
+  <text x="478" y="244" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">DESCENT</text>
+  <!-- Graduations (simplifié) -->
+  <line x1="510" y1="70" x2="510" y2="83" stroke="white" stroke-width="1.5"/>
+  <text x="510" y="100" text-anchor="middle" font-family="Arial" font-size="9" fill="white">2</text>
+  <line x1="440" y1="90" x2="449" y2="97" stroke="white" stroke-width="1.5"/>
+  <text x="436" y="108" text-anchor="middle" font-family="Arial" font-size="9" fill="white">3</text>
+  <!-- Graduations descent -->
+  <line x1="510" y1="240" x2="510" y2="227" stroke="white" stroke-width="1.5"/>
+  <text x="510" y="222" text-anchor="middle" font-family="Arial" font-size="9" fill="white">2</text>
+  <line x1="440" y1="220" x2="449" y2="213" stroke="white" stroke-width="1.5"/>
+  <text x="434" y="210" text-anchor="middle" font-family="Arial" font-size="9" fill="white">3</text>
+  <!-- Aiguille (palier = droite) -->
+  <line x1="510" y1="155" x2="585" y2="155" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="510" cy="155" r="5" fill="#888"/>
+  <!-- Label unité -->
+  <text x="510" y="178" text-anchor="middle" font-family="Arial" font-size="8" fill="#AAA">× 1000 ft/min</text>
+
+  <!-- Annotations flèches expliquant le principe -->
+  <text x="140" y="50" text-anchor="middle" font-family="Arial" font-size="9" fill="#2E75B6" font-weight="bold">① Ps → capsule</text>
+  <text x="140" y="62" text-anchor="middle" font-family="Arial" font-size="9" fill="#2E75B6">immédiatement</text>
+  <text x="152" y="235" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000" font-weight="bold">② Ps → boîtier</text>
+  <text x="152" y="246" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000">avec retard (choke)</text>
+
+  <!-- Encadré principe -->
+  <rect x="398" y="262" width="280" height="40" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="538" y="278" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#1F3864" font-weight="bold">Palier : ΔP = 0 → aiguille à zéro</text>
+  <text x="538" y="292" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#1F3864">Montée/descente : ΔP ≠ 0 → déviation</text>
+</svg>

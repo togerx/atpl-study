@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 390" width="720" height="390">
+  <rect width="720" height="390" fill="transparent"/>
+
+  <!-- Title -->
+  <text x="360" y="22" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">Structure réglementaire EASA — Basic Regulation EU 2018/1139</text>
+
+  <!-- ROOT: Basic Regulation -->
+  <!-- x=260 y=38 w=200 h=40 -->
+  <rect x="260" y="38" width="200" height="40" rx="6" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <text x="360" y="54" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#1F3864" text-anchor="middle">BASIC REGULATION</text>
+  <text x="360" y="70" font-family="Arial,sans-serif" font-size="9.5" fill="#1F3864" text-anchor="middle">EU 2018/1139</text>
+
+  <!-- Arrow down to Hard Law col -->
+  <line x1="280" y1="78" x2="195" y2="115" stroke="#1F3864" stroke-width="1.2"/>
+  <polygon points="195,115 192,107 200,110" fill="#1F3864"/>
+
+  <!-- Arrow down to Soft Law col -->
+  <line x1="440" y1="78" x2="535" y2="115" stroke="#1F3864" stroke-width="1.2"/>
+  <polygon points="535,115 530,108 538,108" fill="#1F3864"/>
+
+  <!-- ── HARD LAW block ── -->
+  <rect x="30" y="118" width="320" height="38" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="190" y="133" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#1F3864" text-anchor="middle">HARD LAW — Règlements obligatoires</text>
+  <text x="190" y="148" font-family="Arial,sans-serif" font-size="9" fill="#1F3864" text-anchor="middle">Documents contraignants dans tous les États membres</text>
+
+  <!-- Hard Law items: 5 boxes in 2 rows -->
+  <!-- Row 1: 3 boxes -->
+  <!-- Box 1: Aircrew -->
+  <rect x="30" y="170" width="148" height="46" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.2"/>
+  <text x="104" y="187" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">AIRCREW</text>
+  <text x="104" y="201" font-family="Arial,sans-serif" font-size="8.5" fill="#1F3864" text-anchor="middle">EU 1178/2011</text>
+  <text x="104" y="213" font-family="Arial,sans-serif" font-size="8" fill="#555" text-anchor="middle">Licences pilotes</text>
+
+  <!-- Box 2: Airworthiness -->
+  <rect x="186" y="170" width="78" height="46" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.2"/>
+  <text x="225" y="187" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">AIRWORTH.</text>
+  <text x="225" y="203" font-family="Arial,sans-serif" font-size="8" fill="#555" text-anchor="middle">Navigabilité</text>
+  <text x="225" y="213" font-family="Arial,sans-serif" font-size="8" fill="#555" text-anchor="middle">init./continue</text>
+
+  <!-- Box 3: Air Ops -->
+  <rect x="272" y="170" width="78" height="46" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.2"/>
+  <text x="311" y="185" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">AIR OPS</text>
+  <text x="311" y="199" font-family="Arial,sans-serif" font-size="8.5" fill="#1F3864" text-anchor="middle">EU 965/2012</text>
+  <text x="311" y="213" font-family="Arial,sans-serif" font-size="8" fill="#555" text-anchor="middle">Opérations aér.</text>
+
+  <!-- Row 2: 2 boxes -->
+  <!-- Box 4: SERA -->
+  <rect x="30" y="224" width="148" height="46" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.2"/>
+  <text x="104" y="241" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">SERA</text>
+  <text x="104" y="256" font-family="Arial,sans-serif" font-size="8.5" fill="#1F3864" text-anchor="middle">EU 923/2012</text>
+  <text x="104" y="268" font-family="Arial,sans-serif" font-size="8" fill="#555" text-anchor="middle">Règles de l'air communes</text>
+
+  <!-- Box 5: ATCO Licensing -->
+  <rect x="186" y="224" width="164" height="46" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.2"/>
+  <text x="268" y="241" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">ATCO LICENSING</text>
+  <text x="268" y="256" font-family="Arial,sans-serif" font-size="8.5" fill="#1F3864" text-anchor="middle">EU 805/2011</text>
+  <text x="268" y="268" font-family="Arial,sans-serif" font-size="8" fill="#555" text-anchor="middle">Licences contrôleurs</text>
+
+  <!-- ── SOFT LAW block ── -->
+  <rect x="370" y="118" width="320" height="38" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="530" y="133" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#1F3864" text-anchor="middle">SOFT LAW — Spécifications</text>
+  <text x="530" y="148" font-family="Arial,sans-serif" font-size="9" fill="#1F3864" text-anchor="middle">Exemples d'application, non contraignants</text>
+
+  <!-- Soft Law items: 3 boxes -->
+  <!-- AMC -->
+  <rect x="370" y="170" width="96" height="100" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.2"/>
+  <text x="418" y="188" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">AMC</text>
+  <text x="418" y="202" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Acceptable</text>
+  <text x="418" y="214" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Means of</text>
+  <text x="418" y="226" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Compliance</text>
+  <text x="418" y="242" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">Explications et</text>
+  <text x="418" y="254" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">exemples</text>
+  <text x="418" y="266" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">d'application</text>
+
+  <!-- GM -->
+  <rect x="474" y="170" width="96" height="100" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.2"/>
+  <text x="522" y="188" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">GM</text>
+  <text x="522" y="202" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Guidance</text>
+  <text x="522" y="214" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Material</text>
+  <text x="522" y="242" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">Comment</text>
+  <text x="522" y="254" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">satisfaire aux</text>
+  <text x="522" y="266" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">exigences</text>
+
+  <!-- CS -->
+  <rect x="578" y="170" width="112" height="100" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.2"/>
+  <text x="634" y="188" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">CS</text>
+  <text x="634" y="202" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Certification</text>
+  <text x="634" y="214" font-family="Arial,sans-serif" font-size="8" fill="#1F3864" text-anchor="middle">Specifications</text>
+  <text x="634" y="242" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">Normes</text>
+  <text x="634" y="254" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">techniques de</text>
+  <text x="634" y="266" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">certification</text>
+
+  <!-- ── Hierarchy note ── -->
+  <rect x="30" y="290" width="660" height="44" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.2"/>
+  <text x="360" y="308" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#C00000" text-anchor="middle">⚠ Hiérarchie des normes EASA</text>
+  <text x="360" y="324" font-family="Arial,sans-serif" font-size="9" fill="#1F3864" text-anchor="middle">Basic Regulation (EU 2018/1139)  ▶  Règlements délégués / d'exécution (Hard Law)  ▶  AMC / GM / CS (Soft Law)</text>
+
+  <!-- ── ICAO relationship note ── -->
+  <rect x="30" y="344" width="660" height="36" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="360" y="358" font-family="Arial,sans-serif" font-size="9.5" font-weight="bold" fill="#1F3864" text-anchor="middle">Relation OACI → EASA → AIP National</text>
+  <text x="360" y="373" font-family="Arial,sans-serif" font-size="8.5" fill="#1F3864" text-anchor="middle">L'OACI publie les SARPs (Annexes). L'EASA les transpose en droit européen (Hard Law). Chaque État publie son AIP national.</text>
+</svg>

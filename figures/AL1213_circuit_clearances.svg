@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <!-- Fond transparent -->
+  
+  <!-- === ÉLÉMENTS FIXES === -->
+  <!-- Piste (centre) -->
+  <rect x="260" y="190" width="200" height="40" fill="#888" stroke="#333" stroke-width="2" rx="2"/>
+  <line x1="355" y1="190" x2="355" y2="230" stroke="white" stroke-width="2" stroke-dasharray="8,6"/>
+  <!-- Marquages seuil piste -->
+  <rect x="264" y="194" width="8" height="6" fill="white"/>
+  <rect x="264" y="210" width="8" height="6" fill="white"/>
+  <rect x="264" y="222" width="8" height="6" fill="white"/>
+  <rect x="448" y="194" width="8" height="6" fill="white"/>
+  <rect x="448" y="210" width="8" height="6" fill="white"/>
+  <rect x="448" y="222" width="8" height="6" fill="white"/>
+  
+  <!-- Taxiway (diag bas-droite) -->
+  <line x1="460" y1="230" x2="540" y2="310" stroke="#F4C542" stroke-width="12" stroke-linecap="round"/>
+  <line x1="460" y1="230" x2="540" y2="310" stroke="#888" stroke-width="8" stroke-linecap="round"/>
+  <line x1="460" y1="230" x2="540" y2="310" stroke="#F4C542" stroke-width="2" stroke-linecap="round" stroke-dasharray="8,6"/>
+  
+  <!-- Apron (parking) -->
+  <rect x="500" y="300" width="170" height="95" fill="#D0D0D0" stroke="#888" stroke-width="2" rx="4"/>
+  <text x="585" y="352" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#555">APRON</text>
+  
+  <!-- Taxiway label -->
+  <text x="520" y="265" font-family="Arial" font-size="11" fill="#555" transform="rotate(45 520 265)">TAXIWAY</text>
+
+  <!-- === CIRCUIT DE TRAFIC === -->
+  <!-- Downwind (haut) -->
+  <line x1="530" y1="90" x2="190" y2="90" stroke="#2E75B6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="360" y="80" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2E75B6">DOWNWIND</text>
+  
+  <!-- Base leg (gauche, descend) -->
+  <line x1="190" y1="90" x2="190" y2="210" stroke="#2E75B6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="155" y="155" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">BASE</text>
+  <text x="155" y="168" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">LEG</text>
+  
+  <!-- Final (vers piste) -->
+  <line x1="190" y1="210" x2="258" y2="210" stroke="#2E75B6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="224" y="204" text-anchor="middle" font-family="Arial" font-size="11" fill="#2E75B6">FINAL</text>
+  
+  <!-- Décollage (montée vers downwind) -->
+  <line x1="460" y1="210" x2="530" y2="210" stroke="#548235" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="530" y1="210" x2="530" y2="90" stroke="#548235" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Marqueurs de flèches -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2E75B6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#548235"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#C00000"/>
+    </marker>
+  </defs>
+
+  <!-- Taxiway vers piste (depuis apron) -->
+  <path d="M540,310 L460,230" stroke="#555" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+
+  <!-- === NUMÉROS DE CLEARANCES === -->
+  <!-- 1 - Start-up & Taxy -->
+  <circle cx="570" cy="395" r="14" fill="#C00000" stroke="white" stroke-width="2"/>
+  <text x="570" y="399" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">1</text>
+  
+  <!-- 2 - Lining-up -->
+  <circle cx="238" cy="240" r="14" fill="#C00000" stroke="white" stroke-width="2"/>
+  <text x="238" y="244" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">2</text>
+  
+  <!-- 3 - Take-off -->
+  <circle cx="490" cy="180" r="14" fill="#548235" stroke="white" stroke-width="2"/>
+  <text x="490" y="184" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">3</text>
+  
+  <!-- 4 - Landing -->
+  <circle cx="210" cy="230" r="14" fill="#2E75B6" stroke="white" stroke-width="2"/>
+  <text x="210" y="234" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">4</text>
+  
+  <!-- 5 - Taxy to apron -->
+  <circle cx="500" cy="250" r="14" fill="#C00000" stroke="white" stroke-width="2"/>
+  <text x="500" y="254" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">5</text>
+  
+  <!-- 6 - Parking -->
+  <circle cx="615" cy="345" r="14" fill="#888" stroke="white" stroke-width="2"/>
+  <text x="615" y="349" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">6</text>
+
+  <!-- === LÉGENDE === -->
+  <rect x="10" y="10" width="240" height="175" fill="white" fill-opacity="0.92" stroke="#CCC" stroke-width="1" rx="6"/>
+  <text x="20" y="30" font-family="Arial" font-size="12" font-weight="bold" fill="#1F3864">Clearances &amp; Contrôleurs</text>
+  
+  <circle cx="24" cy="50" r="9" fill="#C00000"/>
+  <text x="24" y="54" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">1</text>
+  <text x="38" y="54" font-family="Arial" font-size="10" fill="#333">Start-up &amp; Taxy → <tspan fill="#C00000" font-weight="bold">GROUND</tspan></text>
+  
+  <circle cx="24" cy="72" r="9" fill="#C00000"/>
+  <text x="24" y="76" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">2</text>
+  <text x="38" y="76" font-family="Arial" font-size="10" fill="#333">Lining-up → <tspan fill="#2E75B6" font-weight="bold">TOWER</tspan></text>
+  
+  <circle cx="24" cy="94" r="9" fill="#548235"/>
+  <text x="24" y="98" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">3</text>
+  <text x="38" y="98" font-family="Arial" font-size="10" fill="#333">Take-off → <tspan fill="#2E75B6" font-weight="bold">TOWER</tspan></text>
+  
+  <circle cx="24" cy="116" r="9" fill="#2E75B6"/>
+  <text x="24" y="120" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">4</text>
+  <text x="38" y="120" font-family="Arial" font-size="10" fill="#333">Landing → <tspan fill="#2E75B6" font-weight="bold">TOWER</tspan></text>
+  
+  <circle cx="24" cy="138" r="9" fill="#C00000"/>
+  <text x="24" y="142" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">5</text>
+  <text x="38" y="142" font-family="Arial" font-size="10" fill="#333">Taxy apron → <tspan fill="#C00000" font-weight="bold">GROUND</tspan></text>
+  
+  <circle cx="24" cy="160" r="9" fill="#888"/>
+  <text x="24" y="164" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">6</text>
+  <text x="38" y="164" font-family="Arial" font-size="10" fill="#333">Parking</text>
+  
+  <!-- Légende couleurs circuit -->
+  <line x1="38" y1="178" x2="70" y2="178" stroke="#2E75B6" stroke-width="2.5"/>
+  <text x="75" y="182" font-family="Arial" font-size="10" fill="#2E75B6">Arrivée</text>
+  <line x1="140" y1="178" x2="172" y2="178" stroke="#548235" stroke-width="2.5"/>
+  <text x="177" y="182" font-family="Arial" font-size="10" fill="#548235">Départ</text>
+</svg>

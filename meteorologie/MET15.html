@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MET15 — Vent · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">MET15 · Le vent</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="MET15" data-matiere="meteorologie">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Météorologie</a>
+        <span class="sep">›</span>
+        <span>MET15</span>
+      </div>
+      <div class="cours-code-badge">MET15</div>
+      <h1 class="cours-title">Le vent</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~35 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="definition-vent">1. Définition et généralités</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="definition-generale">1.1 Définition générale</h2>
+        <p>Le vent représente le <strong>vecteur vitesse du déplacement d'une masse d'air par rapport au sol</strong>. C'est la composante horizontale du mouvement de l'air — la composante verticale étant appelée <em>vitesse verticale</em>.</p>
+        <p>Point fondamental : le vent est le reflet d'un mouvement par rapport à un référentiel lui-même en rotation — la Terre. Cette particularité explique l'apparition de la force de Coriolis, qui va profondément modifier le comportement du vent.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le <strong>vent</strong> = composante horizontale du mouvement de l'air / sol. La <strong>vitesse verticale</strong> = composante verticale. Les deux ne se confondent pas.
+        </div>
+
+        <h2 id="unites-vent">1.2 Unités et représentation</h2>
+        <p>En météorologie, le vent est représenté comme un <strong>vecteur</strong> caractérisé par sa direction et sa vitesse :</p>
+        <ul>
+          <li><strong>Direction :</strong> mesurée en <strong>degrés vrais</strong> (True North), arrondie à 10°, indiquant la provenance du vent (un vent de 090° vient de l'est). En aéronautique, la référence peut être le nord magnétique.</li>
+          <li><strong>Vitesse :</strong> en <strong>m/s</strong> (SI), en <strong>kt</strong> (aéronautique) ou en km/h.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Conversion clé</div>
+          <div class="values-grid">
+            <div class="value-chip"><span class="val">20 kt</span><span class="val-label">= 10 m/s = 36 km/h</span></div>
+            <div class="value-chip"><span class="val">1 kt</span><span class="val-label">= 0,514 m/s ≈ 1,85 km/h</span></div>
+          </div>
+          <p style="margin:.4rem 0 0;font-size:.85rem">Règle rapide : kt × 0,5 ≈ m/s · m/s × 2 ≈ kt</p>
+        </div>
+
+        <p>Sur les cartes météo, le vent est représenté par un <strong>barbule (wind barb)</strong> : la hampe pointe dans la direction d'où vient le vent, et les traits perpendiculaires indiquent la vitesse (un triangle plein = 50 kt, un long trait = 10 kt, un demi-trait = 5 kt).</p>
+
+        <!-- SOURCE SLIDE 8 — réutilisation recommandée -->
+        <div class="fig-container">
+          <img src="../figures/MET15_wind_symbol.png" alt="Symbole vent avec barbule : 230°/65 kt, côté basses pressions, veering et backing">
+          <div class="fig-caption">Fig. 1 — Représentation du vent (barbule) : hampe orientée dans la direction du vent, traits perpendiculaires pour la vitesse. Le côté BP est à gauche dans l'hémisphère Nord. Veering = rotation horaire, Backing = rotation anti-horaire.</div>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Veering et Backing</div>
+          <strong>Veering</strong> (virage horaire, <em>rotation dans le sens des aiguilles d'une montre</em>) : le vent tourne de S vers W vers N → dans l'hémisphère Nord, signe d'une advection d'air chaud et d'un anticyclone qui approche. <strong>Backing</strong> (rotation anti-horaire) : le vent tourne de N vers W vers S → advection d'air froid.
+        </div>
+
+        <h2 id="vent-meteo-vs-aero">1.3 Vent météorologique vs vent aéronautique</h2>
+        <p>Il existe deux définitions opérationnelles du vent de surface, mesurées à 10 m (≈ 30 ft) :</p>
+        <ul>
+          <li><strong>Vent météorologique :</strong> moyenné sur <strong>10 minutes</strong>, référence au <strong>Nord vrai</strong>. Représentatif à l'échelle méso-synoptique.</li>
+          <li><strong>Vent aéronautique :</strong> moyenné sur <strong>2 minutes</strong>, référence pouvant être le <strong>Nord magnétique</strong>. Représentatif des conditions instantanées pour décollage et atterrissage.</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le vent diffusé dans les METAR/ATIS est une <strong>moyenne sur 2 minutes</strong> (vent aéronautique), alors que les synoptiques utilisent 10 minutes. Les rafales (<em>gusts</em>) sont les pointes instantanées dépassant de 10 kt la moyenne.
+        </div>
+
+        <h2 id="manche-a-air">1.4 Manche à air (wind sock)</h2>
+        <p>La manche à air (<em>wind sock</em>) est un instrument visuel placé aux seuils de piste pour indiquer la direction et estimer la vitesse du vent :</p>
+        <ul>
+          <li>Manche pendant verticalement → vent calme</li>
+          <li>Manche à 45° → environ 10 kt</li>
+          <li>Manche horizontal → 20 kt</li>
+          <li>Manche horizontal avec oscillations haut/bas → plus de 20 kt</li>
+        </ul>
+
+        <!-- SOURCE SLIDE 10 — réutilisation recommandée -->
+        <div class="fig-container">
+          <img src="../figures/MET15_windsock.png" alt="Manche à air : calme, 45°=10 kt, horizontal=20 kt, oscillations > 20 kt">
+          <div class="fig-caption">Fig. 2 — Manche à air : les positions clés et les vitesses correspondantes. Elle est éclairée de nuit.</div>
+        </div>
+
+        <h2 id="ordres-grandeur">1.5 Ordres de grandeur par échelle</h2>
+        <p>Les vitesses horizontales et verticales du vent varient considérablement selon l'échelle du phénomène météorologique :</p>
+
+        <div class="fig-container">
+          <img src="../figures/MET15_ordres_magnitude.png" alt="Tableau ordres de grandeur des vitesses selon l'échelle météorologique">
+          <div class="fig-caption">Fig. 3 — Ordres de grandeur des vitesses horizontales et verticales selon l'échelle météorologique.</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Rapport H/V</div>
+          Le rapport entre vitesses horizontales et verticales est de l'ordre de <strong>100 à 1000</strong>. Le vent horizontal à l'échelle synoptique peut atteindre 100 m/s, la composante verticale associée n'est que de 10 cm/s. C'est ce déséquilibre qui justifie l'approximation hydrostatique.
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="vent-geostrophique">2. Vent géostrophique</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="force-pression">2.1 Origine du vent : la force de pression</h2>
+        <p>Le vent est fondamentalement causé par un <strong>gradient de pression horizontal</strong> : l'air se déplace des hautes pressions vers les basses pressions, exactement comme l'eau s'écoule d'un réservoir en surpression vers un en dépression.</p>
+        <p>La force de gradient de pression est :</p>
+        <ul>
+          <li>Perpendiculaire aux isobares</li>
+          <li>Dirigée des hautes vers les basses pressions</li>
+          <li>Proportionnelle au gradient de pression (isobares serrées → vent fort)</li>
+        </ul>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Force de gradient de pression</div>
+          <strong>Force de pression par unité de masse :</strong>
+          <div class="formula-display">Fp = −(1/ρ) × grad(P)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec ρ = masse volumique de l'air (kg/m³), grad(P) = gradient horizontal de pression (Pa/m). Le signe négatif traduit la direction vers les BP.</p>
+        </div>
+
+        <h2 id="force-coriolis">2.2 Force de Coriolis</h2>
+        <p>Dès que l'air se met en mouvement, la rotation de la Terre fait apparaître une force fictive : la <strong>force de Coriolis</strong>. Dans le plan horizontal, elle est :</p>
+        <ul>
+          <li>Perpendiculaire au vecteur vent (et donc à la vitesse)</li>
+          <li>Proportionnelle à la vitesse du vent</li>
+          <li>Proportionnelle au sinus de la latitude (nulle à l'équateur, maximale aux pôles)</li>
+          <li>Dirigée vers la <strong>droite dans l'hémisphère Nord</strong>, vers la gauche dans l'hémisphère Sud</li>
+        </ul>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Force de Coriolis horizontale</div>
+          <strong>Pour l'hémisphère Nord :</strong>
+          <div class="formula-display">Fch = −m · f · k ∧ Vh</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec f = paramètre de Coriolis = 2·ω·sin(L), ω = vitesse de rotation terrestre = 7,27×10⁻⁵ rad/s, L = latitude, k = vecteur unitaire vertical</p>
+        </div>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info — Coriolis et latitude</div>
+          À l'équateur (L = 0°), sin(0) = 0 → f = 0 → pas de Coriolis. Le vent géostrophique n'est pas applicable à l'équateur. À 45°N, f ≈ 10⁻⁴ rad/s. À 90°N (pôle), f est maximal.
+        </div>
+
+        <h2 id="equilibre-geostrophique">2.3 Équilibre géostrophique et vent Vg</h2>
+        <p>En <strong>atmosphère libre</strong> (au-dessus de la couche limite, sans frottement), dans un écoulement rectiligne et uniforme, la force de pression et la force de Coriolis s'équilibrent exactement : <strong>Fp + Fc = 0</strong>. On atteint l'<strong>équilibre géostrophique</strong>.</p>
+        <p>Le vent résultant, appelé <strong>vent géostrophique Vg</strong>, est alors :</p>
+        <ul>
+          <li>Parallèle aux isobares (ou aux isohypses en altitude)</li>
+          <li>Laisse les <strong>basses pressions à gauche dans l'hémisphère Nord</strong> (à droite dans l'hémisphère Sud)</li>
+          <li>D'autant plus fort que les isobares sont serrées</li>
+          <li>Inversement proportionnel au sinus de la latitude</li>
+        </ul>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Vitesse du vent géostrophique</div>
+          <strong>À altitude constante (représentation isobarique) :</strong>
+          <div class="formula-display">Vg = (1/ρ·f) · dP/dL</div>
+          <strong>À pression constante (représentation isohypse) :</strong>
+          <div class="formula-display">Vg = (G/f) · dZ/dL = (G/f) · grad(Z)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec f = 2·ω·sin(L), G = accélération gravitationnelle standard (9,8 m/s²), dZ/dL = gradient de géopotentiel (m/m)</p>
+        </div>
+
+        <p>Les hypothèses nécessaires pour que Vg soit représentatif du vent réel :</p>
+        <ul>
+          <li>Friction négligeable → <strong>atmosphère libre</strong> (au-dessus de la couche limite)</li>
+          <li>Mouvement rectiligne uniforme, parallèle aux isohypses</li>
+          <li>Vitesse verticale négligeable → échelle synoptique</li>
+          <li>Force de Coriolis horizontale significative → <strong>latitudes moyennes</strong> (30°–70°)</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          À gradient de pression égal, le vent géostrophique est <strong>plus fort aux basses latitudes</strong> (car f est plus petit → Vg = 1/(ρf)·grad(P) est plus grand). Deux isobares à 5 hPa d'écart génèrent un vent bien plus fort à 30°N qu'à 60°N.
+        </div>
+
+        <h2 id="buys-ballot">2.4 Règle de Buys-Ballot</h2>
+        <p>La règle de Buys-Ballot permet de retrouver rapidement la position des centres de pression à partir de la direction du vent :</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Règle de Buys-Ballot</div>
+          <strong>Hémisphère Nord :</strong> dos au vent → basses pressions à gauche, hautes pressions à droite. H tourne dans le sens horaire (anticyclonique), D tourne dans le sens anti-horaire (cyclonique).<br>
+          <strong>Hémisphère Sud :</strong> inversé — H tourne dans le sens anti-horaire, D dans le sens horaire.
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/MET15_buys_ballot.svg" alt="Règle de Buys-Ballot : circulation H et L en NH et SH">
+          <div class="fig-caption">Fig. 4 — Loi de Buys-Ballot : sens de circulation autour des anticyclones (H) et dépressions (L) dans les deux hémisphères. La force de Coriolis explique l'inversion entre NH et SH.</div>
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="vent-gradient">3. Vent de gradient</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <p>Le vent géostrophique suppose un écoulement <strong>rectiligne</strong>. En réalité, les isobares sont courbes (autour des dépressions et anticyclones), ce qui introduit une <strong>force centrifuge</strong> (ou accélération centripète) dans l'équilibre des forces. On parle alors de <strong>vent de gradient Vh</strong>.</p>
+
+        <p>Trois forces s'équilibrent dans un écoulement courbe :</p>
+        <ul>
+          <li>Force de gradient de pression (Fp) — vers le centre de courbure (basses pressions)</li>
+          <li>Force de Coriolis (Fc) — vers la droite en NH</li>
+          <li>Force centrifuge (Fcent) — vers l'extérieur de la courbure</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/MET15_vent_gradient.svg" alt="Vent de gradient vs vent géostrophique : dépression et anticyclone">
+          <div class="fig-caption">Fig. 5 — Équilibre des forces dans un écoulement courbe (NH). En dépression, la force centrifuge aide Fc → Vh > Vg. En anticyclone, elle s'y oppose → Vh < Vg.</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Vent de gradient</div>
+          En dépression : Vh <strong>&gt; Vg</strong> (le vent réel est supérieur au géostrophique).<br>
+          En anticyclone : Vh <strong>&lt; Vg</strong> (le vent réel est inférieur au géostrophique).<br>
+          Conséquence pratique : les anticyclones ne peuvent pas avoir un gradient de pression arbitrairement élevé (contrainte sur Vh).
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'énoncé "la force centrifuge diminue le vent géostrophique" s'applique aux <strong>anticyclones</strong>, et "la augmente" s'applique aux <strong>dépressions</strong>. C'est contre-intuitif mais c'est un classique des QCM.
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="vent-surface">4. Vent en couche limite et en surface</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="couche-limite">4.1 Structure de la couche limite</h2>
+        <p>Entre le sol et l'atmosphère libre, une <strong>couche limite planétaire</strong> (Planetary Boundary Layer, PBL) d'environ 1 000 à 1 500 m d'épaisseur est soumise aux frottements du sol. Elle se divise en deux sous-couches :</p>
+        <ul>
+          <li><strong>Couche de surface (SBL, Surface Boundary Layer) :</strong> des 0 à ~50 m. Vent nul au sol, puis augmentation rapide avec l'altitude sans changement de direction notable. La force de frottement y domine.</li>
+          <li><strong>Couche de transition (TBL, Transition Boundary Layer) :</strong> de ~50 m à ~1 000-1 500 m. Le vent augmente en vitesse ET tourne (vent qui vire) progressivement vers la direction géostrophique. La turbulence est prépondérante.</li>
+        </ul>
+        <p>Au-dessus de la TBL : l'<strong>atmosphère libre</strong> où le vent géostrophique ou de gradient est établi. Friction négligeable.</p>
+
+        <h2 id="force-frottement">4.2 Force de frottement</h2>
+        <p>La force de frottement est due à la viscosité de l'air :</p>
+        <ul>
+          <li>Elle s'oppose à la vitesse (force dans la direction opposée au mouvement)</li>
+          <li>Elle est nulle au sol strict (vitesse de l'air nulle par rapport au sol — condition de non-glissement)</li>
+          <li>Elle est très variable près du sol et décroît rapidement avec l'altitude</li>
+          <li>En atmosphère libre (au-dessus de la TBL), elle est négligeable</li>
+        </ul>
+
+        <h2 id="vent-10m">4.3 Vent à 10 m — Valeurs pratiques</h2>
+        <p>À 10 m d'altitude, le vent de surface est dévié par rapport aux isobares et affaibli par rapport au vent géostrophique. L'angle de déviation μ (vers les basses pressions) varie selon la rugosité de la surface :</p>
+
+        <div class="fig-container">
+          <img src="../figures/MET15_surface_wind_angle.svg" alt="Vent de surface à 10 m : angle 15° sur mer, 30° sur terre, vitesses 2/3 Vg et 1/2 Vg">
+          <div class="fig-caption">Fig. 6 — Déviation du vent de surface par rapport aux isobares selon la rugosité. Plus la surface est rugueuse, plus la déviation est grande et la vitesse réduite.</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Vent de surface à 10 m</div>
+          <div class="values-grid">
+            <div class="value-chip"><span class="val">Sur mer</span><span class="val-label">V = 2/3 · Vg · μ = 15°</span></div>
+            <div class="value-chip"><span class="val">Sur terre</span><span class="val-label">V = 1/2 · Vg · μ = 30°</span></div>
+          </div>
+          <p style="margin:.4rem 0 0;font-size:.85rem">μ = angle entre vent de surface et isobares, vers les basses pressions. Plus la rugosité augmente, plus μ augmente et plus V diminue.</p>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          En surface, le vent n'est PAS parallèle aux isobares. Il traverse les isobares avec un angle de 15° (mer) à 30° (terre). C'est la friction qui brise l'équilibre géostrophique et permet au vent de converger vers les dépressions.
+        </div>
+
+        <h2 id="ekman-spiral">4.4 Spirale d'Ekman</h2>
+        <p>En montant depuis le sol jusqu'à l'atmosphère libre, le vent change progressivement de direction et de vitesse. L'ensemble des vecteurs vent tracés à différentes altitudes forme une spirale : la <strong>spirale d'Ekman</strong>.</p>
+        <p>Dans l'hémisphère Nord :</p>
+        <ul>
+          <li>Au sol : vent faible, formant un grand angle avec les isobares (30–45°)</li>
+          <li>En montant dans la TBL : le vent augmente en vitesse ET tourne dans le sens <strong>horaire (veer)</strong></li>
+          <li>En atmosphère libre : vent géostrophique, parallèle aux isobares</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/MET15_ekman_spiral.png" alt="Spirale d'Ekman : profil vertical du vent (angle et vitesse) et hodographe">
+          <div class="fig-caption">Fig. 7 — Spirale d'Ekman (NH). À gauche : évolution de l'angle de déviation et de la fraction de Vg avec l'altitude. À droite : vue du dessus de l'hodographe (chaque flèche = vecteur vent à une altitude donnée).</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Spirale d'Ekman</div>
+          NH : en montant, le vent tourne dans le sens <strong>horaire</strong> (veering) et accélère jusqu'au vent géostrophique vers ~1 000-1 500 m. SH : le vent tourne dans le sens anti-horaire (backing) en montant. Mnémo : NH → Vent monte et vire à droite comme Coriolis.
+        </div>
+
+        <h2 id="profil-tropopause">4.5 Profil vertical jusqu'à la tropopause</h2>
+        <p>Au-delà de la couche limite, le vent continue d'augmenter avec l'altitude dans la troposphère. Le gradient de pression horizontal (et donc le gradient de géopotentiel des isobares) s'accentue à mesure qu'on monte, car les isobares s'inclinent davantage du pôle vers l'équateur (différence de température). Le <strong>vent maximum se situe à la tropopause</strong>, là où le gradient horizontal des isobares est le plus fort — c'est la localisation des <strong>jet-streams</strong>.</p>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="convergence-divergence">5. Convergence et divergence</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <p>Dans la couche limite, le vent de surface n'est pas parallèle aux isobares mais les traverse légèrement (angles 15° à 30°). Cela crée des effets de <strong>convergence</strong> (accumulation d'air) ou de <strong>divergence</strong> (étalement d'air) en surface, qui se compensent par des mouvements verticaux.</p>
+
+        <div class="fig-container">
+          <img src="../figures/MET15_conv_div.svg" alt="Convergence en dépression (ascendance) et divergence en anticyclone (subsidence)">
+          <div class="fig-caption">Fig. 8 — Convergence en surface sous une dépression (ascendance résultante) et divergence sous un anticyclone (subsidence résultante). Les vitesses verticales sont environ 100 fois plus faibles que les horizontales.</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Convergence / Divergence</div>
+          <strong>Dépression (L) en surface :</strong> les vents convergent vers le centre → ascendance → nuages convectifs, précipitations → temps perturbé.<br>
+          <strong>Anticyclone (H) en surface :</strong> les vents divergent du centre → subsidence → air sec, dissolution des nuages → temps calme (mais possibilité de brumes, stratus bas en cas de refroidissement nocturne).
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La vitesse verticale résultant de la convergence/divergence est environ <strong>100 à 1000 fois plus faible</strong> que la vitesse horizontale (cm/s contre m/s). C'est néanmoins suffisant pour générer des mouvements verticaux importants sur de grandes surfaces et de longues durées.
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="brises-locales">6. Vents locaux — Brises</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="brise-mer">6.1 Brise de mer</h2>
+        <p>La <strong>brise de mer</strong> (<em>sea breeze</em>) est un vent local thermique qui se développe le jour le long des côtes, sous conditions anticycloniques (ciel clair, vent synoptique faible ou nul) :</p>
+        <ul>
+          <li>La terre se réchauffe plus vite que la mer → pression plus basse sur terre (Warm Low) → ascendance sur terre</li>
+          <li>L'air frais de mer afflue en surface vers la terre (brise de mer)</li>
+          <li>Un retour d'air chaud s'établit en altitude vers la mer → <strong>cellule de brise</strong></li>
+        </ul>
+        <p>Caractéristiques de la brise de mer :</p>
+        <ul>
+          <li>Extension latérale : <strong>~50 km (30 NM)</strong> depuis la côte</li>
+          <li>Extension verticale : <strong>~500 m (1 500 ft)</strong> sur les plaines</li>
+          <li>Vitesse : <strong>5 à 20 kt</strong></li>
+          <li>Direction initiale perpendiculaire à la côte, puis <strong>vire vers la droite en NH</strong> (effet Coriolis) pour devenir plus parallèle à la côte en après-midi</li>
+        </ul>
+
+        <h2 id="front-brise">6.2 Front de brise</h2>
+        <p>La limite entre la brise de mer fraîche et l'air continental chaud constitue un <strong>front de brise</strong>. Ce front présente des phénomènes dangereux pour l'aviation :</p>
+        <ul>
+          <li>Convergence et ascendance → développement de cumulus ou cumulonimbus</li>
+          <li>Cisaillements de vent (<em>wind shears</em>) importants</li>
+          <li>Turbulence</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Le front de brise peut être dangereux en approche ou décollage même par beau temps apparent : il génère des cisaillements brutaux et des ascendances localisées, surtout si la brise est intensifiée par l'instabilité convective.
+        </div>
+
+        <h2 id="brise-terre">6.3 Brise de terre</h2>
+        <p>La <strong>brise de terre</strong> (<em>land breeze</em>) est l'inverse de la brise de mer : elle se développe la nuit. La terre se refroidit plus vite que la mer → pression plus élevée sur terre → l'air froid s'écoule de la terre vers la mer.</p>
+        <p>Elle est nettement plus faible que la brise de mer :</p>
+        <ul>
+          <li>Extension latérale : <strong>~5 NM</strong> seulement</li>
+          <li>Extension verticale : <strong>~150 m (500 ft)</strong></li>
+          <li>Vitesse : <strong>~10 kt</strong></li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Brises côtières</div>
+          Brise de mer = jour, de la mer vers la terre, 50 km / 500 m / 5-20 kt. Brise de terre = nuit, de la terre vers la mer, 5 NM / 150 m / ~10 kt. Les deux nécessitent : ciel dégagé + vent synoptique faible (anticyclone ou marais barométrique).
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">20 kt</span><span class="val-label">= 10 m/s = 36 km/h</span></div>
+          <div class="value-chip"><span class="val">2 min</span><span class="val-label">Moyenne vent aéronautique</span></div>
+          <div class="value-chip"><span class="val">10 min</span><span class="val-label">Moyenne vent météo</span></div>
+          <div class="value-chip"><span class="val">2/3 Vg</span><span class="val-label">Vent de surface / mer</span></div>
+          <div class="value-chip"><span class="val">1/2 Vg</span><span class="val-label">Vent de surface / terre</span></div>
+          <div class="value-chip"><span class="val">15°</span><span class="val-label">Déviation / isobares (mer)</span></div>
+          <div class="value-chip"><span class="val">30°</span><span class="val-label">Déviation / isobares (terre)</span></div>
+          <div class="value-chip"><span class="val">50 km</span><span class="val-label">Extension brise de mer</span></div>
+          <div class="value-chip"><span class="val">5 NM</span><span class="val-label">Extension brise de terre</span></div>
+          <div class="value-chip"><span class="val">5–20 kt</span><span class="val-label">Vitesse brise de mer</span></div>
+          <div class="value-chip"><span class="val">~10 kt</span><span class="val-label">Vitesse brise de terre</span></div>
+          <div class="value-chip"><span class="val">1 000–1 500 m</span><span class="val-label">Épaisseur couche limite</span></div>
+        </div>
+
+        <!-- FIGURES DE RÉFÉRENCE -->
+        <h1 id="figures-synthese">Figures de référence</h1>
+
+        <div id="fig-buys-ballot-synth">
+          <div class="fig-container">
+            <img src="../figures/MET15_buys_ballot.svg" alt="Buys-Ballot : circulation H et L en NH et SH">
+            <div class="fig-caption">Loi de Buys-Ballot — Circulation NH et SH</div>
+          </div>
+        </div>
+
+        <div id="fig-gradient-wind-synth">
+          <div class="fig-container">
+            <img src="../figures/MET15_vent_gradient.svg" alt="Vent de gradient vs géostrophique en dépression et anticyclone">
+            <div class="fig-caption">Vent de gradient : Vh > Vg en dépression · Vh < Vg en anticyclone</div>
+          </div>
+        </div>
+
+        <div id="fig-surface-angle-synth">
+          <div class="fig-container">
+            <img src="../figures/MET15_surface_wind_angle.svg" alt="Angles du vent de surface : 15° mer, 30° terre">
+            <div class="fig-caption">Vent de surface : angles et vitesses selon la rugosité</div>
+          </div>
+        </div>
+
+        <div id="fig-ekman-synth">
+          <div class="fig-container">
+            <img src="../figures/MET15_ekman_spiral.png" alt="Spirale d'Ekman : profil vertical du vent">
+            <div class="fig-caption">Spirale d'Ekman — Profil vertical et hodographe (NH)</div>
+          </div>
+        </div>
+
+        <div id="fig-conv-div-synth">
+          <div class="fig-container">
+            <img src="../figures/MET15_conv_div.svg" alt="Convergence L = ascendance / Divergence H = subsidence">
+            <div class="fig-caption">Convergence / Divergence et mouvements verticaux</div>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Direction du vent = d'où il vient (pas où il va)</div>
+              <div class="piege-explication">Un vent de 090° vient de l'est et souffle vers l'ouest. C'est la convention météorologique. En aéronautique c'est identique : le vent METAR 090/15kt vient de l'est.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Vent météo (10 min) ≠ vent aéronautique (2 min)</div>
+              <div class="piege-explication">Les METAR diffusent le vent aéronautique (2 min). Les bulletins synoptiques utilisent 10 min. Confondu en examen : toujours vérifier le contexte de la question.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Vent géostrophique nul à l'équateur</div>
+              <div class="piege-explication">f = 2ω·sin(L). À L = 0° (équateur), sin(0) = 0 → f = 0 → Vg = infini théoriquement, et l'équilibre géostrophique n'existe pas. Le vent y suit directement le gradient de pression sans déflexion.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">À gradient égal, vent plus fort aux basses latitudes</div>
+              <div class="piege-explication">Vg = (1/ρf)·dP/dL. Plus la latitude est faible, plus f est petit, plus Vg est grand. Deux isobares espacées de la même distance génèrent un vent plus fort à 30°N qu'à 60°N.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Vent gradient > Vg en dépression, < Vg en anticyclone</div>
+              <div class="piege-explication">En dépression (L), la force centrifuge s'ajoute à Fc pour équilibrer Fp → Vh > Vg. En anticyclone (H), Fcent s'ajoute à Fp → Vh < Vg. Piège classique, très fréquent en QCM.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Vent de surface ne suit PAS les isobares</div>
+              <div class="piege-explication">Le vent de surface traverse les isobares avec un angle μ vers les basses pressions (15° sur mer, 30° sur terre). Il n'est parallèle aux isobares QU'en atmosphère libre (géostrophique).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Spirale d'Ekman : sens de rotation NH vs SH</div>
+              <div class="piege-explication">En NH, le vent tourne dans le sens HORAIRE en montant (veering). En SH, dans le sens ANTI-HORAIRE (backing). Mnémo NH : "monte et vire à droite" (comme Coriolis).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Buys-Ballot inversé en SH</div>
+              <div class="piege-explication">NH : dos au vent → BP à gauche. SH : dos au vent → BP à DROITE. Le sens de rotation de H et L est inversé entre les deux hémisphères (Coriolis change de sens).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">Convergence/divergence : rapport H/V ~1/100</div>
+              <div class="piege-explication">Les vitesses verticales (ascendance/subsidence) sont ~100 fois plus faibles que les horizontales : m/s horizontal → cm/s vertical. Mais sur de grandes surfaces et durées, l'effet cumulé est considérable (nuages, précipitations).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Brise de mer : direction vire en cours de journée en NH</div>
+              <div class="piege-explication">La brise de mer démarre perpendiculaire à la côte puis, sous effet Coriolis en NH, vire progressivement vers la droite pour devenir plus parallèle à la côte en fin d'après-midi.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Front de brise = danger aviation même par beau temps</div>
+              <div class="piege-explication">Le front de brise génère convergence, ascendance localisée, cisaillements et turbulence. Un cumulus isolé sur une côte par beau temps peut indiquer un front de brise actif, dangereux en approche basse altitude.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Vent maximum à la tropopause (jet-stream)</div>
+              <div class="piege-explication">C'est à la tropopause que le gradient horizontal de pression (inclinaison des isobares) est maximum, donc que le vent géostrophique est maximum → localisation des jets. Au-dessus (stratosphère), le gradient diminue, le vent aussi.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Définition du vent en météorologie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Composante horizontale</strong> du vecteur vitesse d'une masse d'air par rapport au sol. La composante verticale est la vitesse verticale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Conversion : 20 kt = ? m/s = ? km/h <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>20 kt = 10 m/s = 36 km/h</strong>. Règle rapide : kt ÷ 2 ≈ m/s.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la durée de moyennage du vent aéronautique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 minutes</strong> (vent météorologique = 10 min). Le vent METAR est une moyenne sur 2 min.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la référence de direction du vent en météorologie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Nord vrai</strong> (True North). En aéronautique, la référence peut être le nord magnétique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'indique un barbule à 45° sur une manche à air ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>≈ 10 kt</strong>. Horizontal = 20 kt, pendant = calme, oscillations = > 20 kt.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la force de Coriolis ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Force fictive due à la rotation de la Terre. Perpendiculaire au vent, proportionnelle à la vitesse et au sinus de la latitude. Dévie le vent vers la <strong>droite en NH</strong>, vers la gauche en SH.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le vent géostrophique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Vent d'équilibre en atmosphère libre quand <strong>Fp = Fc</strong>. Parallèle aux isobares, BP à gauche en NH. Valable aux latitudes moyennes, hors couche limite.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Règle de Buys-Ballot en NH ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dos au vent → <strong>BP à gauche, HP à droite</strong>. H tourne dans le sens horaire, L dans le sens anti-horaire.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Règle de Buys-Ballot en SH ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dos au vent → <strong>BP à droite, HP à gauche</strong>. H tourne dans le sens anti-horaire, L dans le sens horaire. Inverse du NH.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Vent gradient en dépression : Vh > ou < Vg ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Vh &gt; Vg</strong> en dépression. La force centrifuge ajoute à Fc → le vent réel est supérieur au géostrophique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Vent gradient en anticyclone : Vh > ou < Vg ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Vh &lt; Vg</strong> en anticyclone. La force centrifuge s'oppose à Fc → le vent réel est inférieur au géostrophique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Vent de surface sur mer : vitesse et angle par rapport aux isobares ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>V = 2/3 Vg, angle μ = 15°</strong> vers les BP.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Vent de surface sur terre : vitesse et angle par rapport aux isobares ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>V = 1/2 Vg, angle μ = 30°</strong> vers les BP.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que la spirale d'Ekman ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Représentation du vecteur vent à différentes altitudes dans la couche limite. En NH, le vent tourne dans le sens <strong>horaire (veering)</strong> et accélère en montant jusqu'au vent géostrophique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Épaisseur de la couche limite planétaire ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>~1 000 à 1 500 m</strong> (TBL + SBL). La SBL s'étend de 0 à ~50 m, la TBL jusqu'à ~1 500 m.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le veering ? Et le backing ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Veering</strong> = rotation horaire du vent (ex : S → W → N). <strong>Backing</strong> = rotation anti-horaire (ex : N → W → S). En NH, veering = advection chaude / backing = advection froide.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Convergence en surface → quel mouvement vertical ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Ascendance</strong> (updraught). La convergence sous une dépression provoque une montée d'air → nuages, précipitations.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Divergence en surface → quel mouvement vertical ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Subsidence</strong>. La divergence sous un anticyclone provoque un affaissement d'air → air sec, dissolution des nuages.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Conditions favorables aux brises côtières ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Ciel clair, vent synoptique faible ou nul, conditions anticycloniques ou marais barométrique. Elles nécessitent un fort contraste thermique terre/mer.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Extension et vitesse de la brise de mer ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>~50 km (30 NM), 500 m d'épaisseur, 5–20 kt</strong>. Max en surface près du front de brise.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le vent de surface est-il dévié vers les BP ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La friction réduit la vitesse du vent → Coriolis est plus faible → la force de pression n'est plus entièrement compensée → le vent s'incline vers les BP (angle μ).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Où se situe le vent maximum dans la troposphère ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">À la <strong>tropopause</strong>, là où le gradient horizontal des isobares (inclinaison) est maximum → localisation des jet-streams.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le vent géostrophique est-il nul à l'équateur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Car f = 2ω·sin(L) → à L = 0°, f = 0 → la force de Coriolis est nulle → pas d'équilibre géostrophique possible.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un front de brise ? Quels dangers ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Limite entre l'air marin frais (brise de mer) et l'air continental chaud. Génère <strong>convergence, ascendance, cisaillements et turbulence</strong>. Dangereux en approche basse altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Rapport entre vitesse horizontale et verticale à l'échelle synoptique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Horizontal : 5-100 m/s · Vertical : ~10 cm/s. Rapport de l'ordre de <strong>1 000</strong>. Le vent synoptique est quasi purement horizontal.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Brise de terre vs brise de mer : laquelle est plus faible ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>brise de terre</strong> (nuit) est bien plus faible : ~10 kt, 5 NM, 150 m. La brise de mer (jour) peut atteindre 20 kt, 50 km, 500 m.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Dans quel sens tourne le vent en montant en SH (spirale d'Ekman) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dans le sens <strong>anti-horaire (backing)</strong> en montant en SH. C'est l'inverse de l'hémisphère Nord (horaire/veering).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Formule du paramètre de Coriolis f ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>f = 2·ω·sin(L)</strong>, avec ω = 7,27×10⁻⁵ rad/s (vitesse de rotation terrestre) et L = latitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel vent est parallèle aux isobares dans l'hémisphère Nord ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le <strong>vent géostrophique</strong>, avec BP à gauche. Ce n'est valable qu'en atmosphère libre (au-dessus de la couche limite) et pour un écoulement rectiligne.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il si la brise de mer est intensifiée par l'instabilité ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le front de brise peut générer des <strong>cumulonimbus</strong> localisés, avec orages, fortes rafales et turbulence sévère, même en conditions anticycloniques générales.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

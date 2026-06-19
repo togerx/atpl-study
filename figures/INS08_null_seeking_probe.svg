@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="720" height="320">
+  <!--
+    LAYOUT (x, y)
+    - Probe conique : 30,100 → 180,220
+    - Paddle/balances : 210,110 → 310,210
+    - Flèche → RVDT : 315,160 → 390,160
+    - RVDT box : 395,130 → 490,190
+    - Flèche → AOA computer : 495,160 → 555,160
+    - AOA computer box : 560,130 → 650,190
+    - Flèche retour (feedback) : 650,185 → 210,210 (bas)
+    - Labels Pt1/Pt2 dans probe
+    - Airflow arrows : 10,150–28,160 et 10,160–28,170
+  -->
+
+  <!-- === AIRFLOW arrows === -->
+  <defs>
+    <marker id="aBlue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#2E75B6"/>
+    </marker>
+    <marker id="aGray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
+    </marker>
+    <marker id="aRed" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#C00000"/>
+    </marker>
+    <marker id="aGreen" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#548235"/>
+    </marker>
+  </defs>
+
+  <!-- Airflow lines -->
+  <line x1="10" y1="130" x2="55" y2="130" stroke="#2E75B6" stroke-width="2" marker-end="url(#aBlue)"/>
+  <line x1="10" y1="148" x2="55" y2="148" stroke="#2E75B6" stroke-width="2" marker-end="url(#aBlue)"/>
+  <line x1="10" y1="166" x2="55" y2="166" stroke="#2E75B6" stroke-width="2" marker-end="url(#aBlue)"/>
+  <line x1="10" y1="184" x2="55" y2="184" stroke="#2E75B6" stroke-width="2" marker-end="url(#aBlue)"/>
+  <text x="5" y="116" font-family="Arial" font-size="10" fill="#2E75B6" font-weight="bold">Relative</text>
+  <text x="5" y="127" font-family="Arial" font-size="10" fill="#2E75B6" font-weight="bold">airflow</text>
+
+  <!-- === PROBE CONIQUE === -->
+  <!-- Corps cylindrique de la sonde -->
+  <ellipse cx="155" cy="157" rx="18" ry="65" fill="#D0D8E8" stroke="#2E75B6" stroke-width="2"/>
+  <!-- Pointe conique avant -->
+  <polygon points="55,130 55,184 155,157" fill="#BDD7EE" stroke="#2E75B6" stroke-width="2"/>
+  <!-- Slots (fentes) -->
+  <!-- Slot haut (Pt1) -->
+  <ellipse cx="100" cy="140" rx="22" ry="5" fill="none" stroke="#C00000" stroke-width="2"/>
+  <text x="65" y="123" font-family="Arial" font-size="11" font-weight="bold" fill="#C00000">Pt1</text>
+  <line x1="88" y1="127" x2="93" y2="137" stroke="#C00000" stroke-width="1.5"/>
+  <!-- Slot bas (Pt2) -->
+  <ellipse cx="100" cy="174" rx="22" ry="5" fill="none" stroke="#548235" stroke-width="2"/>
+  <text x="65" y="196" font-family="Arial" font-size="11" font-weight="bold" fill="#548235">Pt2</text>
+  <line x1="88" y1="189" x2="93" y2="179" stroke="#548235" stroke-width="1.5"/>
+  <!-- Label probe -->
+  <text x="155" y="248" text-anchor="middle" font-family="Arial" font-size="10" fill="#1F3864" font-weight="bold">Sonde conique</text>
+  <text x="155" y="260" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">à fentes (slots)</text>
+  <!-- Chauffage -->
+  <text x="155" y="275" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000" font-style="italic">⚡ chauffage antigivre</text>
+
+  <!-- === PADDLE / BALANCE (comparateur) === -->
+  <rect x="185" y="118" width="100" height="80" rx="6" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+  <text x="235" y="136" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#1F3864">PALETTE</text>
+  <text x="235" y="148" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#1F3864">(paddle)</text>
+  <!-- Pt1 → côté haut paddle -->
+  <line x1="155" y1="140" x2="185" y2="140" stroke="#C00000" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#aRed)"/>
+  <text x="168" y="133" font-family="Arial" font-size="9" fill="#C00000">Pt1</text>
+  <!-- Pt2 → côté bas paddle -->
+  <line x1="155" y1="174" x2="185" y2="174" stroke="#548235" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#aGreen)"/>
+  <text x="168" y="186" font-family="Arial" font-size="9" fill="#548235">Pt2</text>
+  <!-- Palette inclinée (déséquilibre) -->
+  <line x1="200" y1="155" x2="270" y2="163" stroke="#1F3864" stroke-width="2.5"/>
+  <circle cx="235" cy="159" r="4" fill="#1F3864"/>
+  <!-- Pivot -->
+  <line x1="235" y1="159" x2="235" y2="175" stroke="#1F3864" stroke-width="1.5"/>
+  <!-- Label Pt1≠Pt2 -->
+  <text x="235" y="190" text-anchor="middle" font-family="Arial" font-size="9" fill="#C00000">Pt1 ≠ Pt2</text>
+
+  <!-- Flèche vers RVDT -->
+  <line x1="285" y1="158" x2="360" y2="158" stroke="#555" stroke-width="2" marker-end="url(#aGray)"/>
+  <text x="321" y="149" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">rotation</text>
+  <text x="321" y="160" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">mécanique</text>
+
+  <!-- === RVDT === -->
+  <rect x="365" y="125" width="110" height="65" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <text x="420" y="147" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7A5800">RVDT</text>
+  <text x="420" y="160" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#7A5800">Rotary Variable</text>
+  <text x="420" y="171" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#7A5800">Differential</text>
+  <text x="420" y="182" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#7A5800">Transformer</text>
+  <text x="420" y="210" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">pos. angulaire → signal ⚡</text>
+
+  <!-- Flèche RVDT → AOA computer -->
+  <line x1="475" y1="158" x2="540" y2="158" stroke="#555" stroke-width="2" marker-end="url(#aGray)"/>
+  <text x="507" y="149" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">signal</text>
+  <text x="507" y="160" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">électrique</text>
+
+  <!-- === AOA COMPUTER (ADC) === -->
+  <rect x="545" y="120" width="115" height="75" rx="6" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <text x="602" y="142" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">ADC / AOA</text>
+  <text x="602" y="154" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">Computer</text>
+  <!-- Alpha output -->
+  <rect x="560" y="163" width="45" height="24" rx="4" fill="#1F3864"/>
+  <text x="582" y="179" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white">α</text>
+  <text x="620" y="175" font-family="Arial" font-size="10" fill="#1F3864">→ cockpit</text>
+  <text x="620" y="187" font-family="Arial" font-size="10" fill="#1F3864">→ AP/FD</text>
+
+  <!-- === FEEDBACK LOOP (rotation de la sonde pour équilibrer Pt1=Pt2) === -->
+  <!-- Flèche de retour bas -->
+  <path d="M 235 198 Q 235 230 155 230 Q 80 230 80 200" stroke="#C00000" stroke-width="1.8" fill="none" stroke-dasharray="6,3" marker-end="url(#aRed)"/>
+  <text x="155" y="248" text-anchor="middle" font-family="Arial" font-size="0" fill="none"/>
+  <rect x="150" y="232" width="160" height="22" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="230" y="247" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#C00000" font-weight="bold">rotation jusqu'à Pt1 = Pt2</text>
+
+  <!-- === TITRE === -->
+  <text x="360" y="18" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">Sonde conique à fentes — Null-Seeking Probe</text>
+  <text x="360" y="33" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Principe de mesure de l'angle d'attaque (α)</text>
+
+  <!-- Séparateur haut -->
+  <line x1="30" y1="40" x2="690" y2="40" stroke="#CCC" stroke-width="1"/>
+</svg>

@@ -1,0 +1,76 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="760" height="400" fill="#F8F9FA"/>
+  <text x="380" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F3864">Loi de Buys-Ballot — Circulation autour des centres d'action</text>
+
+  <!-- === HEMISPHERE NORD === -->
+  <rect x="15" y="38" width="360" height="26" rx="5" fill="#1F3864"/>
+  <text x="195" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="white">HÉMISPHÈRE NORD (NH)</text>
+
+  <!-- Anticyclone NH -->
+  <circle cx="115" cy="185" r="72" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+  <text x="115" y="191" text-anchor="middle" font-size="36" font-weight="bold" fill="#548235">H</text>
+  <!-- Arrows clockwise around H NH -->
+  <path d="M115,108 A77,77 0 0,1 190,160" fill="none" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="190,160 180,148 196,151" fill="#548235"/>
+  <path d="M190,210 A77,77 0 0,1 115,262" fill="none" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="115,262 127,252 124,268" fill="#548235"/>
+  <path d="M65,240 A77,77 0 0,1 38,185" fill="none" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="38,185 50,194 36,200" fill="#548235"/>
+  <text x="115" y="295" text-anchor="middle" font-size="10" fill="#548235" font-weight="bold">Rotation HORAIRE</text>
+  <text x="115" y="310" text-anchor="middle" font-size="9.5" fill="#333">Vent tourne le dos aux BP (gauche)</text>
+
+  <!-- Depression NH -->
+  <circle cx="270" cy="185" r="72" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <text x="270" y="191" text-anchor="middle" font-size="36" font-weight="bold" fill="#C00000">L</text>
+  <!-- Arrows anti-clockwise around L NH -->
+  <path d="M270,108 A77,77 0 0,0 195,160" fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="195,160 205,148 200,164" fill="#C00000"/>
+  <path d="M195,210 A77,77 0 0,0 270,262" fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="270,262 258,252 262,268" fill="#C00000"/>
+  <path d="M320,240 A77,77 0 0,0 346,185" fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="346,185 334,194 348,200" fill="#C00000"/>
+  <text x="270" y="295" text-anchor="middle" font-size="10" fill="#C00000" font-weight="bold">Rotation ANTI-HORAIRE</text>
+  <text x="270" y="310" text-anchor="middle" font-size="9.5" fill="#333">BP à gauche, HP à droite du vent</text>
+
+  <!-- NH rule box -->
+  <rect x="15" y="326" width="360" height="52" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="195" y="343" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1F3864">Règle de Buys-Ballot (NH) :</text>
+  <text x="195" y="358" text-anchor="middle" font-size="9.5" fill="#333">Dos au vent → BP à gauche, HP à droite</text>
+  <text x="195" y="372" text-anchor="middle" font-size="9.5" fill="#333">H tourne dans le sens horaire · L dans le sens anti-horaire</text>
+
+  <!-- === HEMISPHERE SUD === -->
+  <rect x="385" y="38" width="360" height="26" rx="5" fill="#1F3864"/>
+  <text x="565" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="white">HÉMISPHÈRE SUD (SH)</text>
+
+  <!-- Anticyclone SH -->
+  <circle cx="485" cy="185" r="72" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+  <text x="485" y="191" text-anchor="middle" font-size="36" font-weight="bold" fill="#548235">H</text>
+  <!-- Arrows ANTI-clockwise around H SH -->
+  <path d="M485,108 A77,77 0 0,0 410,160" fill="none" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="410,160 420,148 416,164" fill="#548235"/>
+  <path d="M410,210 A77,77 0 0,0 485,262" fill="none" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="485,262 473,252 477,268" fill="#548235"/>
+  <path d="M535,240 A77,77 0 0,0 562,185" fill="none" stroke="#548235" stroke-width="2.5"/>
+  <polygon points="562,185 550,194 564,200" fill="#548235"/>
+  <text x="485" y="295" text-anchor="middle" font-size="10" fill="#548235" font-weight="bold">Rotation ANTI-HORAIRE</text>
+  <text x="485" y="310" text-anchor="middle" font-size="9.5" fill="#333">Inversé vs NH (force de Coriolis)</text>
+
+  <!-- Depression SH -->
+  <circle cx="640" cy="185" r="72" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <text x="640" y="191" text-anchor="middle" font-size="36" font-weight="bold" fill="#C00000">L</text>
+  <!-- Arrows clockwise around L SH -->
+  <path d="M640,108 A77,77 0 0,1 715,160" fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="715,160 705,148 721,151" fill="#C00000"/>
+  <path d="M715,210 A77,77 0 0,1 640,262" fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="640,262 652,252 649,268" fill="#C00000"/>
+  <path d="M590,240 A77,77 0 0,1 563,185" fill="none" stroke="#C00000" stroke-width="2.5"/>
+  <polygon points="563,185 575,194 561,200" fill="#C00000"/>
+  <text x="640" y="295" text-anchor="middle" font-size="10" fill="#C00000" font-weight="bold">Rotation HORAIRE</text>
+  <text x="640" y="310" text-anchor="middle" font-size="9.5" fill="#333">BP à droite du vent (SH)</text>
+
+  <!-- SH rule box -->
+  <rect x="385" y="326" width="360" height="52" rx="6" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="565" y="343" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1F3864">Règle de Buys-Ballot (SH) :</text>
+  <text x="565" y="358" text-anchor="middle" font-size="9.5" fill="#333">Dos au vent → BP à droite, HP à gauche</text>
+  <text x="565" y="372" text-anchor="middle" font-size="9.5" fill="#333">H tourne ANTI-horaire · L tourne dans le sens horaire</text>
+</svg>

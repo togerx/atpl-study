@@ -1,0 +1,112 @@
+<svg viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <text x="380" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F3864">Torquemètres — Turbopropulseurs (P = T × ω)</text>
+
+  <defs>
+    <marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F3864"/>
+    </marker>
+  </defs>
+
+  <!-- === GAUCHE : MÉCANIQUE === -->
+  <rect x="10" y="35" width="355" height="35" rx="6" fill="#1F3864"/>
+  <text x="187" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="white">3.1 Torquemètre mécanique (pression d'huile)</text>
+
+  <!-- Schéma mécanique -->
+  <rect x="10" y="78" width="355" height="150" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+
+  <!-- Vilebrequin / Arbre moteur -->
+  <rect x="25" y="120" width="70" height="30" rx="4" fill="#c0c8d8" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="60" y="140" text-anchor="middle" font-size="9" fill="#1F3864">Vilebrequin</text>
+  <!-- Flèche rotation -->
+  <path d="M 40 118 A 20 20 0 0 1 80 118" fill="none" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#at)"/>
+
+  <!-- Réducteur épicycloïdal -->
+  <rect x="105" y="110" width="80" height="50" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <text x="145" y="130" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1F3864">Réducteur</text>
+  <text x="145" y="143" text-anchor="middle" font-size="8" fill="#BF8F00">épicycloïdal</text>
+  <text x="145" y="155" text-anchor="middle" font-size="8" fill="#BF8F00">(engrenage hélicoïdal)</text>
+
+  <!-- Arbre hélice -->
+  <rect x="196" y="122" width="70" height="25" rx="3" fill="#c0d8c0" stroke="#548235" stroke-width="1.5"/>
+  <text x="231" y="138" text-anchor="middle" font-size="9" fill="#1F3864">Arbre hélice</text>
+
+  <!-- Hélice -->
+  <ellipse cx="295" cy="135" rx="8" ry="35" fill="#ccc" stroke="#888" stroke-width="1.5"/>
+  <text x="315" y="139" font-size="9" fill="#888">Hélice</text>
+
+  <!-- Piston torquemètre -->
+  <rect x="100" y="173" width="90" height="22" rx="3" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="145" y="188" text-anchor="middle" font-size="9" fill="#C00000">Piston torquemètre</text>
+
+  <!-- Flèche pression huile → indicateur -->
+  <line x1="235" y1="170" x2="280" y2="180" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#at)"/>
+  <rect x="280" y="168" width="75" height="25" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="317" y="180" text-anchor="middle" font-size="8" fill="#1F3864">Pression huile</text>
+  <text x="317" y="191" text-anchor="middle" font-size="8" fill="#BF8F00">∝ Couple (Torque)</text>
+
+  <!-- Explication -->
+  <text x="25" y="215" font-size="8.5" fill="#1F3864">Engrenages hélicoïdaux → mouvement axial ∝ couple → piston → pression huile mesurée</text>
+  <text x="25" y="227" font-size="8.5" fill="#1F3864">Indicateur cockpit en PSI (mécanique) ou % de la valeur maximale</text>
+
+  <!-- Avantages/inconvénients -->
+  <text x="25" y="244" font-size="8.5" fill="#548235">+ Robuste, éprouvé</text>
+  <text x="150" y="244" font-size="8.5" fill="#C00000">− Lourd, intégré réducteur, complexe entretien</text>
+
+  <!-- === DROITE : ÉLECTRONIQUE === -->
+  <rect x="385" y="35" width="365" height="35" rx="6" fill="#1F3864"/>
+  <text x="567" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="white">3.2 Torquemètre électronique (déphasage)</text>
+
+  <rect x="385" y="78" width="365" height="150" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+
+  <!-- Arbre avec torsion -->
+  <rect x="400" y="120" width="250" height="28" rx="5" fill="#c0d8c0" stroke="#548235" stroke-width="2"/>
+  <text x="525" y="138" text-anchor="middle" font-size="9" font-weight="bold" fill="#1F3864">Arbre de sortie moteur (torque shaft)</text>
+
+  <!-- Roue dentée 1 (avant) -->
+  <rect x="400" y="105" width="30" height="12" rx="2" fill="#1F3864"/>
+  <text x="415" y="115" text-anchor="middle" font-size="7" fill="white">W1</text>
+  <text x="415" y="165" text-anchor="middle" font-size="8" fill="#2E75B6">Pickup 1</text>
+  <line x1="415" y1="105" x2="415" y2="95" stroke="#2E75B6" stroke-width="1.5"/>
+  <rect x="395" y="83" width="40" height="14" rx="3" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="415" y="94" text-anchor="middle" font-size="7.5" fill="#1F3864">Pickup 1</text>
+
+  <!-- Roue dentée 2 (arrière) -->
+  <rect x="620" y="105" width="30" height="12" rx="2" fill="#1F3864"/>
+  <text x="635" y="115" text-anchor="middle" font-size="7" fill="white">W2</text>
+  <line x1="635" y1="105" x2="635" y2="95" stroke="#C00000" stroke-width="1.5"/>
+  <rect x="615" y="83" width="40" height="14" rx="3" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="635" y="94" text-anchor="middle" font-size="7.5" fill="#1F3864">Pickup 2</text>
+
+  <!-- Déphasage illustration -->
+  <rect x="455" y="85" width="100" height="28" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="505" y="97" text-anchor="middle" font-size="8" font-weight="bold" fill="#BF8F00">Δφ = déphasage</text>
+  <text x="505" y="109" text-anchor="middle" font-size="7.5" fill="#1F3864">∝ torsion de l'arbre ∝ Couple</text>
+
+  <!-- Flèche vers électronique -->
+  <line x1="415" y1="97" x2="455" y2="97" stroke="#2E75B6" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="635" y1="97" x2="555" y2="97" stroke="#C00000" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Électronique -->
+  <line x1="505" y1="113" x2="505" y2="165" stroke="#BF8F00" stroke-width="1.5" marker-end="url(#at)"/>
+  <rect x="460" y="165" width="90" height="28" rx="4" fill="#1F3864"/>
+  <text x="505" y="179" text-anchor="middle" font-size="8.5" font-weight="bold" fill="white">Électronique</text>
+  <text x="505" y="190" text-anchor="middle" font-size="8" fill="#aad">Δφ → V (DC)</text>
+
+  <!-- → EFIS -->
+  <line x1="550" y1="179" x2="600" y2="179" stroke="#1F3864" stroke-width="1.5" marker-end="url(#at)"/>
+  <rect x="600" y="168" width="65" height="24" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="632" y="184" text-anchor="middle" font-size="9" font-weight="bold" fill="#548235">EFIS / ECAM</text>
+
+  <!-- Avantages/inconvénients -->
+  <text x="400" y="215" font-size="8.5" fill="#548235">+ Plus léger, données numériques, compatible EFIS</text>
+  <text x="400" y="229" font-size="8.5" fill="#C00000">− Plus complexe que le mécanique</text>
+  <text x="400" y="243" font-size="8.5" fill="#1F3864">Principe : torsion arbre → déphasage Pickup 1 vs Pickup 2 → tension DC ∝ couple</text>
+
+  <!-- Formule bas -->
+  <rect x="10" y="238" width="740" height="58" rx="6" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="380" y="256" text-anchor="middle" font-size="11" font-weight="bold" fill="#1F3864">Formules couples-puissance (turbopropulseurs)</text>
+  <text x="380" y="272" text-anchor="middle" font-size="10" fill="#1F3864">Puissance = Couple × Vitesse angulaire  →  P = T × ω  (ou P = T × n)</text>
+  <text x="380" y="287" text-anchor="middle" font-size="9.5" fill="#555">Unités de couple : N·m, ft·lb, in·lb. Affichage cockpit : PSI (méca), % de la valeur max, ou ft·lb</text>
+
+</svg>

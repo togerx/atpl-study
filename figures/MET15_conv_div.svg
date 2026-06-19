@@ -1,0 +1,92 @@
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="760" height="380" fill="#F8F9FA"/>
+  <text x="380" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F3864">Convergence / Divergence et mouvements verticaux</text>
+
+  <!-- === LEFT: DEPRESSION / CONVERGENCE === -->
+  <rect x="15" y="40" width="355" height="26" rx="5" fill="#C00000"/>
+  <text x="192" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="white">DÉPRESSION (L) — Convergence en surface</text>
+
+  <!-- Low center -->
+  <circle cx="192" cy="185" r="42" fill="#FBE5E5" stroke="#C00000" stroke-width="2.5"/>
+  <text x="192" y="193" text-anchor="middle" font-size="32" font-weight="bold" fill="#C00000">L</text>
+
+  <!-- Convergent inflow arrows (spiral in, anti-clockwise NH) -->
+  <!-- Right -->
+  <line x1="310" y1="185" x2="240" y2="185" stroke="#C00000" stroke-width="2"/>
+  <polygon points="238,185 252,179 252,191" fill="#C00000"/>
+  <!-- Left -->
+  <line x1="74" y1="185" x2="144" y2="185" stroke="#C00000" stroke-width="2"/>
+  <polygon points="146,185 132,179 132,191" fill="#C00000"/>
+  <!-- Top-right -->
+  <line x1="290" y1="105" x2="233" y2="152" stroke="#C00000" stroke-width="2"/>
+  <polygon points="231,154 238,140 245,153" fill="#C00000"/>
+  <!-- Bottom-left -->
+  <line x1="94" y1="265" x2="151" y2="218" stroke="#C00000" stroke-width="2"/>
+  <polygon points="153,216 146,230 139,217" fill="#C00000"/>
+  <!-- Top -->
+  <line x1="192" y1="75" x2="192" y2="138" stroke="#C00000" stroke-width="2"/>
+  <polygon points="192,140 186,126 198,126" fill="#C00000"/>
+  <!-- Bottom -->
+  <line x1="192" y1="295" x2="192" y2="232" stroke="#C00000" stroke-width="2"/>
+  <polygon points="192,230 186,244 198,244" fill="#C00000"/>
+
+  <!-- Label convergence -->
+  <text x="192" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">↓ CONVERGENCE</text>
+
+  <!-- Vertical arrow UP (updraught) -->
+  <rect x="176" y="85" width="32" height="10" rx="2" fill="#2E75B6" opacity="0.5"/>
+  <text x="253" y="120" font-size="9" fill="#2E75B6" font-weight="bold">Ascendance</text>
+  <text x="253" y="132" font-size="9" fill="#2E75B6">(quelques cm/s)</text>
+  <line x1="240" y1="127" x2="208" y2="127" stroke="#2E75B6" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Box effects L -->
+  <rect x="20" y="285" width="345" height="75" rx="6" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="192" y="305" text-anchor="middle" font-size="10" font-weight="bold" fill="#C00000">Dépression : convergence de surface</text>
+  <text x="192" y="323" text-anchor="middle" font-size="9.5" fill="#333">→ Ascendance (updraught) au centre : quelques cm/s</text>
+  <text x="192" y="340" text-anchor="middle" font-size="9.5" fill="#333">→ Nuages convectifs, précipitations → temps perturbé</text>
+  <text x="192" y="357" text-anchor="middle" font-size="9" fill="#555">Flux horizontal : m/s · Flux vertical : cm/s (ratio ~1/100)</text>
+
+  <!-- === RIGHT: ANTICYCLONE / DIVERGENCE === -->
+  <rect x="390" y="40" width="355" height="26" rx="5" fill="#548235"/>
+  <text x="567" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ANTICYCLONE (H) — Divergence en surface</text>
+
+  <!-- High center -->
+  <circle cx="567" cy="185" r="42" fill="#E2EFDA" stroke="#548235" stroke-width="2.5"/>
+  <text x="567" y="193" text-anchor="middle" font-size="32" font-weight="bold" fill="#548235">H</text>
+
+  <!-- Divergent outflow arrows (spiral out, clockwise NH) -->
+  <!-- Right -->
+  <line x1="615" y1="185" x2="685" y2="185" stroke="#548235" stroke-width="2"/>
+  <polygon points="688,185 674,179 674,191" fill="#548235"/>
+  <!-- Left -->
+  <line x1="519" y1="185" x2="449" y2="185" stroke="#548235" stroke-width="2"/>
+  <polygon points="446,185 460,179 460,191" fill="#548235"/>
+  <!-- Top-left -->
+  <line x1="540" y1="152" x2="468" y2="103" stroke="#548235" stroke-width="2"/>
+  <polygon points="465,101 478,108 470,120" fill="#548235"/>
+  <!-- Bottom-right -->
+  <line x1="594" y1="218" x2="666" y2="267" stroke="#548235" stroke-width="2"/>
+  <polygon points="669,269 656,261 665,250" fill="#548235"/>
+  <!-- Top -->
+  <line x1="567" y1="138" x2="567" y2="72" stroke="#548235" stroke-width="2"/>
+  <polygon points="567,69 561,83 573,83" fill="#548235"/>
+  <!-- Bottom -->
+  <line x1="567" y1="232" x2="567" y2="298" stroke="#548235" stroke-width="2"/>
+  <polygon points="567,301 561,287 573,287" fill="#548235"/>
+
+  <!-- Label divergence -->
+  <text x="567" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#548235">↑ DIVERGENCE</text>
+
+  <!-- Subsidence arrow -->
+  <rect x="551" y="145" width="32" height="10" rx="2" fill="#C00000" opacity="0.4"/>
+  <text x="628" y="120" font-size="9" fill="#C00000" font-weight="bold">Subsidence</text>
+  <text x="628" y="132" font-size="9" fill="#C00000">(quelques cm/s)</text>
+  <line x1="625" y1="128" x2="593" y2="150" stroke="#C00000" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Box effects H -->
+  <rect x="395" y="285" width="345" height="75" rx="6" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="567" y="305" text-anchor="middle" font-size="10" font-weight="bold" fill="#548235">Anticyclone : divergence de surface</text>
+  <text x="567" y="323" text-anchor="middle" font-size="9.5" fill="#333">→ Subsidence (affaissement) au centre : quelques cm/s</text>
+  <text x="567" y="340" text-anchor="middle" font-size="9.5" fill="#333">→ Air sec et stable → temps calme, brumes possibles</text>
+  <text x="567" y="357" text-anchor="middle" font-size="9" fill="#555">Réchauffement adiabatique lors de la subsidence → dissolution nuages</text>
+</svg>

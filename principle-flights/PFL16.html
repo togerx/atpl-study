@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PFL13 — Limitations structurales · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">PFL13 · Limitations structurales</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="PFL13" data-matiere="principle-flights">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Principes du Vol</a>
+        <span class="sep">›</span>
+        <span>PFL13</span>
+      </div>
+      <div class="cours-code-badge">PFL13</div>
+      <h1 class="cours-title">Limitations structurales — Flutter, Enveloppes de manœuvre et de rafale</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA CS-25</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA CS-23</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~35 min</span>
+        <span class="cours-meta-item">❓ 30 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════
+             PARTIE 1 — FLUTTER
+        ══════════════════════════════ -->
+
+        <h1 id="flutter">1. Flutter</h1>
+
+        <h2 id="flutter-definition">1.1 Définition et mécanisme</h2>
+
+        <p>Le <strong>flutter</strong> est une vibration auto-entretenue et divergente d'une structure aéronautique. Contrairement à une résonance classique, l'air n'amortit pas l'oscillation : il lui <em>apporte</em> de l'énergie à chaque cycle, ce qui fait croître l'amplitude jusqu'à la rupture structurale.</p>
+
+        <p>Trois ingrédients sont indispensables à l'apparition du flutter :</p>
+        <ul>
+          <li>une structure flexible capable de se déformer en flexion (<em>bending</em>) et/ou en torsion (<em>torsion</em>) ;</li>
+          <li>deux degrés de liberté couplés (ex. : flexion + torsion) ;</li>
+          <li>une vitesse supérieure ou égale à la vitesse critique de flutter V_flutter, au-delà de laquelle l'amortissement aérodynamique devient négatif.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le flutter <strong>n'est pas une simple résonance</strong>. Il nécessite obligatoirement deux modes couplés <em>plus</em> un décalage de phase entre eux. Sans couplage, il ne peut pas y avoir de flutter.
+        </div>
+
+        <h2 id="flutter-cycle">1.2 Cycle d'énergie</h2>
+
+        <p>Le mécanisme peut être décomposé en quatre phases successives illustrant comment l'air effectue un travail <em>positif</em> sur la structure à chaque demi-cycle :</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL16_flutter_energy_cycle.svg" alt="Cycle d'énergie du flutter : 4 phases montrant comment l'air amplifie l'oscillation">
+          <div class="fig-caption">Fig. 1 — Cycle d'énergie du flutter : l'air fait un travail positif sur la structure à chaque cycle, ce qui fait diverger l'amplitude</div>
+        </div>
+
+        <p>Lors de la montée de l'aile, la torsion nez-haut augmente l'incidence, ce qui augmente la portance dans la direction du mouvement (travail positif). Lors de la descente, la torsion nez-bas réduit l'incidence, réduisant la portance, mais toujours dans la direction du mouvement. Le résultat net est une injection d'énergie à chaque cycle.</p>
+
+        <h2 id="flutter-mode-coalescence">1.3 Coalescence des modes et vitesse critique</h2>
+
+        <p>À basse vitesse, les deux modes vibratoires (flexion et torsion) ont des fréquences bien séparées. La fréquence propre s'exprime par :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Fréquence propre :</strong>
+          <div class="formula-display">f = (1 / 2π) × √(k / m)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec k = raideur (stiffness), m = masse de la section. La <strong>torsion</strong> a une fréquence plus élevée (k grand) ; la <strong>flexion</strong> a une fréquence plus basse (k petit).</p>
+        </div>
+
+        <p>Lorsque la vitesse augmente, le moment aérodynamique de torsion réduit la raideur effective en torsion, faisant <em>descendre</em> la fréquence de torsion. À la <strong>vitesse critique</strong> V_flutter, les deux fréquences se rejoignent (<em>coalescence</em> ou <em>mode crossing</em>) : l'amortissement s'annule et l'oscillation diverge.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          La définition rigoureuse de V_flutter est la vitesse à laquelle l'amortissement total devient nul (damping = 0). Le croisement des courbes de fréquence (<em>mode coalescence</em>) en est le symptôme visible, pas la cause. En dessous de V_flutter, toute perturbation est amortie et les oscillations s'éteignent.
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Règle de conception : <strong>V_flutter &gt; V_D</strong>. La vitesse de flutter doit être en dehors de l'enveloppe de vol, au-delà de la vitesse de piqué VD. Cette marge est vérifiée par essais en vol.
+        </div>
+
+        <!-- Figure réutilisée slide 5 -->
+        <div class="fig-container">
+          <img src="../figures/PFL16_mode_coalescence.png" alt="Graphe fréquence vs vitesse montrant la coalescence des modes de flexion et de torsion à V_critique">
+          <div class="fig-caption">Fig. 2 — Coalescence des modes : la fréquence de torsion descend avec la vitesse jusqu'à rejoindre la fréquence de flexion à V_critique = V_flutter</div>
+        </div>
+        <!-- Source : slide 5 du PDF MVL_20-21_Limitations_190626.pdf — extraire et renommer PFL16_mode_coalescence.png -->
+
+        <h2 id="flutter-remedes">1.4 Remèdes contre le flutter</h2>
+
+        <h3 id="flutter-remedes-aile">1.4.1 Flutter aile flexion/torsion</h3>
+
+        <p>Deux approches structurales permettent de repousser V_flutter :</p>
+        <ul>
+          <li><strong>Augmenter la raideur en torsion</strong> : les courbes de fréquence s'éloignent davantage, la coalescence est repoussée à une vitesse plus élevée ;</li>
+          <li><strong>Déplacer le centre de gravité (CG) de section vers l'axe élastique</strong> (<em>mass balancing</em>, équilibrage de masse) : réduit le bras de levier inertiel et donc le couplage entre les deux modes ;</li>
+          <li><strong>Moteurs sous les ailes</strong> : la masse des réacteurs, placée en avant de l'axe élastique, décale naturellement le CG vers l'avant, réduisant l'impulsion de torsion.</li>
+        </ul>
+
+        <h3 id="flutter-remedes-gouverne">1.4.2 Flutter des gouvernes</h3>
+
+        <p>Une gouverne non équilibrée a son CG <em>en arrière</em> de son axe de rotation (charnière). Lors d'une accélération de l'aile, la force d'inertie de la gouverne la défléchit dans le sens du mouvement, créant une variation de portance en phase avec l'oscillation — c'est du flutter de gouverne.</p>
+
+        <!-- Figure réutilisée slide 6 -->
+        <div class="fig-container">
+          <img src="../figures/PFL16_mass_balance.png" alt="Schéma d'un aileron avec son CG en arrière de l'axe élastique, montrant la force inertielle créant une déflexion en phase">
+          <div class="fig-caption">Fig. 3 — Flutter de gouverne : le CG de l'aileron situé en arrière de la charnière crée une force inertielle qui défléchit la gouverne en phase avec le mouvement de l'aile</div>
+        </div>
+        <!-- Source : slide 6 du PDF MVL_20-21_Limitations_190626.pdf — extraire et renommer PFL16_mass_balance.png -->
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Moment statique de la gouverne :</strong>
+          <div class="formula-display">S = m × d</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec S = moment statique, m = masse de la gouverne, d = distance entre le CG et l'axe de charnière / l'axe élastique. <br>Quand <strong>d → 0, S = 0</strong> : le couplage inertiel est supprimé.</p>
+        </div>
+
+        <p>En pratique, l'équilibrage de masse est réalisé en ajoutant des <strong>masses en plomb à l'avant du bord d'attaque</strong> de la gouverne, ce qui rapproche le CG de l'axe de charnière. Le même principe s'applique à l'aileron, à la gouverne de profondeur (<em>elevator</em>) et à la gouverne de direction (<em>rudder</em>).</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>Repeindre une gouverne abaisse V_flutter.</strong> Une couche de peinture supplémentaire ajoute de la masse à l'arrière de l'axe de charnière (bord de fuite), déplaçant le CG vers l'arrière et augmentant le moment statique S. Cela réduit la vitesse critique de flutter. C'est pourquoi tout travail de peinture sur une gouverne nécessite un rechargement des contrepoids ou une requalification.
+        </div>
+
+        <!-- ══════════════════════════════
+             PARTIE 2 — ENVELOPPE DE MANŒUVRE
+        ══════════════════════════════ -->
+
+        <h1 id="manoeuvrering-envelope">2. Enveloppe de manœuvre (diagramme V-n)</h1>
+
+        <h2 id="facteur-de-charge">2.1 Facteur de charge n<sub>z</sub></h2>
+
+        <p>Le <strong>facteur de charge</strong> n<sub>z</sub> est le rapport entre la portance (ou la résultante des forces aérodynamiques) et le poids de l'aéronef. Il représente la charge structurale apparente subie par l'appareil :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Facteur de charge :</strong>
+          <div class="formula-display">n<sub>z</sub> = L / mg = Portance / Poids</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">n<sub>z</sub> = 1 → vol en palier rectiligne ; n<sub>z</sub> &gt; 1 → virage ou ressource ; n<sub>z</sub> &lt; 0 → manœuvre inversée brusque.</p>
+        </div>
+
+        <p>La distinction entre charge <strong>limite</strong> et charge <strong>ultime</strong> est fondamentale en certification :</p>
+        <ul>
+          <li><strong>Charge limite</strong> (<em>limit load</em>) : charge maximale attendue en service. La structure ne doit subir aucune déformation permanente.</li>
+          <li><strong>Charge ultime</strong> (<em>ultimate load</em>) = charge limite × 1,5. La structure doit résister pendant au moins 3 secondes sans rupture, mais des déformations permanentes sont tolérées.</li>
+          <li>Au-delà de la charge ultime : rupture structurale.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le facteur de sécurité réglementaire est <strong>1,5</strong> dans tous les cas. Charge ultime = Charge limite × 1,5. En CS-25, la charge limite positive en configuration lisse est <strong>+2,5g</strong>, et la charge ultime correspondante est <strong>+3,75g</strong>.
+        </div>
+
+        <h2 id="vn-diagram">2.2 Construction du diagramme V-n</h2>
+
+        <p>Le <strong>diagramme V-n</strong> (<em>V-n diagram</em> ou <em>manoeuvring load diagram</em>) représente graphiquement le facteur de charge en fonction de la vitesse. Il délimite l'enveloppe dans laquelle l'aéronef peut voler sans dépasser ses charges structurales limites.</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL16_vn_diagram.png" alt="Diagramme V-n montrant l'enveloppe de manœuvre CS-25 avec les courbes de décrochage, les vitesses VA, VF, VC, VD et les niveaux de charge limite et ultime">
+          <div class="fig-caption">Fig. 4 — Diagramme V-n CS-25 : enveloppes lisse (+2,5g/−1g) et volets sortis (+2,0g/−1g), avec le facteur de sécurité × 1,5 menant à la charge ultime</div>
+        </div>
+
+        <p>La <strong>courbe de décrochage</strong> constitue la limite gauche du diagramme. Elle suit la loi :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Courbe de décrochage (parabole) :</strong>
+          <div class="formula-display">n<sub>z</sub> = k · V²&nbsp;&nbsp;avec&nbsp;&nbsp;k = ρ·S·C<sub>Lmax</sub> / (2mg)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">La portance maximale croît comme V² : la structure peut supporter de plus en plus de g à mesure que la vitesse augmente, jusqu'à atteindre le facteur limite.</p>
+        </div>
+
+        <h2 id="vitesses-conception">2.3 Vitesses de conception CS-25</h2>
+
+        <div class="fig-container">
+          <img src="../figures/PFL16_design_speeds.svg" alt="Axe des vitesses montrant l'ordre et les relations entre VS1, VA, VB, VC et VD selon CS-25">
+          <div class="fig-caption">Fig. 5 — Vitesses de conception CS-25 : ordre, relations mathématiques et rôle opérationnel de chaque vitesse</div>
+        </div>
+
+        <h3 id="va">VA — Vitesse de manœuvre</h3>
+
+        <p>VA est la <strong>vitesse de manœuvre</strong> (<em>manoeuvring speed</em>) : la vitesse maximale à laquelle il est permis d'appliquer une déflexion totale d'une seule gouverne sans dépasser la charge limite. En dessous de VA, toute déflexion maximale d'une gouverne provoque le décrochage avant que la charge limite soit atteinte.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Vitesse de manœuvre :</strong>
+          <div class="formula-display">V<sub>A</sub> = V<sub>S1</sub> × √n<sub>lim</sub></div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Pour CS-25 : V<sub>A</sub> = V<sub>S1</sub> × √2,5. Cette formule découle de l'égalité : à V<sub>A</sub>, la vitesse de décrochage à n<sub>lim</sub>g est atteinte exactement. <br>Avec V<sub>S1</sub> = vitesse de décrochage en lisse (1g).</p>
+        </div>
+
+        <p><strong>Démonstration :</strong> En palier 1g, mg = ½ρ₀·VS1²·S·CLmax. En facteur n, n·mg = ½ρ₀·VS(n)²·S·CLmax. En divisant : VS(n) = VS1·√n. VA est donc la vitesse de décrochage au facteur limite n.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>VA diminue quand la masse diminue.</strong> VA ∝ √m. Va est publiée pour la masse maximale. Si l'avion est plus léger, la <em>véritable</em> VA est plus basse que la valeur publiée. À masse réduite, utiliser la valeur publiée risque de dépasser le facteur limite — car l'aile décroche à une portance plus faible pour la même vitesse.
+        </div>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Calcul de VA à une masse différente :</strong>
+          <div class="formula-display">V<sub>A</sub>(m₂) = V<sub>A</sub>(m₁) × √(m₂ / m₁)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Exemple : VA = 200 kt à 20 000 kg → VA = 200 × √(18000/20000) ≈ 190 kt à 18 000 kg.</p>
+        </div>
+
+        <!-- Figure réutilisée slide 10 -->
+        <div class="fig-container">
+          <img src="../figures/PFL16_va_stall.png" alt="Diagramme V-n montrant comment VA est l'intersection de la parabole de décrochage avec le facteur limite 2.5g">
+          <div class="fig-caption">Fig. 6 — VA : intersection de la parabole de décrochage nz = k·V² avec le facteur de charge limite n = 2,5. VS (décrochage 1g) et VA (décrochage à n_lim) sont reliés par √n.</div>
+        </div>
+        <!-- Source : slide 10 du PDF MVL_20-21_Limitations_190626.pdf — extraire et renommer PFL16_va_stall.png -->
+
+        <h3 id="vb">VB — Vitesse pour l'intensité de rafale maximale</h3>
+
+        <p>VB est la <strong>vitesse pour l'intensité de rafale maximale</strong> (<em>design speed for maximum gust intensity</em>). C'est la vitesse à laquelle l'avion doit pouvoir rencontrer la rafale réglementaire maximale (±66 ft/s) et décrocher, sans dépasser la charge limite. VB est déterminée graphiquement comme l'intersection de la ligne de rafale à ±66 ft/s avec la courbe de décrochage dans le diagramme de rafale.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          VRA (vitesse recommandée en air turbulent, <em>rough-air speed</em>) est toujours <strong>inférieure à VB</strong>, qui est elle-même inférieure à VC. La hiérarchie est : <strong>VRA &lt; VB &lt; VC</strong>.
+        </div>
+
+        <h3 id="vc">VC — Vitesse de croisière de conception</h3>
+
+        <p>VC est la <strong>vitesse de croisière de conception</strong> (<em>design cruise speed</em>). Elle doit respecter :</p>
+        <ul>
+          <li>Minimum : VB + 43 kt (pour éviter une rafale à VC de dépasser le facteur limite)</li>
+          <li>Maximum : 0,8 × VD</li>
+          <li>En exploitation, la limite opérationnelle VMO correspond approximativement à VC.</li>
+        </ul>
+
+        <h3 id="vd">VD — Vitesse de piqué de conception</h3>
+
+        <p>VD est la <strong>vitesse de piqué de conception</strong> (<em>design dive speed</em>). Elle doit satisfaire VD ≥ 1,25 × VC. C'est le plancher absolu en conception ; les constructeurs peuvent aller plus haut, jamais plus bas. V_flutter doit être supérieure à VD.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          L'expression réglementaire <em>"may not be less than"</em> (CS 25.335) signifie que les valeurs indiquées sont des <strong>planchers de conception</strong> (<em>design floors</em>), non des valeurs prescrites. Un constructeur peut choisir VC = VB + 60 kt s'il le juge utile, mais pas VC = VB + 30 kt.
+        </div>
+
+        <h2 id="vitesses-operationnelles">2.4 Vitesses opérationnelles (VMO, VNE, VNO)</h2>
+
+        <p>Les vitesses de conception (VA, VC, VD) définissent l'enveloppe structurale. Les vitesses <em>opérationnelles</em> sont celles qui figurent dans l'AFM et sur les instruments :</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Vitesse</th>
+              <th>Norme</th>
+              <th>Définition</th>
+              <th>Affichage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>VMO / MMO</strong></td><td>CS-25</td><td>Vitesse / Mach opérationnel maximum</td><td>Barquette rouge sur ASI ; le plus restrictif des deux s'applique</td></tr>
+            <tr><td><strong>VNE</strong></td><td>CS-23</td><td>Vitesse à ne jamais dépasser (<em>Never Exceed</em>)</td><td>Trait rouge, fin de l'arc jaune (air calme seulement)</td></tr>
+            <tr><td><strong>VNO</strong></td><td>CS-23</td><td>Vitesse normale maximale (<em>Normal Operating</em>)</td><td>Sommet de l'arc vert</td></tr>
+            <tr><td><strong>VLO</strong></td><td>Tous</td><td>Vitesse train en transit (<em>gear operating</em>)</td><td>AFM</td></tr>
+            <tr><td><strong>VLE</strong></td><td>Tous</td><td>Vitesse train sorti (<em>gear extended</em>)</td><td>AFM</td></tr>
+            <tr><td><strong>VFE</strong></td><td>Tous</td><td>Vitesse volets sortis (<em>flap extended</em>)</td><td>Sommet de l'arc blanc</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>VMO est une vitesse IAS constante, pas une vitesse variant avec l'altitude.</strong> Au-delà de l'altitude de croisement (<em>crossover altitude</em>), c'est MMO (le Mach) qui devient la limite contraignante — pas VMO qui continuerait de baisser. Les deux existent indépendamment ; la plus restrictive s'applique à chaque instant.
+        </div>
+
+        <h2 id="cs25-cs23-enveloppes">2.5 Facteurs de charge CS-25 et catégories CS-23</h2>
+
+        <p>En CS-25 (avions de transport, &gt; 5 700 kg), les facteurs de charge limites sont :</p>
+        <ul>
+          <li>Configuration lisse (<em>clean</em>) : <strong>+2,5g / −1g</strong></li>
+          <li>Volets sortis (<em>flaps down</em>) : <strong>+2,0g / −1g</strong></li>
+        </ul>
+
+        <p>La vérification structurale à la vitesse VFE suppose : en air calme 0 ≤ nz ≤ 2 ; en air turbulent, une rafale de 25 ft/s.</p>
+
+        <p>Pour CS-23 (avions légers, ≤ 9 pax et ≤ 5 670 kg, ou Commuter ≤ 19 pax et ≤ 8 618 kg), les facteurs limites dépendent de la catégorie :</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL16_cs23_categories.png" alt="Tableau des facteurs de charge limites CS-23 par catégorie (Normal 3.8g, Utility 4.4g, Aerobatic 6.0g, Commuter 3.8g)">
+          <div class="fig-caption">Fig. 7 — Facteurs de charge limites par catégorie CS-23. La charge ultime = facteur limite × 1,5 dans tous les cas.</div>
+        </div>
+
+        <h2 id="facteurs-vn">2.6 Facteurs influençant le diagramme V-n</h2>
+
+        <p>Deux paramètres principaux déplacent ou déforment l'enveloppe de manœuvre :</p>
+
+        <p><strong>La masse :</strong> la charge limite est une <em>force</em> fixée à la masse maximale de certification. Un avion plus léger atteint un facteur de charge plus élevé pour la même force, mais en même temps VA est plus basse (VA ∝ √m). Le diagramme V-n est donc valable pour une masse spécifiée.</p>
+
+        <p><strong>L'altitude :</strong> à haute altitude, le nombre de Mach critique (MC, MD) devient limitant avant que l'aile puisse atteindre +2,5g. La partie haute droite de l'enveloppe est coupée par une limite Mach verticale. Le facteur de charge de 2,5g peut devenir inaccessible.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>L'altitude rend VA sans signification.</strong> À haute altitude, le facteur de charge de 2,5g est impossible à atteindre (limite Mach). VA (qui suppose que le décrochage limite la charge) perd donc son sens pratique : c'est le nombre de Mach qui contraindra le domaine de vol avant le décrochage.
+        </div>
+
+        <!-- ══════════════════════════════
+             PARTIE 3 — ENVELOPPE DE RAFALE
+        ══════════════════════════════ -->
+
+        <h1 id="gust-envelope">3. Enveloppe de rafale (diagramme de rafale)</h1>
+
+        <h2 id="gust-mechanism">3.1 Mécanisme : comment une rafale génère un facteur de charge</h2>
+
+        <p>Une rafale verticale de vitesse u (ft/s ou m/s) modifie instantanément l'incidence (<em>angle of attack</em>) de l'aile. Le facteur de charge supplémentaire est généré en quatre étapes :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Facteur de charge dû à une rafale :</strong>
+          <div class="formula-display">Δn<sub>z</sub> = ρ·V·S·a·u / (2mg)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">
+            ① Variation d'incidence : Δα ≈ u/V<br>
+            ② Variation du coefficient de portance : ΔCL = a·Δα = a·u/V (avec a = pente de la courbe CL−α)<br>
+            ③ Variation de portance : ΔL = ½ρV²·S·ΔCL = ½ρV·S·a·u (les V² et V se simplifient en V)<br>
+            ④ Facteur de charge : Δnz = ΔL/mg → <strong>linéaire en V</strong>, pas quadratique.
+          </p>
+        </div>
+
+        <p>Donc : nz = 1 + (ρSau / 2mg) × V. Sur le diagramme de rafale, les lignes de rafale sont des <strong>droites</strong> (proportionnelles à V), non des paraboles — contrairement à l'enveloppe de manœuvre.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Dans le diagramme de manœuvre, les courbes de décrochage sont des <strong>paraboles</strong> (nz ∝ V²). Dans le diagramme de rafale, les lignes de rafale sont des <strong>droites</strong> (Δnz ∝ V). Cette distinction tombe régulièrement en examen.
+        </div>
+
+        <h2 id="gust-construction">3.2 Construction du diagramme de rafale</h2>
+
+        <p>Les vitesses de rafale réglementaires (CS-25) varient avec l'altitude :</p>
+
+        <table>
+          <thead>
+            <tr><th>Vitesse de vol</th><th>Rafale 0–20 000 ft</th><th>Rafale à 50 000 ft</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>VB</strong></td><td>±66 ft/s (20,1 m/s)</td><td>±38 ft/s (11,6 m/s)</td></tr>
+            <tr><td><strong>VC</strong></td><td>±50 ft/s (15,2 m/s)</td><td>±25 ft/s (7,6 m/s)</td></tr>
+            <tr><td><strong>VD</strong></td><td>±25 ft/s (7,6 m/s)</td><td>±12,5 ft/s (3,8 m/s)</td></tr>
+          </tbody>
+        </table>
+
+        <p>Les vitesses de rafale sont constantes de 0 à 20 000 ft, puis décroissent linéairement jusqu'à 50 000 ft. Chaque ligne de rafale part de nz = 1 (vol en palier, sans rafale) et monte ou descend linéairement avec V. VB est définie comme l'intersection de la ligne ±66 ft/s avec la courbe de décrochage.</p>
+
+        <div class="fig-container">
+          <img src="../figures/PFL16_gust_envelope.png" alt="Diagramme de rafale CS-25 avec les lignes de rafale à ±66, ±50 et ±25 ft/s passant par VB, VC et VD, et l'enveloppe hexagonale résultante">
+          <div class="fig-caption">Fig. 8 — Diagramme de rafale CS-25 : les lignes de rafale sont des droites (Δnz ∝ V). L'enveloppe de rafale (hexagone bleu) délimite la zone sûre. Zp ≤ 20 000 ft.</div>
+        </div>
+
+        <h2 id="gust-factors">3.3 Facteurs influençant Δnz et vitesse VRA</h2>
+
+        <div class="fig-container">
+          <img src="../figures/PFL16_gust_factors.png" alt="Tableau des facteurs augmentant ou diminuant le facteur de charge de rafale Δnz">
+          <div class="fig-caption">Fig. 9 — Facteurs influençant Δnz : la vitesse et l'intensité de la rafale l'augmentent ; la masse, la charge alaire et la flèche le réduisent</div>
+        </div>
+
+        <p>Les conséquences pratiques sont les suivantes :</p>
+        <ul>
+          <li><strong>Flèche ↑</strong> → Δnz ↓ (les avions swept sont moins sensibles aux rafales)</li>
+          <li><strong>Allongement (AR) ↑</strong> → Δnz ↑ (la pente de la courbe CL−α augmente avec l'allongement)</li>
+          <li><strong>Charge alaire (W/S) ↑</strong> → Δnz ↓ (les avions lourds sont moins sensibles à une même rafale)</li>
+          <li><strong>Masse ↑</strong> → Δnz ↓ (même raison)</li>
+          <li><strong>Vitesse ↑</strong> → Δnz ↑ → <strong>ralentir en turbulence</strong></li>
+          <li><strong>Intensité de rafale (u) ↑</strong> → Δnz ↑</li>
+        </ul>
+
+        <h3 id="vra">3.3.1 Vitesse VRA — vitesse recommandée en air turbulent</h3>
+
+        <p>VRA (<em>Rough Air Speed</em>, <em>turbulence penetration speed</em>) est la vitesse opérationnelle recommandée pour la traversée de zones de turbulences. Elle résulte d'un compromis :</p>
+        <ul>
+          <li>Trop <strong>lent</strong> : une rafale peut provoquer le décrochage (incidence excessive)</li>
+          <li>Trop <strong>rapide</strong> : Δnz ∝ V → surcharge structurale</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>VRA &lt; VB &lt; VC</strong>. VRA est publiée dans l'AFM et est toujours inférieure à VB. En pratique, en avion de transport, VRA ≈ 0,78 Mach ou correspond à la vitesse de turbulence publiée dans les cartes de navigation.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">+2,5g</span>
+            <span class="val-label">n limite lisse CS-25</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+2,0g</span>
+            <span class="val-label">n limite volets CS-25</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">−1,0g</span>
+            <span class="val-label">n limite négatif CS-25</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">× 1,5</span>
+            <span class="val-label">Facteur de sécurité structural</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+3,75g</span>
+            <span class="val-label">n ultime CS-25 (lisse)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+3,8g</span>
+            <span class="val-label">n limite CS-23 Normal/Commuter</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+4,4g</span>
+            <span class="val-label">n limite CS-23 Utility</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">+6,0g</span>
+            <span class="val-label">n limite CS-23 Aerobatic</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">±66 ft/s</span>
+            <span class="val-label">Rafale à VB (0–20 000 ft)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">±50 ft/s</span>
+            <span class="val-label">Rafale à VC (0–20 000 ft)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">±25 ft/s</span>
+            <span class="val-label">Rafale à VD (0–20 000 ft)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">43 kt</span>
+            <span class="val-label">Écart minimum VB → VC</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1,25 × VC</span>
+            <span class="val-label">VD minimum (CS-25)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">VA ∝ √m</span>
+            <span class="val-label">VA varie avec la masse</span>
+          </div>
+        </div>
+
+        <h1 id="figures-synthese">Figures de référence</h1>
+
+        <div class="fig-container" id="fig-vn-synth">
+          <img src="../figures/PFL16_vn_diagram.png" alt="Diagramme V-n CS-25 enveloppes lisse et volets">
+          <div class="fig-caption">Fig. A — Diagramme V-n CS-25 : enveloppes de manœuvre lisse (+2,5g/−1g) et volets (+2,0g/−1g)</div>
+        </div>
+
+        <div class="fig-container" id="fig-gust-synth">
+          <img src="../figures/PFL16_gust_envelope.png" alt="Diagramme de rafale CS-25 avec lignes de rafale et enveloppe hexagonale">
+          <div class="fig-caption">Fig. B — Enveloppe de rafale CS-25 : les lignes de rafale sont des droites (Δnz ∝ V). VRA &lt; VB &lt; VC.</div>
+        </div>
+
+        <div class="fig-container" id="fig-speeds-synth">
+          <img src="../figures/PFL16_design_speeds.svg" alt="Axe des vitesses de conception CS-25 avec relations">
+          <div class="fig-caption">Fig. C — Vitesses de conception CS-25 : hiérarchie VS1 → VA → VB → VC → VD et V_flutter</div>
+        </div>
+
+        <div class="fig-container" id="fig-cs23-synth">
+          <img src="../figures/PFL16_cs23_categories.png" alt="Tableau des catégories CS-23 et leurs facteurs de charge">
+          <div class="fig-caption">Fig. D — Catégories CS-23 et facteurs de charge limites</div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Flutter ≠ résonance</div>
+              <div class="piege-explication">Le flutter nécessite deux modes couplés + décalage de phase. Une simple résonance d'un seul mode ne produit pas de flutter. Sans couplage flexion/torsion, pas de flutter possible.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Repeindre une gouverne → V_flutter ↓</div>
+              <div class="piege-explication">La peinture ajoute de la masse en arrière de la charnière → S = m×d augmente → couplage inertiel plus fort → V_flutter s'abaisse. Tout travail de peinture sur une gouverne doit faire l'objet d'une requalification des contrepoids.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">VA diminue avec la masse (publiée à la masse max)</div>
+              <div class="piege-explication">VA ∝ √m. L'AFM publie VA à MTOW. À masse réduite, la vraie VA est plus basse. Utiliser la VA publiée avec un avion léger risque de dépasser le facteur de charge limite avant le décrochage.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">VMO est une IAS constante, pas une vitesse variable</div>
+              <div class="piege-explication">VMO est en nœuds IAS et ne varie pas avec l'altitude. C'est MMO (Mach) qui prend le relais au-dessus de l'altitude de croisement. À basse altitude : VMO limitant. À haute altitude : MMO limitant.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Courbes de rafale = droites, pas des paraboles</div>
+              <div class="piege-explication">Dans le diagramme de rafale, Δnz ∝ V (linéaire). Dans le diagramme de manœuvre, nz ∝ V² (courbe de décrochage parabolique). Confondre les deux formes est une erreur classique.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">VRA &lt; VB (pas VRA = VB)</div>
+              <div class="piege-explication">VRA est la vitesse recommandée en turbulence, inférieure à VB. VB est la limite structurale pour la rafale maximale (66 ft/s). VRA est un compromis entre risque de décrochage (trop lent) et surcharge structurale (trop rapide).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Avion plus léger → Δnz de rafale plus élevé</div>
+              <div class="piege-explication">Δnz = ρVSau/2mg. Si m diminue, Δnz augmente pour la même rafale. Un avion léger est donc plus sensible aux rafales (facteur de charge plus élevé à même vitesse et même rafale).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">V_flutter &gt; VD (jamais inférieure)</div>
+              <div class="piege-explication">La vitesse de flutter doit toujours être supérieure à VD, en dehors de l'enveloppe de vol. C'est une exigence de conception, vérifiée par calcul et essais. Si une modification abaisse V_flutter en dessous de VD, l'aéronef n'est plus certifiable.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">VA à haute altitude perd sa signification</div>
+              <div class="piege-explication">À haute altitude, le facteur de charge +2,5g est inaccessible (le Mach critique est atteint avant). VA (conçue pour protéger la structure via le décrochage) n'a donc plus de pertinence pratique — c'est MMO qui contraint le domaine.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">«May not be less than» = plancher, pas plafond</div>
+              <div class="piege-explication">Les formules CS-25 (VD ≥ 1,25 VC, VC ≥ VB+43kt) sont des minima réglementaires. Les constructeurs peuvent aller au-delà (VD plus grand, VC plus grande), mais jamais en dessous. Ce sont des exigences minimales de conception.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Charge limite ≠ charge ultime</div>
+              <div class="piege-explication">Limite = max en service, aucune déformation permanente. Ultime = limite × 1,5, déformations tolérées mais pas de rupture (au moins 3 secondes). Au-delà de l'ultime : rupture structurale certaine.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">CS-25 vs CS-23 : ne pas confondre les seuils</div>
+              <div class="piege-explication">CS-25 = avions de transport &gt; 5 700 kg. CS-23 = avions légers (≤9 pax, ≤5 670 kg) ou Commuter (≤19 pax, ≤8 618 kg). Les facteurs de charge n'ont pas les mêmes valeurs : CS-25 +2,5g vs CS-23 Normal +3,8g.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Définition du flutter en une phrase ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Vibration aéroélastique auto-entretenue et divergente</strong> dans laquelle l'air ajoute de l'énergie à chaque cycle au lieu d'amortir.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les 3 ingrédients obligatoires du flutter ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1)</strong> Structure flexible (flexion/torsion) <strong>2)</strong> Deux degrés de liberté couplés <strong>3)</strong> Vitesse ≥ V_flutter (amortissement aéro négatif).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il à la vitesse de flutter ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'amortissement total devient <strong>nul</strong> (damping = 0). Les fréquences de flexion et de torsion <em>coalescent</em>. L'oscillation diverge — rupture structurale imminente.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les moteurs sous les ailes réduisent-ils le risque de flutter ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Leur masse, placée <strong>en avant de l'axe élastique</strong>, déplace le CG de section vers l'avant → réduit le bras de levier en torsion → modes plus séparés → V_flutter plus élevée.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Formule du moment statique de gouverne et implication ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>S = m × d</strong>. Si d → 0 (CG sur la charnière) alors S → 0 → couplage inertiel supprimé → pas de flutter de gouverne.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi repeindre une gouverne est dangereux ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La peinture ajoute de la masse en arrière de l'axe de charnière → <strong>S augmente → V_flutter diminue</strong>. Une requalification des contrepoids est nécessaire.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Formule de n<sub>z</sub> ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>nz = L / mg = Portance / Poids</strong>. En palier nz = 1 ; en virage nz &gt; 1 ; en manœuvre inversée nz &lt; 0.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Différence entre charge limite et charge ultime ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Limite</strong> : max en service, aucune déformation permanente. <strong>Ultime = limite × 1,5</strong> : déformations tolérées, résistance au moins 3 secondes sans rupture.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Facteurs de charge limites CS-25 en lisse et volets ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Lisse : <strong>+2,5g / −1g</strong>. Volets sortis : <strong>+2,0g / −1g</strong>. Ultime lisse : +3,75g.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Facteurs de charge CS-23 par catégorie ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Normal/Commuter : <strong>+3,8g / −1,52g</strong>. Utility : <strong>+4,4g / −1,76g</strong>. Aerobatic : <strong>+6,0g / −3,0g</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Formule de VA et que représente-t-elle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>VA = VS1 × √n_lim</strong>. C'est la vitesse de décrochage au facteur de charge limite. En dessous de VA, le décrochage protège la structure contre toute déflexion gouverne maximale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment VA évolue-t-elle avec la masse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>VA ∝ √m</strong>. Publiée à la masse max. À masse réduite, la vraie VA est plus basse. Ex : VA = 200 kt à 20 000 kg → 190 kt à 18 000 kg (×√(18/20)).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Hiérarchie des vitesses de conception CS-25 ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>VS1 &lt; VA &lt; VB &lt; VC &lt; VD &lt; V_flutter</strong>. Avec VC ≥ VB + 43 kt, VD ≥ 1,25 VC, V_flutter &gt; VD.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quoi sert VB ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">VB est la vitesse de rafale maximale : à VB, une rafale de <strong>±66 ft/s</strong> provoque le décrochage sans dépasser le facteur limite. VRA &lt; VB (vitesse recommandée en turbulence).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">VMO est-elle constante ou variable avec l'altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>VMO est constante</strong> (IAS). Au-dessus de l'altitude de croisement, c'est <strong>MMO</strong> (Mach) qui prend le relais — VMO ne varie pas, elle cesse simplement d'être la limite contraignante.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Formule du facteur de charge dû à une rafale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Δnz = ρVSau / 2mg</strong>. Donc Δnz est linéaire en V — le diagramme de rafale contient des droites, pas des paraboles.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Vitesses de rafale réglementaires à VB, VC et VD (0–20 000 ft) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">VB : <strong>±66 ft/s</strong>. VC : <strong>±50 ft/s</strong>. VD : <strong>±25 ft/s</strong>. Constantes jusqu'à 20 000 ft, puis décroissance linéaire jusqu'à 50 000 ft.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels facteurs augmentent Δnz de rafale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Vitesse ↑, intensité de rafale (u) ↑, allongement (AR) ↑</strong>. À l'inverse, masse ↑, charge alaire ↑ et flèche ↑ réduisent Δnz.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi ralentir en turbulence ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Parce que <strong>Δnz ∝ V</strong> : plus la vitesse est élevée, plus une rafale de même intensité génère un facteur de charge élevé → risque de surcharge structurale. On vise VRA.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre diagramme V-n et diagramme de rafale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">V-n (manœuvre) : limites structurales des <em>manœuvres pilotées</em>, courbes de décrochage <strong>paraboliques</strong>. Rafale : charges dues aux turbulences atmosphériques, lignes de rafale <strong>droites</strong> (Δnz ∝ V).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi VA perd-elle sa signification à haute altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Le Mach critique (MC) est atteint avant que l'aile ne puisse générer +2,5g. Le décrochage ne limite donc plus la charge — c'est le Mach qui contraint le domaine. VA n'est plus protectrice.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la définition de VNE (CS-23) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Never Exceed Speed : vitesse à ne jamais dépasser en opération. Matérialisée par un <strong>trait rouge</strong> au bout de l'arc jaune sur l'indicateur de vitesse. Valable en air <em>calme seulement</em>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">VNO (CS-23) — définition et affichage ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Normal Operating Speed : vitesse maximale en opération normale (sans turbulence). Sommet de l'<strong>arc vert</strong>. En dessous de VNO, les manœuvres sont sans risque structural ; entre VNO et VNE (arc jaune), air calme seulement.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">CS-25 s'applique à quel type d'aéronef ? CS-23 ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">CS-25 : <strong>avions de transport &gt; 5 700 kg</strong>. CS-23 : avions légers <strong>≤ 9 pax et ≤ 5 670 kg</strong>, ou Commuter <strong>≤ 19 pax et ≤ 8 618 kg</strong>.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que garantit la règle VD ≥ 1,25 × VC ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une marge structurale entre la vitesse de croisière de conception VC (≈ VMO) et la vitesse de piqué VD, elle-même en deçà de V_flutter. Cela garantit que le domaine opérationnel est bien à l'intérieur de l'enveloppe structurale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment est définie VB graphiquement dans le diagramme de rafale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">VB est l'intersection de la <strong>ligne de rafale ±66 ft/s</strong> avec la <strong>courbe de décrochage</strong> dans le diagramme de rafale. À VB, une rafale maximale provoque le décrochage exact au facteur limite.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi les avions à grande flèche sont-ils moins sensibles aux rafales ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La flèche réduit la <strong>pente effective de la courbe CL-α</strong> (a dans Δnz = ρVSau/2mg). Un même Δα produit moins de ΔCL → moins de ΔL → Δnz plus faible.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la charge limite est-elle spécifiée à la masse maximale ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La charge limite est une <strong>force</strong> (en Newtons), fixée au cas le plus pénalisant = masse maximale. À masse réduite, le facteur nz peut être plus élevé pour la même force, mais la structure est déjà dimensionnée pour cette force maximale.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'expression de VFE et quelle vérification structurale implique-t-elle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">VFE = Flap Extended Speed (sommet de l'arc blanc). La structure est vérifiée à VFE pour : 0 ≤ nz ≤ 2 en air calme, et une <strong>rafale de 25 ft/s</strong> en air turbulent.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment calculer la vraie VA à une masse différente ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>VA(m₂) = VA(m₁) × √(m₂/m₁)</strong>. Exemple : VA = 250 kt à 80 000 kg → VA = 250 × √(70000/80000) ≈ 237 kt à 70 000 kg.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

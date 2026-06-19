@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INS03 — Mesures et Capteurs de Température · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">INS03 · Capteurs Température</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="INS03" data-matiere="instruments">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Instrumentation</a>
+        <span class="sep">›</span>
+        <span>INS03</span>
+      </div>
+      <div class="cours-code-badge">INS03</div>
+      <h1 class="cours-title">Mesures et Systèmes de Détection de Température</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~8 min</span>
+        <span class="cours-meta-item">❓ 8 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <h1 id="introduction-besoins">1. Introduction : Pourquoi mesurer les températures en vol ?</h1>
+        <p>Le monitorage précis des températures à bord des aéronefs est fondamental à la fois pour la sécurité des vols, la performance aérodynamique et la protection des systèmes de propulsion.</p>
+        
+        <h2 id="temperature-air">1.1. Températures de l'air extérieur (OAT / TAT)</h2>
+        <ul>
+          <li><strong>Évitement des conditions de givrage :</strong> La détection des zones de givrage potentiel dépend directement de la température de l'air extérieur combinée à la présence d'humidité visible.</li>
+          <li><strong>Calcul de la densité de l'air :</strong> La masse volumique de l'air influence directement la poussée ou la puissance délivrée par les moteurs, ainsi que la fidélité des calculs de vitesse vraie (TAS) et la correction des erreurs altimétriques.</li>
+        </ul>
+
+        <h2 id="temperature-systemes">1.2. Températures des servitudes et des moteurs</h2>
+        <p>Les paramètres thermiques des fluides et des composants mécaniques ou électroniques sont surveillés en permanence afin d'éviter toute défaillance critique :</p>
+        <ul>
+          <li><strong>Groupe motopropulseur (Moteur à pistons et Turbomachines) :</strong> Suivi des gaz d'échappement (EGT) et des têtes de cylindres (Cylinder Head Temperature - CHT).</li>
+          <li><strong>Fluides vitaux :</strong> Températures des circuits de lubrification (Huile) et des réservoirs/circuits de carburant (détection du figeage).</li>
+          <li><strong>Systèmes de servitude :</strong> Équipements de bord avioniques/électroniques et température de l'air de conditionnement de la cabine.</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info Complémentaire</div>
+          Sur les aéronefs modernes, les plages thermiques opérationnelles surveillées s'étendent de <strong>-56 °C</strong> (température standard de la tropopause) à plus de <strong>+1200 °C</strong> (température des gaz au cœur des turbines). Face à un tel spectre, différentes technologies de capteurs doivent coexister.
+        </div>
+
+        <hr>
+
+        <h1 id="unites-temperature">2. Unités de mesure et conversions réglementaires</h1>
+        <p>Trois échelles de température sont utilisées de manière interchangeable selon l'origine réglementaire ou le domaine technique (conception américaine, européenne ou thermodynamique pure).</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formules de Conversion Obligatoires</div>
+          <strong>Échelle Celsius (°C), Fahrenheit (°F) et Kelvin (K) :</strong>
+          <div class="formula-display">°F = (°C × 1,8) + 32</div>
+          <div class="formula-display">K = °C + 273</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Note d'examen : Le coefficient 1,8 équivaut exactement à la fraction 9/5.</p>
+        </div>
+
+        <p>L'atmosphère standard OACI (ISA - International Standard Atmosphere) définit des valeurs de référence indispensables au niveau de la mer (MSL) :</p>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">15 °C</span>
+            <span class="val-label">Température standard MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">59 °F</span>
+            <span class="val-label">Température en Fahrenheit</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">288 K</span>
+            <span class="val-label">Température en Kelvin</span>
+          </div>
+        </div>
+
+        <hr>
+
+        <h1 id="types-capteurs">3. Typologie des capteurs de température</h1>
+        <p>Les capteurs tirent parti de la modification des caractéristiques physiques des matériaux (dilatation volumique ou variation des propriétés électriques) sous l'effet de l'agitation thermique.</p>
+
+        <h2 id="capteurs-dilatation">3.1. Capteurs mécaniques par expansion (Plage de -100 °C à +350 °C)</h2>
+        <p>Ces technologies mécaniques autonomes n'exigent généralement pas d'alimentation électrique et équipent principalement l'aviation légère d'entraînement ou les instruments de secours.</p>
+        
+        <h3>A. Capteurs bimétalliques (Bilames)</h3>
+        <p>Ils exploitent la juxtaposition de deux métaux possédant des coefficients de dilatation thermique linéique distincts (typiquement l'<strong>Invar</strong>, qui ne réagit presque pas, associé au <strong>Laiton/Brass</strong>, fortement dilatable). Sous l'effet de la température, l'ensemble fléchit du côté du métal ayant le plus faible coefficient.</p>
+        
+        <div class="fig-container">
+          <img src="../figures/INS03_bimetallic_sensor.svg" alt="Principe du capteur bimétallique à dilatation de solide">
+          <div class="fig-caption">Fig. 1 — Déformation d'un bilame sous l'effet des variations de température</div>
+        </div>
+
+        <p>Pour augmenter la course de déplacement et piloter directement une aiguille d'affichage sans jeu mécanique excessif, le bilame est enroulé sous la forme d'une <strong>hélice bimétallique</strong> logée dans un doigt de gant protecteur.</p>
+
+        <h3>B. Capteurs à tension de vapeur (Pression de vapeur)</h3>
+        <p>Un bulbe scellé renferme un liquide volatil. Lorsque la température augmente, une partie du liquide subit un changement d'état et se transforme en vapeur. L'élévation consécutive de la pression interne est acheminée via un tube capillaire vers un mécanisme de type tube de Bourdon, traduisant ainsi une pression en une lecture directe de température.</p>
+
+        <h2 id="capteurs-electriques">3.2. Capteurs de type électrique et électronique</h2>
+        <p>Plus précis, dynamiques et aptes à transmettre les données à de longues distances vers des calculateurs (FADEC, EFIS), ils dominent l'aviation commerciale.</p>
+
+        <h3>A. Sondes à résistance électrique (Plage de -200 °C à +850 °C)</h3>
+        <p>Également appelées "Thermomètres à bulbe de résistance", elles reposent sur le principe que la résistance électrique d'un conducteur métallique (souvent du platine, technologie Pt100) varie de façon linéaire avec la température. La mesure de la variation de tension ou de courant permet d'isoler précisément la température mesurée.</p>
+
+        <h3>B. Thermocouples / Sondes thermoélectriques (Plage de -200 °C à +2000 °C)</h3>
+        <p>Essentiels pour les environnements à très haute sollicitation thermique (EGT des turboréacteurs et CHT des moteurs à pistons). Le principe repose sur l'<strong>Effet Seebeck</strong> : deux métaux de natures différentes (généralement le couple <strong>Chromel / Alumel</strong>) connectés à leurs extrémités génèrent une force électromotrice (EMF) proportionnelle à la différence de température existant entre la jonction de mesure (jonction chaude) et la jonction de référence (jonction froide).</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS03_thermocouple_circuit.svg" alt="Circuit de principe d'un thermocouple">
+          <div class="fig-caption">Fig. 2 — Schéma de principe d'un thermocouple de type K (Chromel/Alumel) pour la mesure de l'EGT</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>La force électromotrice (tension en mV) produite par un thermocouple dépend uniquement de la différence de température entre la jonction chaude et la jonction froide.</strong> Si la température de la jonction froide (boîtier d'instrumentation ou ordinateur de bord) fluctue sans compensation, la mesure finale sera fausse. C'est pourquoi la jonction froide est maintenue à une température constante connue ou électroniquement compensée.
+        </div>
+
+        <hr>
+
+        <h1 id="affichages-cadrans">4. Affichages et codification couleur des cadrans</h1>
+        <p>Qu'il s'agisse de cadrans analogiques ou de dalles numériques d'ECAM/EICAS, les indicateurs de température respectent un code couleur strict défini par les certifications de navigabilité (CS-25 / FAR-25) :</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Couleur de l'arc / secteur</th>
+              <th>Signification opérationnelle</th>
+              <th>Exemple d'application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:green">Vert</strong></td>
+              <td>Plage de fonctionnement normal</td>
+              <td>Plage nominale d'utilisation de l'huile moteur</td>
+            </tr>
+            <tr>
+              <td><strong>Blanc</strong></td>
+              <td>Plage d'exploitation spécifique / particulière</td>
+              <td>Procédures ou configurations restreintes</td>
+            </tr>
+            <tr>
+              <td><strong style="color:orange">Ambre / Jaune</strong></td>
+              <td>Plage exceptionnelle / Zone de préalerte (Caution)</td>
+              <td>Surchauffe transitoire autorisée avec limitation de temps</td>
+            </tr>
+            <tr>
+              <td><strong style="color:red">Rouge</strong></td>
+              <td>Limites minimales ou maximales absolues (Danger)</td>
+              <td>EGT maximale autorisée avant dommages structuraux</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">15 °C / 288 K</span>
+            <span class="val-label">Température standard ISA au niveau de la mer</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">Chromel / Alumel</span>
+            <span class="val-label">Alliages standards pour thermocouples haute température</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">-56 °C à +1200 °C</span>
+            <span class="val-label">Plage totale de mesure requise à bord d'un avion de ligne</span>
+          </div>
+        </div>
+
+        <h1 id="formules-synthese">Formules indispensables</h1>
+        <div class="box box-formule" style="margin-top:0">
+          <div class="formula-display">°F = (°C × 1,8) + 32</div>
+          <div class="formula-display">K = °C + 273</div>
+        </div>
+
+        <h1 id="pieges">Top Pièges ATPL à éviter en examen</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Principe de dépendance du Thermocouple</div>
+              <div class="piege-explication">En examen, on cherche souvent à vous faire croire que le thermocouple mesure directement la température absolue de la jonction chaude. C'est FAUX : il mesure la <strong>différence</strong> de température entre les deux jonctions.</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Sélection des capteurs selon les plages</div>
+              <div class="piege-explication">Retenez les correspondances technologiques : Bilame = indicateur mécanique direct OAT d'aviation légère. Thermocouple = Très hautes températures (EGT / CHT). Sonde de résistance (Pt100) = Températures intermédiaires de précision (Carburant, Huile, TAR).</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Interprétation de la couleur Blanche sur les cadrans</div>
+              <div class="piege-explication">L'arc blanc ne correspond pas à une zone "neutre" ou "inactive", mais bien à une <strong>plage d'exploitation spécifique ou restreinte</strong> (tout comme l'arc blanc des vitesses pour les volets).</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check — Entraînement Flash</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        
+        <div class="qc-grid">
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la valeur de la température standard ISA au niveau de la mer en Kelvin ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>288 K</strong> (car 15 °C + 273 = 288 K).</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les deux métaux principalement associés dans un bilame classique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'<strong>Invar</strong> et le <strong>Laiton (Brass)</strong>.</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Quel effet physique est exploité par un thermocouple ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'<strong>Effet Seebeck</strong> (génération d'une EMF thermoélectrique).</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Quelle couleur de secteur indique une plage de fonctionnement exceptionnelle ou de préalerte ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La couleur <strong>Ambre / Jaune</strong>.</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Convertir une température de 20 °C en échelle Fahrenheit. <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>68 °F</strong> (20 × 1,8 = 36 ; 36 + 32 = 68 °F).</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Quel capteur utilise-t-on spécifiquement pour l'EGT d'une turbine ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un <strong>Thermocouple</strong> (généralement Chromel/Alumel), apte à résister jusqu'à +1200 °C / +2000 °C.</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi un capteur à tension de vapeur utilise-t-il un tube de Bourdon ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Parce qu'il convertit le changement thermique en <strong>changement de pression de vapeur</strong>, qui doit être mesuré mécaniquement par un manomètre à tube de Bourdon.</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Que signifie un arc rouge placé en bas d'une échelle de température ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une <strong>limite minimale absolue</strong> d'exploitation (par exemple, température d'huile trop basse pour autoriser la mise en puissance).</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

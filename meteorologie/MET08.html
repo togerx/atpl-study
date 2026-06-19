@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MET08 — Pression atmosphérique · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">MET08 · Pression atmosphérique</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="MET08" data-matiere="meteorologie">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Météorologie</a>
+        <span class="sep">›</span>
+        <span>MET08</span>
+      </div>
+      <div class="cours-code-badge">MET08</div>
+      <h1 class="cours-title">Pression atmosphérique</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-oaci">OACI</span></span>
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~30 min</span>
+        <span class="cours-meta-item">❓ 28 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="definition-pression">1. Définition et unités de la pression</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="def-generale">1.1 Définition générale</h2>
+        <p>La pression est définie comme la force exercée par unité de surface. Dans un fluide au repos, cette force est exercée de manière uniforme dans toutes les directions (loi de Pascal).</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule fondamentale</div>
+          <strong>Pression :</strong>
+          <div class="formula-display">p = F / S</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec F = force appliquée (Newton), S = surface (m²) → l'unité SI est le <strong>Pascal (Pa)</strong> : 1 Pa = 1 N/m²</p>
+        </div>
+
+        <h2 id="pression-atmospherique-def">1.2 Pression atmosphérique</h2>
+        <p>La pression atmosphérique est une <strong>pression statique</strong>. Elle correspond au poids d'une colonne d'air s'étendant depuis le point de mesure jusqu'à la limite supérieure de l'atmosphère, divisé par la surface unitaire sur laquelle s'exerce ce poids. Le poids de cette colonne s'exerce de manière uniforme dans toutes les directions.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          La pression exercée par de l'air en mouvement sur une surface (mur, sol…) peut légèrement différer de la pression de l'atmosphère libre, car elle intègre une composante dynamique supplémentaire.
+        </div>
+
+        <h2 id="mesure-unites">1.3 Mesure et unités</h2>
+        <p>La mesure de la pression atmosphérique remonte à l'expérience de <strong>Torricelli (1647)</strong> : un tube de mercure retourné dans un bac ouvert — le poids de la colonne de mercure contrebalance exactement le poids de la colonne d'air au-dessus du bac. Si la pression atmosphérique varie, la hauteur de mercure varie proportionnellement.</p>
+
+        <!-- SOURCE SLIDE 6 — réutilisation recommandée -->
+        <div class="fig-container">
+          <img src="../figures/MET08_barometer_formula.png" alt="Formule P = ρ·h·g illustrée avec baromètre à mercure">
+          <div class="fig-caption">Fig. 1 — Principe du baromètre à mercure : P = ρ·h·g. À la surface de la mer, 0°C, g = 9,80665 m/s², la pression vaut 100 kN/m².</div>
+        </div>
+
+        <p>La formule fondamentale du baromètre à mercure est :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule baromètre</div>
+          <strong>Pression exercée par une colonne de liquide :</strong>
+          <div class="formula-display">P = ρ · h · g</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec ρ = masse volumique du liquide (kg/m³), h = hauteur de la colonne (m), g = accélération gravitationnelle (9,80665 m/s²)</p>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Équivalences de pression standard</div>
+          À la surface de la mer (0°C, g = 9,80665 m/s²) la pression standard est :
+          <div class="values-grid" style="margin-top:.6rem">
+            <div class="value-chip"><span class="val">1013,25</span><span class="val-label">hPa (QNH standard)</span></div>
+            <div class="value-chip"><span class="val">760</span><span class="val-label">mm Hg (millimètres de mercure)</span></div>
+            <div class="value-chip"><span class="val">29,92</span><span class="val-label">in Hg (pouces de mercure)</span></div>
+            <div class="value-chip"><span class="val">1 atm</span><span class="val-label">Atmosphère standard</span></div>
+            <div class="value-chip"><span class="val">100 kN/m²</span><span class="val-label">Force surfacique</span></div>
+            <div class="value-chip"><span class="val">10 m H₂O</span><span class="val-label">Colonne d'eau équivalente</span></div>
+          </div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Rappel : 1 in = 2,54 cm</p>
+        </div>
+
+        <h2 id="types-barometre">1.4 Types d'instruments de mesure</h2>
+        <p>Trois types principaux d'instruments sont utilisés pour mesurer la pression atmosphérique :</p>
+        <ul>
+          <li><strong>Baromètre à mercure :</strong> instrument de référence historique, précis mais fragile et encombrant.</li>
+          <li><strong>Barographe :</strong> baromètre enregistreur (capsule anéroïde + papier millimétré sur tambour rotatif), permet de suivre l'évolution de la pression dans le temps.</li>
+          <li><strong>Baromètre numérique à capteur capacitif silicium :</strong> capteur moderne, léger, embarquable. Très répandu en météorologie automatisée.</li>
+        </ul>
+
+        <p>Le <strong>baromètre anéroïde (holostérique)</strong> et l'<strong>altimètre</strong> fonctionnent avec le même capteur : la <strong>capsule Vidie</strong> — capsule métallique vide et compensée qui se déforme proportionnellement à la pression environnante. La déformation mécanique est ensuite amplifiée et traduite soit en pression (baromètre), soit en altitude (altimètre).</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          L'altimètre et le baromètre anéroïde utilisent exactement le même type de capteur (capsule Vidie). La différence est uniquement dans l'étalonnage et l'affichage : l'altimètre affiche une altitude déduite de la pression mesurée selon l'atmosphère standard OACI, pas la pression elle-même.
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="pression-surface">2. Pression de surface — QFE et QFF</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="qfe-qff-definition">2.1 QFE et QFF : deux valeurs pour un même lieu</h2>
+        <p>En un point donné, il existe deux valeurs distinctes pour la pression de surface :</p>
+        <ul>
+          <li><strong>QFE (station pressure) :</strong> pression mesurée directement à la station. C'est <em>la seule valeur réellement mesurée</em>. Elle ne peut pas être comparée directement avec la pression d'une station à une altitude différente.</li>
+          <li><strong>QFF (Mean Sea Level Pressure / MSLP) :</strong> pression ramenée au niveau moyen de la mer. Pour l'obtenir, on ajoute au QFE la pression d'une colonne d'air fictive allant du sol jusqu'au niveau de la mer, en tenant compte des conditions réelles de température et d'humidité. Le QFF permet de comparer les pressions entre stations d'altitude différente.</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          QFE = seule valeur mesurée (altitude de la station). QFF = pression réduite au niveau de la mer (comparaison entre stations). QFF > QFE pour une station en altitude.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Ne pas confondre QFF et QNH. Le <strong>QNH</strong> est la pression calée sur l'altimètre pour lire l'altitude de l'aérodrome. Le <strong>QFF</strong> est la pression ramenée au NMM en prenant les conditions atmosphériques réelles. Le QNH utilise l'atmosphère standard OACI pour la réduction (calcul simplifié), le QFF utilise les conditions réelles (température mesurée). Dans les METAR/ATIS on lit le QNH, pas le QFF.
+        </div>
+
+        <h2 id="variations-surface">2.2 Variations de la pression en surface</h2>
+        <p>Au niveau de la mer, la pression se situe généralement entre <strong>950 hPa et 1050 hPa</strong>. Quelques records à retenir :</p>
+        <ul>
+          <li>Maximum mondial : 1083,5 hPa à Agata (Sibérie), hiver 1968</li>
+          <li>Record de Paris : ~1050 hPa</li>
+          <li>Minimum mondial : 867 hPa dans l'œil du typhon TIP en 1979</li>
+          <li>Record européen bas : ~947 hPa à Boulogne-sur-Mer</li>
+        </ul>
+        <p>La pression en surface (P = ρ·h·g) peut varier sous l'effet de quatre facteurs :</p>
+        <ul>
+          <li>Variations du champ gravitationnel (marées atmosphériques)</li>
+          <li>Variations de la densité moyenne de l'air (liées à la température)</li>
+          <li>Mouvements verticaux (composante dynamique : ascendance ou subsidence)</li>
+          <li>Advections et déplacements horizontaux de masses d'air</li>
+        </ul>
+
+        <p>Selon les phénomènes météorologiques, les variations de pression observées en un point sont caractéristiques :</p>
+        <ul>
+          <li><strong>Perturbations extratropicales :</strong> quelques dizaines de hPa, sur 24 à 48 h</li>
+          <li><strong>Averses / orages :</strong> quelques hPa, sur ~1 h (variation rapide et localisée)</li>
+          <li><strong>Cyclones :</strong> plusieurs dizaines de hPa, sur ~12 h dans l'œil</li>
+        </ul>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="representation-surface">3. Représentation isobarique en surface</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="isobares-definition">3.1 Définition des isobares</h2>
+        <p>La pression au niveau de la mer n'est pas uniforme horizontalement. On la représente à l'aide de <strong>cartes d'isobares</strong>. Une isobare est une ligne reliant des points ayant la même pression atmosphérique à une altitude donnée. Sur les cartes de surface, les isobares relient des points ayant le même QFF (pression au NMM).</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Zones d'une carte isobarique</div>
+          Les différentes zones d'une carte sont nommées selon la répartition des isobares :
+          <ul style="margin:.4rem 0 0">
+            <li><strong>Anticyclone (A / H) :</strong> zone de hautes pressions fermées</li>
+            <li><strong>Dépression (D / L) :</strong> zone de basses pressions fermées</li>
+            <li><strong>Dorsale (Ridge) :</strong> extension d'un anticyclone</li>
+            <li><strong>Thalweg (Trough) :</strong> extension d'une dépression</li>
+            <li><strong>Col (Col) :</strong> zone de pression intermédiaire entre deux anticyclones et deux dépressions</li>
+            <li><strong>Marais barométrique (Low pressure pattern) :</strong> faible gradient de pression, sans structure organisée</li>
+          </ul>
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="variations-verticales">4. Variations verticales de la pression</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="loi-hydro">4.1 Loi hydrostatique fondamentale</h2>
+        <p>Dans un fluide, la pression diminue quand l'altitude augmente. Pour un fluide de masse volumique ρ, on a :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi hydrostatique</div>
+          <strong>Variation élémentaire de pression :</strong>
+          <div class="formula-display">dP = − ρ · g · dZ</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec dP = variation de pression (Pa), ρ = masse volumique de l'air (kg/m³), g = 9,80665 m/s², dZ = variation d'altitude (m). Le signe négatif traduit la décroissance de pression avec l'altitude.</p>
+        </div>
+
+        <h2 id="fluide-compressible">4.2 L'atmosphère est un fluide compressible</h2>
+        <p>L'atmosphère est un mélange gazeux, donc un fluide compressible : la masse volumique ρ n'est pas constante, elle <strong>diminue avec l'altitude</strong>. Cela rend la variation de pression non linéaire : la courbe pression/altitude est <strong>logarithmique</strong>.</p>
+        <ul>
+          <li>À basse altitude (haute pression) : la pression varie rapidement avec l'altitude → <em>1 hPa ≈ 8,3 m à la surface</em></li>
+          <li>À haute altitude (basse pression) : la pression varie lentement → <em>1 hPa ≈ 116 m à 20 000 m</em></li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/MET08_profil_vertical.png" alt="Graphe logarithmique de la variation de pression en fonction de l'altitude">
+          <div class="fig-caption">Fig. 2 — Profil vertical de la pression atmosphérique. La courbe est logarithmique : la pression décroît beaucoup plus vite en basse atmosphère qu'en haute atmosphère.</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Gradients pression/altitude clés</div>
+          <div class="values-grid">
+            <div class="value-chip"><span class="val">8,3 m</span><span class="val-label">par hPa à 0 m</span></div>
+            <div class="value-chip"><span class="val">37 hPa</span><span class="val-label">par 1000 ft à 0 m</span></div>
+            <div class="value-chip"><span class="val">15 m</span><span class="val-label">par hPa à 5 000 m</span></div>
+            <div class="value-chip"><span class="val">21 hPa</span><span class="val-label">par 1000 ft à 5 000 m</span></div>
+            <div class="value-chip"><span class="val">28 m</span><span class="val-label">par hPa à 11 000 m</span></div>
+            <div class="value-chip"><span class="val">11 hPa</span><span class="val-label">par 1000 ft à 11 000 m</span></div>
+            <div class="value-chip"><span class="val">116 m</span><span class="val-label">par hPa à 20 000 m</span></div>
+            <div class="value-chip"><span class="val">2,6 hPa</span><span class="val-label">par 1000 ft à 20 000 m</span></div>
+          </div>
+          <p style="margin:.4rem 0 0;font-size:.85rem">Repères utiles : FL180 (≈5 500 m) = 500 hPa = P(sol)/2 ; FL360 (≈11 000 m) = 226 hPa ; FL650 (≈20 000 m) = P(sol)/20</p>
+        </div>
+
+        <h2 id="masse-atmosphere">4.3 Répartition de la masse atmosphérique</h2>
+        <p>La majorité de la masse de l'atmosphère est concentrée dans les basses couches :</p>
+        <ul>
+          <li>5 500 m → 50 % de la masse atmosphérique en-dessous</li>
+          <li>11 000 m → 75 % de la masse atmosphérique en-dessous</li>
+          <li>16 000 m → 90 % de la masse atmosphérique en-dessous</li>
+          <li>30 000 m → 99 % de la masse atmosphérique en-dessous</li>
+        </ul>
+        <p>La densité à la surface vaut environ 1,2 kg/m³. À FL220, la densité est divisée par 2 ; à FL400, par 4.</p>
+
+        <h2 id="atm-standard">4.4 Atmosphère standard OACI</h2>
+        <p>L'atmosphère standard OACI (ISA — International Standard Atmosphere) définit des conditions de référence permettant d'étalonner les instruments de bord. Elle suppose une troposphère avec un gradient de température constant de −6,5°C/1 000 m.</p>
+
+        <div class="fig-container">
+          <img src="../figures/MET08_atm_standard.png" alt="Tableau des valeurs standard OACI : altitude, pression, FL, température">
+          <div class="fig-caption">Fig. 3 — Valeurs de référence de l'atmosphère standard OACI. Ces valeurs sont essentielles pour l'altimétrie et les performances.</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          En atmosphère standard, la troposphère se termine à 11 000 m (tropopause) où la température est de −56,5°C. Au-dessus (stratosphère inférieure), la température reste constante. L'altimètre est étalonné sur ces valeurs : toute déviation par rapport à l'ISA entraîne une erreur d'altitude.
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="loi-laplace">5. Loi de Laplace et mètre géopotentiel</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="laplace-formule">5.1 Loi de Laplace</h2>
+        <p>En combinant la loi hydrostatique (dP = −ρ·g·dZ) et la loi des gaz parfaits pour l'air sec (P = ρ·Rₐ·T), on obtient la <strong>loi de Laplace</strong>, qui relie l'épaisseur d'une couche atmosphérique à sa température moyenne :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Loi de Laplace</div>
+          <strong>Épaisseur entre deux surfaces isobares :</strong>
+          <div class="formula-display">Z − Z₀ ≈ 67 445 · Tm · log(P₀ / P)</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec Z = altitude de la surface isobare supérieure (m), Z₀ = altitude de la surface isobare inférieure (m), Tm = température moyenne de la couche (K), P₀ = pression à Z₀ (hPa), P = pression à Z (hPa)</p>
+        </div>
+
+        <p>La conséquence directe est que <strong>l'épaisseur (thickness) entre deux surfaces isobares est directement proportionnelle à la température moyenne de la couche</strong> :</p>
+        <ul>
+          <li>Air chaud → grande épaisseur → les surfaces isobares sont plus élevées en altitude</li>
+          <li>Air froid → faible épaisseur → les surfaces isobares sont plus basses en altitude</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/MET08_laplace_thermique.svg" alt="Schéma Laplace : épaisseur grande en air chaud, faible en air froid">
+          <div class="fig-caption">Fig. 4 — Loi de Laplace : en air chaud, l'épaisseur entre P₀ et P est plus grande qu'en air froid, pour une même pression de départ P₀.</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          La loi de Laplace explique pourquoi, pour un même niveau de pression, l'altitude réelle varie selon la température de l'air. En air chaud, on est plus haut qu'en air froid pour la même pression lue. Cette relation est fondamentale pour comprendre les centres d'action et le décalage vertical entre les anticyclones et les dépressions.
+        </div>
+
+        <h2 id="metre-geopotentiel">5.2 Le mètre géopotentiel (mgp)</h2>
+        <p>L'accélération gravitationnelle g n'est pas strictement constante : elle varie légèrement selon la latitude et l'altitude. Pour harmoniser les mesures, on utilise le <strong>mètre géopotentiel (mgp)</strong>.</p>
+        <p>La relation est : g·dz = 9,8·dZ, soit 1 mgp ≈ 1,02 m géométrique (la différence est négligeable en pratique pour les altitudes de vol commercial). Les cartes de haute altitude donnent les altitudes des surfaces isobares en <strong>décamètres géopotentiels (dam)</strong>.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Sur les cartes de haute altitude (cartes isobariques), la valeur "556" signifie 5 560 mètres géopotentiels, qui est l'altitude standard de la surface 500 hPa. Ces cartes sont des <em>cartes de contour (contour charts)</em> ou <em>cartes de topographie de surface isobare</em>.
+        </div>
+
+        <h2 id="fl-vs-altitude-reelle">5.3 Flight Level indiqué vs altitude réelle</h2>
+        <p>L'altimètre calé sur 1013,25 hPa (QNE) indique un <strong>Flight Level (FL)</strong>, qui est une altitude de pression, pas une altitude géométrique. Selon la température réelle de l'air par rapport à l'ISA :</p>
+        <ul>
+          <li>En <strong>air plus chaud que l'ISA</strong> : l'altitude réelle est <em>supérieure</em> à l'altitude indiquée (l'avion est plus haut qu'annoncé)</li>
+          <li>En <strong>air plus froid que l'ISA</strong> : l'altitude réelle est <em>inférieure</em> à l'altitude indiquée (l'avion est plus bas qu'annoncé — risque de percussion de relief)</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          En hiver dans les pays froids (température très inférieure à l'ISA), l'altitude réelle est <em>inférieure</em> à l'altitude indiquée par l'altimètre. Des corrections de l'altitude minimale de sécurité (MSA) sont alors requises. La règle mnémotechnique : "Cold is low" — l'altimètre surestime l'altitude par temps froid.
+        </div>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="pression-altitude">6. Pression en altitude — Représentation par isohypses</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <h2 id="isohypses-definition">6.1 Définition des isohypses</h2>
+        <p>En haute atmosphère, on ne peut pas raisonner en pression à altitude fixe (l'air est trop variable). On travaille plutôt à <strong>pression fixe</strong> (sur une surface isobare) et on représente la variation d'altitude de cette surface. Une <strong>isohypse</strong> (ou <em>contour height</em>) est une ligne reliant les points d'une surface isobare qui se trouvent à la même altitude géopotentielle.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Isobares vs Isohypses</div>
+          <ul style="margin:.4rem 0 0">
+            <li><strong>Isobares :</strong> utilisées en surface — lignes de même pression à une altitude fixe (NMM)</li>
+            <li><strong>Isohypses :</strong> utilisées en altitude — lignes de même altitude sur une surface de pression fixe (ex : 500 hPa)</li>
+            <li>Au voisinage d'un niveau donné, les deux représentations sont liées : une isohypse élevée correspond à une haute pression locale, une isohypse basse à une basse pression locale.</li>
+          </ul>
+        </div>
+
+        <h2 id="cartes-altitude">6.2 Cartes de haute altitude (contour charts)</h2>
+        <p>La topographie d'une surface isobare (ex : 500 hPa) est représentée sur des cartes par des isohypses, de la même façon que le relief est représenté sur une carte topographique. On retrouve les mêmes structures que sur les cartes de surface :</p>
+        <ul>
+          <li><strong>Hauts géopotentiels (H) :</strong> zones où la surface isobare est plus haute → anticyclones d'altitude</li>
+          <li><strong>Bas géopotentiels (L) :</strong> zones où la surface isobare est plus basse → dépressions d'altitude</li>
+          <li><strong>Dorsales (Ridges) :</strong> extensions des hauts géopotentiels</li>
+          <li><strong>Thalwegs (Troughs) :</strong> extensions des bas géopotentiels</li>
+        </ul>
+        <p>Une carte de contour est définie par sa pression de référence (ex : 500 hPa) ou par son FL équivalent (FL180 pour 500 hPa). La valeur "556" sur une carte 500 hPa signifie 5 560 mgp.</p>
+
+        <!-- ══════════════════════════════════ -->
+        <h1 id="centres-action">7. Centres d'action — Thermiques et dynamiques</h1>
+        <!-- ══════════════════════════════════ -->
+
+        <p>Les écarts de pression entre zones géographiques créent des forces de gradient de pression qui mettent l'atmosphère en mouvement. Les <strong>centres d'action</strong> (anticyclones et dépressions) ont un rôle majeur sur les conditions météorologiques des régions environnantes.</p>
+
+        <h2 id="centres-thermiques">7.1 Centres d'action thermiques</h2>
+        <p>Lorsque l'effet thermique domine (pas de mouvement vertical forcé) :</p>
+
+        <p><strong>Warm Low (dépression thermique, air chaud) :</strong> en air chaud, la colonne d'air est légère (faible densité). En surface, le poids de la colonne est inférieur → pression basse (L). L'air monte naturellement et renforce l'effet. En altitude, la couche est plus épaisse (loi de Laplace) → pression plus élevée (H). Résultat : <em>L en surface, H en altitude</em>.</p>
+
+        <p><strong>Cold High (anticyclone thermique, air froid) :</strong> en air froid, la colonne est lourde (forte densité). En surface, pression élevée (H). L'air descend et renforce. En altitude, couche plus mince → pression plus basse (L). Résultat : <em>H en surface, L en altitude</em>.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Centres thermiques</div>
+          Le signe change entre la surface et l'altitude (décalage vertical). Exemple classique : dépression thermique d'été sur le Sahara (L en surface, H en altitude).
+        </div>
+
+        <h2 id="centres-dynamiques">7.2 Centres d'action dynamiques</h2>
+        <p>Lorsque des mouvements verticaux forcés dominent l'effet thermique :</p>
+
+        <p><strong>Warm High (anticyclone dynamique, air chaud) :</strong> en air chaud, l'air est forcé à <em>descendre</em> par convergence d'altitude. La subsidence crée une haute pression en surface malgré la légèreté de l'air. En altitude, l'air chaud donne toujours H. Résultat : <em>H en surface, H en altitude</em>.</p>
+
+        <p><strong>Cold Low (dépression dynamique, air froid) :</strong> en air froid, l'air est forcé à <em>monter</em> par divergence d'altitude. L'ascendance forcée crée une basse pression en surface malgré la lourdeur de l'air. En altitude, l'air froid donne toujours L. Résultat : <em>L en surface, L en altitude</em>.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir — Centres dynamiques</div>
+          Le signe est le même en surface et en altitude (pas de décalage vertical). Exemple : anticyclone des Açores (Warm High : H/H), dépression d'altitude froide (Cold Low : L/L).
+        </div>
+
+        <div class="fig-container">
+          <img src="../figures/MET08_centres_action.svg" alt="Schéma des 4 centres d'action thermiques et dynamiques avec décalage vertical">
+          <div class="fig-caption">Fig. 5 — Les 4 centres d'action : Warm Low (L/H), Cold High (H/L), Warm High (H/H), Cold Low (L/L). La flèche en pointillés indique un mouvement dynamique forcé.</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          <strong>Décalage vertical thermique vs alignement dynamique :</strong> un Warm Low (dépression thermique d'été) est une dépression EN SURFACE mais un anticyclone EN ALTITUDE. À l'inverse, un Cold High (anticyclone de Sibérie en hiver) est H en surface et L en altitude. Les centres thermiques changent de signe, les centres dynamiques conservent le même signe. C'est un classique des QCM.
+        </div>
+
+        <div class="box box-formule">
+          <div class="box-label">📋 Tableau récapitulatif — Les 4 centres d'action</div>
+          <div class="fig-container" style="margin:.5rem 0 0">
+            <img src="../figures/MET08_resume_centres.png" alt="Tableau résumé des 4 centres d'action : Warm Low, Warm High, Cold High, Cold Low">
+            <div class="fig-caption">Fig. 6 — Résumé des 4 centres d'action selon l'effet (thermique/dynamique) et la température de l'air.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip"><span class="val">1013,25</span><span class="val-label">hPa standard (NMM)</span></div>
+          <div class="value-chip"><span class="val">760</span><span class="val-label">mm Hg standard</span></div>
+          <div class="value-chip"><span class="val">29,92</span><span class="val-label">in Hg standard</span></div>
+          <div class="value-chip"><span class="val">500 hPa</span><span class="val-label">FL180 / 5 500 m</span></div>
+          <div class="value-chip"><span class="val">226 hPa</span><span class="val-label">FL360 / 11 000 m</span></div>
+          <div class="value-chip"><span class="val">700 hPa</span><span class="val-label">FL100 / 3 000 m</span></div>
+          <div class="value-chip"><span class="val">850 hPa</span><span class="val-label">FL50 / 1 500 m</span></div>
+          <div class="value-chip"><span class="val">8,3 m/hPa</span><span class="val-label">Gradient au sol</span></div>
+          <div class="value-chip"><span class="val">37 hPa</span><span class="val-label">/ 1000 ft au sol</span></div>
+          <div class="value-chip"><span class="val">11 hPa</span><span class="val-label">/ 1000 ft à FL360</span></div>
+          <div class="value-chip"><span class="val">867 hPa</span><span class="val-label">Min mondial (typhon TIP)</span></div>
+          <div class="value-chip"><span class="val">1083,5</span><span class="val-label">hPa Max mondial (Sibérie)</span></div>
+        </div>
+
+        <!-- Figures de référence -->
+        <h1 id="figures-synthese">Figures de référence</h1>
+
+        <div id="fig-atm-standard-synth">
+          <div class="fig-container">
+            <img src="../figures/MET08_atm_standard.png" alt="Atmosphère standard OACI — altitudes, pressions, FL, températures">
+            <div class="fig-caption">Atmosphère standard OACI — Valeurs de référence</div>
+          </div>
+        </div>
+
+        <div id="fig-profil-vertical-synth">
+          <div class="fig-container">
+            <img src="../figures/MET08_profil_vertical.png" alt="Profil logarithmique de la pression en fonction de l'altitude">
+            <div class="fig-caption">Profil vertical de la pression (courbe logarithmique)</div>
+          </div>
+        </div>
+
+        <div id="fig-centres-action-synth">
+          <div class="fig-container">
+            <img src="../figures/MET08_centres_action.svg" alt="Les 4 centres d'action : thermiques et dynamiques">
+            <div class="fig-caption">Centres d'action — Décalage vertical Sol / Altitude</div>
+          </div>
+        </div>
+
+        <div id="fig-resume-centres-synth">
+          <div class="fig-container">
+            <img src="../figures/MET08_resume_centres.png" alt="Tableau résumé Warm Low, Warm High, Cold High, Cold Low">
+            <div class="fig-caption">Résumé des 4 centres d'action (Warm/Cold — Low/High)</div>
+          </div>
+        </div>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">QFE vs QFF vs QNH</div>
+              <div class="piege-explication">QFE = pression mesurée à la station (seule valeur réelle). QFF = réduit au NMM avec les conditions réelles (T, humidité). QNH = réduit au NMM via l'ISA (utilisé en altimétrie). Dans les METAR/ATIS : on diffuse le QNH, pas le QFF.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Altimètre = baromètre ? Oui mais…</div>
+              <div class="piege-explication">Altimètre et baromètre anéroïde utilisent la même capsule Vidie. La différence est uniquement dans l'étalonnage : l'altimètre convertit la pression en altitude via l'atmosphère standard, pas la pression réelle.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Cold is low — altitude réelle < altitude indiquée</div>
+              <div class="piege-explication">En air plus froid que l'ISA, l'altitude réelle est inférieure à l'altitude indiquée. Risk pour les approches aux minima et le franchissement de relief en hiver. Des corrections MSA sont requises.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Warm Low → L en surface, H en altitude (pas L/L !)</div>
+              <div class="piege-explication">Le Warm Low est une dépression thermique : L en surface (air léger) mais H en altitude (couche épaisse). C'est le contraire d'un Cold Low dynamique qui est L/L partout. Classique de QCM.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Cold High → H en surface, L en altitude</div>
+              <div class="piege-explication">L'anticyclone sibérien (d'hiver) est un Cold High thermique : H en surface (air lourd), L en altitude (couche mince). Il disparaît ou s'affaiblit en altitude. Différent du Warm High dynamique (H/H).</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">Gradient pression/altitude n'est pas constant</div>
+              <div class="piege-explication">La variation de pression avec l'altitude est logarithmique. En surface : ≈37 hPa/1000 ft ; à FL360 : ≈11 hPa/1000 ft. Ne jamais appliquer le même gradient partout.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">Isobares (surface) ≠ Isohypses (altitude)</div>
+              <div class="piege-explication">Les isobares relient des points de même pression à altitude fixe (NMM). Les isohypses relient des points de même altitude sur une surface isobare. Les deux types de cartes coexistent et se complètent.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Loi de Laplace : épaisseur ≠ altitude absolue</div>
+              <div class="piege-explication">La loi de Laplace donne l'épaisseur (Z − Z₀) entre deux surfaces isobares, pas l'altitude absolue de la surface supérieure. L'altitude absolue dépend aussi de la pression et de l'altitude de départ Z₀.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">50 % de la masse atmosphérique sous 5 500 m</div>
+              <div class="piege-explication">La moitié de la masse de l'atmosphère se trouve sous 5 500 m (FL180). Cela explique la rapidité de la diminution de pression dans les basses couches comparé à la haute atmosphère.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">FL180 = 500 hPa en conditions standard seulement</div>
+              <div class="piege-explication">500 hPa correspond à FL180 uniquement en atmosphère standard ISA. En réalité, la hauteur de la surface 500 hPa varie selon la température. C'est ce que montrent les cartes d'isohypses 500 hPa.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#11</span>
+            <div>
+              <div class="piege-sujet">Marais barométrique ≠ dépression</div>
+              <div class="piege-explication">Un marais barométrique (low pressure pattern, flat pressure) est une zone de faible gradient de pression sans centre dépressionnaire organisé. Le vent y est faible et variable, et les conditions météo difficiles à prévoir.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#12</span>
+            <div>
+              <div class="piege-sujet">Pascal vs hPa vs mbar</div>
+              <div class="piege-explication">1 hPa = 1 mbar = 100 Pa. Le millibar est l'ancienne unité, toujours utilisée dans certains contextes (USA). Le Pascal (SI) est peu pratique en météo. En pratique : 1013,25 hPa = 101 325 Pa = 1013,25 mbar.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la pression standard au NMM ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1013,25 hPa</strong> = 760 mmHg = 29,92 inHg = 1 atm</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'unité SI de la pression ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Pascal (Pa)</strong> : 1 Pa = 1 N/m². En météo on utilise l'hPa (1 hPa = 100 Pa).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que mesure le QFE ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>La pression à la station</strong> (seule valeur réellement mesurée). Non comparable entre stations à altitudes différentes.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Comment obtient-on le QFF à partir du QFE ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">On ajoute au QFE la pression d'une <strong>colonne d'air fictive</strong> jusqu'au NMM, en tenant compte des conditions réelles (T, humidité).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle pression correspond à FL180 en ISA ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>500 hPa</strong> (environ 5 500 m). C'est la moitié de la pression au sol.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle pression correspond à FL360 en ISA ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>226 hPa</strong> (environ 11 000 m, altitude de la tropopause standard).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le gradient pression/altitude à la surface (0 m) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>≈ 8,3 m par hPa</strong>, soit environ 37 hPa pour 1 000 ft.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la courbe pression/altitude est-elle logarithmique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Parce que l'air est un <strong>fluide compressible</strong> : sa densité ρ diminue avec l'altitude, donc la variation de pression (dP = −ρgdZ) ralentit en montant.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle altitude contient 50 % de la masse atmosphérique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>5 500 m</strong> (FL180). La moitié de la masse de l'atmosphère se trouve sous cette altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'énonce la loi de Laplace ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'épaisseur entre deux surfaces isobares est <strong>proportionnelle à la température moyenne</strong> de la couche intermédiaire (Z−Z₀ ≈ 67 445·Tm·log(P₀/P)).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'une isohypse ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Ligne reliant les points d'une <strong>surface isobare</strong> ayant la même <strong>altitude géopotentielle</strong>. Utilisée sur les cartes de haute altitude.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un Warm Low ? Pressions en surface et en altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dépression thermique en air chaud : <strong>L en surface</strong> (air léger), <strong>H en altitude</strong> (couche épaisse). Effet thermique dominant.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un Cold High ? Pressions en surface et en altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Anticyclone thermique en air froid : <strong>H en surface</strong> (air lourd), <strong>L en altitude</strong> (couche mince). Ex : anticyclone sibérien en hiver.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un Warm High ? Pressions en surface et en altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Anticyclone dynamique en air chaud : <strong>H en surface</strong> (subsidence forcée) <em>et</em> <strong>H en altitude</strong> (air chaud). Ex : anticyclone des Açores. Même signe → pas de décalage vertical.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un Cold Low ? Pressions en surface et en altitude ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Dépression dynamique en air froid : <strong>L en surface</strong> (ascendance forcée) <em>et</em> <strong>L en altitude</strong> (air froid). Même signe → pas de décalage vertical.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que se passe-t-il avec l'altitude réelle si T < ISA (air froid) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">L'altitude réelle est <strong>inférieure</strong> à l'altitude indiquée par l'altimètre. Règle : "Cold is low" → risque de collision avec le relief.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre isobare (surface) et isohypse (altitude) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Isobare</strong> = même pression à altitude fixe (NMM). <strong>Isohypse</strong> = même altitude sur une surface à pression fixe. Deux représentations complémentaires.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle capsule est utilisée dans les baromètres anéroïdes et altimètres ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Capsule Vidie</strong> : capsule métallique vide et compensée qui se déforme proportionnellement à la pression.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le record mondial de haute pression ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1083,5 hPa</strong> à Agata (Sibérie), hiver 1968.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est le record mondial de basse pression ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>867 hPa</strong> dans l'œil du typhon TIP, 1979.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que vaut la pression à FL650 par rapport à la pression au sol ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>P(sol) / 20</strong> (environ 50 hPa). À FL180 : P(sol)/2 = 500 hPa.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">À quelle altitude se trouve 75 % de la masse atmosphérique en-dessous ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>11 000 m</strong> (FL360, tropopause standard). 90 % → 16 000 m ; 99 % → 30 000 m.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle valeur indique "556" sur une carte 500 hPa ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>5 560 mètres géopotentiels (mgp)</strong> — altitude standard de la surface 500 hPa.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que le mètre géopotentiel (mgp) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Unité qui tient compte de la variation de g avec l'altitude et la latitude : g·dz = 9,8·dZ. 1 mgp ≈ 1,02 m géométrique.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la plage de pression habituelle au niveau de la mer ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Entre <strong>950 hPa et 1050 hPa</strong> dans les conditions usuelles.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Les centres d'action thermiques ont-ils un décalage vertical ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Oui</strong> : le signe change entre la surface et l'altitude (Warm Low = L/H ; Cold High = H/L). Les centres dynamiques, eux, ont le même signe partout (pas de décalage).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un marais barométrique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Zone de <strong>faible gradient de pression</strong>, sans centre dépressionnaire organisé. Vent faible et variable. Aussi appelé "low pressure pattern", "flat pressure" ou "slack pressure gradient".</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi le QFF peut-il différer du QNH ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">QFF utilise les conditions réelles (T mesurée) pour la réduction au NMM ; QNH utilise l'atmosphère standard ISA. En conditions non-ISA, QFF ≠ QNH.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

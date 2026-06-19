@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 400" width="740" height="400">
+  <!-- Background -->
+  <rect width="740" height="400" fill="transparent"/>
+
+  <!-- Title -->
+  <text x="370" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">Régions OACI mondiales — 7 bureaux régionaux, 9 régions</text>
+
+  <!-- Ocean background -->
+  <rect x="20" y="32" width="700" height="340" rx="6" fill="#D6EAF8" stroke="#2E75B6" stroke-width="1"/>
+
+  <!-- ── REGION BOXES (approximate positions on simplified world) ── -->
+
+  <!-- NAM — North America: left-center top -->
+  <rect x="55" y="80" width="130" height="50" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="120" y="101" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">NAM</text>
+  <text x="120" y="118" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Amérique du Nord</text>
+
+  <!-- CAR — Caribbean: left-center mid -->
+  <rect x="100" y="170" width="110" height="50" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="155" y="191" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">CAR</text>
+  <text x="155" y="208" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Caraïbes</text>
+
+  <!-- SAM — South America: bottom left -->
+  <rect x="70" y="265" width="130" height="50" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="135" y="286" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">SAM</text>
+  <text x="135" y="303" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Amérique du Sud</text>
+
+  <!-- NAT — North Atlantic: top center -->
+  <rect x="245" y="60" width="130" height="50" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="310" y="81" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">NAT</text>
+  <text x="310" y="98" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Atlantique Nord</text>
+
+  <!-- EUR — Europe: center-right top -->
+  <rect x="360" y="60" width="120" height="50" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="420" y="81" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">EUR</text>
+  <text x="420" y="98" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Europe</text>
+
+  <!-- MID — Middle East: right center -->
+  <rect x="490" y="155" width="120" height="50" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="550" y="176" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">MID</text>
+  <text x="550" y="193" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Moyen-Orient</text>
+
+  <!-- AFI — Africa: center-right bottom -->
+  <rect x="360" y="250" width="120" height="50" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="420" y="271" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">AFI</text>
+  <text x="420" y="288" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Afrique</text>
+
+  <!-- ASIA — Asia: far right center -->
+  <rect x="565" y="240" width="120" height="50" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="625" y="261" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">ASIA</text>
+  <text x="625" y="278" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Asie-Pacifique</text>
+
+  <!-- PAC — Pacific: bottom right -->
+  <rect x="565" y="320" width="120" height="42" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="625" y="338" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F3864" text-anchor="middle">PAC</text>
+  <text x="625" y="354" font-family="Arial,sans-serif" font-size="10" fill="#1F3864" text-anchor="middle">Pacifique</text>
+
+  <!-- ── Connecting lines (approximate continent links) ── -->
+  <!-- NAM ↔ NAT -->
+  <line x1="185" y1="105" x2="245" y2="90" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- NAT ↔ EUR -->
+  <line x1="375" y1="85" x2="360" y2="85" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- EUR ↔ MID -->
+  <line x1="450" y1="110" x2="520" y2="155" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- EUR ↔ AFI -->
+  <line x1="420" y1="110" x2="420" y2="250" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- MID ↔ ASIA -->
+  <line x1="610" y1="190" x2="625" y2="240" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- AFI ↔ ASIA -->
+  <line x1="480" y1="275" x2="565" y2="265" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- CAR ↔ SAM -->
+  <line x1="155" y1="220" x2="145" y2="265" stroke="#1F3864" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- ── Legend: 7 regional offices ── -->
+  <rect x="20" y="355" width="700" height="38" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1"/>
+  <text x="370" y="368" font-family="Arial,sans-serif" font-size="9.5" font-weight="bold" fill="#1F3864" text-anchor="middle">7 bureaux régionaux OACI :</text>
+  <text x="370" y="385" font-family="Arial,sans-serif" font-size="9" fill="#1F3864" text-anchor="middle">Bangkok · Cairo · Dakar · Lima · Mexico City · Nairobi · Paris</text>
+</svg>

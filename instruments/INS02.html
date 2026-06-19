@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INS02 — Manomètres et capteurs de pression · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">INS02 · Manomètres &amp; capteurs</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="INS02" data-matiere="instruments">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Instrumentation</a>
+        <span class="sep">›</span>
+        <span>INS02</span>
+      </div>
+      <div class="cours-code-badge">INS02</div>
+      <h1 class="cours-title">Manomètres et capteurs de pression</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA 022</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~20 min</span>
+        <span class="cours-meta-item">❓ 22 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 1 — COURS COMPLET
+    ════════════════════════════════════ -->
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="introduction">1. Introduction — Pourquoi mesurer la pression ?</h1>
+
+        <p>La mesure de pression est omniprésente en aviation. Elle sert à deux grandes familles d'usages : la <strong>surveillance des systèmes moteur et avion</strong> d'une part, et les <strong>instruments de vol</strong> d'autre part.</p>
+
+        <p>Côté systèmes, la pression est mesurée pour :</p>
+        <ul>
+          <li>la <strong>pression d'huile</strong> (lubrification moteur) ;</li>
+          <li>la <strong>pression carburant</strong> (alimentation moteur) ;</li>
+          <li>la <strong>pression de collecteur</strong> (MAP — moteurs à pistons) ;</li>
+          <li>la <strong>poussée moteur</strong> (EPR — Engine Pressure Ratio sur turbines) ;</li>
+          <li>la <strong>pression hydraulique</strong> (train d'atterrissage, freins, gouvernes).</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Côté instruments de vol, la pression atmosphérique est exploitée par les instruments pitot-statiques : altimètre (pression statique), badin / ASI (pression dynamique = totale − statique) et variomètre (variation de la pression statique).
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="definitions">2. Définitions fondamentales</h1>
+
+        <p>La <strong>pression</strong> est définie comme une force exercée perpendiculairement sur une unité de surface : <em>P = F / A</em>. Elle s'exprime en N/m² (pascal).</p>
+
+        <h2 id="def-absolue">2.1 Pression absolue</h2>
+        <p>La pression absolue est mesurée en prenant pour référence le <strong>vide parfait</strong> (pression nulle absolue). Elle est toujours positive. C'est la pression "réelle" d'un point de vue physique, indépendante de toute pression ambiante. L'altimètre est calé en pression absolue lorsqu'il affiche QFE (pression au sol).</p>
+
+        <h2 id="def-manometrique">2.2 Pression manométrique (gauge pressure)</h2>
+        <p>La pression manométrique est référencée par rapport à la <strong>pression atmosphérique ambiante</strong>. Elle peut être positive ou négative. La relation est simple :</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Pression manométrique :</strong>
+          <div class="formula-display">P_man = P_abs − P_atm</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">Avec P_abs = pression absolue, P_atm = pression atmosphérique locale. Si P_man = 0, la pression mesurée est égale à la pression atmosphérique.</p>
+        </div>
+
+        <h2 id="def-differentielle">2.3 Pression différentielle</h2>
+        <p>La pression différentielle est la <strong>différence de pression entre deux points</strong> d'un circuit ou d'une installation. Elle ne nécessite aucune référence absolue ou atmosphérique.</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS02_types_pression.svg" alt="Les 3 types de pression : absolue, manométrique, différentielle">
+          <div class="fig-caption">Fig. 1 — Comparaison des trois types de pression et leurs applications avion</div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Ne pas confondre "pression manométrique nulle" et "vide". Pression manométrique nulle signifie que la pression mesurée est égale à la pression atmosphérique. Le vide absolu correspond à une pression absolue de 0 Pa, soit une pression manométrique de −1 atm.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="unites">3. Unités de pression</h1>
+
+        <p>Plusieurs unités coexistent en aviation selon les pays, les instruments et les systèmes. Il est indispensable de maîtriser leurs conversions.</p>
+
+        <h2 id="unites-list">3.1 Les unités principales</h2>
+
+        <p>Le <strong>Pascal (Pa)</strong> est l'unité SI de base : 1 Pa = 1 N/m². Il est peu utilisé directement en aviation ; on lui préfère le <strong>hectopascal (hPa)</strong> (1 hPa = 100 Pa), identique au millibar (mb), et employé universellement pour les calages altimètre et les bulletins météo.</p>
+
+        <p>L'<strong>inch of mercury (in Hg)</strong> est la référence de l'altimétrie nord-américaine et de la pression collecteur (MAP). À 0 °C, 1 in Hg vaut environ 3 386 Pa.</p>
+
+        <p>Le <strong>PSI (pounds per square inch)</strong> est utilisé pour les pressions élevées : huile, hydraulique, oxygène. 1 PSI = 6 895 Pa ≈ 0,07 bar. Un ordre de grandeur utile : 3 000 PSI ≈ 200 bar (pression hydraulique d'un gros porteur).</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS02_unites_pression.png" alt="Tableau de conversion des unités de pression">
+          <div class="fig-caption">Fig. 2 — Tableau de conversion des unités de pression et formule clé ISA</div>
+        </div>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          <strong>1 atm = 1 013,25 mb = 1 013,25 hPa = 29,92 inHg = 14,7 PSI</strong><br>
+          ISA au niveau de la mer : P₀ = 1 013,25 hPa · T = 15 °C · ρ = 1,225 kg/m³ · Gradient thermique : 2 °C/1 000 ft (6,5 °C/1 000 m) · Gradient barique (Z=0) : 28 ft/hPa ou 6,5 m/hPa.
+        </div>
+
+        <h2 id="unites-bar">3.2 Le Bar</h2>
+        <p>Le bar est utilisé dans certains systèmes industriels. 1 bar = 100 000 Pa = 1 000 hPa, soit légèrement moins qu'une atmosphère standard (1 013,25 hPa). Exemple de conversion : 20 000 Pa = 0,2 bar.</p>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="capteurs">4. Types de capteurs de pression</h1>
+
+        <p>Cinq familles de capteurs permettent de transformer une pression en signal mécanique ou électrique. Elles se distinguent essentiellement par leur plage de mesure et leur principe de fonctionnement.</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS02_capteurs_comparaison.svg" alt="Tableau comparatif des capteurs de pression">
+          <div class="fig-caption">Fig. 3 — Comparatif des capteurs : plage, principe et applications avion</div>
+        </div>
+
+        <h2 id="capteur-diaphragme">4.1 Le diaphragme</h2>
+        <p>Le diaphragme est un disque métallique circulaire et ondulé (<em>corrugated</em>) qui se défléchit proportionnellement à la pression appliquée. Cette déflexion est transmise mécaniquement à un pointeur ou convertie en signal électrique. Le diaphragme est réservé aux <strong>basses pressions (0,1 à 50 PSI)</strong>. Sa construction simple le rend fiable et peu coûteux.</p>
+
+        <h2 id="capteur-capsule">4.2 La capsule (aneroid capsule)</h2>
+        <p>La capsule est formée de <strong>deux diaphragmes soudés face à face</strong>. Elle existe sous deux variantes :</p>
+        <ul>
+          <li><strong>Capsule anéroïde</strong> : le volume interne est <em>scellé sous vide</em>. Elle mesure donc une <strong>pression absolue</strong> (elle se dilate quand la pression externe diminue, comme dans un altimètre). Applications : pompe carburant basse pression, pression d'admission GTR.</li>
+          <li><strong>Capsule différentielle</strong> : l'une des faces est exposée à une pression de référence. Elle mesure une <strong>pression différentielle</strong>.</li>
+        </ul>
+        <p>La capsule est utilisée pour les pressions <strong>inférieures à 50 PSI</strong>, notamment pour la pression collecteur (MAP).</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La capsule anéroïde mesure une <strong>pression absolue</strong> (référence = vide interne), pas une pression manométrique. C'est elle qui équipe l'altimètre et la jauge de pression collecteur. Ne pas la confondre avec la capsule différentielle.
+        </div>
+
+        <h2 id="capteur-soufflet">4.3 Le soufflet (bellows)</h2>
+        <p>Le soufflet est un cylindre métallique à parois plissées qui peut se comprimer ou s'allonger sous l'effet de la pression. Contrairement aux diaphragmes et capsules, il peut être utilisé pour les <strong>pressions hautes, basses et différentielles</strong>. C'est le seul capteur mécanique véritablement polyvalent en termes de gamme. Applications typiques : sortie de pompe BP, jauge de pression différentielle cabine, pression collecteur moteur à pistons.</p>
+
+        <h2 id="capteur-bourdon">4.4 Le tube de Bourdon</h2>
+        <p>Le tube de Bourdon est un tube métallique de section ovale enroulé en arc de cercle (forme en C). Lorsque la pression intérieure augmente, le tube tend à se redresser, entraînant un mécanisme à pignon et crémaillère qui déplace une aiguille. Il est conçu pour les <strong>hautes pressions</strong> : huile moteur, pression hydraulique cockpit, oxygène.</p>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Le tube de Bourdon <strong>ne peut pas mesurer de pression différentielle</strong>. C'est une limitation fondamentale de sa conception : il n'a qu'une seule entrée de pression. Pour mesurer un différentiel, il faut un soufflet ou une capsule différentielle.
+        </div>
+
+        <h2 id="capteur-solidstate">4.5 Les capteurs à état solide (Solid State Sensors)</h2>
+        <p>Les capteurs à état solide (SSS) exploitent les propriétés électriques de certains matériaux semi-conducteurs : leur résistance ou leur tension de sortie varie lorsque la pression change. Les technologies les plus communes sont le <strong>piézoélectrique</strong>, le <strong>piézorésistif</strong> et les <strong>puces à semiconducteur</strong>.</p>
+
+        <p>Ces capteurs sont au cœur des avioniques modernes (ADIRU, FMS) car ils sont compacts, très précis, numériques, et couvrent toutes les gammes de pression. Leur signal électrique se prête parfaitement à la transmission à distance et à l'acquisition par les calculateurs.</p>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Info</div>
+          Règle de mémoire sur la gamme des capteurs mécaniques : <strong>Diaphragme → Capsule → Soufflet → Bourdon</strong> correspond à une progression de basse vers haute pression. Les capteurs solid-state couvrent toutes les gammes.
+        </div>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="instruments">5. Instruments de pression avion</h1>
+
+        <h2 id="ins-huile">5.1 Pression d'huile moteur</h2>
+        <p>La lubrification est essentielle à la santé d'un moteur. La pression d'huile est captée à la <strong>sortie de la pompe d'huile</strong>. Un indicateur de pression d'huile anormalement basse ou absente est une alerte critique impliquant une procédure d'urgence immédiate.</p>
+
+        <p>Pour les jauges analogiques, on utilise un <strong>tube de Bourdon</strong>. Les valeurs nominales diffèrent selon le type de motorisation :</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">80 PSI</span>
+            <span class="val-label">Pression huile moteur à pistons</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">40–50 PSI</span>
+            <span class="val-label">Pression huile turbomoteur</span>
+          </div>
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La pression d'huile nominale est <strong>plus élevée sur un moteur à pistons (80 PSI) que sur une turbine (40–50 PSI)</strong>. Contre-intuitif car les turbines tournent plus vite, mais leur système de lubrification fonctionne à des pressions plus faibles grâce à des circuits différents.
+        </div>
+
+        <h2 id="ins-carburant">5.2 Pression carburant</h2>
+        <p>La pression carburant est mesurée à l'aide d'un <strong>soufflet (bellows)</strong>, adapté aux pressions faibles à modérées. La valeur typique est de <strong>20 à 25 PSI</strong>. La jauge indique la pression de carburant dosé (<em>metered fuel pressure</em>).</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">20–25 PSI</span>
+            <span class="val-label">Pression carburant (bellows)</span>
+          </div>
+        </div>
+
+        <h2 id="ins-map">5.3 Pression de collecteur — MAP (moteur à pistons)</h2>
+        <p>La pression de collecteur (<em>Manifold Absolute Pressure</em>) est mesurée dans la tubulure d'admission à proximité des soupapes d'entrée. C'est une <strong>pression absolue</strong>, exprimée en <strong>inches of Mercury (in Hg)</strong>. Elle est mesurée par un <strong>soufflet anéroïde différentiel</strong>.</p>
+
+        <p>Ses indications varient selon :</p>
+        <ul>
+          <li>le <strong>régime moteur</strong> (plus le régime est élevé, plus la MAP est élevée sur un moteur atmosphérique) ;</li>
+          <li>l'<strong>altitude</strong> (la MAP diminue avec l'altitude sur un moteur atmosphérique) ;</li>
+          <li>le <strong>pas d'hélice</strong> (un pas plus fin absorbe plus de puissance et crée plus de dépression).</li>
+        </ul>
+
+        <div class="box box-retenir">
+          <div class="box-label">✅ À retenir</div>
+          Au sol moteur à l'arrêt, la MAP indique la <strong>pression atmosphérique locale (QFE)</strong>. Si la MAP indique la pression atmosphérique moteur en route, cela signale une <strong>fuite dans la ligne de pression</strong> de l'instrument.
+        </div>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          La MAP est une pression <strong>absolue</strong> (référencée sur le vide), pas une pression manométrique. L'instrument affiche la vraie pression dans le collecteur, indépendamment de la pression ambiante. C'est pourquoi une capsule anéroïde est utilisée.
+        </div>
+
+        <h2 id="ins-hydraulique">5.4 Pression hydraulique</h2>
+        <p>Les circuits hydrauliques des avions de ligne fonctionnent sous de <strong>très hautes pressions (2 500 à 3 000 PSI)</strong>. La jauge de cockpit utilise un <strong>tube de Bourdon</strong> pour les systèmes à lecture directe, ou un <strong>transducteur électrique</strong> qui reçoit le signal d'un capteur de pression distant et l'affiche sur l'ECAM/EICAS.</p>
+
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">2 500–3 000 PSI</span>
+            <span class="val-label">Pression hydraulique avion de ligne</span>
+          </div>
+        </div>
+
+        <h2 id="ins-epr">5.5 Engine Pressure Ratio (EPR)</h2>
+        <p>L'EPR est un paramètre moteur spécifique aux <strong>turboréacteurs</strong>. Il représente le <strong>rapport entre la pression totale en sortie de tuyère et la pression totale à l'entrée du moteur</strong> (entrée de soufflante). C'est un indicateur de poussée utilisé sur certains appareils (Airbus A300/A310, Airbus A320 avec CFM56, etc.) en lieu et place du N1.</p>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Engine Pressure Ratio :</strong>
+          <div class="formula-display">EPR = P_t7 / P_t2</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">P_t7 = pression totale sortie tuyère · P_t2 = pression totale entrée moteur. Valeur de ralenti ≈ 1,00 · TOGA ≈ 1,5–1,6.</p>
+        </div>
+
+        <h2 id="ins-transmission">5.6 Modes de transmission</h2>
+        <p>Les instruments de pression utilisent trois modes de transmission entre le capteur et l'indicateur cockpit :</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS02_transmission_systemes.svg" alt="Les 3 systèmes de transmission : direct, relay, électrique">
+          <div class="fig-caption">Fig. 4 — Comparaison des systèmes de transmission : direct, relay et électrique</div>
+        </div>
+
+        <p>La <strong>lecture directe</strong> consiste à relier physiquement le capteur à l'instrument par une canalisation. Simple et fiable, elle ne nécessite aucune alimentation électrique, mais présente un risque de fuite et un léger retard d'indication (<em>lag time</em>). C'est le principe d'un tube de Bourdon relié directement à la ligne d'huile.</p>
+
+        <p>Le <strong>système à relais</strong> interpose un relais mécanique entre le capteur et l'indicateur. Il réduit les fuites et améliore la réactivité, au prix d'une complexité accrue en tuyauterie.</p>
+
+        <p>La <strong>transmission électrique</strong> (ou indication à distance) exploite un <strong>transducteur</strong> qui convertit la pression en signal électrique (courant 4–20 mA ou signal numérique). L'indicateur reçoit ce signal et affiche la pression sans aucune liaison physique en pression. C'est le mode utilisé dans les cockpits modernes (ECAM, EICAS) : minimal en fuites, très rapide, compatible avec les systèmes numériques. L'inconvénient est la dépendance à l'alimentation électrique et les risques d'erreurs électroniques.
+
+        <table>
+          <thead>
+            <tr><th>Mode</th><th>Avantages</th><th>Inconvénients</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Direct</strong></td><td>Simplicité, fiabilité, pas d'électricité</td><td>Fuite possible, retard de réponse</td></tr>
+            <tr><td><strong>Relais</strong></td><td>Plus rapide, moins de fuites</td><td>Tuyauteries, relais mécanique</td></tr>
+            <tr><td><strong>Électrique</strong></td><td>Simple, numérique, très rapide, peu de fuites</td><td>Besoin alimentation, erreurs électriques</td></tr>
+          </tbody>
+        </table>
+
+        <!-- ══════════════════════════════ -->
+        <h1 id="pannes">6. Pannes et conséquences</h1>
+
+        <p>Les défaillances des instruments de pression se classent en deux catégories : la <strong>perte de la mesure</strong> et les <strong>indications incorrectes</strong>.</p>
+
+        <h2 id="pannes-types">6.1 Types de pannes</h2>
+        <p>Une <strong>perte de mesure de pression</strong> peut résulter d'un capteur défaillant, d'un bouchon dans une canalisation, ou d'un fil électrique rompu. La conséquence directe est la disparition de la surveillance : le pilote ne sait plus si la pression est dans la plage normale.</p>
+
+        <p>Des <strong>indications incorrectes</strong> peuvent provenir d'une fuite dans la ligne (la pression indiquée baisse artificiellement), d'un capteur dérivé (indication erronée mais stable), ou d'un transducteur défaillant (indication figée ou aléatoire).</p>
+
+        <h2 id="pannes-consequences">6.2 Conséquences opérationnelles</h2>
+        <p>Sans surveillance de pression, les risques sont sérieux :</p>
+        <ul>
+          <li><strong>Pression d'huile</strong> : perte de lubrification → saisissement moteur ;</li>
+          <li><strong>Pression hydraulique</strong> : perte des gouvernes, du train, des freins ;</li>
+          <li><strong>Pression carburant</strong> : extinction moteur par manque de débit ;</li>
+          <li><strong>MAP</strong> : surpuissance ou sous-puissance non détectée → endommagement moteur ou performances insuffisantes au décollage.</li>
+        </ul>
+
+        <p>Une défaillance d'instrument de pression peut conduire à une <strong>utilisation inappropriée du système</strong>, à des <strong>dommages graves</strong> sur le circuit concerné, voire à un <strong>déroutement</strong> de l'aéronef.</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Piège ATPL</div>
+          Sur un moteur à pistons, si la jauge MAP indique la <strong>pression atmosphérique</strong> alors que le moteur tourne, la cause probable est une <strong>fuite dans la ligne de pression</strong> de l'instrument (la tubulure est exposée à l'air ambiant au lieu d'être raccordée au collecteur).
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         TAB 2 — FICHE SYNTHÈSE
+    ════════════════════════════════════ -->
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs clés à mémoriser</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">1 013,25 hPa</span>
+            <span class="val-label">Pression ISA MSL (P₀)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">29,92 inHg</span>
+            <span class="val-label">Pression ISA en inches of Hg</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">14,7 PSI</span>
+            <span class="val-label">Pression ISA en PSI</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">15 °C</span>
+            <span class="val-label">Température ISA MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">1,225 kg/m³</span>
+            <span class="val-label">Densité ISA MSL</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">28 ft/hPa</span>
+            <span class="val-label">Gradient barométrique au sol</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">80 PSI</span>
+            <span class="val-label">P huile moteur à pistons</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">40–50 PSI</span>
+            <span class="val-label">P huile turbomoteur</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">20–25 PSI</span>
+            <span class="val-label">P carburant (bellows)</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">2 500–3 000 PSI</span>
+            <span class="val-label">P hydraulique avion de ligne</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">0,1–50 PSI</span>
+            <span class="val-label">Plage diaphragme</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">&gt; 50 PSI</span>
+            <span class="val-label">Plage Bourdon (hautes P)</span>
+          </div>
+        </div>
+
+        <h1 id="formule-synthese">Formule clé</h1>
+        <div class="box box-formule">
+          <div class="box-label">🧮 Formule</div>
+          <strong>Conversion de pression :</strong>
+          <div class="formula-display">P_man = P_abs − P_atm</div>
+          <p style="margin:.5rem 0 0;font-size:.85rem">P_man = pression manométrique (référencée sur l'atmo) · P_abs = pression absolue (référencée sur le vide)</p>
+        </div>
+
+        <h1 id="capteurs-synthese">Capteurs — Aide-mémoire</h1>
+        <table>
+          <thead>
+            <tr><th>Capteur</th><th>Plage</th><th>Type P mesuré</th><th>Application clé</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Diaphragme</td><td>0,1–50 PSI</td><td>Basse P</td><td>Carburant, instruments vol</td></tr>
+            <tr><td>Capsule anéroïde</td><td>≤ 50 PSI</td><td><strong>Absolue</strong></td><td>MAP, altimètre, GTR</td></tr>
+            <tr><td>Capsule diff.</td><td>≤ 50 PSI</td><td><strong>Différentielle</strong></td><td>Pitot-statique, EPR</td></tr>
+            <tr><td>Soufflet</td><td>HP / BP / Diff.</td><td>Toutes</td><td>ΔP cabine, MAP, pompe BP</td></tr>
+            <tr><td>Tube Bourdon</td><td>&gt; 50 PSI</td><td>HP uniquement</td><td>Huile, hydraulique, O₂</td></tr>
+            <tr><td>Solid State</td><td>Toutes</td><td>Toutes</td><td>Avionique moderne, ADIRU</td></tr>
+          </tbody>
+        </table>
+
+        <h1 id="pieges">Pièges ATPL</h1>
+        <div class="piege-list">
+
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Tube de Bourdon et pression différentielle</div>
+              <div class="piege-explication">Le tube de Bourdon NE PEUT PAS mesurer une pression différentielle. Il n'a qu'une entrée de pression. Seuls le soufflet et la capsule différentielle peuvent mesurer un ΔP.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Capsule anéroïde = pression absolue</div>
+              <div class="piege-explication">Une capsule anéroïde est scellée sous vide. Elle mesure une pression absolue, pas une pression manométrique. L'altimètre et la jauge MAP utilisent des capsules anéroïdes.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">Pression huile : piston > turbine</div>
+              <div class="piege-explication">Contre-intuitivement, la pression d'huile nominale est plus élevée sur un moteur à pistons (80 PSI) que sur une turbine (40–50 PSI). À mémoriser dans ce sens.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">MAP = QFE au sol moteur arrêté</div>
+              <div class="piege-explication">Avec le moteur à l'arrêt au sol, la MAP affiche la pression atmosphérique locale (QFE). Si la MAP indique QFE moteur en route, c'est une fuite dans la ligne de pression de l'instrument.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">P manométrique nulle ≠ vide</div>
+              <div class="piege-explication">Une pression manométrique de 0 signifie que la pression mesurée est égale à la pression atmosphérique. Le vide parfait correspond à une pression absolue de 0, soit une pression manométrique de −1 atm ≈ −1 013 hPa.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#6</span>
+            <div>
+              <div class="piege-sujet">MAP = pression absolue (en in Hg)</div>
+              <div class="piege-explication">La pression collecteur (MAP) est exprimée en inches of Mercury ABSOLUS. Ce n'est pas une pression manométrique. On peut avoir une MAP de 25 in Hg alors que la pression atmosphérique est de 29,92 in Hg.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#7</span>
+            <div>
+              <div class="piege-sujet">EPR = rapport (sans unité)</div>
+              <div class="piege-explication">L'EPR est un ratio de pression totale (sortie tuyère / entrée moteur). C'est un nombre sans unité, toujours supérieur à 1 en poussée. Au ralenti ≈ 1,00, TOGA ≈ 1,5 à 1,6.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#8</span>
+            <div>
+              <div class="piege-sujet">Soufflet = seul capteur mécanique polyvalent</div>
+              <div class="piege-explication">Le soufflet est le seul capteur mécanique capable de mesurer des pressions hautes, basses ET différentielles. Le diaphragme et la capsule sont limités aux basses pressions ; le Bourdon est limité aux hautes pressions sans ΔP.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#9</span>
+            <div>
+              <div class="piege-sujet">1 bar ≠ 1 atm</div>
+              <div class="piege-explication">1 bar = 1 000 hPa, mais 1 atm = 1 013,25 hPa. Le bar est légèrement inférieur à une atmosphère. Ne pas utiliser bar = atm dans les calculs de conversion.</div>
+            </div>
+          </div>
+
+          <div class="piege-item">
+            <span class="piege-num">#10</span>
+            <div>
+              <div class="piege-sujet">Transmission directe = pas d'électricité mais risque de fuite</div>
+              <div class="piege-explication">L'avantage principal de la lecture directe est l'absence de besoin en alimentation électrique. L'inconvénient principal est le risque de fuite de fluide en cockpit. Sur un avion à turbine, la pression hydraulique (3 000 PSI) est toujours transmise électriquement pour cette raison.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <h1 id="quickcheck">Quick Check</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        <div class="qc-grid">
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la définition de la pression absolue ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Pression mesurée par rapport au vide parfait (0 Pa).</strong> Elle est toujours positive et indépendante de la pression ambiante.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que vaut 1 atm en hPa, inHg et PSI ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1 atm = 1 013,25 hPa = 29,92 inHg = 14,7 PSI.</strong> Valeurs ISA MSL à mémoriser absolument.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Le tube de Bourdon peut-il mesurer une pression différentielle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Non.</strong> Le tube de Bourdon n'a qu'une seule entrée de pression. Il ne peut mesurer que la pression absolue ou manométrique, jamais différentielle.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle pression d'huile est nominale sur un moteur à pistons ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>80 PSI</strong> pour un moteur à pistons, contre 40–50 PSI pour une turbine.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel capteur équipe la jauge MAP d'un moteur à pistons ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Soufflet anéroïde différentiel (bellow sensors).</strong> La MAP mesure une pression absolue en in Hg dans le collecteur d'admission.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que signifie MAP = QFE avec le moteur en route ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Fuite dans la ligne de pression de l'instrument.</strong> La tubulure est exposée à l'air ambiant au lieu d'être raccordée au collecteur d'admission.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la plage de pression du diaphragme ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>0,1 à 50 PSI</strong> — Basses pressions uniquement. Le diaphragme est un disque métallique ondulé qui se défléchit proportionnellement.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'une capsule anéroïde et que mesure-t-elle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Deux diaphragmes soudés avec un volume interne scellé sous vide.</strong> Elle mesure une pression absolue (altimètre, MAP, pression d'admission GTR).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel est l'avantage principal des solid state sensors ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Signal électrique numérique, compact, toutes gammes.</strong> Piézoélectrique ou piézorésistif. Compatibles avec les systèmes avioniques modernes (ADIRU, FMS).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la pression hydraulique typique d'un avion de ligne ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>2 500 à 3 000 PSI.</strong> Mesurée par tube de Bourdon (lecture directe) ou transducteur électrique (ECAM).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce que l'EPR et comment se calcule-t-il ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Engine Pressure Ratio = P_t7 / P_t2</strong> (pression totale sortie tuyère / entrée moteur). Paramètre de poussée sans unité. Ralenti ≈ 1,00 · TOGA ≈ 1,5–1,6.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel capteur est le seul à couvrir HP, BP et différentielle ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Le soufflet (bellows).</strong> Cylindre métallique plissé utilisé pour ΔP cabine, sortie pompe BP, pression collecteur moteur piston.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quels sont les 3 modes de transmission d'un instrument de pression ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Direct (tuyau), Relay (relais mécanique), Électrique (transducteur + signal élec.).</strong> L'électrique est le plus rapide et numérique mais nécessite une alimentation.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelles sont les 2 conséquences d'une panne d'instrument de pression ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1) Perte de mesure (pas de surveillance)</strong> → endommagement moteur ou circuit. <strong>2) Indication incorrecte</strong> → utilisation inappropriée du système, possible déroutement.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la pression carburant typique et quel capteur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>20 à 25 PSI, mesuré par soufflet (bellows).</strong> La jauge carburant indique la pression de carburant dosé.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la différence entre 1 bar et 1 atm ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>1 bar = 1 000 hPa, mais 1 atm = 1 013,25 hPa.</strong> Le bar est légèrement inférieur à une atmosphère. Ne pas les confondre dans les calculs.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Sur quel type de moteur la pression d'huile est-elle la plus élevée ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Moteur à pistons (80 PSI)</strong>, contre 40–50 PSI pour une turbine. Contre-intuitif mais à mémoriser.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la référence de mesure d'une pression manométrique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>La pression atmosphérique ambiante.</strong> P_man = P_abs − P_atm. Elle peut être positive (surpression) ou négative (dépression).</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi la transmission électrique est-elle préférée pour la pression hydraulique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Évite les fuites de fluide hydraulique en cockpit</strong> (3 000 PSI en direct serait dangereux). Signal électrique propre, compatible ECAM/EICAS.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Que sont les SSS (Solid State Sensors) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Capteurs semi-conducteurs</strong> (piézoélectrique, piézorésistif, chip) dont la résistance ou la tension de sortie varie avec la pression. Précis, compacts, numériques.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quelle est l'unité de mesure de la pression collecteur (MAP) ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Inches of Mercury ABSOLUS (in Hg).</strong> La MAP est une pression absolue dans le collecteur d'admission, exprimée en in Hg.</div>
+          </div>
+
+          <div class="qc-item">
+            <div class="qc-question">Quel capteur est utilisé pour la pression d'huile analogique ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer"><strong>Tube de Bourdon</strong> pour les jauges analogiques. Tube en C à section ovale qui se redresse sous pression et actionne un mécanisme pignon/crémaillère.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>

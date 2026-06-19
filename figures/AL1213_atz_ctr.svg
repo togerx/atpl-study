@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="700" height="320">
+  <!-- Fond transparent -->
+  <!-- ATZ (gauche) -->
+  <!-- Cylindre ATZ -->
+  <ellipse cx="175" cy="90" rx="120" ry="28" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <rect x="55" y="90" width="240" height="140" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <ellipse cx="175" cy="230" rx="120" ry="28" fill="#FFE082" stroke="#BF8F00" stroke-width="2"/>
+  <!-- Sol -->
+  <rect x="55" y="218" width="240" height="12" fill="#A8D5A2" stroke="#548235" stroke-width="1"/>
+  <!-- Piste -->
+  <rect x="140" y="218" width="70" height="12" fill="#888" stroke="#555" stroke-width="1"/>
+  <!-- Tour TWR -->
+  <rect x="192" y="185" width="18" height="33" fill="#2E75B6" stroke="#1F3864" stroke-width="1.5"/>
+  <rect x="188" y="178" width="26" height="12" fill="#2E75B6" stroke="#1F3864" stroke-width="1.5"/>
+  <!-- Label ATZ -->
+  <text x="175" y="155" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#BF8F00">ATZ</text>
+  <text x="175" y="175" text-anchor="middle" font-family="Arial" font-size="11" fill="#7A5800">Aerodrome Traffic Zone</text>
+  <!-- TWR label -->
+  <text x="196" y="175" text-anchor="middle" font-family="Arial" font-size="10" fill="#1F3864">TWR</text>
+  <!-- Top label -->
+  <text x="175" y="85" text-anchor="middle" font-family="Arial" font-size="11" fill="#BF8F00" font-style="italic">plafond variable</text>
+  <!-- Avion dans ATZ -->
+  <text x="90" y="150" font-family="Arial" font-size="20">✈</text>
+  <text x="245" y="130" font-family="Arial" font-size="20">✈</text>
+
+  <!-- CTR + TMA (droite) -->
+  <!-- TMA (grand cylindre) -->
+  <ellipse cx="530" cy="55" rx="145" ry="28" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <rect x="385" y="55" width="290" height="200" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <ellipse cx="530" cy="255" rx="145" ry="28" fill="#BDD7EE" stroke="#2E75B6" stroke-width="2"/>
+  <!-- CTR (cylindre intérieur) -->
+  <ellipse cx="530" cy="155" rx="85" ry="20" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+  <rect x="445" y="155" width="170" height="100" fill="#E2EFDA" stroke="#548235" stroke-width="2"/>
+  <ellipse cx="530" cy="255" rx="85" ry="20" fill="#C6DFCE" stroke="#548235" stroke-width="2"/>
+  <!-- Sol CTR -->
+  <rect x="445" y="244" width="170" height="11" fill="#A8D5A2" stroke="#548235" stroke-width="1"/>
+  <!-- Piste CTR -->
+  <rect x="505" y="244" width="50" height="11" fill="#888" stroke="#555" stroke-width="1"/>
+  <!-- Tour CTR -->
+  <rect x="545" y="218" width="16" height="26" fill="#548235" stroke="#1F3864" stroke-width="1.5"/>
+  <rect x="541" y="212" width="24" height="10" fill="#548235" stroke="#1F3864" stroke-width="1.5"/>
+  <!-- Labels TMA -->
+  <text x="530" y="100" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#2E75B6">TMA</text>
+  <text x="530" y="118" text-anchor="middle" font-family="Arial" font-size="10" fill="#2E75B6">Terminal Manoeuvring Area</text>
+  <!-- Label CTR -->
+  <text x="530" y="205" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#548235">CTR</text>
+  <text x="530" y="220" text-anchor="middle" font-family="Arial" font-size="10" fill="#548235">Control Zone</text>
+  <!-- VOR labels -->
+  <text x="395" y="180" font-family="Arial" font-size="10" fill="#1F3864">VOR</text>
+  <text x="650" y="180" font-family="Arial" font-size="10" fill="#1F3864">VOR</text>
+  <!-- Airway arrows -->
+  <line x1="385" y1="155" x2="340" y2="155" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <line x1="675" y1="155" x2="700" y2="155" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- AWY labels -->
+  <text x="340" y="150" font-family="Arial" font-size="10" fill="#1F3864">AWY</text>
+  <!-- Avions TMA -->
+  <text x="415" y="85" font-family="Arial" font-size="18" transform="rotate(-15 415 85)">✈</text>
+  <text x="630" y="75" font-family="Arial" font-size="18" transform="rotate(10 630 75)">✈</text>
+  <!-- Flèches AWY vertical -->
+  <line x1="408" y1="55" x2="408" y2="20" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="400" y="15" font-family="Arial" font-size="10" fill="#1F3864">AWY</text>
+  <line x1="648" y1="55" x2="648" y2="20" stroke="#1F3864" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="640" y="15" font-family="Arial" font-size="10" fill="#1F3864">AWY</text>
+
+  <!-- Légendes bas -->
+  <text x="175" y="300" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#BF8F00">ATZ — espace aérodrome</text>
+  <text x="175" y="316" text-anchor="middle" font-family="Arial" font-size="11" fill="#7A5800">Service : Aerodrome Control</text>
+  <text x="530" y="300" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#548235">CTR + TMA — espace contrôlé</text>
+  <text x="530" y="316" text-anchor="middle" font-family="Arial" font-size="11" fill="#1F3864">Service : Approach + Area Control</text>
+</svg>

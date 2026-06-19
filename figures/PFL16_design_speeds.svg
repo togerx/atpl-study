@@ -1,0 +1,77 @@
+<svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="360" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F3864">Vitesses de conception CS-25 — ordre et relations</text>
+
+  <!-- Axe principal V (EAS) -->
+  <line x1="30" y1="130" x2="690" y2="130" stroke="#1F3864" stroke-width="2.5" marker-end="url(#arrowB)"/>
+  <text x="695" y="135" font-size="11" fill="#1F3864">V (EAS)</text>
+
+  <defs>
+    <marker id="arrowB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1F3864"/>
+    </marker>
+    <marker id="arrowDown" markerWidth="7" markerHeight="7" refX="3" refY="6" orient="auto">
+      <path d="M0,0 L3,7 L6,0 z" fill="#1F3864"/>
+    </marker>
+  </defs>
+
+  <!-- Positions des vitesses sur l'axe -->
+  <!-- VS1 ~80, VA ~155, VB ~235, VC ~390, VD ~540 -->
+
+  <!-- VS1 -->
+  <line x1="80" y1="118" x2="80" y2="142" stroke="#548235" stroke-width="2"/>
+  <text x="80" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#548235">VS1</text>
+  <text x="80" y="160" text-anchor="middle" font-size="9" fill="#548235">Vitesse de décrochage</text>
+  <text x="80" y="172" text-anchor="middle" font-size="9" fill="#548235">en lisse</text>
+
+  <!-- VA -->
+  <line x1="155" y1="118" x2="155" y2="142" stroke="#375623" stroke-width="2"/>
+  <rect x="105" y="68" width="100" height="42" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="155" y="84" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#375623">VA</text>
+  <text x="155" y="98" text-anchor="middle" font-size="9" fill="#375623">Manœuvre</text>
+  <text x="155" y="110" text-anchor="middle" font-size="9" fill="#375623">VS1 · √n</text>
+  <line x1="155" y1="68" x2="155" y2="118" stroke="#548235" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- VB -->
+  <line x1="235" y1="118" x2="235" y2="142" stroke="#BF8F00" stroke-width="2"/>
+  <rect x="185" y="58" width="100" height="52" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="235" y="75" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#7F5500">VB</text>
+  <text x="235" y="89" text-anchor="middle" font-size="9" fill="#7F5500">Max intensité</text>
+  <text x="235" y="101" text-anchor="middle" font-size="9" fill="#7F5500">de rafale</text>
+  <text x="235" y="113" text-anchor="middle" font-size="9" fill="#7F5500">≤ VC − 43 kt</text>
+  <line x1="235" y1="58" x2="235" y2="118" stroke="#BF8F00" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="235" y="157" text-anchor="middle" font-size="8.5" fill="#BF8F00">VRA &lt; VB</text>
+
+  <!-- VC -->
+  <line x1="390" y1="118" x2="390" y2="142" stroke="#2E75B6" stroke-width="2.5"/>
+  <rect x="330" y="52" width="120" height="58" rx="5" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="390" y="69" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1F3864">VC</text>
+  <text x="390" y="83" text-anchor="middle" font-size="9" fill="#1F3864">Croisière conception</text>
+  <text x="390" y="96" text-anchor="middle" font-size="8.5" fill="#1F3864">VB+43kt ≤ VC ≤ 0,8·VD</text>
+  <text x="390" y="109" text-anchor="middle" font-size="8.5" fill="#1F3864">≈ VMO opérationnel</text>
+  <line x1="390" y1="52" x2="390" y2="118" stroke="#2E75B6" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- VD -->
+  <line x1="540" y1="118" x2="540" y2="142" stroke="#C00000" stroke-width="2.5"/>
+  <rect x="478" y="52" width="124" height="58" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="540" y="69" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#C00000">VD</text>
+  <text x="540" y="83" text-anchor="middle" font-size="9" fill="#7B0000">Piqué conception</text>
+  <text x="540" y="96" text-anchor="middle" font-size="8.5" fill="#7B0000">VD ≥ 1,25 · VC</text>
+  <text x="540" y="109" text-anchor="middle" font-size="8.5" fill="#7B0000">V_flutter &gt; VD</text>
+  <line x1="540" y1="52" x2="540" y2="118" stroke="#C00000" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Relation VB+43kt ≤ VC -->
+  <path d="M 235 142 Q 312 175 390 142" stroke="#BF8F00" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <text x="312" y="188" text-anchor="middle" font-size="9" fill="#7F5500">≥ 43 kt</text>
+
+  <!-- Relation VC × 1.25 = VD -->
+  <path d="M 390 142 Q 465 175 540 142" stroke="#C00000" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <text x="465" y="188" text-anchor="middle" font-size="9" fill="#C00000">× 1,25 min</text>
+
+  <!-- Relation VA = VS1 × sqrt(n) -->
+  <path d="M 80 142 Q 117 195 155 142" stroke="#548235" stroke-width="1.2" fill="none" stroke-dasharray="4,3"/>
+  <text x="117" y="207" text-anchor="middle" font-size="9" fill="#375623">× √n</text>
+
+  <!-- Note bas -->
+  <text x="360" y="240" text-anchor="middle" font-size="9" fill="#555">NB : « May not be less than » = plancher de conception. Les constructeurs peuvent aller au-delà, jamais en dessous.</text>
+  <text x="360" y="256" text-anchor="middle" font-size="9" fill="#555">VMO/MMO (opérationnel) &lt; VC/MC (conception) &lt; VD/MD (piqué) — trois niveaux distincts.</text>
+</svg>

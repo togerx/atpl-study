@@ -1,0 +1,108 @@
+<svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <text x="380" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F3864">Mesure de poussée turbine — EPR vs N1</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F3864"/>
+    </marker>
+    <marker id="arr_r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C00000"/>
+    </marker>
+    <marker id="arr_g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#548235"/>
+    </marker>
+  </defs>
+
+  <!-- ============ COUPE MOTEUR SIMPLIFIÉ ============ -->
+  <!-- Entrée moteur -->
+  <rect x="20" y="80" width="30" height="110" rx="3" fill="#e0e8f4" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="35" y="130" text-anchor="middle" font-size="9" fill="#2E75B6" transform="rotate(-90 35 130)">Entrée air</text>
+
+  <!-- Fan / LP Compresseur -->
+  <rect x="52" y="90" width="70" height="90" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <text x="87" y="128" text-anchor="middle" font-size="9" font-weight="bold" fill="#1F3864">Fan / LP</text>
+  <text x="87" y="141" text-anchor="middle" font-size="9" fill="#1F3864">Compressor</text>
+  <!-- Sonde Pt2 -->
+  <rect x="52" y="70" width="40" height="18" rx="3" fill="#C00000"/>
+  <text x="72" y="83" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Pt2</text>
+  <line x1="72" y1="88" x2="72" y2="90" stroke="#C00000" stroke-width="2"/>
+
+  <!-- N1 indicator -->
+  <rect x="56" y="187" width="62" height="18" rx="3" fill="#548235"/>
+  <text x="87" y="199" text-anchor="middle" font-size="8" font-weight="bold" fill="white">TACHY N1</text>
+
+  <!-- HP Compresseur -->
+  <rect x="130" y="100" width="90" height="70" rx="4" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="175" y="128" text-anchor="middle" font-size="9" font-weight="bold" fill="#1F3864">HP</text>
+  <text x="175" y="141" text-anchor="middle" font-size="9" fill="#1F3864">Compressor</text>
+  <!-- N2 indicator -->
+  <rect x="145" y="177" width="62" height="18" rx="3" fill="#548235"/>
+  <text x="176" y="189" text-anchor="middle" font-size="8" font-weight="bold" fill="white">TACHY N2</text>
+
+  <!-- Chambre de combustion -->
+  <rect x="228" y="100" width="70" height="70" rx="4" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="263" y="128" text-anchor="middle" font-size="9" font-weight="bold" fill="#C00000">Chambre</text>
+  <text x="263" y="141" text-anchor="middle" font-size="9" fill="#C00000">Combustion</text>
+  <!-- Flamme icône -->
+  <path d="M 255 118 Q 263 105 271 118 Q 265 112 263 120 Q 261 112 255 118" fill="#C00000" opacity="0.5"/>
+
+  <!-- Turbine HP + LP -->
+  <rect x="306" y="100" width="100" height="70" rx="4" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="356" y="128" text-anchor="middle" font-size="9" font-weight="bold" fill="#1F3864">HP + LP</text>
+  <text x="356" y="141" text-anchor="middle" font-size="9" fill="#1F3864">Turbines</text>
+
+  <!-- Tuyère / sortie -->
+  <rect x="414" y="95" width="35" height="80" rx="3" fill="#e8f0e8" stroke="#548235" stroke-width="1.5"/>
+  <text x="431" y="130" text-anchor="middle" font-size="9" fill="#548235" transform="rotate(-90 431 130)">Tuyère</text>
+  <!-- Sonde Pt7 -->
+  <rect x="414" y="75" width="40" height="18" rx="3" fill="#C00000"/>
+  <text x="434" y="88" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Pt7</text>
+  <line x1="434" y1="93" x2="434" y2="95" stroke="#C00000" stroke-width="2"/>
+
+  <!-- Flux gaz -->
+  <line x1="52" y1="135" x2="52" y2="135" stroke="#aaa" stroke-width="0"/>
+  <text x="252" y="220" text-anchor="middle" font-size="9" fill="#888">← flux des gaz →</text>
+
+  <!-- ============ CALCULATEUR EPR ============ -->
+  <rect x="475" y="85" width="80" height="48" rx="6" fill="#1F3864" stroke="#0a1628" stroke-width="1.5"/>
+  <text x="515" y="105" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Calculateur</text>
+  <text x="515" y="118" text-anchor="middle" font-size="8.5" fill="#aad">EPR = Pt7/Pt2</text>
+  <text x="515" y="128" text-anchor="middle" font-size="8" fill="#88f">(capsule diff.)</text>
+
+  <!-- Lignes Pt2 → calculateur -->
+  <line x1="72" y1="70" x2="72" y2="55" stroke="#C00000" stroke-width="1.5"/>
+  <line x1="72" y1="55" x2="475" y2="55" stroke="#C00000" stroke-width="1.5"/>
+  <line x1="475" y1="55" x2="475" y2="95" stroke="#C00000" stroke-width="1.5" marker-end="url(#arr_r)"/>
+  <text x="270" y="50" text-anchor="middle" font-size="9" fill="#C00000">Pt2 (entrée compresseur LP)</text>
+
+  <!-- Lignes Pt7 → calculateur -->
+  <line x1="434" y1="75" x2="434" y2="58" stroke="#C00000" stroke-width="1.5"/>
+  <line x1="434" y1="58" x2="510" y2="58" stroke="#C00000" stroke-width="1.5"/>
+  <line x1="510" y1="58" x2="510" y2="85" stroke="#C00000" stroke-width="1.5" marker-end="url(#arr_r)"/>
+  <text x="462" y="70" text-anchor="middle" font-size="9" fill="#C00000">Pt7 (sortie tuyère)</text>
+
+  <!-- EPR → indicateur -->
+  <line x1="555" y1="109" x2="590" y2="109" stroke="#1F3864" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="590" y="90" width="80" height="40" rx="5" fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.5"/>
+  <text x="630" y="108" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">EPR</text>
+  <text x="630" y="123" text-anchor="middle" font-size="9" fill="#BF8F00">Indicateur</text>
+
+  <!-- N1 → indicateur -->
+  <line x1="87" y1="205" x2="87" y2="240" stroke="#548235" stroke-width="1.5"/>
+  <line x1="87" y1="240" x2="620" y2="240" stroke="#548235" stroke-width="1.5"/>
+  <line x1="620" y1="240" x2="620" y2="165" stroke="#548235" stroke-width="1.5"/>
+  <line x1="620" y1="165" x2="590" y2="165" stroke="#548235" stroke-width="1.5" marker-end="url(#arr_g)"/>
+  <rect x="590" y="148" width="80" height="28" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="630" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#548235">N1 %</text>
+
+  <!-- Encadrés comparaison EPR / N1 -->
+  <rect x="20" y="255" width="355" height="30" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1"/>
+  <text x="197" y="268" text-anchor="middle" font-size="9" font-weight="bold" fill="#C00000">EPR</text>
+  <text x="197" y="280" text-anchor="middle" font-size="9" fill="#1F3864">Affecté par T° et altitude — Pt2 obstrué → EPR affiché trop élevé → réduction poussée intempestive</text>
+
+  <rect x="385" y="255" width="365" height="30" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1"/>
+  <text x="567" y="268" text-anchor="middle" font-size="9" font-weight="bold" fill="#548235">N1</text>
+  <text x="567" y="280" text-anchor="middle" font-size="9" fill="#1F3864">Non affecté par variations atmosphériques — Référence en zone turbulente — Peut dépasser 100%</text>
+
+</svg>

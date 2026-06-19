@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180" width="100%" height="100%">
+  <circle cx="60" cy="90" r="6" fill="#C00000"/>
+  <text x="60" y="70" font-family="Arial" font-size="11" font-weight="bold" fill="#C00000" text-anchor="middle">Jonction Chaude (Sonde EGT)</text>
+  
+  <path d="M 60,90 L 240,40" stroke="#C00000" stroke-width="3" fill="none"/>
+  <text x="150" y="50" font-family="Arial" font-size="10" fill="#C00000" text-anchor="middle">Métal A (Chromel)</text>
+  
+  <path d="M 60,90 L 240,140" stroke="#2E75B6" stroke-width="3" fill="none"/>
+  <text x="150" y="135" font-family="Arial" font-size="10" fill="#2E75B6" text-anchor="middle">Métal B (Alumel)</text>
+  
+  <rect x="240" y="25" width="110" height="130" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="295" y="45" font-family="Arial" font-size="10" font-weight="bold" fill="#548235" text-anchor="middle">Jonction de Référence</text>
+  <text x="295" y="60" font-family="Arial" font-size="9" fill="#548235" text-anchor="middle">(Température constante)</text>
+  
+  <circle cx="250" cy="40" r="4" fill="#1F3864"/>
+  <circle cx="250" cy="140" r="4" fill="#1F3864"/>
+  
+  <path d="M 250,40 L 380,40 L 380,65" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+  <path d="M 250,140 L 380,140 L 380,115" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+  
+  <circle cx="380" cy="90" r="25" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <path d="M 380,90 L 392,75" stroke="#1F3864" stroke-width="2"/>
+  <text x="380" y="112" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">EMF (mV)</text>
+  <text x="440" y="94" font-family="Arial" font-size="11" font-weight="bold" fill="#1F3864">Indicateur</text>
+</svg>

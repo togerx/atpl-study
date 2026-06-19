@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="150" height="15" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+    <rect x="0" y="15" width="150" height="15" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+    <text x="75" y="11" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">INVAR (Faible expansion)</text>
+    <text x="75" y="26" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle">LAITON / BRASS</text>
+    <text x="170" y="20" font-family="Arial" font-size="12" font-weight="bold" fill="#1F3864">a) À FROID (Rectiligne)</text>
+  </g>
+  <g transform="translate(20, 100)">
+    <path d="M 0,15 Q 75,-15 150,15 L 147,29 Q 73,-1 0,29 Z" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+    <path d="M 0,29 Q 73,-1 150,29 L 144,43 Q 71,13 0,43 Z" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+    <text x="75" y="14" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle" transform="rotate(5, 75, 14)">INVAR</text>
+    <text x="75" y="32" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864" text-anchor="middle" transform="rotate(5, 75, 32)">LAITON</text>
+    <text x="170" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="#1F3864">b) À CHAUD (Courbure vers l'Invar)</text>
+  </g>
+</svg>

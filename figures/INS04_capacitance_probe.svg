@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 160" width="100%" height="100%">
+  <rect x="50" y="10" width="16" height="130" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  <rect x="90" y="10" width="16" height="130" fill="#DEEAF6" stroke="#2E75B6" stroke-width="2"/>
+  
+  <rect x="66" y="75" width="24" height="65" fill="#FFF2CC" opacity="0.8"/>
+  <line x1="40" y1="75" x2="116" y2="75" stroke="#BF8F00" stroke-width="2" stroke-dasharray="3"/>
+  
+  <text x="130" y="45" font-family="Arial" font-size="11" font-weight="bold" fill="#2E75B6">Zone Air : ε = 1.0</text>
+  <text x="130" y="110" font-family="Arial" font-size="11" font-weight="bold" fill="#BF8F00">Zone Fuel : ε = 2.1 (Kérosène)</text>
+  
+  <path d="M 58,10 L 58,2 L 240,2" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+  <path d="M 98,10 L 98,6 L 240,6" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+  
+  <rect x="240" y="-10" width="100" height="35" fill="#E2EFDA" stroke="#548235" stroke-width="1.5" transform="translate(0,10)"/>
+  <text x="290" y="12" font-family="Arial" font-size="11" font-weight="bold" fill="#548235" text-anchor="middle">AMPLIFICATEUR</text>
+  
+  <path d="M 340,8 L 380,8" stroke="#1F3864" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="390" y="12" font-family="Arial" font-size="11" font-weight="bold" fill="#1F3864">Indication MASSE (kg ou lbs)</text>
+  
+  <text x="10" y="155" font-family="Arial" font-size="10" fill="#1F3864">Armatures métalliques du condensateur (Sonde de cuve)</text>
+</svg>

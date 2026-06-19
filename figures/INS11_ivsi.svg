@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" width="700" height="310">
+  <!--
+    LAYOUT IVSI
+    Cadran (gauche) : x=30,y=50 r=90
+    Dash-pot/pompe accéléromètre (centre-haut) : x=200,y=60 → 160x110
+    Restriction principale (centre-bas) : x=200,y=200 → 160x60
+    Capsule (droite) : x=400,y=80 → 120x100
+    Prise statique (droite basse) : x=450,y=240
+    Flèches flux
+  -->
+  <defs>
+    <marker id="aGold" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#BF8F00"/>
+    </marker>
+    <marker id="aBlue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#2E75B6"/>
+    </marker>
+    <marker id="aGray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
+    </marker>
+    <marker id="aRed" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#C00000"/>
+    </marker>
+  </defs>
+
+  <!-- Titre -->
+  <text x="350" y="18" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1F3864">IVSI — Instantaneous Vertical Speed Indicator</text>
+  <line x1="20" y1="24" x2="680" y2="24" stroke="#CCC" stroke-width="1"/>
+
+  <!-- === CADRAN IVSI === -->
+  <circle cx="115" cy="165" r="90" fill="#111" stroke="#555" stroke-width="2"/>
+  <circle cx="115" cy="165" r="85" fill="none" stroke="#888" stroke-width="1"/>
+  <!-- Graduation -->
+  <text x="115" y="86" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">CLIMB</text>
+  <text x="115" y="252" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">DESCENT</text>
+  <text x="200" y="169" font-family="Arial" font-size="11" fill="white">0</text>
+  <text x="116" y="106" text-anchor="middle" font-family="Arial" font-size="9" fill="white">2</text>
+  <text x="60" y="118" text-anchor="middle" font-family="Arial" font-size="9" fill="white">3</text>
+  <text x="116" y="234" text-anchor="middle" font-family="Arial" font-size="9" fill="white">2</text>
+  <text x="60" y="220" text-anchor="middle" font-family="Arial" font-size="9" fill="white">3</text>
+  <!-- Aiguille IVSI pointe immédiatement (simulation montée) -->
+  <line x1="115" y1="165" x2="100" y2="100" stroke="#F4C542" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="115" cy="165" r="5" fill="#888"/>
+  <!-- Label unité -->
+  <text x="115" y="185" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#AAA">Ft/min × 1,000</text>
+
+  <!-- === DASH-POT (accéléromètre vertical) === -->
+  <rect x="230" y="52" width="160" height="110" rx="7" fill="#FBE5E5" stroke="#C00000" stroke-width="2"/>
+  <text x="310" y="70" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#C00000">DASH-POT</text>
+  <text x="310" y="82" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">(pompe accélérométrique)</text>
+  <!-- Piston interne -->
+  <rect x="265" y="90" width="90" height="55" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="310" y="110" text-anchor="middle" font-family="Arial" font-size="9" fill="#1F3864">piston libre</text>
+  <text x="310" y="123" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">(masse inertielle)</text>
+  <!-- Flèche verticale (accélération détectée) -->
+  <line x1="310" y1="88" x2="310" y2="78" stroke="#C00000" stroke-width="2.5" marker-end="url(#aRed)"/>
+  <text x="335" y="76" font-family="Arial" font-size="8.5" fill="#C00000">az ↑</text>
+  <!-- Label dash-pot sorties air -->
+  <line x1="230" y1="110" x2="210" y2="110" stroke="#C00000" stroke-width="1.5" marker-end="url(#aRed)"/>
+  <text x="195" y="108" font-family="Arial" font-size="8" fill="#C00000" text-anchor="end">air pompé</text>
+  <!-- Flèche dash-pot vers capsule -->
+  <line x1="390" y1="107" x2="420" y2="107" stroke="#C00000" stroke-width="1.8" marker-end="url(#aRed)"/>
+
+  <!-- === CAPSULE === -->
+  <ellipse cx="480" cy="140" rx="55" ry="38" fill="#E2EFDA" stroke="#548235" stroke-width="2.5"/>
+  <text x="480" y="136" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1F3864">CAPSULE</text>
+  <text x="480" y="149" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">(soufflet)</text>
+
+  <!-- Renvoi mécanique capsule → cadran -->
+  <line x1="425" y1="140" x2="205" y2="165" stroke="#BF8F00" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#aGold)"/>
+  <text x="305" y="148" text-anchor="middle" font-family="Arial" font-size="9" fill="#BF8F00">renvoi mécanique</text>
+
+  <!-- === METERING RESTRICTION (choke VSI normal) === -->
+  <rect x="230" y="200" width="160" height="55" rx="7" fill="#FFF2CC" stroke="#BF8F00" stroke-width="2"/>
+  <text x="310" y="218" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7A5800">RESTRICTION PRINCIPALE</text>
+  <text x="310" y="231" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">(metering restriction / choke VSI)</text>
+  <text x="310" y="244" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">même rôle que VSI standard</text>
+
+  <!-- === PRISE STATIQUE === -->
+  <rect x="530" y="230" width="110" height="28" rx="4" fill="#DEEAF6" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="585" y="248" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#1F3864" font-weight="bold">Ps statique</text>
+  <!-- Flux Ps → restriction + capsule -->
+  <line x1="530" y1="244" x2="390" y2="222" stroke="#2E75B6" stroke-width="1.8" marker-end="url(#aBlue)"/>
+  <line x1="530" y1="238" x2="480" y2="178" stroke="#2E75B6" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#aBlue)"/>
+
+  <!-- === ENCADRÉ AVANTAGE / INCONVÉNIENT === -->
+  <rect x="20" y="272" width="300" height="32" rx="5" fill="#E2EFDA" stroke="#548235" stroke-width="1.5"/>
+  <text x="170" y="287" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#548235" font-weight="bold">✅ Avantage : réponse instantanée (pas de time lag)</text>
+  <text x="170" y="299" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Dash-pot = accéléromètre précède la variation de Ps</text>
+
+  <rect x="340" y="272" width="340" height="32" rx="5" fill="#FBE5E5" stroke="#C00000" stroke-width="1.5"/>
+  <text x="510" y="287" text-anchor="middle" font-family="Arial" font-size="9.5" fill="#C00000" font-weight="bold">⚠️ Limite : dash-pot sensible aux facteurs de charge</text>
+  <text x="510" y="299" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#555">Fausse indication au décollage, virage serré (load factor ≠ 1g)</text>
+</svg>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INS04 — Jauges de Carburant et Débitmètres · ATPL Study</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="sidebar-mobile-btn" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a href="../index.html" class="topbar-logo">ATPL <span>Study</span></a>
+  <div class="topbar-divider"></div>
+  <span class="topbar-subtitle">INS04 · Jauges & Débitmètres</span>
+  <button class="topbar-search" aria-label="Rechercher">🔍 Rechercher&nbsp;&nbsp;<kbd>Ctrl K</kbd></button>
+</header>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span style="color:var(--text-light);font-size:1.1rem">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher…" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Navigation des cours"></nav>
+
+  <main class="main" data-code="INS04" data-matiere="instruments">
+
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+
+    <div class="cours-header">
+      <div class="cours-breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="index.html">Instrumentation</a>
+        <span class="sep">›</span>
+        <span>INS04</span>
+      </div>
+      <div class="cours-code-badge">INS04</div>
+      <h1 class="cours-title">Jauges de Carburant et Débitmètres (Fuel Quantity & Flow)</h1>
+      <div class="cours-meta">
+        <span class="cours-meta-item"><span class="tag tag-easa">EASA</span></span>
+        <span class="cours-meta-item"><span class="tag tag-exam">Exam fréquent</span></span>
+        <span class="cours-meta-item">📖 Lecture ~10 min</span>
+        <span class="cours-meta-item">❓ 8 questions Quick Check</span>
+      </div>
+    </div>
+
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="cours" role="tab">📚 Cours complet</button>
+      <button class="tab-btn" data-tab="synthese" role="tab">⚡ Fiche synthèse</button>
+    </div>
+
+    <div class="tab-content active" id="tab-cours">
+      <div class="content">
+
+        <h1 id="introduction-carburant">1. Introduction : L'importance du suivi du carburant</h1>
+        <p>La connaissance précise de la quantité de carburant à bord (FOB — Fuel On Board) est une obligation critique avant le décollage, pendant le vol et après l'atterrissage[cite: 225]. Cette information est directement prise en compte pour :</p>
+        <ul>
+          <li>Le calcul de la masse totale au décollage (Take-Off Weight) et le respect des limites de centrage[cite: 226, 263].</li>
+          <li>Le suivi rigoureux de la consommation en temps réel et la détection d'éventuelles fuites[cite: 226].</li>
+          <li>Le calcul de l'autonomie restante (Playtime / Endurance) et le choix des déroutements[cite: 226].</li>
+        </ul>
+
+        <div class="fig-container">
+          <p></p>
+        </div>
+
+        <hr>
+
+        <h1 id="unites-carburant">2. Unités de mesure et équivalences de conversion</h1>
+        <p>Il existe deux méthodes principales pour indiquer la quantité de carburant à bord[cite: 252]:</p>
+        <ul>
+          <li><strong>Indication Volumétrique (Aviation légère) :</strong> Exprimée en Litres, US Gallons (USG) ou Imperial Gallons (Imp Gal)[cite: 253, 254, 260].</li>
+          <li><strong>Indication Massique (Aviation commerciale et lourde) :</strong> Exprimée en Kilogrammes (kg) ou en Livres (lbs)[cite: 256, 257].</li>
+        </ul>
+
+        <div class="box box-info">
+          <div class="box-label">ℹ️ Pourquoi privilégier la masse sur les avions lourds ?</div>
+          La masse donne une indication directe de l'<strong>énergie totale disponible</strong> libérée par le carburant[cite: 264]. Le volume d'un fluide se dilate lorsque sa température augmente (le fluide devient moins dense), mais sa masse reste strictement inchangée[cite: 265, 332, 341, 342]. Ainsi, 10 kg de kérosène froid ou 10 kg de kérosène chaud contiennent rigoureusement la même quantité d'énergie[cite: 266, 267, 268].
+        </div>
+
+        <div class="box box-formule">
+          <div class="box-label">🧮 Équivalences et Facteurs de Conversion ATPL</div>
+          <strong>Valeurs mathématiques indispensables à connaître par cœur pour les calculs de masse et centrage / préparation de vol :</strong>
+          <div class="formula-display">1 US gal = 3,785 Litres [cite: 254]</div>
+          <div class="formula-display">1 Imperial gal = 4,546 Litres = 1,20 USG [cite: 260]</div>
+          <div class="formula-display">1 kg = 2,205 lbs (Livres) [cite: 259]</div>
+          <div class="formula-display">1 lb = 0,453 kg [cite: 257]</div>
+        </div>
+
+        <hr>
+
+        <h1 id="systemes-jaugeage">3. Systèmes de jaugeage et dispositifs de mesure</h1>
+        
+        <h2 id="jauge-flotteur">3.1. Jauge électrique à flotteur (Système volumétrique)</h2>
+        <p>Principalement utilisée sur avion léger, elle se compose d'un flotteur relié à un bras articulé mécanique qui déplace le curseur d'une résistance variable (potentiomètre) alimentée en courant continu (DC)[cite: 250, 275, 291]. La variation de résistance modifie le courant traversant l'indicateur du cockpit[cite: 248, 249].</p>
+
+        <div class="fig-container">
+          <img src="../figures/INS04_float_gauge.svg" alt="Schéma électrique d'une jauge à flotteur">
+          <div class="fig-caption">Fig. 1 — Jauge à flotteur et potentiomètre associée à un indicateur de cockpit [cite: 247, 248, 249, 250]</div>
+        </div>
+
+        <ul>
+          <li><strong>Avantage :</strong> Conception simple, économique et robuste[cite: 279].</li>
+          <li><strong>Inconvénients et non-linéarité :</strong> L'indication n'est pas linéaire à cause de la forme géométrique souvent complexe et irrégulière des réservoirs d'ailes[cite: 278]. Le système est réglé pour être d'une précision maximale uniquement sur les positions <strong>Low (Bas)</strong> et <strong>Empty (Vide)</strong> pour des raisons évidentes de sécurité[cite: 277].</li>
+          <li><strong>Précision :</strong> Faible, de l'ordre de 10%[cite: 291].</li>
+        </ul>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Erreurs de la jauge à flotteur</div>
+          Ce système subit d'importantes erreurs induites par[cite: 280]:
+          <br>• <strong>L'assiette de l'aéronef (Attitude) :</strong> En montée ou en descente, le carburant se déplace, décalant le flotteur[cite: 281].
+          <br>• <strong>Les accélérations :</strong> Les virages ou turbulences créent des forces d'inertie sur le fluide[cite: 282].
+          <br>• <strong>La température :</strong> Une hausse thermique dilate le carburant, faisant monter faussement le flotteur alors que la masse de carburant est restée stable[cite: 265, 283].
+        </div>
+
+        <h2 id="jauge-capacitive">3.2. Jauge capacitive électronique (Système massique)</h2>
+        <p>Le jaugeage capacitif est le standard de l'aviation commerciale. Il permet une mesure automatique en unités de **masse**, s'affranchissant totalement des variations de température[cite: 293, 332].</p>
+        <p>Une jauge de réservoir (Tank Unit) est constituée de tubes conducteurs métalliques concentriques formant un condensateur[cite: 295, 297, 344, 346]. La capacité électrique $C$ d'un condensateur dépend de la géométrie des armatures ($S/e$) et de la **permittivité relative (constante diélectrique $\epsilon$)** du milieu situé entre les armatures[cite: 322, 324]:</p>
+        
+        <div class="formula-display">$$C = \epsilon \times \frac{S}{e}$$ [cite: 322, 324]</div>
+
+        <p>Le diélectrique est ici constitué par la combinaison du carburant et de l'air présents dans le réservoir[cite: 295, 313]:</p>
+        <ul>
+          <li>La constante diélectrique de l'air est égale à <strong>1,0</strong>[cite: 325, 326].</li>
+          <li>La constante diélectrique du kérosène (Jet A-1) est égale à environ <strong>2,1</strong>[cite: 325, 327, 328].</li>
+        </ul>
+
+        <div class="fig-container">
+          <img src="../figures/INS04_capacitance_probe.svg" alt="Principe d'un condensateur de jauge capacitive">
+          <div class="fig-caption">Fig. 2 — Évolution de la capacité en fonction du ratio Air / Carburant entre les électrodes [cite: 295, 313]</div>
+        </div>
+
+        <p>À mesure que le réservoir se remplit, le carburant remplace l'air entre les plaques, ce qui fait **augmenter la capacité globale** mesurée par le système[cite: 294, 327]. Un réservoir plein présente une capacité deux fois plus élevée qu'un réservoir vide ($C_1 = 2 \times C_0$)[cite: 326, 327].</p>
+
+        <h3>Rôle de l'unité de référence (Compensateur)</h3>
+        <p>La permittivité du kérosène peut légèrement dévier de sa valeur nominale en fonction de sa composition chimique exacte ou s'il subit une baisse de température (ce qui engendre une baisse de sa permittivité $\epsilon_r$ parallèlement à une augmentation de sa densité)[cite: 319, 335, 342, 343]. Pour éliminer cette erreur, une <strong>unité de référence (compensateur de densité)</strong> est impérativement installée au point le plus bas de la cuve, garantissant qu'elle reste totalement immergée dans le carburant[cite: 320]. Elle ajuste en permanence le calcul pour maintenir une indication de masse exacte à 1% près[cite: 350].</p>
+
+        <div class="box box-piege">
+          <div class="box-label">⚠️ Pièges ATPL classiques sur les pannes capacitives</div>
+          • <strong>Présence d'eau dans les réservoirs :</strong> L'eau distillée possède une constante diélectrique extrêmement élevée ($\epsilon \approx 81$) par rapport au kérosène ($\epsilon \approx 2,1$)[cite: 328, 333]. Si de l'eau décante au fond des réservoirs et entre en contact avec les sondes, elle va saturer le condensateur et provoquer une <strong>erreur majeure d'indication de masse (valeur fausse mais non nulle)</strong>[cite: 333, 363].
+          <br>• <strong>Coupure ou défaillance électrique de la sonde :</strong> Si la jauge subit une rupture électrique complète ou une panne de son circuit, la capacité mesurée chute instantanément vers <strong>zéro</strong>[cite: 334]. L'indicateur de cockpit va alors basculer en affichant un réservoir **strictement vide (Empty)**, constituant une sécurité positive[cite: 334].
+        </div>
+
+        <hr>
+
+        <h1 id="procedures-refueling">4. Procédures d'avitaillement (Refueling Cross-Check)</h1>
+        <p>Afin de prévenir les pannes sèches causées par une mauvaise saisie ou une anomalie instrumentale, l'équipage doit mener une double vérification systématique[cite: 355, 356, 358]:</p>
+        <ol>
+          <li><strong>Avant l'avitaillement :</strong> Noter la quantité résiduelle à bord (FOB)[cite: 353]. Elle doit correspondre au carburant de départ du vol précédent diminué de la consommation réelle calculée[cite: 353, 354].</li>
+          <li><strong>Conversion d'unités :</strong> Convertir le volume de carburant commandé au camion d'avitaillement (généralement délivré en Litres) dans l'unité de masse utilisée par les jauges de l'avion (kg ou lbs) en utilisant la densité du jour[cite: 355].</li>
+          <li><strong>Après l'avitaillement :</strong> Comparer la valeur finale affichée au cockpit à la somme mathématique : $\text{FOB initiale} + \text{Masse ajoutée}$[cite: 356].</li>
+        </ol>
+
+        <p>En cas d'écart significatif, le pilote doit faire vérifier le bon de livraison du fournisseur et demander un contrôle technique du système de jaugeage de bord (FQIS — Fuel Quantity Indicator System)[cite: 357, 358, 361]. Les calculs de performance et de devis de masse de l'appareil devront obligatoirement être recalculés[cite: 362].</p>
+
+        <hr>
+
+        <h1 id="debitmetres-moteur">5. Débitmètres de carburant (Fuel Flowmeters)</h1>
+        <p>Le débitmètre mesure le débit de carburant consommé par le moteur par unité de temps (ex: kg/h ou lbs/h pour les réacteurs, L/h ou USG/h pour les pistons)[cite: 364, 365, 366].</p>
+
+        <h3>Emplacement des capteurs dans le circuit :</h3>
+        <ul>
+          <li><strong>Sur moteur à pistons :</strong> Le débitmètre est inséré entre la pompe à carburant et le carburateur ou le système d'injection[cite: 371].</li>
+          <li><strong>Sur turboréacteur :</strong> Le capteur se situe obligatoirement en aval, entre la pompe haute pression (HP Pump) et les injecteurs de la chambre de combustion[cite: 370].</li>
+        </ul>
+
+        <h3>Débitmètre intégrateur</h3>
+        <p>La consommation totale consommée depuis le bloc (Fuel Used) est obtenue en intégrant mathématiquement le débit instantané par rapport au temps écoulé[cite: 372]. Un appareil capable d'afficher simultanément le débit horaire actuel et la quantité totale consommée est qualifié de <strong>Débitmètre Intégrateur (Integrated Flowmeter)</strong>[cite: 373].</p>
+
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-synthese">
+      <div class="content">
+
+        <h1 id="valeurs-cles" style="margin-top:0">Valeurs diélectriques et constantes clés</h1>
+        <div class="values-grid">
+          <div class="value-chip">
+            <span class="val">ε = 1.0</span>
+            <span class="val-label">Constante diélectrique de l'air [cite: 325, 326]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">ε ≈ 2.1</span>
+            <span class="val-label">Constante diélectrique du kérosène (Jet A-1) [cite: 325, 327, 328]</span>
+          </div>
+          <div class="value-chip">
+            <span class="val">ε ≈ 81.0</span>
+            <span class="val-label">Constante diélectrique de l'eau (source d'erreur majeure) [cite: 328, 333]</span>
+          </div>
+        </div>
+
+        <h1 id="equivalences-synthese">Conversions de référence</h1>
+        <div class="box box-formule" style="margin-top:0">
+          <div class="formula-display">1 USG = 3,785 L || 1 Imperial Gallon = 4,546 L [cite: 254, 260]</div>
+          <div class="formula-display">1 kg = 2,205 lbs || 1 lb = 0,453 kg [cite: 257, 259]</div>
+        </div>
+
+        <h1 id="pieges-synthese">Top 10 des Pièges ATPL à connaître</h1>
+        <div class="piege-list">
+          <div class="piege-item">
+            <span class="piege-num">#1</span>
+            <div>
+              <div class="piege-sujet">Indication massique vs volumétrique</div>
+              <div class="piege-explication">Le volume change avec la température (dilatation), la masse reste constante[cite: 265, 332, 341]. Seule l'indication de masse reflète fidèlement l'énergie disponible à bord[cite: 264].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#2</span>
+            <div>
+              <div class="piege-sujet">Comportement en cas de rupture de jauge capacitive</div>
+              <div class="piege-explication">Si la capacité tombe à zéro à cause d'une coupure électrique, la jauge bascule par sécurité positive sur l'indication <strong>strictement vide (Empty)</strong>[cite: 334].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#3</span>
+            <div>
+              <div class="piege-sujet">L'intrusion d'eau distillée dans les cuves</div>
+              <div class="piege-explication">L'eau possède une permittivité de 81 (contre 2,1 pour le fuel)[cite: 328]. Elle fausse l'indication mais n'amène pas la jauge à zéro ; elle génère une <strong>valeur de masse totalement erronée</strong>[cite: 333, 363].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#4</span>
+            <div>
+              <div class="piege-sujet">Rôle et positionnement du compensateur</div>
+              <div class="piege-explication">L'unité de référence/compensatrice doit obligatoirement être fixée sur la <strong>partie la plus basse du réservoir</strong> pour demeurer totalement immergée et mesurer les variations réelles de permittivité du carburant[cite: 320].</div>
+            </div>
+          </div>
+          <div class="piege-item">
+            <span class="piege-num">#5</span>
+            <div>
+              <div class="piege-sujet">Précision des jauges mécaniques à flotteur</div>
+              <div class="piege-explication">Une jauge à flotteur n'est calibrée pour être parfaitement précise qu'aux voisinages des graduations <strong>proches de zéro (Low / Empty)</strong>[cite: 277].</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="quickcheck">Quick Check — Évaluation Flash</h1>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">Cliquez sur chaque question pour révéler la réponse.</p>
+        
+        <div class="qc-grid">
+          <div class="qc-item">
+            <div class="qc-question">Quel type de jauge indique la quantité de carburant sous forme de volume ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">La <strong>jauge électrique à flotteur</strong>[cite: 275, 276].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Quelle est la constante diélectrique approximative du kérosène d'aviation ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Elle est proche de <strong>2,1</strong> (ou 2)[cite: 325, 328].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Où se situe précisément le débitmètre sur un turboréacteur ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Entre la <strong>pompe haute pression (HP)</strong> et les <strong>injecteurs</strong> de la chambre de combustion[cite: 370].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Qu'est-ce qu'un débitmètre de type "intégrateur" ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Un instrument qui calcule et affiche à la fois le débit instantané et la <strong>quantité totale de carburant consommée (Fuel Used)</strong> au cours du temps[cite: 372, 373].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Si la température du kérosène chute, qu'advient-il de son volume et de sa densité ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Son volume <strong>diminue</strong> (contraction thermique) et sa densité <strong>augmente</strong>[cite: 341, 342].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Pourquoi un grand nombre de sondes capacitives élimine-t-il l'erreur d'assiette ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Parce que la répartition géométrique de plusieurs sondes interconnectées permet de <strong>moyenner les variations de niveau</strong> causées par l'inclinaison ou les accélérations de l'avion[cite: 330].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Quel type de courant alimente une jauge capacitive ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Une alimentation en <strong>courant alternatif (AC)</strong>[cite: 331].</div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-question">Que doit faire l'équipage si la quantité mesurée après le plein est incohérente ? <span class="qc-toggle-icon">▼</span></div>
+            <div class="qc-answer">Vérifier le bon de livraison du fournisseur, s'assurer du bon fonctionnement du FQIS et <strong>refaire impérativement les calculs de performances de vol</strong>[cite: 361, 362].</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cours-nav">
+      <a id="nav-prev" href="#" style="display:none">←</a>
+      <a id="nav-next" href="#" style="display:none">→</a>
+    </div>
+
+  </main>
+
+  <aside class="toc" aria-label="Table des matières">
+    <div class="toc-title">Dans ce cours</div>
+    <div id="toc-auto"></div>
+  </aside>
+
+</div>
+
+<script src="../main.js"></script>
+</body>
+</html>
